@@ -15,6 +15,7 @@ v2: fetches the xml file from /ncsServer/mrt/ncs/packages/coordinator2009-08-10v
     and makes a local copy to read from.
 
 *NOTE: This version is an adaptation to work from thr Field System on "mrt-vlbi"
+* Inserted a new comment to check git version functionality
 
 P. Torne, IRAM, v22.04.2018
 """
