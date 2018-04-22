@@ -13,9 +13,8 @@ v0: reads from /ncsServer/mrt/ncs/var/spool/odp/
 v1: reads from /ncsServer/mrt/ncs/work/odp/continuum/old/
 v2: fetches the xml file from /ncsServer/mrt/ncs/packages/coordinator2009-08-10v1.13/
     and makes a local copy to read from.
-
-*NOTE: This version is an adaptation to work from thr Field System on "mrt-vlbi"
-* Inserted a new comment to check git version functionality
+v3: added argparser options to have more flexibility. Now this code can be used by
+    the VLBI monitor or the VLBI field system by passing the correct -lc parameter.
 
 P. Torne, IRAM, v22.04.2018
 """
@@ -27,16 +26,37 @@ import fnmatch
 import time
 import glob
 
-# First we need to get the system date and point to the path with the scans:
-CURRENTDAY = datetime.today().strftime("%Y%m%d") 
-DATAPATH   = "/ncsServer/mrt/ncs/packages/coordinator2009-08-10v1.13/"
-#LOCALDATAPATH = "/local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
-LOCALDATAPATH = "/mrt-lx3/vis/vlbi/vlbireduc/CALXMLs/"  # version for vlbi Field System
+import argparse
 
-verbose    = False
-makelocalcopy = True
+# Arguments control:
+parser = argparse.ArgumentParser()
+
+parser.add_argument("-v", "--verbose", action="store_true", help="Outputs detailed execution informaton")
+parser.add_argument("-lc", "--localdatapath", help="Copies the xml files to this location and reads the information from there. \nRecommended mode. Make sure you have read/write permission in that folder!\nIf you prefer to not make local copies, do not pass this argument.\n")
+
+args = parser.parse_args()
+
+# Init values
+CURRENTDAY = datetime.today().strftime("%Y%m%d") 
+verbose = False
+makelocalcopy = False
+DATAPATH   = "/ncsServer/mrt/ncs/packages/coordinator2009-08-10v1.13/"
+LOCALDATAPATH = "/mrt-lx3/vis/vlbi/vlbireduc/CALXMLs/"  # A standard, already created directory.
+#LOCALDATAPATH = "/local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
+#LOCALDATAPATH = "/mrt-lx3/vis/vlbi/vlbireduc/CALXMLs/"  # version for vlbi Field System
+
+# Format the program variables with the arguments passed:
+if args.localdatapath != None: 
+    LOCALDATAPATH = args.localdatapath
+    makelocalcopy = True
+
+if args.verbose == True: verbose = True
+
+# ---
 
 if verbose: print " "
+if verbose: print "Setting the telescope datapath to %s"%DATAPATH
+if verbose: print "Setting the localdatapath to %s"%LOCALDATAPATH
 
 # FUNCTIONS
 def get_lastmodified_file(glob_pattern, dir):
