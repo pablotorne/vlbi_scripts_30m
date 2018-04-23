@@ -28,6 +28,8 @@ import glob
 
 import argparse
 
+import subprocess
+
 # Arguments control:
 parser = argparse.ArgumentParser()
 
@@ -190,8 +192,12 @@ while not success_get_cal:
                 if not os.path.exists(LOCALDATAPATH+xml_cal_filenm):
                     if verbose: 
                         print "Creating a local copy of the cal xml: cp %s %s"%(xml_cal, LOCALDATAPATH+xml_cal_filenm)
-                    status = subprocess.call('cp %s s%'%(xml_cal, LOCALDATAPATH+xml_cal_filenm), shell=True)
+                    try:
+                        status = subprocess.call('cp %s %s'%(xml_cal, LOCALDATAPATH+xml_cal_filenm), shell=True)
+                    except Exception as e:
+                        print "Exception in COPY! = %s"%e
                     if status != 0: print "ERROR copying xml file to /local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
+                    if verbose: print "status cp = %d"%status
                     xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, LOCALDATAPATH)
                 else:
                     if verbose: print "%s already in %s. Skipping copy."%(xml_cal_filenm, LOCALDATAPATH)
