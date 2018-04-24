@@ -27,8 +27,9 @@ import time
 import glob
 
 import argparse
-
 import subprocess
+
+import socket
 
 # Arguments control:
 parser = argparse.ArgumentParser()
@@ -37,6 +38,12 @@ parser.add_argument("-v", "--verbose", action="store_true", help="Outputs detail
 parser.add_argument("-lc", "--localdatapath", help="Copies the xml files to this location and reads the information from there. \nRecommended mode. Make sure you have read/write permission in that folder!\nIf you prefer to not make local copies, do not pass this argument.\n")
 
 args = parser.parse_args()
+
+# 1) Check that we are executing from mrt-lx1, or mrt-lx2, or mrt-lx3. This program will only work from them!
+if socket.gethostname() not in ['mrt-lx1', 'mrt-lx2', 'mrt-lx3']:
+    print "\n * Error: this program can only run from mrt-lx1, mrt-lx2, mrt-lx3. The preferred one is mrt-lx2."
+    print "Exiting."
+    sys.exit(1)
 
 # Init values
 CURRENTDAY = datetime.today().strftime("%Y%m%d") 
