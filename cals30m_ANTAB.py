@@ -25,21 +25,22 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("-v", "--verbose", action="count", help="outputs detailed execution informaton")
 parser.add_argument("sched", help="name of the schedule from which calibration is read. Used to name the output file accordingly")
-parser.add_argument("calinfo_file", help="input file where to read the calibration information from")
-parser.add_argument("wxinfo_file", help="input file where to read the weather information from")
+parser.add_argument("calinfo_file", help="input file where to read the calibration information from (e.g. a Field System log)")
+#parser.add_argument("wxinfo_file", help="input file where to read the weather information from")
 
 args = parser.parse_args()
 
 sched = args.sched.split(".vex")[0]
 
-print "Opening file %spv.antab to write ANTAB table ..."%sched
+print "\nOpening file %spv.antab to write ANTAB table ..."%sched
 outputfn = open("%spv.antab"%sched, "w")
 
 # Load input file
 try:
 
     calinfo = subprocess.check_output('grep %s -e "rx:"'%args.calinfo_file, shell=True).splitlines()
-    wxinfo  = subprocess.check_output('grep %s -e "/wx/"'%args.wxinfo_file, shell=True).splitlines()
+    #wxinfo  = subprocess.check_output('grep %s -e "/wx/"'%args.calinfo_file, shell=True).splitlines()
+    #wxinfo  = subprocess.check_output('grep %s -e "/wx/"'%args.wxinfo_file, shell=True).splitlines()
 
 except Exception as e:
 
@@ -93,11 +94,18 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
         # Extract tau
         tau.append( float(data[2].split()[1]) )
 
-        # Extract elevation
-        elv.append( float(data[7].split()[1]) )
+        try:
 
-        # Extract the source
-        source.append(data[8].split()[1])
+            # Extract elevation
+            elv.append( float(data[7].split()[1]) )
+
+            # Extract the source
+            source.append(data[8].split()[1])
+
+        except Exception as e:
+            print "\n* Error: You seem to be passing a log from before Apr2018. Sorry, those are not in a compatible format.\n"
+            sys.exit(1)
+         
 
     if args.verbose >= 1:
         #print "DOY = %s"%DOY
