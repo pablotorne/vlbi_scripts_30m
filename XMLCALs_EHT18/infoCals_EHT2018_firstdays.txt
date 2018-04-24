@@ -1,0 +1,396 @@
+CAL info read from: ./iram30m-calibration-NBC-20180420s294.xml
+rx: E2HLI ; tsys: 386.02 ; tau: 0.36 ; pwv mm: 6.0 ; trx: 79.0 ; time: 2018-04-20 21:28:29 ; rxFreq: 214.8497 ; elev: 40.5 ; source: 3C279
+rx: E2HUI ; tsys: 392.51 ; tau: 0.36 ; pwv mm: 5.8 ; trx: 79.9 ; time: 2018-04-20 21:28:29 ; rxFreq: 227.3500 ; elev: 40.5 ; source: 3C279
+rx: E2VLI ; tsys: 407.69 ; tau: 0.35 ; pwv mm: 5.8 ; trx: 96.2 ; time: 2018-04-20 21:28:29 ; rxFreq: 214.8497 ; elev: 40.5 ; source: 3C279
+rx: E2VUI ; tsys: 422.96 ; tau: 0.36 ; pwv mm: 5.8 ; trx: 96.7 ; time: 2018-04-20 21:28:29 ; rxFreq: 227.3500 ; elev: 40.5 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:28:29 ; rxFreq: -1.0000 ; elev: 40.5 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:28:29 ; rxFreq: -1.0000 ; elev: 40.5 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:28:29 ; rxFreq: -1.0000 ; elev: 40.5 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:28:29 ; rxFreq: -1.0000 ; elev: 40.5 ; source: 3C279
+CAL info read from: ./iram30m-calibration-NBC-20180420s295.xml
+rx: E2HLI ; tsys: 384.33 ; tau: 0.36 ; pwv mm: 6.0 ; trx: 78.8 ; time: 2018-04-20 21:29:28 ; rxFreq: 214.8497 ; elev: 40.7 ; source: 3C279
+rx: E2HUI ; tsys: 391.44 ; tau: 0.36 ; pwv mm: 5.8 ; trx: 79.7 ; time: 2018-04-20 21:29:28 ; rxFreq: 227.3500 ; elev: 40.7 ; source: 3C279
+rx: E2VLI ; tsys: 406.83 ; tau: 0.35 ; pwv mm: 5.8 ; trx: 96.0 ; time: 2018-04-20 21:29:28 ; rxFreq: 214.8497 ; elev: 40.7 ; source: 3C279
+rx: E2VUI ; tsys: 421.99 ; tau: 0.36 ; pwv mm: 5.8 ; trx: 96.5 ; time: 2018-04-20 21:29:28 ; rxFreq: 227.3500 ; elev: 40.7 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:29:28 ; rxFreq: -1.0000 ; elev: 40.7 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:29:28 ; rxFreq: -1.0000 ; elev: 40.7 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:29:28 ; rxFreq: -1.0000 ; elev: 40.7 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:29:28 ; rxFreq: -1.0000 ; elev: 40.7 ; source: 3C279
+CAL info read from: ./iram30m-calibration-NBC-20180420s301.xml
+rx: E2HLI ; tsys: 357.23 ; tau: 0.36 ; pwv mm: 6.0 ; trx: 76.4 ; time: 2018-04-20 21:59:48 ; rxFreq: 214.8497 ; elev: 43.7 ; source: 3C279
+rx: E2HUI ; tsys: 365.83 ; tau: 0.36 ; pwv mm: 5.8 ; trx: 78.0 ; time: 2018-04-20 21:59:48 ; rxFreq: 227.3500 ; elev: 43.7 ; source: 3C279
+rx: E2VLI ; tsys: 377.24 ; tau: 0.34 ; pwv mm: 5.7 ; trx: 93.9 ; time: 2018-04-20 21:59:48 ; rxFreq: 214.8497 ; elev: 43.7 ; source: 3C279
+rx: E2VUI ; tsys: 385.38 ; tau: 0.35 ; pwv mm: 5.6 ; trx: 93.2 ; time: 2018-04-20 21:59:48 ; rxFreq: 227.3500 ; elev: 43.7 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:59:48 ; rxFreq: -1.0000 ; elev: 43.7 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:59:48 ; rxFreq: -1.0000 ; elev: 43.7 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:59:48 ; rxFreq: -1.0000 ; elev: 43.7 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 21:59:48 ; rxFreq: -1.0000 ; elev: 43.7 ; source: 3C279
+CAL info read from: ./iram30m-calibration-NBC-20180420s305.xml
+rx: E2HLI ; tsys: 353.09 ; tau: 0.35 ; pwv mm: 5.9 ; trx: 76.3 ; time: 2018-04-20 22:04:11 ; rxFreq: 214.8497 ; elev: 44.1 ; source: 3C279
+rx: E2HUI ; tsys: 361.32 ; tau: 0.36 ; pwv mm: 5.8 ; trx: 77.8 ; time: 2018-04-20 22:04:11 ; rxFreq: 227.3500 ; elev: 44.1 ; source: 3C279
+rx: E2VLI ; tsys: 373.39 ; tau: 0.34 ; pwv mm: 5.7 ; trx: 93.8 ; time: 2018-04-20 22:04:11 ; rxFreq: 214.8497 ; elev: 44.1 ; source: 3C279
+rx: E2VUI ; tsys: 381.07 ; tau: 0.35 ; pwv mm: 5.6 ; trx: 93.0 ; time: 2018-04-20 22:04:11 ; rxFreq: 227.3500 ; elev: 44.1 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:04:11 ; rxFreq: -1.0000 ; elev: 44.1 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:04:11 ; rxFreq: -1.0000 ; elev: 44.1 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:04:11 ; rxFreq: -1.0000 ; elev: 44.1 ; source: 3C279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:04:11 ; rxFreq: -1.0000 ; elev: 44.1 ; source: 3C279
+CAL info read from: ./iram30m-calibration-NBC-20180420s309.xml
+rx: E2HLI ; tsys: 319.11 ; tau: 0.37 ; pwv mm: 6.2 ; trx: 76.0 ; time: 2018-04-20 22:12:27 ; rxFreq: 214.8495 ; elev: 54.1 ; source: 1226+023
+rx: E2HUI ; tsys: 325.40 ; tau: 0.37 ; pwv mm: 5.9 ; trx: 77.6 ; time: 2018-04-20 22:12:27 ; rxFreq: 227.3500 ; elev: 54.1 ; source: 1226+023
+rx: E2VLI ; tsys: 338.69 ; tau: 0.35 ; pwv mm: 5.9 ; trx: 93.9 ; time: 2018-04-20 22:12:27 ; rxFreq: 214.8495 ; elev: 54.1 ; source: 1226+023
+rx: E2VUI ; tsys: 344.49 ; tau: 0.36 ; pwv mm: 5.8 ; trx: 93.0 ; time: 2018-04-20 22:12:27 ; rxFreq: 227.3500 ; elev: 54.1 ; source: 1226+023
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:12:27 ; rxFreq: -1.0000 ; elev: 54.1 ; source: 1226+023
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:12:27 ; rxFreq: -1.0000 ; elev: 54.1 ; source: 1226+023
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:12:27 ; rxFreq: -1.0000 ; elev: 54.1 ; source: 1226+023
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:12:27 ; rxFreq: -1.0000 ; elev: 54.1 ; source: 1226+023
+CAL info read from: ./iram30m-calibration-NBC-20180420s313.xml
+rx: E2HLI ; tsys: 324.18 ; tau: 0.37 ; pwv mm: 6.3 ; trx: 75.7 ; time: 2018-04-20 22:17:32 ; rxFreq: 214.8495 ; elev: 54.3 ; source: 1226+023
+rx: E2HUI ; tsys: 330.33 ; tau: 0.38 ; pwv mm: 6.1 ; trx: 77.3 ; time: 2018-04-20 22:17:32 ; rxFreq: 227.3500 ; elev: 54.3 ; source: 1226+023
+rx: E2VLI ; tsys: 343.05 ; tau: 0.36 ; pwv mm: 6.0 ; trx: 93.4 ; time: 2018-04-20 22:17:32 ; rxFreq: 214.8495 ; elev: 54.3 ; source: 1226+023
+rx: E2VUI ; tsys: 350.12 ; tau: 0.37 ; pwv mm: 5.9 ; trx: 92.4 ; time: 2018-04-20 22:17:32 ; rxFreq: 227.3500 ; elev: 54.3 ; source: 1226+023
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:17:32 ; rxFreq: -1.0000 ; elev: 54.3 ; source: 1226+023
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:17:32 ; rxFreq: -1.0000 ; elev: 54.3 ; source: 1226+023
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:17:32 ; rxFreq: -1.0000 ; elev: 54.3 ; source: 1226+023
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:17:32 ; rxFreq: -1.0000 ; elev: 54.3 ; source: 1226+023
+CAL info read from: ./iram30m-calibration-NBC-20180420s317.xml
+rx: E2HLI ; tsys: 360.60 ; tau: 0.36 ; pwv mm: 6.1 ; trx: 75.3 ; time: 2018-04-20 22:31:28 ; rxFreq: 214.8488 ; elev: 43.9 ; source: OJ287
+rx: E2HUI ; tsys: 369.50 ; tau: 0.37 ; pwv mm: 5.9 ; trx: 76.9 ; time: 2018-04-20 22:31:28 ; rxFreq: 227.3500 ; elev: 43.9 ; source: OJ287
+rx: E2VLI ; tsys: 380.88 ; tau: 0.35 ; pwv mm: 5.8 ; trx: 93.2 ; time: 2018-04-20 22:31:28 ; rxFreq: 214.8488 ; elev: 43.9 ; source: OJ287
+rx: E2VUI ; tsys: 388.79 ; tau: 0.36 ; pwv mm: 5.7 ; trx: 92.7 ; time: 2018-04-20 22:31:28 ; rxFreq: 227.3500 ; elev: 43.9 ; source: OJ287
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:31:28 ; rxFreq: -1.0000 ; elev: 43.9 ; source: OJ287
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:31:28 ; rxFreq: -1.0000 ; elev: 43.9 ; source: OJ287
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:31:28 ; rxFreq: -1.0000 ; elev: 43.9 ; source: OJ287
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:31:28 ; rxFreq: -1.0000 ; elev: 43.9 ; source: OJ287
+CAL info read from: ./iram30m-calibration-NBC-20180420s321.xml
+rx: E2HLI ; tsys: 392.70 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 76.0 ; time: 2018-04-20 22:43:35 ; rxFreq: 214.8488 ; elev: 41.5 ; source: OJ287
+rx: E2HUI ; tsys: 403.59 ; tau: 0.39 ; pwv mm: 6.2 ; trx: 77.4 ; time: 2018-04-20 22:43:35 ; rxFreq: 227.3500 ; elev: 41.5 ; source: OJ287
+rx: E2VLI ; tsys: 412.95 ; tau: 0.36 ; pwv mm: 6.1 ; trx: 93.9 ; time: 2018-04-20 22:43:35 ; rxFreq: 214.8488 ; elev: 41.5 ; source: OJ287
+rx: E2VUI ; tsys: 424.80 ; tau: 0.38 ; pwv mm: 6.0 ; trx: 93.4 ; time: 2018-04-20 22:43:35 ; rxFreq: 227.3500 ; elev: 41.5 ; source: OJ287
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:43:35 ; rxFreq: -1.0000 ; elev: 41.5 ; source: OJ287
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:43:35 ; rxFreq: -1.0000 ; elev: 41.5 ; source: OJ287
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:43:35 ; rxFreq: -1.0000 ; elev: 41.5 ; source: OJ287
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:43:35 ; rxFreq: -1.0000 ; elev: 41.5 ; source: OJ287
+CAL info read from: ./iram30m-calibration-NBC-20180420s326.xml
+rx: E2HLI ; tsys: 311.66 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 75.9 ; time: 2018-04-20 22:56:53 ; rxFreq: 214.8494 ; elev: 65.2 ; source: m87
+rx: E2HUI ; tsys: 318.13 ; tau: 0.40 ; pwv mm: 6.5 ; trx: 77.5 ; time: 2018-04-20 22:56:53 ; rxFreq: 227.3500 ; elev: 65.2 ; source: m87
+rx: E2VLI ; tsys: 330.61 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 93.8 ; time: 2018-04-20 22:56:53 ; rxFreq: 214.8494 ; elev: 65.2 ; source: m87
+rx: E2VUI ; tsys: 336.40 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 93.2 ; time: 2018-04-20 22:56:53 ; rxFreq: 227.3500 ; elev: 65.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:56:53 ; rxFreq: -1.0000 ; elev: 65.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:56:53 ; rxFreq: -1.0000 ; elev: 65.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:56:53 ; rxFreq: -1.0000 ; elev: 65.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 22:56:53 ; rxFreq: -1.0000 ; elev: 65.2 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180420s330.xml
+rx: E2HLI ; tsys: 311.86 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 75.3 ; time: 2018-04-20 23:08:43 ; rxFreq: 214.8494 ; elev: 64.9 ; source: m87
+rx: E2HUI ; tsys: 318.61 ; tau: 0.41 ; pwv mm: 6.5 ; trx: 76.8 ; time: 2018-04-20 23:08:43 ; rxFreq: 227.3500 ; elev: 64.9 ; source: m87
+rx: E2VLI ; tsys: 331.22 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 93.1 ; time: 2018-04-20 23:08:43 ; rxFreq: 214.8494 ; elev: 64.9 ; source: m87
+rx: E2VUI ; tsys: 337.34 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 92.5 ; time: 2018-04-20 23:08:43 ; rxFreq: 227.3500 ; elev: 64.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:08:43 ; rxFreq: -1.0000 ; elev: 64.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:08:43 ; rxFreq: -1.0000 ; elev: 64.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:08:43 ; rxFreq: -1.0000 ; elev: 64.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:08:43 ; rxFreq: -1.0000 ; elev: 64.9 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180420s333.xml
+rx: E2HLI ; tsys: 369.93 ; tau: 0.39 ; pwv mm: 6.7 ; trx: 74.9 ; time: 2018-04-20 23:17:40 ; rxFreq: 214.8497 ; elev: 47.1 ; source: 3c279
+rx: E2HUI ; tsys: 380.20 ; tau: 0.40 ; pwv mm: 6.5 ; trx: 76.5 ; time: 2018-04-20 23:17:40 ; rxFreq: 227.3500 ; elev: 47.1 ; source: 3c279
+rx: E2VLI ; tsys: 389.93 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 92.8 ; time: 2018-04-20 23:17:40 ; rxFreq: 214.8497 ; elev: 47.1 ; source: 3c279
+rx: E2VUI ; tsys: 398.83 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 92.1 ; time: 2018-04-20 23:17:40 ; rxFreq: 227.3500 ; elev: 47.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:17:40 ; rxFreq: -1.0000 ; elev: 47.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:17:40 ; rxFreq: -1.0000 ; elev: 47.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:17:40 ; rxFreq: -1.0000 ; elev: 47.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:17:40 ; rxFreq: -1.0000 ; elev: 47.1 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180420s338.xml
+rx: E2HLI ; tsys: 320.93 ; tau: 0.41 ; pwv mm: 7.0 ; trx: 74.4 ; time: 2018-04-20 23:27:22 ; rxFreq: 214.8494 ; elev: 63.8 ; source: m87
+rx: E2HUI ; tsys: 326.93 ; tau: 0.42 ; pwv mm: 6.7 ; trx: 76.0 ; time: 2018-04-20 23:27:22 ; rxFreq: 227.3500 ; elev: 63.8 ; source: m87
+rx: E2VLI ; tsys: 339.31 ; tau: 0.39 ; pwv mm: 6.6 ; trx: 92.4 ; time: 2018-04-20 23:27:22 ; rxFreq: 214.8494 ; elev: 63.8 ; source: m87
+rx: E2VUI ; tsys: 340.70 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 92.1 ; time: 2018-04-20 23:27:22 ; rxFreq: 227.3500 ; elev: 63.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:27:22 ; rxFreq: -1.0000 ; elev: 63.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:27:22 ; rxFreq: -1.0000 ; elev: 63.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:27:22 ; rxFreq: -1.0000 ; elev: 63.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:27:22 ; rxFreq: -1.0000 ; elev: 63.8 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180420s339.xml
+rx: E2HLI ; tsys: 319.19 ; tau: 0.41 ; pwv mm: 6.9 ; trx: 74.3 ; time: 2018-04-20 23:27:58 ; rxFreq: 214.8494 ; elev: 63.8 ; source: m87
+rx: E2HUI ; tsys: 326.51 ; tau: 0.42 ; pwv mm: 6.7 ; trx: 75.9 ; time: 2018-04-20 23:27:58 ; rxFreq: 227.3500 ; elev: 63.8 ; source: m87
+rx: E2VLI ; tsys: 338.65 ; tau: 0.39 ; pwv mm: 6.6 ; trx: 92.3 ; time: 2018-04-20 23:27:58 ; rxFreq: 214.8494 ; elev: 63.8 ; source: m87
+rx: E2VUI ; tsys: 344.13 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 91.9 ; time: 2018-04-20 23:27:58 ; rxFreq: 227.3500 ; elev: 63.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:27:58 ; rxFreq: -1.0000 ; elev: 63.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:27:58 ; rxFreq: -1.0000 ; elev: 63.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:27:58 ; rxFreq: -1.0000 ; elev: 63.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:27:58 ; rxFreq: -1.0000 ; elev: 63.8 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180420s343.xml
+rx: E2HLI ; tsys: 331.18 ; tau: 0.43 ; pwv mm: 7.2 ; trx: 74.1 ; time: 2018-04-20 23:37:58 ; rxFreq: 214.8494 ; elev: 62.9 ; source: m87
+rx: E2HUI ; tsys: 339.44 ; tau: 0.43 ; pwv mm: 7.0 ; trx: 75.7 ; time: 2018-04-20 23:37:58 ; rxFreq: 227.3500 ; elev: 62.9 ; source: m87
+rx: E2VLI ; tsys: 350.20 ; tau: 0.41 ; pwv mm: 6.9 ; trx: 92.1 ; time: 2018-04-20 23:37:58 ; rxFreq: 214.8494 ; elev: 62.9 ; source: m87
+rx: E2VUI ; tsys: 359.86 ; tau: 0.44 ; pwv mm: 7.2 ; trx: 83.5 ; time: 2018-04-20 23:37:58 ; rxFreq: 227.3500 ; elev: 62.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:37:58 ; rxFreq: -1.0000 ; elev: 62.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:37:58 ; rxFreq: -1.0000 ; elev: 62.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:37:58 ; rxFreq: -1.0000 ; elev: 62.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:37:58 ; rxFreq: -1.0000 ; elev: 62.9 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180420s346.xml
+rx: E2HLI ; tsys: 434.13 ; tau: 0.46 ; pwv mm: 7.9 ; trx: 73.9 ; time: 2018-04-20 23:47:02 ; rxFreq: 214.8497 ; elev: 46.4 ; source: 3c279
+rx: E2HUI ; tsys: 453.75 ; tau: 0.48 ; pwv mm: 7.8 ; trx: 75.4 ; time: 2018-04-20 23:47:02 ; rxFreq: 227.3500 ; elev: 46.4 ; source: 3c279
+rx: E2VLI ; tsys: 454.29 ; tau: 0.44 ; pwv mm: 7.6 ; trx: 91.9 ; time: 2018-04-20 23:47:02 ; rxFreq: 214.8497 ; elev: 46.4 ; source: 3c279
+rx: E2VUI ; tsys: 472.06 ; tau: 0.46 ; pwv mm: 7.5 ; trx: 91.4 ; time: 2018-04-20 23:47:02 ; rxFreq: 227.3500 ; elev: 46.4 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:47:02 ; rxFreq: -1.0000 ; elev: 46.4 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:47:02 ; rxFreq: -1.0000 ; elev: 46.4 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:47:02 ; rxFreq: -1.0000 ; elev: 46.4 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:47:02 ; rxFreq: -1.0000 ; elev: 46.4 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180420s351.xml
+rx: E2HLI ; tsys: 365.82 ; tau: 0.47 ; pwv mm: 8.0 ; trx: 73.6 ; time: 2018-04-20 23:57:01 ; rxFreq: 214.8494 ; elev: 60.9 ; source: m87
+rx: E2HUI ; tsys: 380.10 ; tau: 0.48 ; pwv mm: 7.9 ; trx: 75.1 ; time: 2018-04-20 23:57:01 ; rxFreq: 227.3500 ; elev: 60.9 ; source: m87
+rx: E2VLI ; tsys: 385.83 ; tau: 0.45 ; pwv mm: 7.6 ; trx: 91.6 ; time: 2018-04-20 23:57:01 ; rxFreq: 214.8494 ; elev: 60.9 ; source: m87
+rx: E2VUI ; tsys: 398.91 ; tau: 0.47 ; pwv mm: 7.6 ; trx: 90.9 ; time: 2018-04-20 23:57:01 ; rxFreq: 227.3500 ; elev: 60.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:57:01 ; rxFreq: -1.0000 ; elev: 60.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:57:01 ; rxFreq: -1.0000 ; elev: 60.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:57:01 ; rxFreq: -1.0000 ; elev: 60.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-20 23:57:01 ; rxFreq: -1.0000 ; elev: 60.9 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s3.xml
+rx: E2HLI ; tsys: 342.91 ; tau: 0.43 ; pwv mm: 7.3 ; trx: 73.6 ; time: 2018-04-21 00:09:46 ; rxFreq: 214.8494 ; elev: 59.3 ; source: m87
+rx: E2HUI ; tsys: 352.43 ; tau: 0.44 ; pwv mm: 7.1 ; trx: 75.1 ; time: 2018-04-21 00:09:46 ; rxFreq: 227.3500 ; elev: 59.3 ; source: m87
+rx: E2VLI ; tsys: 362.26 ; tau: 0.41 ; pwv mm: 7.0 ; trx: 91.5 ; time: 2018-04-21 00:09:46 ; rxFreq: 214.8494 ; elev: 59.3 ; source: m87
+rx: E2VUI ; tsys: 371.05 ; tau: 0.42 ; pwv mm: 6.8 ; trx: 90.9 ; time: 2018-04-21 00:09:46 ; rxFreq: 227.3500 ; elev: 59.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:09:46 ; rxFreq: -1.0000 ; elev: 59.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:09:46 ; rxFreq: -1.0000 ; elev: 59.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:09:46 ; rxFreq: -1.0000 ; elev: 59.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:09:46 ; rxFreq: -1.0000 ; elev: 59.3 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s5.xml
+rx: E2HLI ; tsys: 337.02 ; tau: 0.42 ; pwv mm: 7.1 ; trx: 73.4 ; time: 2018-04-21 00:17:43 ; rxFreq: 214.8494 ; elev: 58.2 ; source: m87
+rx: E2HUI ; tsys: 345.13 ; tau: 0.42 ; pwv mm: 6.8 ; trx: 74.9 ; time: 2018-04-21 00:17:43 ; rxFreq: 227.3500 ; elev: 58.2 ; source: m87
+rx: E2VLI ; tsys: 356.26 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 91.3 ; time: 2018-04-21 00:17:43 ; rxFreq: 214.8494 ; elev: 58.2 ; source: m87
+rx: E2VUI ; tsys: 363.58 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 90.5 ; time: 2018-04-21 00:17:43 ; rxFreq: 227.3500 ; elev: 58.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:17:43 ; rxFreq: -1.0000 ; elev: 58.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:17:43 ; rxFreq: -1.0000 ; elev: 58.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:17:43 ; rxFreq: -1.0000 ; elev: 58.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:17:43 ; rxFreq: -1.0000 ; elev: 58.2 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s8.xml
+rx: E2HLI ; tsys: 386.06 ; tau: 0.39 ; pwv mm: 6.7 ; trx: 73.4 ; time: 2018-04-21 00:25:45 ; rxFreq: 214.8497 ; elev: 44.0 ; source: 3c279
+rx: E2HUI ; tsys: 397.04 ; tau: 0.40 ; pwv mm: 6.5 ; trx: 75.0 ; time: 2018-04-21 00:25:45 ; rxFreq: 227.3500 ; elev: 44.0 ; source: 3c279
+rx: E2VLI ; tsys: 405.92 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 91.4 ; time: 2018-04-21 00:25:45 ; rxFreq: 214.8497 ; elev: 44.0 ; source: 3c279
+rx: E2VUI ; tsys: 415.07 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 90.8 ; time: 2018-04-21 00:25:45 ; rxFreq: 227.3500 ; elev: 44.0 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:25:45 ; rxFreq: -1.0000 ; elev: 44.0 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:25:45 ; rxFreq: -1.0000 ; elev: 44.0 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:25:45 ; rxFreq: -1.0000 ; elev: 44.0 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:25:45 ; rxFreq: -1.0000 ; elev: 44.0 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180421s13.xml
+rx: E2HLI ; tsys: 330.12 ; tau: 0.39 ; pwv mm: 6.7 ; trx: 73.3 ; time: 2018-04-21 00:35:23 ; rxFreq: 214.8494 ; elev: 55.6 ; source: m87
+rx: E2HUI ; tsys: 337.25 ; tau: 0.40 ; pwv mm: 6.5 ; trx: 74.8 ; time: 2018-04-21 00:35:23 ; rxFreq: 227.3500 ; elev: 55.6 ; source: m87
+rx: E2VLI ; tsys: 348.71 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 91.1 ; time: 2018-04-21 00:35:23 ; rxFreq: 214.8494 ; elev: 55.6 ; source: m87
+rx: E2VUI ; tsys: 355.84 ; tau: 0.39 ; pwv mm: 6.2 ; trx: 90.4 ; time: 2018-04-21 00:35:23 ; rxFreq: 227.3500 ; elev: 55.6 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:35:23 ; rxFreq: -1.0000 ; elev: 55.6 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:35:23 ; rxFreq: -1.0000 ; elev: 55.6 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:35:23 ; rxFreq: -1.0000 ; elev: 55.6 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:35:23 ; rxFreq: -1.0000 ; elev: 55.6 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s17.xml
+rx: E2HLI ; tsys: 335.87 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.2 ; time: 2018-04-21 00:45:21 ; rxFreq: 214.8494 ; elev: 54.0 ; source: m87
+rx: E2HUI ; tsys: 343.69 ; tau: 0.40 ; pwv mm: 6.5 ; trx: 74.8 ; time: 2018-04-21 00:45:21 ; rxFreq: 227.3500 ; elev: 54.0 ; source: m87
+rx: E2VLI ; tsys: 354.99 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 91.1 ; time: 2018-04-21 00:45:21 ; rxFreq: 214.8494 ; elev: 54.0 ; source: m87
+rx: E2VUI ; tsys: 362.12 ; tau: 0.39 ; pwv mm: 6.2 ; trx: 90.6 ; time: 2018-04-21 00:45:21 ; rxFreq: 227.3500 ; elev: 54.0 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:45:21 ; rxFreq: -1.0000 ; elev: 54.0 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:45:21 ; rxFreq: -1.0000 ; elev: 54.0 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:45:21 ; rxFreq: -1.0000 ; elev: 54.0 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:45:21 ; rxFreq: -1.0000 ; elev: 54.0 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s20.xml
+rx: E2HLI ; tsys: 391.99 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 73.3 ; time: 2018-04-21 00:54:24 ; rxFreq: 214.8497 ; elev: 41.1 ; source: 3c279
+rx: E2HUI ; tsys: 403.41 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 74.8 ; time: 2018-04-21 00:54:24 ; rxFreq: 227.3500 ; elev: 41.1 ; source: 3c279
+rx: E2VLI ; tsys: 411.70 ; tau: 0.37 ; pwv mm: 6.2 ; trx: 91.0 ; time: 2018-04-21 00:54:24 ; rxFreq: 214.8497 ; elev: 41.1 ; source: 3c279
+rx: E2VUI ; tsys: 421.38 ; tau: 0.38 ; pwv mm: 6.0 ; trx: 90.4 ; time: 2018-04-21 00:54:24 ; rxFreq: 227.3500 ; elev: 41.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:54:24 ; rxFreq: -1.0000 ; elev: 41.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:54:24 ; rxFreq: -1.0000 ; elev: 41.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:54:24 ; rxFreq: -1.0000 ; elev: 41.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 00:54:24 ; rxFreq: -1.0000 ; elev: 41.1 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180421s25.xml
+rx: E2HLI ; tsys: 338.63 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 73.1 ; time: 2018-04-21 01:04:32 ; rxFreq: 214.8494 ; elev: 50.8 ; source: m87
+rx: E2HUI ; tsys: 346.28 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 74.6 ; time: 2018-04-21 01:04:32 ; rxFreq: 227.3500 ; elev: 50.8 ; source: m87
+rx: E2VLI ; tsys: 358.01 ; tau: 0.37 ; pwv mm: 6.2 ; trx: 90.9 ; time: 2018-04-21 01:04:32 ; rxFreq: 214.8494 ; elev: 50.8 ; source: m87
+rx: E2VUI ; tsys: 364.59 ; tau: 0.38 ; pwv mm: 6.0 ; trx: 90.3 ; time: 2018-04-21 01:04:32 ; rxFreq: 227.3500 ; elev: 50.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:04:32 ; rxFreq: -1.0000 ; elev: 50.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:04:32 ; rxFreq: -1.0000 ; elev: 50.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:04:32 ; rxFreq: -1.0000 ; elev: 50.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:04:32 ; rxFreq: -1.0000 ; elev: 50.8 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s29.xml
+rx: E2HLI ; tsys: 331.71 ; tau: 0.36 ; pwv mm: 6.1 ; trx: 73.4 ; time: 2018-04-21 01:17:34 ; rxFreq: 214.8494 ; elev: 48.5 ; source: m87
+rx: E2HUI ; tsys: 338.34 ; tau: 0.37 ; pwv mm: 5.9 ; trx: 74.9 ; time: 2018-04-21 01:17:34 ; rxFreq: 227.3500 ; elev: 48.5 ; source: m87
+rx: E2VLI ; tsys: 350.72 ; tau: 0.34 ; pwv mm: 5.8 ; trx: 91.1 ; time: 2018-04-21 01:17:34 ; rxFreq: 214.8494 ; elev: 48.5 ; source: m87
+rx: E2VUI ; tsys: 356.89 ; tau: 0.35 ; pwv mm: 5.7 ; trx: 90.5 ; time: 2018-04-21 01:17:34 ; rxFreq: 227.3500 ; elev: 48.5 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:17:34 ; rxFreq: -1.0000 ; elev: 48.5 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:17:34 ; rxFreq: -1.0000 ; elev: 48.5 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:17:34 ; rxFreq: -1.0000 ; elev: 48.5 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:17:34 ; rxFreq: -1.0000 ; elev: 48.5 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s32.xml
+rx: E2HLI ; tsys: 385.15 ; tau: 0.34 ; pwv mm: 5.8 ; trx: 73.5 ; time: 2018-04-21 01:25:24 ; rxFreq: 214.8497 ; elev: 37.3 ; source: 3c279
+rx: E2HUI ; tsys: 395.10 ; tau: 0.35 ; pwv mm: 5.6 ; trx: 75.0 ; time: 2018-04-21 01:25:24 ; rxFreq: 227.3500 ; elev: 37.3 ; source: 3c279
+rx: E2VLI ; tsys: 404.71 ; tau: 0.33 ; pwv mm: 5.5 ; trx: 91.1 ; time: 2018-04-21 01:25:24 ; rxFreq: 214.8497 ; elev: 37.3 ; source: 3c279
+rx: E2VUI ; tsys: 412.30 ; tau: 0.34 ; pwv mm: 5.4 ; trx: 90.6 ; time: 2018-04-21 01:25:24 ; rxFreq: 227.3500 ; elev: 37.3 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:25:24 ; rxFreq: -1.0000 ; elev: 37.3 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:25:24 ; rxFreq: -1.0000 ; elev: 37.3 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:25:24 ; rxFreq: -1.0000 ; elev: 37.3 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:25:24 ; rxFreq: -1.0000 ; elev: 37.3 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180421s37.xml
+rx: E2HLI ; tsys: 345.69 ; tau: 0.36 ; pwv mm: 6.0 ; trx: 73.2 ; time: 2018-04-21 01:35:18 ; rxFreq: 214.8494 ; elev: 45.3 ; source: m87
+rx: E2HUI ; tsys: 353.21 ; tau: 0.36 ; pwv mm: 5.8 ; trx: 74.7 ; time: 2018-04-21 01:35:18 ; rxFreq: 227.3500 ; elev: 45.3 ; source: m87
+rx: E2VLI ; tsys: 364.99 ; tau: 0.34 ; pwv mm: 5.8 ; trx: 91.0 ; time: 2018-04-21 01:35:18 ; rxFreq: 214.8494 ; elev: 45.3 ; source: m87
+rx: E2VUI ; tsys: 372.33 ; tau: 0.35 ; pwv mm: 5.7 ; trx: 90.3 ; time: 2018-04-21 01:35:18 ; rxFreq: 227.3500 ; elev: 45.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:35:18 ; rxFreq: -1.0000 ; elev: 45.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:35:18 ; rxFreq: -1.0000 ; elev: 45.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:35:18 ; rxFreq: -1.0000 ; elev: 45.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:35:18 ; rxFreq: -1.0000 ; elev: 45.3 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s41.xml
+rx: E2HLI ; tsys: 351.37 ; tau: 0.35 ; pwv mm: 5.9 ; trx: 73.5 ; time: 2018-04-21 01:45:31 ; rxFreq: 214.8494 ; elev: 43.4 ; source: m87
+rx: E2HUI ; tsys: 358.74 ; tau: 0.36 ; pwv mm: 5.7 ; trx: 75.0 ; time: 2018-04-21 01:45:31 ; rxFreq: 227.3500 ; elev: 43.4 ; source: m87
+rx: E2VLI ; tsys: 369.75 ; tau: 0.34 ; pwv mm: 5.7 ; trx: 91.1 ; time: 2018-04-21 01:45:31 ; rxFreq: 214.8494 ; elev: 43.4 ; source: m87
+rx: E2VUI ; tsys: 376.75 ; tau: 0.35 ; pwv mm: 5.5 ; trx: 90.5 ; time: 2018-04-21 01:45:31 ; rxFreq: 227.3500 ; elev: 43.4 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:45:31 ; rxFreq: -1.0000 ; elev: 43.4 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:45:31 ; rxFreq: -1.0000 ; elev: 43.4 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:45:31 ; rxFreq: -1.0000 ; elev: 43.4 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 01:45:31 ; rxFreq: -1.0000 ; elev: 43.4 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s47.xml
+rx: E2HLI ; tsys: 393.60 ; tau: 0.37 ; pwv mm: 6.3 ; trx: 73.5 ; time: 2018-04-21 02:04:30 ; rxFreq: 214.8494 ; elev: 39.8 ; source: m87
+rx: E2HUI ; tsys: 404.63 ; tau: 0.38 ; pwv mm: 6.1 ; trx: 75.0 ; time: 2018-04-21 02:04:30 ; rxFreq: 227.3500 ; elev: 39.8 ; source: m87
+rx: E2VLI ; tsys: 413.60 ; tau: 0.36 ; pwv mm: 6.0 ; trx: 91.0 ; time: 2018-04-21 02:04:30 ; rxFreq: 214.8494 ; elev: 39.8 ; source: m87
+rx: E2VUI ; tsys: 423.72 ; tau: 0.37 ; pwv mm: 5.9 ; trx: 90.5 ; time: 2018-04-21 02:04:30 ; rxFreq: 227.3500 ; elev: 39.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:04:30 ; rxFreq: -1.0000 ; elev: 39.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:04:30 ; rxFreq: -1.0000 ; elev: 39.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:04:30 ; rxFreq: -1.0000 ; elev: 39.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:04:30 ; rxFreq: -1.0000 ; elev: 39.8 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s51.xml
+rx: E2HLI ; tsys: 440.72 ; tau: 0.39 ; pwv mm: 6.7 ; trx: 73.8 ; time: 2018-04-21 02:17:29 ; rxFreq: 214.8494 ; elev: 37.3 ; source: m87
+rx: E2HUI ; tsys: 455.09 ; tau: 0.40 ; pwv mm: 6.5 ; trx: 75.2 ; time: 2018-04-21 02:17:29 ; rxFreq: 227.3500 ; elev: 37.3 ; source: m87
+rx: E2VLI ; tsys: 461.75 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 91.1 ; time: 2018-04-21 02:17:29 ; rxFreq: 214.8494 ; elev: 37.3 ; source: m87
+rx: E2VUI ; tsys: 473.79 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 90.5 ; time: 2018-04-21 02:17:29 ; rxFreq: 227.3500 ; elev: 37.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:17:29 ; rxFreq: -1.0000 ; elev: 37.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:17:29 ; rxFreq: -1.0000 ; elev: 37.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:17:29 ; rxFreq: -1.0000 ; elev: 37.3 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:17:29 ; rxFreq: -1.0000 ; elev: 37.3 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s54.xml
+rx: E2HLI ; tsys: 551.30 ; tau: 0.38 ; pwv mm: 6.3 ; trx: 73.9 ; time: 2018-04-21 02:25:18 ; rxFreq: 214.8497 ; elev: 28.2 ; source: 3c279
+rx: E2HUI ; tsys: 575.36 ; tau: 0.39 ; pwv mm: 6.2 ; trx: 75.3 ; time: 2018-04-21 02:25:18 ; rxFreq: 227.3500 ; elev: 28.2 ; source: 3c279
+rx: E2VLI ; tsys: 574.54 ; tau: 0.36 ; pwv mm: 6.1 ; trx: 91.2 ; time: 2018-04-21 02:25:18 ; rxFreq: 214.8497 ; elev: 28.2 ; source: 3c279
+rx: E2VUI ; tsys: 593.88 ; tau: 0.38 ; pwv mm: 6.0 ; trx: 90.7 ; time: 2018-04-21 02:25:18 ; rxFreq: 227.3500 ; elev: 28.2 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:25:18 ; rxFreq: -1.0000 ; elev: 28.2 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:25:18 ; rxFreq: -1.0000 ; elev: 28.2 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:25:18 ; rxFreq: -1.0000 ; elev: 28.2 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:25:18 ; rxFreq: -1.0000 ; elev: 28.2 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180421s59.xml
+rx: E2HLI ; tsys: 457.64 ; tau: 0.37 ; pwv mm: 6.3 ; trx: 73.9 ; time: 2018-04-21 02:35:14 ; rxFreq: 214.8494 ; elev: 33.9 ; source: m87
+rx: E2HUI ; tsys: 473.66 ; tau: 0.38 ; pwv mm: 6.2 ; trx: 75.4 ; time: 2018-04-21 02:35:14 ; rxFreq: 227.3500 ; elev: 33.9 ; source: m87
+rx: E2VLI ; tsys: 478.56 ; tau: 0.36 ; pwv mm: 6.1 ; trx: 91.2 ; time: 2018-04-21 02:35:14 ; rxFreq: 214.8494 ; elev: 33.9 ; source: m87
+rx: E2VUI ; tsys: 492.31 ; tau: 0.37 ; pwv mm: 6.0 ; trx: 90.7 ; time: 2018-04-21 02:35:14 ; rxFreq: 227.3500 ; elev: 33.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:35:14 ; rxFreq: -1.0000 ; elev: 33.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:35:14 ; rxFreq: -1.0000 ; elev: 33.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:35:14 ; rxFreq: -1.0000 ; elev: 33.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:35:14 ; rxFreq: -1.0000 ; elev: 33.9 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s63.xml
+rx: E2HLI ; tsys: 499.92 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 74.1 ; time: 2018-04-21 02:45:30 ; rxFreq: 214.8494 ; elev: 31.8 ; source: m87
+rx: E2HUI ; tsys: 519.08 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 75.6 ; time: 2018-04-21 02:45:30 ; rxFreq: 227.3500 ; elev: 31.8 ; source: m87
+rx: E2VLI ; tsys: 522.18 ; tau: 0.37 ; pwv mm: 6.3 ; trx: 91.4 ; time: 2018-04-21 02:45:30 ; rxFreq: 214.8494 ; elev: 31.8 ; source: m87
+rx: E2VUI ; tsys: 538.09 ; tau: 0.38 ; pwv mm: 6.2 ; trx: 90.9 ; time: 2018-04-21 02:45:30 ; rxFreq: 227.3500 ; elev: 31.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:45:30 ; rxFreq: -1.0000 ; elev: 31.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:45:30 ; rxFreq: -1.0000 ; elev: 31.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:45:30 ; rxFreq: -1.0000 ; elev: 31.8 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:45:30 ; rxFreq: -1.0000 ; elev: 31.8 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s66.xml
+rx: E2HLI ; tsys: 691.79 ; tau: 0.37 ; pwv mm: 6.3 ; trx: 74.5 ; time: 2018-04-21 02:54:32 ; rxFreq: 214.8497 ; elev: 23.1 ; source: 3c279
+rx: E2HUI ; tsys: 727.68 ; tau: 0.39 ; pwv mm: 6.2 ; trx: 75.9 ; time: 2018-04-21 02:54:32 ; rxFreq: 227.3500 ; elev: 23.1 ; source: 3c279
+rx: E2VLI ; tsys: 716.50 ; tau: 0.36 ; pwv mm: 6.2 ; trx: 91.7 ; time: 2018-04-21 02:54:32 ; rxFreq: 214.8497 ; elev: 23.1 ; source: 3c279
+rx: E2VUI ; tsys: 739.62 ; tau: 0.37 ; pwv mm: 6.0 ; trx: 91.4 ; time: 2018-04-21 02:54:32 ; rxFreq: 227.3500 ; elev: 23.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:54:32 ; rxFreq: -1.0000 ; elev: 23.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:54:32 ; rxFreq: -1.0000 ; elev: 23.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:54:32 ; rxFreq: -1.0000 ; elev: 23.1 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 02:54:32 ; rxFreq: -1.0000 ; elev: 23.1 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180421s71.xml
+rx: E2HLI ; tsys: 558.37 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 74.6 ; time: 2018-04-21 03:04:13 ; rxFreq: 214.8494 ; elev: 28.1 ; source: m87
+rx: E2HUI ; tsys: 582.84 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 76.0 ; time: 2018-04-21 03:04:13 ; rxFreq: 227.3500 ; elev: 28.1 ; source: m87
+rx: E2VLI ; tsys: 580.50 ; tau: 0.37 ; pwv mm: 6.2 ; trx: 91.7 ; time: 2018-04-21 03:04:13 ; rxFreq: 214.8494 ; elev: 28.1 ; source: m87
+rx: E2VUI ; tsys: 601.63 ; tau: 0.38 ; pwv mm: 6.1 ; trx: 91.2 ; time: 2018-04-21 03:04:13 ; rxFreq: 227.3500 ; elev: 28.1 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:04:13 ; rxFreq: -1.0000 ; elev: 28.1 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:04:13 ; rxFreq: -1.0000 ; elev: 28.1 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:04:13 ; rxFreq: -1.0000 ; elev: 28.1 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:04:13 ; rxFreq: -1.0000 ; elev: 28.1 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s75.xml
+rx: E2HLI ; tsys: 651.15 ; tau: 0.39 ; pwv mm: 6.6 ; trx: 74.8 ; time: 2018-04-21 03:17:25 ; rxFreq: 214.8494 ; elev: 25.5 ; source: m87
+rx: E2HUI ; tsys: 684.06 ; tau: 0.41 ; pwv mm: 6.5 ; trx: 76.1 ; time: 2018-04-21 03:17:25 ; rxFreq: 227.3500 ; elev: 25.5 ; source: m87
+rx: E2VLI ; tsys: 676.18 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 91.9 ; time: 2018-04-21 03:17:25 ; rxFreq: 214.8494 ; elev: 25.5 ; source: m87
+rx: E2VUI ; tsys: 703.41 ; tau: 0.39 ; pwv mm: 6.4 ; trx: 91.3 ; time: 2018-04-21 03:17:25 ; rxFreq: 227.3500 ; elev: 25.5 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:17:25 ; rxFreq: -1.0000 ; elev: 25.5 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:17:25 ; rxFreq: -1.0000 ; elev: 25.5 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:17:25 ; rxFreq: -1.0000 ; elev: 25.5 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:17:25 ; rxFreq: -1.0000 ; elev: 25.5 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s78.xml
+rx: E2HLI ; tsys: 1019.27 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 74.8 ; time: 2018-04-21 03:25:23 ; rxFreq: 214.8497 ; elev: 17.5 ; source: 3c279
+rx: E2HUI ; tsys: 1096.40 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 76.2 ; time: 2018-04-21 03:25:23 ; rxFreq: 227.3500 ; elev: 17.5 ; source: 3c279
+rx: E2VLI ; tsys: 1049.23 ; tau: 0.37 ; pwv mm: 6.2 ; trx: 91.9 ; time: 2018-04-21 03:25:23 ; rxFreq: 214.8497 ; elev: 17.5 ; source: 3c279
+rx: E2VUI ; tsys: 1104.97 ; tau: 0.38 ; pwv mm: 6.1 ; trx: 91.6 ; time: 2018-04-21 03:25:23 ; rxFreq: 227.3500 ; elev: 17.5 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:25:23 ; rxFreq: -1.0000 ; elev: 17.5 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:25:23 ; rxFreq: -1.0000 ; elev: 17.5 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:25:23 ; rxFreq: -1.0000 ; elev: 17.5 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:25:23 ; rxFreq: -1.0000 ; elev: 17.5 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180421s83.xml
+rx: E2HLI ; tsys: 757.90 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 74.8 ; time: 2018-04-21 03:35:20 ; rxFreq: 214.8494 ; elev: 21.9 ; source: m87
+rx: E2HUI ; tsys: 801.48 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 76.3 ; time: 2018-04-21 03:35:20 ; rxFreq: 227.3500 ; elev: 21.9 ; source: m87
+rx: E2VLI ; tsys: 784.29 ; tau: 0.37 ; pwv mm: 6.3 ; trx: 91.8 ; time: 2018-04-21 03:35:20 ; rxFreq: 214.8494 ; elev: 21.9 ; source: m87
+rx: E2VUI ; tsys: 820.57 ; tau: 0.39 ; pwv mm: 6.2 ; trx: 91.3 ; time: 2018-04-21 03:35:20 ; rxFreq: 227.3500 ; elev: 21.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:35:20 ; rxFreq: -1.0000 ; elev: 21.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:35:20 ; rxFreq: -1.0000 ; elev: 21.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:35:20 ; rxFreq: -1.0000 ; elev: 21.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:35:20 ; rxFreq: -1.0000 ; elev: 21.9 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s87.xml
+rx: E2HLI ; tsys: 895.46 ; tau: 0.39 ; pwv mm: 6.6 ; trx: 74.8 ; time: 2018-04-21 03:45:34 ; rxFreq: 214.8494 ; elev: 19.9 ; source: m87
+rx: E2HUI ; tsys: 957.55 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 76.2 ; time: 2018-04-21 03:45:34 ; rxFreq: 227.3500 ; elev: 19.9 ; source: m87
+rx: E2VLI ; tsys: 924.75 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 91.7 ; time: 2018-04-21 03:45:34 ; rxFreq: 214.8494 ; elev: 19.9 ; source: m87
+rx: E2VUI ; tsys: 973.62 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 91.3 ; time: 2018-04-21 03:45:34 ; rxFreq: 227.3500 ; elev: 19.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:45:34 ; rxFreq: -1.0000 ; elev: 19.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:45:34 ; rxFreq: -1.0000 ; elev: 19.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:45:34 ; rxFreq: -1.0000 ; elev: 19.9 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:45:34 ; rxFreq: -1.0000 ; elev: 19.9 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s90.xml
+rx: E2HLI ; tsys: 2235.92 ; tau: 0.40 ; pwv mm: 6.8 ; trx: 74.7 ; time: 2018-04-21 03:54:50 ; rxFreq: 214.8497 ; elev: 12.0 ; source: 3c279
+rx: E2HUI ; tsys: 2582.07 ; tau: 0.43 ; pwv mm: 6.9 ; trx: 76.2 ; time: 2018-04-21 03:54:50 ; rxFreq: 227.3500 ; elev: 12.0 ; source: 3c279
+rx: E2VLI ; tsys: 2265.08 ; tau: 0.39 ; pwv mm: 6.7 ; trx: 91.7 ; time: 2018-04-21 03:54:50 ; rxFreq: 214.8497 ; elev: 12.0 ; source: 3c279
+rx: E2VUI ; tsys: 2498.76 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 91.1 ; time: 2018-04-21 03:54:50 ; rxFreq: 227.3500 ; elev: 12.0 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:54:50 ; rxFreq: -1.0000 ; elev: 12.0 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:54:50 ; rxFreq: -1.0000 ; elev: 12.0 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:54:50 ; rxFreq: -1.0000 ; elev: 12.0 ; source: 3c279
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 03:54:50 ; rxFreq: -1.0000 ; elev: 12.0 ; source: 3c279
+CAL info read from: ./iram30m-calibration-NBC-20180421s95.xml
+rx: E2HLI ; tsys: 1256.36 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 74.8 ; time: 2018-04-21 04:04:17 ; rxFreq: 214.8494 ; elev: 16.2 ; source: m87
+rx: E2HUI ; tsys: 1381.03 ; tau: 0.42 ; pwv mm: 6.7 ; trx: 76.3 ; time: 2018-04-21 04:04:17 ; rxFreq: 227.3500 ; elev: 16.2 ; source: m87
+rx: E2VLI ; tsys: 1283.82 ; tau: 0.39 ; pwv mm: 6.6 ; trx: 91.7 ; time: 2018-04-21 04:04:17 ; rxFreq: 214.8494 ; elev: 16.2 ; source: m87
+rx: E2VUI ; tsys: 1380.32 ; tau: 0.40 ; pwv mm: 6.5 ; trx: 91.1 ; time: 2018-04-21 04:04:17 ; rxFreq: 227.3500 ; elev: 16.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:04:17 ; rxFreq: -1.0000 ; elev: 16.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:04:17 ; rxFreq: -1.0000 ; elev: 16.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:04:17 ; rxFreq: -1.0000 ; elev: 16.2 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:04:17 ; rxFreq: -1.0000 ; elev: 16.2 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s98.xml
+rx: E2HLI ; tsys: 1416.39 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 74.9 ; time: 2018-04-21 04:09:51 ; rxFreq: 214.8494 ; elev: 15.0 ; source: m87
+rx: E2HUI ; tsys: 1570.18 ; tau: 0.42 ; pwv mm: 6.7 ; trx: 76.3 ; time: 2018-04-21 04:09:51 ; rxFreq: 227.3500 ; elev: 15.0 ; source: m87
+rx: E2VLI ; tsys: 1439.86 ; tau: 0.39 ; pwv mm: 6.5 ; trx: 92.0 ; time: 2018-04-21 04:09:51 ; rxFreq: 214.8494 ; elev: 15.0 ; source: m87
+rx: E2VUI ; tsys: 1562.60 ; tau: 0.40 ; pwv mm: 6.5 ; trx: 91.4 ; time: 2018-04-21 04:09:51 ; rxFreq: 227.3500 ; elev: 15.0 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:09:51 ; rxFreq: -1.0000 ; elev: 15.0 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:09:51 ; rxFreq: -1.0000 ; elev: 15.0 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:09:51 ; rxFreq: -1.0000 ; elev: 15.0 ; source: m87
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:09:51 ; rxFreq: -1.0000 ; elev: 15.0 ; source: m87
+CAL info read from: ./iram30m-calibration-NBC-20180421s102.xml
+rx: E2HLI ; tsys: 583.01 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 74.5 ; time: 2018-04-21 04:22:18 ; rxFreq: 214.8506 ; elev: 27.4 ; source: Mars
+rx: E2HUI ; tsys: 610.89 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 76.0 ; time: 2018-04-21 04:22:18 ; rxFreq: 227.3500 ; elev: 27.4 ; source: Mars
+rx: E2VLI ; tsys: 606.51 ; tau: 0.37 ; pwv mm: 6.3 ; trx: 91.4 ; time: 2018-04-21 04:22:18 ; rxFreq: 214.8506 ; elev: 27.4 ; source: Mars
+rx: E2VUI ; tsys: 631.72 ; tau: 0.39 ; pwv mm: 6.2 ; trx: 90.8 ; time: 2018-04-21 04:22:18 ; rxFreq: 227.3500 ; elev: 27.4 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:22:18 ; rxFreq: -1.0000 ; elev: 27.4 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:22:18 ; rxFreq: -1.0000 ; elev: 27.4 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:22:18 ; rxFreq: -1.0000 ; elev: 27.4 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:22:18 ; rxFreq: -1.0000 ; elev: 27.4 ; source: Mars
+CAL info read from: ./iram30m-calibration-NBC-20180421s107.xml
+rx: E2HLI ; tsys: 622.64 ; tau: 0.41 ; pwv mm: 7.0 ; trx: 74.1 ; time: 2018-04-21 04:30:30 ; rxFreq: 214.8506 ; elev: 27.9 ; source: Mars
+rx: E2HUI ; tsys: 654.44 ; tau: 0.43 ; pwv mm: 6.9 ; trx: 75.5 ; time: 2018-04-21 04:30:30 ; rxFreq: 227.3500 ; elev: 27.9 ; source: Mars
+rx: E2VLI ; tsys: 645.22 ; tau: 0.40 ; pwv mm: 6.8 ; trx: 90.9 ; time: 2018-04-21 04:30:30 ; rxFreq: 214.8506 ; elev: 27.9 ; source: Mars
+rx: E2VUI ; tsys: 673.10 ; tau: 0.42 ; pwv mm: 6.7 ; trx: 90.2 ; time: 2018-04-21 04:30:30 ; rxFreq: 227.3500 ; elev: 27.9 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:30:30 ; rxFreq: -1.0000 ; elev: 27.9 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:30:30 ; rxFreq: -1.0000 ; elev: 27.9 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:30:30 ; rxFreq: -1.0000 ; elev: 27.9 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:30:30 ; rxFreq: -1.0000 ; elev: 27.9 ; source: Mars
+CAL info read from: ./iram30m-calibration-NBC-20180421s111.xml
+rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:37:24 ; rxFreq: -1.0000 ; elev: 28.3 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:37:24 ; rxFreq: -1.0000 ; elev: 28.3 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:37:24 ; rxFreq: -1.0000 ; elev: 28.3 ; source: Mars
+rx: Not_tuned ; tsys: -1.00 ; tau: -1.00 ; pwv mm: -1.0 ; trx: -1.0 ; time: 2018-04-21 04:37:24 ; rxFreq: -1.0000 ; elev: 28.3 ; source: Mars

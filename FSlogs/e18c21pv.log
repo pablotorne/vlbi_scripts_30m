@@ -1,0 +1,1420 @@
+2018.110.21:18:07.01;Log Opened: Mark IV Field System Version 9.11.18
+2018.110.21:18:07.01;location,PICOVEL ,3.39,37.07,2920.0
+2018.110.21:18:07.01;horizon1,0.,10.,360.
+2018.110.21:18:07.01;antenna,30.0,30.0,30.0,60.0,460.0,3.0,88.0,azel
+2018.110.21:18:07.01;equip,dbbc_pfb/fila10g,none,none,none,500.10,3,a/d,101,60,20,none,40,1,in,8bit,cdp,3,return,v105_1,v16_1,1,1,15000,15000,0,vsi2
+2018.110.21:18:07.01;time,-5.411,5.545,rate
+2018.110.21:18:07.01;flagr,200
+2018.110.21:18:07.01:" e18c21    2018 PICOVEL  B Pv
+2018.110.21:18:07.01:" B PICOVEL  AZEL  .0000  30.0   10 -999.9  999.9  30.0   10 -999.9  999.9   .0 Pv
+2018.110.21:18:07.01:" Pv PICOVEL   5088967.74544  -301681.18586  3825012.20561
+2018.110.21:18:07.01:"      PICOVEL     0     8820
+2018.110.21:18:07.01:" drudg version 2016Nov29 compiled under FS  9.11.18
+2018.110.21:18:07.01:" Rack=DBBC_PFB  Recorder 1=none      Recorder 2=none
+2018.110.21:18:07.01:exper_initi
+2018.110.21:18:07.01?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.21:18:07.01:scan_name=no0001,e18c21,pv,300,300
+2018.110.21:18:07.02:source=oj287,085448.87,200630.6,2000.0,
+2018.110.21:18:07.03#antcn#>>SM NONE oj287  8h54m48.9s  20d06'31" 4cm 0 0 2000FS9
+2018.110.21:18:07.03:setup01
+2018.110.21:18:07.03#flagr#flagr/antenna,new-source
+2018.110.21:18:07.03?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.21:18:07.03:!2018.110.22:37:50
+2018.110.22:37:50.00:preob
+2018.110.22:37:50.00&preob/"- - - - preob - - - -
+2018.110.22:37:50.00&preob/dbbcifread
+2018.110.22:37:50.00$preob/"- - - - preob - - - -
+2018.110.22:37:50.00$preob/dbbcifread
+2018.110.22:37:50.00&dbbcifread/"- - - - dbbcifread - - - -
+2018.110.22:37:50.00&dbbcifread/dbbc=dbbcifa
+2018.110.22:37:50.00&dbbcifread/dbbc=dbbcifb
+2018.110.22:37:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.22:37:50.00$dbbcifread/dbbc=dbbcifa
+2018.110.22:37:53.00?ERROR un  113 No route to host
+2018.110.22:37:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:37:53.00$dbbcifread/dbbc=dbbcifb
+2018.110.22:37:56.01?ERROR un  113 No route to host
+2018.110.22:37:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:37:56.01:!2018.110.22:38:00
+2018.110.22:38:00.00:data_valid=on
+2018.110.22:38:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.22:38:00.00:midob
+2018.110.22:38:00.00&midob/"- - - - midob - - - -
+2018.110.22:38:00.00&midob/onsource
+2018.110.22:38:00.00&midob/pvwget
+2018.110.22:38:00.00&midob/getcal3mm
+2018.110.22:38:00.00&midob/dbbcifread
+2018.110.22:38:00.00$midob/"- - - - midob - - - -
+2018.110.22:38:00.00$midob/onsource
+2018.110.22:38:00.00/onsource/TRACKING
+2018.110.22:38:00.00$midob/pvwget
+2018.110.22:38:00.00&pvwget/"- - - - pvwget - - - -
+2018.110.22:38:00.00&pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.22:38:00.00&pvwget/!+2s
+2018.110.22:38:00.00&pvwget/wx
+2018.110.22:38:00.00$pvwget/"- - - - pvwget - - - -
+2018.110.22:38:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.22:38:00.00#flagr#flagr/antenna,acquired
+2018.110.22:38:00.01$pvwget/!+2s
+2018.110.22:38:02.02$pvwget/wx
+2018.110.22:38:02.02/wx/  4.1,  723.5, 55.2
+2018.110.22:38:02.02$midob/getcal3mm
+2018.110.22:38:02.02&getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.22:38:02.02&getcal3mm/!+2s
+2018.110.22:38:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.22:38:12.84#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.110.22:38:12.84#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.110.22:38:12.84$getcal3mm/!+2s
+2018.110.22:38:14.85$midob/dbbcifread
+2018.110.22:38:14.85$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.22:38:14.85$dbbcifread/dbbc=dbbcifa
+2018.110.22:38:17.85?ERROR un  113 No route to host
+2018.110.22:38:17.85?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:38:17.85$dbbcifread/dbbc=dbbcifb
+2018.110.22:38:20.85?ERROR un  113 No route to host
+2018.110.22:38:20.85?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:38:20.85:!2018.110.22:43:00
+2018.110.22:43:00.00:data_valid=off
+2018.110.22:43:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.22:43:00.00:postob
+2018.110.22:43:00.00&postob/"- - - - postob - - - -
+2018.110.22:43:00.00&postob/dbbcifread
+2018.110.22:43:00.00&postob/mk5=rtime?;
+2018.110.22:43:00.00&postob/!+1s
+2018.110.22:43:00.00&postob/mk5=scan_check?;
+2018.110.22:43:00.00&postob/!+1s
+2018.110.22:43:00.00&postob/mk5=dir_info?;
+2018.110.22:43:00.00&postob/!+1s
+2018.110.22:43:00.00&postob/mk5=bank_set?;
+2018.110.22:43:00.00&postob/!+1s
+2018.110.22:43:00.00&postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.22:43:00.00&postob/!+5s
+2018.110.22:43:00.00&postob/wx
+2018.110.22:43:00.00$postob/"- - - - postob - - - -
+2018.110.22:43:00.00$postob/dbbcifread
+2018.110.22:43:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.22:43:00.01$dbbcifread/dbbc=dbbcifa
+2018.110.22:43:03.01?ERROR un  113 No route to host
+2018.110.22:43:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:43:03.01$dbbcifread/dbbc=dbbcifb
+2018.110.22:43:06.01?ERROR un  113 No route to host
+2018.110.22:43:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:43:06.01$postob/mk5=rtime?;
+2018.110.22:43:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.22:43:06.01$postob/!+1s
+2018.110.22:43:07.02$postob/mk5=scan_check?;
+2018.110.22:43:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.22:43:07.03$postob/!+1s
+2018.110.22:43:08.04$postob/mk5=dir_info?;
+2018.110.22:43:08.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.22:43:08.04$postob/!+1s
+2018.110.22:43:09.05$postob/mk5=bank_set?;
+2018.110.22:43:09.05?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.22:43:09.05$postob/!+1s
+2018.110.22:43:10.06$postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.22:43:11.72$postob/!+5s
+2018.110.22:43:16.73$postob/wx
+2018.110.22:43:16.73/wx/  4.1,  723.5, 55.2
+2018.110.22:43:16.73:scan_name=no0002,e18c21,pv,300,300
+2018.110.22:43:16.73:source=oj287,085448.87,200630.6,2000.0,
+2018.110.22:43:16.73#antcn#>>SM NONE oj287  8h54m48.9s  20d06'31" 4cm 0 0 2000FS9
+2018.110.22:43:16.73#flagr#flagr/antenna,new-source
+2018.110.22:43:16.73:setup01
+2018.110.22:43:16.73?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.22:43:16.73:!2018.110.22:47:50
+2018.110.22:47:50.01:preob
+2018.110.22:47:50.01$preob/"- - - - preob - - - -
+2018.110.22:47:50.01$preob/dbbcifread
+2018.110.22:47:50.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.22:47:50.01$dbbcifread/dbbc=dbbcifa
+2018.110.22:47:53.01?ERROR un  113 No route to host
+2018.110.22:47:53.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:47:53.01$dbbcifread/dbbc=dbbcifb
+2018.110.22:47:56.01?ERROR un  113 No route to host
+2018.110.22:47:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:47:56.01:!2018.110.22:48:00
+2018.110.22:48:00.00:data_valid=on
+2018.110.22:48:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.22:48:00.00:midob
+2018.110.22:48:00.00$midob/"- - - - midob - - - -
+2018.110.22:48:00.00$midob/onsource
+2018.110.22:48:00.00/onsource/TRACKING
+2018.110.22:48:00.00$midob/pvwget
+2018.110.22:48:00.00$pvwget/"- - - - pvwget - - - -
+2018.110.22:48:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.22:48:00.00#flagr#flagr/antenna,acquired
+2018.110.22:48:00.01$pvwget/!+2s
+2018.110.22:48:02.02$pvwget/wx
+2018.110.22:48:02.02/wx/  3.9,  723.6, 57.2
+2018.110.22:48:02.02$midob/getcal3mm
+2018.110.22:48:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.22:48:12.83#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.110.22:48:12.83#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.110.22:48:12.84$getcal3mm/!+2s
+2018.110.22:48:14.85$midob/dbbcifread
+2018.110.22:48:14.85$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.22:48:14.85$dbbcifread/dbbc=dbbcifa
+2018.110.22:48:17.85?ERROR un  113 No route to host
+2018.110.22:48:17.85?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:48:17.85$dbbcifread/dbbc=dbbcifb
+2018.110.22:48:20.85?ERROR un  113 No route to host
+2018.110.22:48:20.85?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:48:20.85:!2018.110.22:53:00
+2018.110.22:53:00.00:data_valid=off
+2018.110.22:53:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.22:53:00.00:postob
+2018.110.22:53:00.00$postob/"- - - - postob - - - -
+2018.110.22:53:00.00$postob/dbbcifread
+2018.110.22:53:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.22:53:00.00$dbbcifread/dbbc=dbbcifa
+2018.110.22:53:03.00?ERROR un  113 No route to host
+2018.110.22:53:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:53:03.00$dbbcifread/dbbc=dbbcifb
+2018.110.22:53:06.01?ERROR un  113 No route to host
+2018.110.22:53:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.22:53:06.01$postob/mk5=rtime?;
+2018.110.22:53:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.22:53:06.01$postob/!+1s
+2018.110.22:53:07.02$postob/mk5=scan_check?;
+2018.110.22:53:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.22:53:07.02$postob/!+1s
+2018.110.22:53:08.03$postob/mk5=dir_info?;
+2018.110.22:53:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.22:53:08.03$postob/!+1s
+2018.110.22:53:09.04$postob/mk5=bank_set?;
+2018.110.22:53:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.22:53:09.04$postob/!+1s
+2018.110.22:53:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.22:53:11.66$postob/!+5s
+2018.110.22:53:16.67$postob/wx
+2018.110.22:53:16.67/wx/  3.9,  723.6, 57.2
+2018.110.22:53:16.67:scan_name=no0003,e18c21,pv,300,300
+2018.110.22:53:16.68:source=m87,123049.42,122328.0,2000.0,
+2018.110.22:53:16.68#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.110.22:53:16.68#flagr#flagr/antenna,new-source
+2018.110.22:53:16.68:setup01
+2018.110.22:53:16.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.22:53:16.68:!2018.110.23:02:50
+2018.110.23:02:50.00:preob
+2018.110.23:02:50.00$preob/"- - - - preob - - - -
+2018.110.23:02:50.00$preob/dbbcifread
+2018.110.23:02:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:02:50.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:02:53.00?ERROR un  113 No route to host
+2018.110.23:02:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:02:53.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:02:56.00?ERROR un  113 No route to host
+2018.110.23:02:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:02:56.00:!2018.110.23:03:00
+2018.110.23:03:00.00:data_valid=on
+2018.110.23:03:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:03:00.00:midob
+2018.110.23:03:00.01$midob/"- - - - midob - - - -
+2018.110.23:03:00.01$midob/onsource
+2018.110.23:03:00.01/onsource/TRACKING
+2018.110.23:03:00.01$midob/pvwget
+2018.110.23:03:00.01$pvwget/"- - - - pvwget - - - -
+2018.110.23:03:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.23:03:00.01#flagr#flagr/antenna,acquired
+2018.110.23:03:00.01$pvwget/!+2s
+2018.110.23:03:02.02$pvwget/wx
+2018.110.23:03:02.02/wx/  4.1,  723.7, 57.0
+2018.110.23:03:02.02$midob/getcal3mm
+2018.110.23:03:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.23:03:12.79#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:03:12.79#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:03:12.79$getcal3mm/!+2s
+2018.110.23:03:14.80$midob/dbbcifread
+2018.110.23:03:14.80$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:03:14.80$dbbcifread/dbbc=dbbcifa
+2018.110.23:03:17.80?ERROR un  113 No route to host
+2018.110.23:03:17.80?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:03:17.80$dbbcifread/dbbc=dbbcifb
+2018.110.23:03:20.80?ERROR un  113 No route to host
+2018.110.23:03:20.80?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:03:20.80:!2018.110.23:08:00
+2018.110.23:08:00.00:data_valid=off
+2018.110.23:08:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:08:00.00:postob
+2018.110.23:08:00.00$postob/"- - - - postob - - - -
+2018.110.23:08:00.00$postob/dbbcifread
+2018.110.23:08:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:08:00.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:08:03.00?ERROR un  113 No route to host
+2018.110.23:08:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:08:03.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:08:06.01?ERROR un  113 No route to host
+2018.110.23:08:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:08:06.01$postob/mk5=rtime?;
+2018.110.23:08:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:08:06.01$postob/!+1s
+2018.110.23:08:07.02$postob/mk5=scan_check?;
+2018.110.23:08:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:08:07.02$postob/!+1s
+2018.110.23:08:08.03$postob/mk5=dir_info?;
+2018.110.23:08:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:08:08.03$postob/!+1s
+2018.110.23:08:09.04$postob/mk5=bank_set?;
+2018.110.23:08:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:08:09.04$postob/!+1s
+2018.110.23:08:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.23:08:11.66$postob/!+5s
+2018.110.23:08:16.68$postob/wx
+2018.110.23:08:16.68/wx/  4.1,  723.7, 57.0
+2018.110.23:08:16.68:scan_name=no0004,e18c21,pv,300,300
+2018.110.23:08:16.68:source=m87,123049.42,122328.0,2000.0,
+2018.110.23:08:16.68#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.110.23:08:16.68#flagr#flagr/antenna,new-source
+2018.110.23:08:16.68:setup01
+2018.110.23:08:16.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.23:08:16.68:!2018.110.23:10:50
+2018.110.23:10:50.00:preob
+2018.110.23:10:50.00$preob/"- - - - preob - - - -
+2018.110.23:10:50.00$preob/dbbcifread
+2018.110.23:10:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:10:50.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:10:53.00?ERROR un  113 No route to host
+2018.110.23:10:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:10:53.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:10:56.00?ERROR un  113 No route to host
+2018.110.23:10:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:10:56.00:!2018.110.23:11:00
+2018.110.23:11:00.00:data_valid=on
+2018.110.23:11:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:11:00.00:midob
+2018.110.23:11:00.01$midob/"- - - - midob - - - -
+2018.110.23:11:00.01$midob/onsource
+2018.110.23:11:00.01/onsource/TRACKING
+2018.110.23:11:00.01$midob/pvwget
+2018.110.23:11:00.01$pvwget/"- - - - pvwget - - - -
+2018.110.23:11:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.23:11:00.01#flagr#flagr/antenna,acquired
+2018.110.23:11:00.01$pvwget/!+2s
+2018.110.23:11:02.02$pvwget/wx
+2018.110.23:11:02.02/wx/  3.8,  723.7, 59.8
+2018.110.23:11:02.02$midob/getcal3mm
+2018.110.23:11:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.23:11:12.87#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:11:12.87#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:11:12.88$getcal3mm/!+2s
+2018.110.23:11:14.89$midob/dbbcifread
+2018.110.23:11:14.89$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:11:14.89$dbbcifread/dbbc=dbbcifa
+2018.110.23:11:17.89?ERROR un  113 No route to host
+2018.110.23:11:17.89?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:11:17.89$dbbcifread/dbbc=dbbcifb
+2018.110.23:11:20.89?ERROR un  113 No route to host
+2018.110.23:11:20.89?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:11:20.89:!2018.110.23:16:00
+2018.110.23:16:00.00:data_valid=off
+2018.110.23:16:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:16:00.00:postob
+2018.110.23:16:00.00$postob/"- - - - postob - - - -
+2018.110.23:16:00.00$postob/dbbcifread
+2018.110.23:16:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:16:00.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:16:03.00?ERROR un  113 No route to host
+2018.110.23:16:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:16:03.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:16:06.01?ERROR un  113 No route to host
+2018.110.23:16:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:16:06.01$postob/mk5=rtime?;
+2018.110.23:16:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:16:06.01$postob/!+1s
+2018.110.23:16:07.02$postob/mk5=scan_check?;
+2018.110.23:16:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:16:07.02$postob/!+1s
+2018.110.23:16:08.03$postob/mk5=dir_info?;
+2018.110.23:16:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:16:08.03$postob/!+1s
+2018.110.23:16:09.04$postob/mk5=bank_set?;
+2018.110.23:16:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:16:09.04$postob/!+1s
+2018.110.23:16:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.23:16:11.66$postob/!+5s
+2018.110.23:16:16.68$postob/wx
+2018.110.23:16:16.68/wx/  3.8,  723.7, 59.8
+2018.110.23:16:16.68:scan_name=no0005,e18c21,pv,240,240
+2018.110.23:16:16.68:source=3c279,125611.17,-054721.5,2000.0,
+2018.110.23:16:16.68#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.110.23:16:16.68:setup01
+2018.110.23:16:16.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.23:16:16.68#flagr#flagr/antenna,new-source
+2018.110.23:16:16.68:!2018.110.23:21:50
+2018.110.23:21:50.00:preob
+2018.110.23:21:50.00$preob/"- - - - preob - - - -
+2018.110.23:21:50.00$preob/dbbcifread
+2018.110.23:21:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:21:50.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:21:53.00?ERROR un  113 No route to host
+2018.110.23:21:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:21:53.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:21:56.00?ERROR un  113 No route to host
+2018.110.23:21:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:21:56.00:!2018.110.23:22:00
+2018.110.23:22:00.00:data_valid=on
+2018.110.23:22:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:22:00.00:midob
+2018.110.23:22:00.01$midob/"- - - - midob - - - -
+2018.110.23:22:00.01$midob/onsource
+2018.110.23:22:00.01/onsource/TRACKING
+2018.110.23:22:00.01$midob/pvwget
+2018.110.23:22:00.01$pvwget/"- - - - pvwget - - - -
+2018.110.23:22:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.23:22:00.01#flagr#flagr/antenna,acquired
+2018.110.23:22:00.01$pvwget/!+2s
+2018.110.23:22:02.02$pvwget/wx
+2018.110.23:22:02.02/wx/  3.7,  723.7, 61.2
+2018.110.23:22:02.02$midob/getcal3mm
+2018.110.23:22:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.23:22:12.83#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:22:12.83#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:22:12.84$getcal3mm/!+2s
+2018.110.23:22:14.85$midob/dbbcifread
+2018.110.23:22:14.85$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:22:14.85$dbbcifread/dbbc=dbbcifa
+2018.110.23:22:17.85?ERROR un  113 No route to host
+2018.110.23:22:17.85?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:22:17.85$dbbcifread/dbbc=dbbcifb
+2018.110.23:22:20.85?ERROR un  113 No route to host
+2018.110.23:22:20.85?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:22:20.85:!2018.110.23:26:00
+2018.110.23:26:00.00:data_valid=off
+2018.110.23:26:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:26:00.00:postob
+2018.110.23:26:00.00$postob/"- - - - postob - - - -
+2018.110.23:26:00.00$postob/dbbcifread
+2018.110.23:26:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:26:00.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:26:03.00?ERROR un  113 No route to host
+2018.110.23:26:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:26:03.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:26:06.01?ERROR un  113 No route to host
+2018.110.23:26:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:26:06.01$postob/mk5=rtime?;
+2018.110.23:26:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:26:06.01$postob/!+1s
+2018.110.23:26:07.02$postob/mk5=scan_check?;
+2018.110.23:26:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:26:07.02$postob/!+1s
+2018.110.23:26:08.03$postob/mk5=dir_info?;
+2018.110.23:26:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:26:08.03$postob/!+1s
+2018.110.23:26:09.04$postob/mk5=bank_set?;
+2018.110.23:26:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:26:09.04$postob/!+1s
+2018.110.23:26:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.23:26:11.66$postob/!+5s
+2018.110.23:26:16.68$postob/wx
+2018.110.23:26:16.68/wx/  3.7,  723.7, 61.2
+2018.110.23:26:16.68:scan_name=no0006,e18c21,pv,300,300
+2018.110.23:26:16.68:source=m87,123049.42,122328.0,2000.0,
+2018.110.23:26:16.68#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.110.23:26:16.68#flagr#flagr/antenna,new-source
+2018.110.23:26:16.68:setup01
+2018.110.23:26:16.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.23:26:16.68:!2018.110.23:31:50
+2018.110.23:31:50.00:preob
+2018.110.23:31:50.00$preob/"- - - - preob - - - -
+2018.110.23:31:50.00$preob/dbbcifread
+2018.110.23:31:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:31:50.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:31:53.00?ERROR un  113 No route to host
+2018.110.23:31:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:31:53.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:31:56.00?ERROR un  113 No route to host
+2018.110.23:31:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:31:56.00:!2018.110.23:32:00
+2018.110.23:32:00.00:data_valid=on
+2018.110.23:32:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:32:00.00:midob
+2018.110.23:32:00.01$midob/"- - - - midob - - - -
+2018.110.23:32:00.01$midob/onsource
+2018.110.23:32:00.01/onsource/TRACKING
+2018.110.23:32:00.01$midob/pvwget
+2018.110.23:32:00.01$pvwget/"- - - - pvwget - - - -
+2018.110.23:32:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.23:32:00.01#flagr#flagr/antenna,acquired
+2018.110.23:32:00.01$pvwget/!+2s
+2018.110.23:32:02.02$pvwget/wx
+2018.110.23:32:02.02/wx/  3.9,  723.6, 57.9
+2018.110.23:32:02.02$midob/getcal3mm
+2018.110.23:32:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.23:32:12.77#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:32:12.77#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:32:12.77$getcal3mm/!+2s
+2018.110.23:32:14.78$midob/dbbcifread
+2018.110.23:32:14.78$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:32:14.78$dbbcifread/dbbc=dbbcifa
+2018.110.23:32:17.78?ERROR un  113 No route to host
+2018.110.23:32:17.78?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:32:17.78$dbbcifread/dbbc=dbbcifb
+2018.110.23:32:20.78?ERROR un  113 No route to host
+2018.110.23:32:20.78?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:32:20.78:!2018.110.23:37:00
+2018.110.23:37:00.00:data_valid=off
+2018.110.23:37:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:37:00.00:postob
+2018.110.23:37:00.00$postob/"- - - - postob - - - -
+2018.110.23:37:00.00$postob/dbbcifread
+2018.110.23:37:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:37:00.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:37:03.00?ERROR un  113 No route to host
+2018.110.23:37:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:37:03.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:37:06.01?ERROR un  113 No route to host
+2018.110.23:37:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:37:06.01$postob/mk5=rtime?;
+2018.110.23:37:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:37:06.01$postob/!+1s
+2018.110.23:37:07.02$postob/mk5=scan_check?;
+2018.110.23:37:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:37:07.02$postob/!+1s
+2018.110.23:37:08.03$postob/mk5=dir_info?;
+2018.110.23:37:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:37:08.03$postob/!+1s
+2018.110.23:37:09.04$postob/mk5=bank_set?;
+2018.110.23:37:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:37:09.04$postob/!+1s
+2018.110.23:37:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.23:37:11.66$postob/!+5s
+2018.110.23:37:16.67$postob/wx
+2018.110.23:37:16.67/wx/  3.9,  723.6, 57.9
+2018.110.23:37:16.67:scan_name=no0007,e18c21,pv,300,300
+2018.110.23:37:16.68:source=m87,123049.42,122328.0,2000.0,
+2018.110.23:37:16.68#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.110.23:37:16.68#flagr#flagr/antenna,new-source
+2018.110.23:37:16.68:setup01
+2018.110.23:37:16.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.23:37:16.68:!2018.110.23:39:50
+2018.110.23:39:50.00:preob
+2018.110.23:39:50.00$preob/"- - - - preob - - - -
+2018.110.23:39:50.00$preob/dbbcifread
+2018.110.23:39:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:39:50.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:39:53.00?ERROR un  113 No route to host
+2018.110.23:39:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:39:53.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:39:56.00?ERROR un  113 No route to host
+2018.110.23:39:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:39:56.00:!2018.110.23:40:00
+2018.110.23:40:00.00:data_valid=on
+2018.110.23:40:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:40:00.00:midob
+2018.110.23:40:00.01$midob/"- - - - midob - - - -
+2018.110.23:40:00.01$midob/onsource
+2018.110.23:40:00.01/onsource/TRACKING
+2018.110.23:40:00.01$midob/pvwget
+2018.110.23:40:00.01$pvwget/"- - - - pvwget - - - -
+2018.110.23:40:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.23:40:00.01#flagr#flagr/antenna,acquired
+2018.110.23:40:00.01$pvwget/!+2s
+2018.110.23:40:02.02$pvwget/wx
+2018.110.23:40:02.02/wx/  4.4,  723.7, 54.8
+2018.110.23:40:02.02$midob/getcal3mm
+2018.110.23:40:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.23:40:12.81#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:40:12.81#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:40:12.81$getcal3mm/!+2s
+2018.110.23:40:14.82$midob/dbbcifread
+2018.110.23:40:14.82$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:40:14.82$dbbcifread/dbbc=dbbcifa
+2018.110.23:40:17.82?ERROR un  113 No route to host
+2018.110.23:40:17.82?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:40:17.82$dbbcifread/dbbc=dbbcifb
+2018.110.23:40:20.82?ERROR un  113 No route to host
+2018.110.23:40:20.82?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:40:20.82:!2018.110.23:45:00
+2018.110.23:45:00.00:data_valid=off
+2018.110.23:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:45:00.00:postob
+2018.110.23:45:00.00$postob/"- - - - postob - - - -
+2018.110.23:45:00.00$postob/dbbcifread
+2018.110.23:45:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:45:00.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:45:03.00?ERROR un  113 No route to host
+2018.110.23:45:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:45:03.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:45:06.01?ERROR un  113 No route to host
+2018.110.23:45:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:45:06.01$postob/mk5=rtime?;
+2018.110.23:45:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:45:06.01$postob/!+1s
+2018.110.23:45:07.02$postob/mk5=scan_check?;
+2018.110.23:45:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:45:07.02$postob/!+1s
+2018.110.23:45:08.03$postob/mk5=dir_info?;
+2018.110.23:45:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:45:08.03$postob/!+1s
+2018.110.23:45:09.04$postob/mk5=bank_set?;
+2018.110.23:45:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:45:09.04$postob/!+1s
+2018.110.23:45:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.23:45:11.66$postob/!+5s
+2018.110.23:45:16.67$postob/wx
+2018.110.23:45:16.67/wx/  4.4,  723.7, 54.8
+2018.110.23:45:16.67:scan_name=no0008,e18c21,pv,240,240
+2018.110.23:45:16.68:source=3c279,125611.17,-054721.5,2000.0,
+2018.110.23:45:16.68#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.110.23:45:16.68#flagr#flagr/antenna,new-source
+2018.110.23:45:16.68:setup01
+2018.110.23:45:16.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.23:45:16.68:!2018.110.23:50:50
+2018.110.23:50:50.00:preob
+2018.110.23:50:50.00$preob/"- - - - preob - - - -
+2018.110.23:50:50.00$preob/dbbcifread
+2018.110.23:50:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:50:50.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:50:53.00?ERROR un  113 No route to host
+2018.110.23:50:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:50:53.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:50:56.00?ERROR un  113 No route to host
+2018.110.23:50:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:50:56.00:!2018.110.23:51:00
+2018.110.23:51:00.00:data_valid=on
+2018.110.23:51:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:51:00.00:midob
+2018.110.23:51:00.01$midob/"- - - - midob - - - -
+2018.110.23:51:00.01$midob/onsource
+2018.110.23:51:00.01/onsource/TRACKING
+2018.110.23:51:00.01$midob/pvwget
+2018.110.23:51:00.01$pvwget/"- - - - pvwget - - - -
+2018.110.23:51:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.110.23:51:00.01#flagr#flagr/antenna,acquired
+2018.110.23:51:00.01$pvwget/!+2s
+2018.110.23:51:02.02$pvwget/wx
+2018.110.23:51:02.02/wx/  4.8,  723.8, 51.8
+2018.110.23:51:02.02$midob/getcal3mm
+2018.110.23:51:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.110.23:51:12.87#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:51:12.87#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.110.23:51:12.88$getcal3mm/!+2s
+2018.110.23:51:14.89$midob/dbbcifread
+2018.110.23:51:14.89$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:51:14.89$dbbcifread/dbbc=dbbcifa
+2018.110.23:51:17.89?ERROR un  113 No route to host
+2018.110.23:51:17.89?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:51:17.89$dbbcifread/dbbc=dbbcifb
+2018.110.23:51:20.89?ERROR un  113 No route to host
+2018.110.23:51:20.89?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:51:20.89:!2018.110.23:55:00
+2018.110.23:55:00.00:data_valid=off
+2018.110.23:55:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.110.23:55:00.00:postob
+2018.110.23:55:00.00$postob/"- - - - postob - - - -
+2018.110.23:55:00.00$postob/dbbcifread
+2018.110.23:55:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.110.23:55:00.00$dbbcifread/dbbc=dbbcifa
+2018.110.23:55:03.00?ERROR un  113 No route to host
+2018.110.23:55:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:55:03.00$dbbcifread/dbbc=dbbcifb
+2018.110.23:55:06.01?ERROR un  113 No route to host
+2018.110.23:55:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.110.23:55:06.01$postob/mk5=rtime?;
+2018.110.23:55:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:55:06.01$postob/!+1s
+2018.110.23:55:07.02$postob/mk5=scan_check?;
+2018.110.23:55:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:55:07.02$postob/!+1s
+2018.110.23:55:08.03$postob/mk5=dir_info?;
+2018.110.23:55:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:55:08.03$postob/!+1s
+2018.110.23:55:09.04$postob/mk5=bank_set?;
+2018.110.23:55:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.110.23:55:09.04$postob/!+1s
+2018.110.23:55:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.110.23:55:11.66$postob/!+5s
+2018.110.23:55:16.67$postob/wx
+2018.110.23:55:16.67/wx/  4.8,  723.8, 51.8
+2018.110.23:55:16.67:scan_name=no0009,e18c21,pv,300,300
+2018.110.23:55:16.68:source=m87,123049.42,122328.0,2000.0,
+2018.110.23:55:16.68#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.110.23:55:16.68#flagr#flagr/antenna,new-source
+2018.110.23:55:16.68:setup01
+2018.110.23:55:16.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.110.23:55:16.68:!2018.111.00:03:50
+2018.111.00:03:50.00:preob
+2018.111.00:03:50.00$preob/"- - - - preob - - - -
+2018.111.00:03:50.00$preob/dbbcifread
+2018.111.00:03:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.111.00:03:50.00$dbbcifread/dbbc=dbbcifa
+2018.111.00:03:53.00?ERROR un  113 No route to host
+2018.111.00:03:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:03:53.00$dbbcifread/dbbc=dbbcifb
+2018.111.00:03:56.00?ERROR un  113 No route to host
+2018.111.00:03:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:03:56.00:!2018.111.00:04:00
+2018.111.00:04:00.00:data_valid=on
+2018.111.00:04:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:04:00.00:midob
+2018.111.00:04:00.01$midob/"- - - - midob - - - -
+2018.111.00:04:00.01$midob/onsource
+2018.111.00:04:00.01/onsource/TRACKING
+2018.111.00:04:00.01$midob/pvwget
+2018.111.00:04:00.01$pvwget/"- - - - pvwget - - - -
+2018.111.00:04:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.111.00:04:00.01#flagr#flagr/antenna,acquired
+2018.111.00:04:00.01$pvwget/!+2s
+2018.111.00:04:02.02$pvwget/wx
+2018.111.00:04:02.02/wx/  4.8,  723.7, 51.1
+2018.111.00:04:02.02$midob/getcal3mm
+2018.111.00:04:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.111.00:04:12.84#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.111.00:04:12.84#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.111.00:04:12.85$getcal3mm/!+2s
+2018.111.00:04:14.86$midob/dbbcifread
+2018.111.00:04:14.86$dbbcifread/"- - - - dbbcifread - - - -
+2018.111.00:04:14.86$dbbcifread/dbbc=dbbcifa
+2018.111.00:04:17.86?ERROR un  113 No route to host
+2018.111.00:04:17.86?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:04:17.86$dbbcifread/dbbc=dbbcifb
+2018.111.00:04:20.86?ERROR un  113 No route to host
+2018.111.00:04:20.86?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:04:20.86:!2018.111.00:09:00
+2018.111.00:09:00.00:data_valid=off
+2018.111.00:09:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:09:00.00:postob
+2018.111.00:09:00.00$postob/"- - - - postob - - - -
+2018.111.00:09:00.00$postob/dbbcifread
+2018.111.00:09:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.111.00:09:00.00$dbbcifread/dbbc=dbbcifa
+2018.111.00:09:03.00?ERROR un  113 No route to host
+2018.111.00:09:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:09:03.00$dbbcifread/dbbc=dbbcifb
+2018.111.00:09:06.01?ERROR un  113 No route to host
+2018.111.00:09:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:09:06.01$postob/mk5=rtime?;
+2018.111.00:09:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.111.00:09:06.01$postob/!+1s
+2018.111.00:09:07.02$postob/mk5=scan_check?;
+2018.111.00:09:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.111.00:09:07.02$postob/!+1s
+2018.111.00:09:08.03$postob/mk5=dir_info?;
+2018.111.00:09:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.111.00:09:08.03$postob/!+1s
+2018.111.00:09:09.04$postob/mk5=bank_set?;
+2018.111.00:09:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.111.00:09:09.04$postob/!+1s
+2018.111.00:09:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.111.00:09:11.66$postob/!+5s
+2018.111.00:09:16.67$postob/wx
+2018.111.00:09:16.67/wx/  4.8,  723.7, 51.1
+2018.111.00:09:16.67:scan_name=no0010,e18c21,pv,300,300
+2018.111.00:09:16.67:source=m87,123049.42,122328.0,2000.0,
+2018.111.00:09:16.67#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.00:09:16.67#flagr#flagr/antenna,new-source
+2018.111.00:09:16.67:setup01
+2018.111.00:09:16.67?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.00:09:16.67:!2018.111.00:11:50
+2018.111.00:11:50.00:preob
+2018.111.00:11:50.00$preob/"- - - - preob - - - -
+2018.111.00:11:50.00$preob/dbbcifread
+2018.111.00:11:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.111.00:11:50.00$dbbcifread/dbbc=dbbcifa
+2018.111.00:11:53.00?ERROR un  113 No route to host
+2018.111.00:11:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:11:53.00$dbbcifread/dbbc=dbbcifb
+2018.111.00:11:56.00?ERROR un  113 No route to host
+2018.111.00:11:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:11:56.00:!2018.111.00:12:00
+2018.111.00:12:00.00:data_valid=on
+2018.111.00:12:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:12:00.00:midob
+2018.111.00:12:00.01$midob/"- - - - midob - - - -
+2018.111.00:12:00.01$midob/onsource
+2018.111.00:12:00.01/onsource/TRACKING
+2018.111.00:12:00.01$midob/pvwget
+2018.111.00:12:00.01$pvwget/"- - - - pvwget - - - -
+2018.111.00:12:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.111.00:12:00.01#flagr#flagr/antenna,acquired
+2018.111.00:12:00.01$pvwget/!+2s
+2018.111.00:12:02.02$pvwget/wx
+2018.111.00:12:02.02/wx/  4.7,  723.5, 54.0
+2018.111.00:12:02.02$midob/getcal3mm
+2018.111.00:12:02.02$getcal3mm/sy=ssh -l hello mrt-lx3 getvlbicals3mm | /usr2/st/bin/antrxcal
+2018.111.00:12:12.88#     #rx: E0HLI ; tsys: 149.0 ; tau: 0.22 ; pwv mm: 9.8 ; trx: 70.3 ; time: 2018-04-17 06:36:49 ;
+2018.111.00:12:12.88#     #rx: E0VLI ; tsys: 128.8 ; tau: 0.22 ; pwv mm: 9.9 ; trx: 54.2 ; time: 2018-04-17 06:36:49 ;
+2018.111.00:12:12.88$getcal3mm/!+2s
+2018.111.00:12:14.89$midob/dbbcifread
+2018.111.00:12:14.89$dbbcifread/"- - - - dbbcifread - - - -
+2018.111.00:12:14.89$dbbcifread/dbbc=dbbcifa
+2018.111.00:12:17.89?ERROR un  113 No route to host
+2018.111.00:12:17.89?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:12:17.89$dbbcifread/dbbc=dbbcifb
+2018.111.00:12:20.89?ERROR un  113 No route to host
+2018.111.00:12:20.89?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.111.00:12:20.89:!2018.111.00:17:00
+2018.111.00:13:45.60;getcal1mm
+2018.111.00:13:45.60&getcal1mm/sy=ssh -l hello mrt-lx3 getvlbicals1mm | /usr2/st/bin/antrxcal
+2018.111.00:13:45.60&getcal1mm/!+2s
+2018.111.00:13:45.60$getcal1mm/sy=ssh -l hello mrt-lx3 getvlbicals1mm | /usr2/st/bin/antrxcal
+2018.111.00:13:52.34#     #rx: E2HLI ; tsys: 342.9 ; tau: 0.41 ; pwv mm: 7.3 ; trx: 73.6 ; time: 2018-04-21 00:09:34 ;
+2018.111.00:13:52.34#     #rx: E2HUI ; tsys: 352.4 ; tau: 0.41 ; pwv mm: 7.1 ; trx: 75.1 ; time: 2018-04-21 00:09:34 ;
+2018.111.00:13:52.34#     #rx: E2VLI ; tsys: 362.3 ; tau: 0.41 ; pwv mm: 7.0 ; trx: 91.5 ; time: 2018-04-21 00:09:34 ;
+2018.111.00:13:52.34#     #rx: E2VUI ; tsys: 371.1 ; tau: 0.41 ; pwv mm: 6.8 ; trx: 90.9 ; time: 2018-04-21 00:09:34 ;
+2018.111.00:13:52.34$getcal1mm/!+2s
+2018.111.00:17:00.00:data_valid=off
+2018.111.00:17:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:17:00.00:postob
+2018.111.00:17:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:17:00.00:scan_name=no0011,e18c21,pv,240,240
+2018.111.00:17:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.00:17:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.00:17:00.00#flagr#flagr/antenna,new-source
+2018.111.00:17:00.00:setup01
+2018.111.00:17:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.00:17:00.00:!2018.111.00:19:50
+2018.111.00:19:50.00:preob
+2018.111.00:19:50.00$preob/"- - - - preob - - - -
+2018.111.00:19:50.00$preob/dbbcifread
+2018.111.00:19:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:19:50.00:!2018.111.00:20:00
+2018.111.00:20:00.00:data_valid=on
+2018.111.00:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:20:00.00:midob
+2018.111.00:20:00.00$midob/"- - - - midob - - - -
+2018.111.00:20:00.00$midob/onsource
+2018.111.00:20:00.00#flagr#flagr/antenna,acquired
+2018.111.00:20:00.00/onsource/TRACKING
+2018.111.00:20:00.00$midob/pvwget
+2018.111.00:20:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:20:00.00:!2018.111.00:24:00
+2018.111.00:24:00.00:data_valid=off
+2018.111.00:24:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:24:00.00:postob
+2018.111.00:24:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:24:00.00:scan_name=no0012,e18c21,pv,240,240
+2018.111.00:24:00.00:source=3c279,125611.17,-054721.5,2000.0,
+2018.111.00:24:00.00#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.111.00:24:00.00#flagr#flagr/antenna,new-source
+2018.111.00:24:00.00:setup01
+2018.111.00:24:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.00:24:00.00:!2018.111.00:29:50
+2018.111.00:29:50.00:preob
+2018.111.00:29:50.00$preob/"- - - - preob - - - -
+2018.111.00:29:50.00$preob/dbbcifread
+2018.111.00:29:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:29:50.00:!2018.111.00:30:00
+2018.111.00:30:00.00:data_valid=on
+2018.111.00:30:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:30:00.00:midob
+2018.111.00:30:00.00$midob/"- - - - midob - - - -
+2018.111.00:30:00.00$midob/onsource
+2018.111.00:30:00.00/onsource/TRACKING
+2018.111.00:30:00.00$midob/pvwget
+2018.111.00:30:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:30:00.00:!2018.111.00:34:00
+2018.111.00:30:00.00#flagr#flagr/antenna,acquired
+2018.111.00:34:00.00:data_valid=off
+2018.111.00:34:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:34:00.00:postob
+2018.111.00:34:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:34:00.00:scan_name=no0013,e18c21,pv,300,300
+2018.111.00:34:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.00:34:00.01#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.00:34:00.01#flagr#flagr/antenna,new-source
+2018.111.00:34:00.01:setup01
+2018.111.00:34:00.01?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.00:34:00.01:!2018.111.00:39:50
+2018.111.00:39:50.00:preob
+2018.111.00:39:50.00$preob/"- - - - preob - - - -
+2018.111.00:39:50.00$preob/dbbcifread
+2018.111.00:39:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:39:50.00:!2018.111.00:40:00
+2018.111.00:40:00.00:data_valid=on
+2018.111.00:40:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:40:00.00:midob
+2018.111.00:40:00.00$midob/"- - - - midob - - - -
+2018.111.00:40:00.00$midob/onsource
+2018.111.00:40:00.00/onsource/TRACKING
+2018.111.00:40:00.00$midob/pvwget
+2018.111.00:40:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:40:00.00:!2018.111.00:45:00
+2018.111.00:40:00.00#flagr#flagr/antenna,acquired
+2018.111.00:45:00.00:data_valid=off
+2018.111.00:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:45:00.00:postob
+2018.111.00:45:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:45:00.00:scan_name=no0014,e18c21,pv,300,300
+2018.111.00:45:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.00:45:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.00:45:00.00#flagr#flagr/antenna,new-source
+2018.111.00:45:00.00:setup01
+2018.111.00:45:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.00:45:00.00:!2018.111.00:47:50
+2018.111.00:47:50.00:preob
+2018.111.00:47:50.00$preob/"- - - - preob - - - -
+2018.111.00:47:50.00$preob/dbbcifread
+2018.111.00:47:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:47:50.00:!2018.111.00:48:00
+2018.111.00:48:00.00:data_valid=on
+2018.111.00:48:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:48:00.00:midob
+2018.111.00:48:00.00$midob/"- - - - midob - - - -
+2018.111.00:48:00.00$midob/onsource
+2018.111.00:48:00.00/onsource/TRACKING
+2018.111.00:48:00.00$midob/pvwget
+2018.111.00:48:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:48:00.00:!2018.111.00:53:00
+2018.111.00:48:00.00#flagr#flagr/antenna,acquired
+2018.111.00:53:00.00:data_valid=off
+2018.111.00:53:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:53:00.00:postob
+2018.111.00:53:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:53:00.00:scan_name=no0015,e18c21,pv,240,240
+2018.111.00:53:00.00:source=3c279,125611.17,-054721.5,2000.0,
+2018.111.00:53:00.00#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.111.00:53:00.00#flagr#flagr/antenna,new-source
+2018.111.00:53:00.00:setup01
+2018.111.00:53:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.00:53:00.00:!2018.111.00:58:50
+2018.111.00:58:50.00:preob
+2018.111.00:58:50.00$preob/"- - - - preob - - - -
+2018.111.00:58:50.00$preob/dbbcifread
+2018.111.00:58:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:58:50.00:!2018.111.00:59:00
+2018.111.00:59:00.01:data_valid=on
+2018.111.00:59:00.01?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.00:59:00.01:midob
+2018.111.00:59:00.01$midob/"- - - - midob - - - -
+2018.111.00:59:00.01$midob/onsource
+2018.111.00:59:00.01/onsource/TRACKING
+2018.111.00:59:00.01#flagr#flagr/antenna,acquired
+2018.111.00:59:00.01$midob/pvwget
+2018.111.00:59:00.01?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.00:59:00.01:!2018.111.01:03:00
+2018.111.01:03:00.00:data_valid=off
+2018.111.01:03:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:03:00.00:postob
+2018.111.01:03:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:03:00.00:scan_name=no0016,e18c21,pv,300,300
+2018.111.01:03:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.01:03:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.01:03:00.00#flagr#flagr/antenna,new-source
+2018.111.01:03:00.00:setup01
+2018.111.01:03:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.01:03:00.00:!2018.111.01:11:50
+2018.111.01:11:50.00:preob
+2018.111.01:11:50.00$preob/"- - - - preob - - - -
+2018.111.01:11:50.00$preob/dbbcifread
+2018.111.01:11:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:11:50.00:!2018.111.01:12:00
+2018.111.01:12:00.00:data_valid=on
+2018.111.01:12:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:12:00.00:midob
+2018.111.01:12:00.00$midob/"- - - - midob - - - -
+2018.111.01:12:00.00$midob/onsource
+2018.111.01:12:00.00#flagr#flagr/antenna,acquired
+2018.111.01:12:00.00/onsource/TRACKING
+2018.111.01:12:00.00$midob/pvwget
+2018.111.01:12:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:12:00.00:!2018.111.01:17:00
+2018.111.01:17:00.00:data_valid=off
+2018.111.01:17:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:17:00.00:postob
+2018.111.01:17:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:17:00.00:scan_name=no0017,e18c21,pv,240,240
+2018.111.01:17:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.01:17:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.01:17:00.00#flagr#flagr/antenna,new-source
+2018.111.01:17:00.00:setup01
+2018.111.01:17:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.01:17:00.00:!2018.111.01:19:50
+2018.111.01:19:50.00:preob
+2018.111.01:19:50.00$preob/"- - - - preob - - - -
+2018.111.01:19:50.00$preob/dbbcifread
+2018.111.01:19:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:19:50.00:!2018.111.01:20:00
+2018.111.01:20:00.00:data_valid=on
+2018.111.01:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:20:00.00:midob
+2018.111.01:20:00.00$midob/"- - - - midob - - - -
+2018.111.01:20:00.00$midob/onsource
+2018.111.01:20:00.00/onsource/TRACKING
+2018.111.01:20:00.00#flagr#flagr/antenna,acquired
+2018.111.01:20:00.00$midob/pvwget
+2018.111.01:20:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:20:00.01:!2018.111.01:24:00
+2018.111.01:24:00.00:data_valid=off
+2018.111.01:24:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:24:00.00:postob
+2018.111.01:24:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:24:00.00:scan_name=no0018,e18c21,pv,240,240
+2018.111.01:24:00.00:source=3c279,125611.17,-054721.5,2000.0,
+2018.111.01:24:00.00#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.111.01:24:00.00#flagr#flagr/antenna,new-source
+2018.111.01:24:00.00:setup01
+2018.111.01:24:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.01:24:00.00:!2018.111.01:29:50
+2018.111.01:29:50.00:preob
+2018.111.01:29:50.00$preob/"- - - - preob - - - -
+2018.111.01:29:50.00$preob/dbbcifread
+2018.111.01:29:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:29:50.00:!2018.111.01:30:00
+2018.111.01:30:00.00:data_valid=on
+2018.111.01:30:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:30:00.00:midob
+2018.111.01:30:00.00$midob/"- - - - midob - - - -
+2018.111.01:30:00.00$midob/onsource
+2018.111.01:30:00.00/onsource/TRACKING
+2018.111.01:30:00.00$midob/pvwget
+2018.111.01:30:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:30:00.00:!2018.111.01:34:00
+2018.111.01:30:00.00#flagr#flagr/antenna,acquired
+2018.111.01:34:00.00:data_valid=off
+2018.111.01:34:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:34:00.00:postob
+2018.111.01:34:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:34:00.00:scan_name=no0019,e18c21,pv,300,300
+2018.111.01:34:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.01:34:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.01:34:00.00#flagr#flagr/antenna,new-source
+2018.111.01:34:00.00:setup01
+2018.111.01:34:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.01:34:00.00:!2018.111.01:39:50
+2018.111.01:39:50.00:preob
+2018.111.01:39:50.00$preob/"- - - - preob - - - -
+2018.111.01:39:50.00$preob/dbbcifread
+2018.111.01:39:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:39:50.00:!2018.111.01:40:00
+2018.111.01:40:00.00:data_valid=on
+2018.111.01:40:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:40:00.00:midob
+2018.111.01:40:00.00$midob/"- - - - midob - - - -
+2018.111.01:40:00.00$midob/onsource
+2018.111.01:40:00.00#flagr#flagr/antenna,acquired
+2018.111.01:40:00.00/onsource/TRACKING
+2018.111.01:40:00.00$midob/pvwget
+2018.111.01:40:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:40:00.00:!2018.111.01:45:00
+2018.111.01:45:00.00:data_valid=off
+2018.111.01:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:45:00.01:postob
+2018.111.01:45:00.01?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:45:00.01:scan_name=no0020,e18c21,pv,300,300
+2018.111.01:45:00.01:source=m87,123049.42,122328.0,2000.0,
+2018.111.01:45:00.01#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.01:45:00.01#flagr#flagr/antenna,new-source
+2018.111.01:45:00.01:setup01
+2018.111.01:45:00.01?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.01:45:00.01:!2018.111.01:47:50
+2018.111.01:47:50.00:preob
+2018.111.01:47:50.00$preob/"- - - - preob - - - -
+2018.111.01:47:50.00$preob/dbbcifread
+2018.111.01:47:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:47:50.00:!2018.111.01:48:00
+2018.111.01:48:00.00:data_valid=on
+2018.111.01:48:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:48:00.00:midob
+2018.111.01:48:00.00$midob/"- - - - midob - - - -
+2018.111.01:48:00.00$midob/onsource
+2018.111.01:48:00.00/onsource/TRACKING
+2018.111.01:48:00.00$midob/pvwget
+2018.111.01:48:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:48:00.00:!2018.111.01:53:00
+2018.111.01:48:00.00#flagr#flagr/antenna,acquired
+2018.111.01:53:00.00:data_valid=off
+2018.111.01:53:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:53:00.00:postob
+2018.111.01:53:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:53:00.00:scan_name=no0021,e18c21,pv,240,240
+2018.111.01:53:00.00:source=3c279,125611.17,-054721.5,2000.0,
+2018.111.01:53:00.00#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.111.01:53:00.00#flagr#flagr/antenna,new-source
+2018.111.01:53:00.00:setup01
+2018.111.01:53:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.01:53:00.00:!2018.111.01:58:50
+2018.111.01:58:50.00:preob
+2018.111.01:58:50.00$preob/"- - - - preob - - - -
+2018.111.01:58:50.00$preob/dbbcifread
+2018.111.01:58:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:58:50.00:!2018.111.01:59:00
+2018.111.01:59:00.00:data_valid=on
+2018.111.01:59:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.01:59:00.00:midob
+2018.111.01:59:00.00$midob/"- - - - midob - - - -
+2018.111.01:59:00.00$midob/onsource
+2018.111.01:59:00.00/onsource/TRACKING
+2018.111.01:59:00.00$midob/pvwget
+2018.111.01:59:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.01:59:00.00:!2018.111.02:03:00
+2018.111.01:59:00.00#flagr#flagr/antenna,acquired
+2018.111.02:03:00.00:data_valid=off
+2018.111.02:03:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:03:00.00:postob
+2018.111.02:03:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:03:00.00:scan_name=no0022,e18c21,pv,300,300
+2018.111.02:03:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.02:03:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.02:03:00.00#flagr#flagr/antenna,new-source
+2018.111.02:03:00.00:setup01
+2018.111.02:03:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.02:03:00.01:!2018.111.02:11:50
+2018.111.02:11:50.00:preob
+2018.111.02:11:50.00$preob/"- - - - preob - - - -
+2018.111.02:11:50.00$preob/dbbcifread
+2018.111.02:11:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:11:50.00:!2018.111.02:12:00
+2018.111.02:12:00.00:data_valid=on
+2018.111.02:12:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:12:00.00:midob
+2018.111.02:12:00.00$midob/"- - - - midob - - - -
+2018.111.02:12:00.00$midob/onsource
+2018.111.02:12:00.00/onsource/TRACKING
+2018.111.02:12:00.00$midob/pvwget
+2018.111.02:12:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:12:00.00:!2018.111.02:17:00
+2018.111.02:12:00.00#flagr#flagr/antenna,acquired
+2018.111.02:17:00.00:data_valid=off
+2018.111.02:17:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:17:00.00:postob
+2018.111.02:17:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:17:00.00:scan_name=no0023,e18c21,pv,240,240
+2018.111.02:17:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.02:17:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.02:17:00.00#flagr#flagr/antenna,new-source
+2018.111.02:17:00.00:setup01
+2018.111.02:17:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.02:17:00.00:!2018.111.02:19:50
+2018.111.02:19:50.00:preob
+2018.111.02:19:50.00$preob/"- - - - preob - - - -
+2018.111.02:19:50.00$preob/dbbcifread
+2018.111.02:19:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:19:50.00:!2018.111.02:20:00
+2018.111.02:20:00.00:data_valid=on
+2018.111.02:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:20:00.00:midob
+2018.111.02:20:00.00$midob/"- - - - midob - - - -
+2018.111.02:20:00.00$midob/onsource
+2018.111.02:20:00.00/onsource/TRACKING
+2018.111.02:20:00.00$midob/pvwget
+2018.111.02:20:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:20:00.00:!2018.111.02:24:00
+2018.111.02:20:00.00#flagr#flagr/antenna,acquired
+2018.111.02:24:00.00:data_valid=off
+2018.111.02:24:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:24:00.00:postob
+2018.111.02:24:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:24:00.00:scan_name=no0024,e18c21,pv,240,240
+2018.111.02:24:00.00:source=3c279,125611.17,-054721.5,2000.0,
+2018.111.02:24:00.00#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.111.02:24:00.00#flagr#flagr/antenna,new-source
+2018.111.02:24:00.00:setup01
+2018.111.02:24:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.02:24:00.00:!2018.111.02:29:50
+2018.111.02:29:50.00:preob
+2018.111.02:29:50.00$preob/"- - - - preob - - - -
+2018.111.02:29:50.00$preob/dbbcifread
+2018.111.02:29:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:29:50.00:!2018.111.02:30:00
+2018.111.02:30:00.00:data_valid=on
+2018.111.02:30:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:30:00.01:midob
+2018.111.02:30:00.01$midob/"- - - - midob - - - -
+2018.111.02:30:00.01$midob/onsource
+2018.111.02:30:00.01#flagr#flagr/antenna,acquired
+2018.111.02:30:00.01/onsource/TRACKING
+2018.111.02:30:00.01$midob/pvwget
+2018.111.02:30:00.01?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:30:00.01:!2018.111.02:34:00
+2018.111.02:34:00.00:data_valid=off
+2018.111.02:34:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:34:00.00:postob
+2018.111.02:34:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:34:00.00:scan_name=no0025,e18c21,pv,300,300
+2018.111.02:34:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.02:34:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.02:34:00.00#flagr#flagr/antenna,new-source
+2018.111.02:34:00.00:setup01
+2018.111.02:34:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.02:34:00.00:!2018.111.02:39:50
+2018.111.02:39:50.00:preob
+2018.111.02:39:50.00$preob/"- - - - preob - - - -
+2018.111.02:39:50.00$preob/dbbcifread
+2018.111.02:39:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:39:50.00:!2018.111.02:40:00
+2018.111.02:40:00.00:data_valid=on
+2018.111.02:40:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:40:00.00:midob
+2018.111.02:40:00.00$midob/"- - - - midob - - - -
+2018.111.02:40:00.00$midob/onsource
+2018.111.02:40:00.00/onsource/TRACKING
+2018.111.02:40:00.00$midob/pvwget
+2018.111.02:40:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:40:00.00:!2018.111.02:45:00
+2018.111.02:40:00.00#flagr#flagr/antenna,acquired
+2018.111.02:45:00.00:data_valid=off
+2018.111.02:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:45:00.00:postob
+2018.111.02:45:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:45:00.00:scan_name=no0026,e18c21,pv,300,300
+2018.111.02:45:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.02:45:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.02:45:00.00#flagr#flagr/antenna,new-source
+2018.111.02:45:00.00:setup01
+2018.111.02:45:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.02:45:00.00:!2018.111.02:47:50
+2018.111.02:47:50.00:preob
+2018.111.02:47:50.00$preob/"- - - - preob - - - -
+2018.111.02:47:50.00$preob/dbbcifread
+2018.111.02:47:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:47:50.00:!2018.111.02:48:00
+2018.111.02:48:00.00:data_valid=on
+2018.111.02:48:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:48:00.00:midob
+2018.111.02:48:00.00$midob/"- - - - midob - - - -
+2018.111.02:48:00.00$midob/onsource
+2018.111.02:48:00.00/onsource/TRACKING
+2018.111.02:48:00.00$midob/pvwget
+2018.111.02:48:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:48:00.00:!2018.111.02:53:00
+2018.111.02:48:00.00#flagr#flagr/antenna,acquired
+2018.111.02:53:00.00:data_valid=off
+2018.111.02:53:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:53:00.00:postob
+2018.111.02:53:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:53:00.00:scan_name=no0027,e18c21,pv,240,240
+2018.111.02:53:00.01:source=3c279,125611.17,-054721.5,2000.0,
+2018.111.02:53:00.01#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.111.02:53:00.01#flagr#flagr/antenna,new-source
+2018.111.02:53:00.01:setup01
+2018.111.02:53:00.01?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.02:53:00.01:!2018.111.02:58:50
+2018.111.02:58:50.00:preob
+2018.111.02:58:50.00$preob/"- - - - preob - - - -
+2018.111.02:58:50.00$preob/dbbcifread
+2018.111.02:58:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:58:50.00:!2018.111.02:59:00
+2018.111.02:59:00.00:data_valid=on
+2018.111.02:59:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.02:59:00.00:midob
+2018.111.02:59:00.00$midob/"- - - - midob - - - -
+2018.111.02:59:00.00$midob/onsource
+2018.111.02:59:00.00/onsource/TRACKING
+2018.111.02:59:00.00$midob/pvwget
+2018.111.02:59:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.02:59:00.00:!2018.111.03:03:00
+2018.111.02:59:00.00#flagr#flagr/antenna,acquired
+2018.111.03:03:00.00:data_valid=off
+2018.111.03:03:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:03:00.00:postob
+2018.111.03:03:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:03:00.00:scan_name=no0028,e18c21,pv,300,300
+2018.111.03:03:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.03:03:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.03:03:00.00#flagr#flagr/antenna,new-source
+2018.111.03:03:00.00:setup01
+2018.111.03:03:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.03:03:00.00:!2018.111.03:11:50
+2018.111.03:11:50.00:preob
+2018.111.03:11:50.00$preob/"- - - - preob - - - -
+2018.111.03:11:50.00$preob/dbbcifread
+2018.111.03:11:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:11:50.00:!2018.111.03:12:00
+2018.111.03:12:00.00:data_valid=on
+2018.111.03:12:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:12:00.00:midob
+2018.111.03:12:00.00$midob/"- - - - midob - - - -
+2018.111.03:12:00.00$midob/onsource
+2018.111.03:12:00.00/onsource/TRACKING
+2018.111.03:12:00.00$midob/pvwget
+2018.111.03:12:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:12:00.00:!2018.111.03:17:00
+2018.111.03:12:00.00#flagr#flagr/antenna,acquired
+2018.111.03:17:00.00:data_valid=off
+2018.111.03:17:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:17:00.00:postob
+2018.111.03:17:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:17:00.00:scan_name=no0029,e18c21,pv,240,240
+2018.111.03:17:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.03:17:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.03:17:00.00#flagr#flagr/antenna,new-source
+2018.111.03:17:00.00:setup01
+2018.111.03:17:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.03:17:00.00:!2018.111.03:19:50
+2018.111.03:19:50.00:preob
+2018.111.03:19:50.00$preob/"- - - - preob - - - -
+2018.111.03:19:50.00$preob/dbbcifread
+2018.111.03:19:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:19:50.01:!2018.111.03:20:00
+2018.111.03:20:00.00:data_valid=on
+2018.111.03:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:20:00.00:midob
+2018.111.03:20:00.00$midob/"- - - - midob - - - -
+2018.111.03:20:00.00$midob/onsource
+2018.111.03:20:00.00#flagr#flagr/antenna,acquired
+2018.111.03:20:00.00/onsource/TRACKING
+2018.111.03:20:00.00$midob/pvwget
+2018.111.03:20:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:20:00.00:!2018.111.03:24:00
+2018.111.03:24:00.00:data_valid=off
+2018.111.03:24:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:24:00.00:postob
+2018.111.03:24:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:24:00.00:scan_name=no0030,e18c21,pv,240,240
+2018.111.03:24:00.00:source=3c279,125611.17,-054721.5,2000.0,
+2018.111.03:24:00.00#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.111.03:24:00.00#flagr#flagr/antenna,new-source
+2018.111.03:24:00.00:setup01
+2018.111.03:24:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.03:24:00.00:!2018.111.03:29:50
+2018.111.03:29:50.00:preob
+2018.111.03:29:50.00$preob/"- - - - preob - - - -
+2018.111.03:29:50.00$preob/dbbcifread
+2018.111.03:29:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:29:50.00:!2018.111.03:30:00
+2018.111.03:30:00.00:data_valid=on
+2018.111.03:30:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:30:00.00:midob
+2018.111.03:30:00.00$midob/"- - - - midob - - - -
+2018.111.03:30:00.00$midob/onsource
+2018.111.03:30:00.00#flagr#flagr/antenna,acquired
+2018.111.03:30:00.00/onsource/TRACKING
+2018.111.03:30:00.00$midob/pvwget
+2018.111.03:30:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:30:00.00:!2018.111.03:34:00
+2018.111.03:34:00.00:data_valid=off
+2018.111.03:34:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:34:00.00:postob
+2018.111.03:34:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:34:00.00:scan_name=no0031,e18c21,pv,300,300
+2018.111.03:34:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.03:34:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.03:34:00.00#flagr#flagr/antenna,new-source
+2018.111.03:34:00.00:setup01
+2018.111.03:34:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.03:34:00.00:!2018.111.03:39:50
+2018.111.03:39:50.00:preob
+2018.111.03:39:50.00$preob/"- - - - preob - - - -
+2018.111.03:39:50.00$preob/dbbcifread
+2018.111.03:39:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:39:50.00:!2018.111.03:40:00
+2018.111.03:40:00.00:data_valid=on
+2018.111.03:40:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:40:00.00:midob
+2018.111.03:40:00.00$midob/"- - - - midob - - - -
+2018.111.03:40:00.00$midob/onsource
+2018.111.03:40:00.00/onsource/TRACKING
+2018.111.03:40:00.00$midob/pvwget
+2018.111.03:40:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:40:00.01:!2018.111.03:45:00
+2018.111.03:40:00.01#flagr#flagr/antenna,acquired
+2018.111.03:45:00.00:data_valid=off
+2018.111.03:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:45:00.00:postob
+2018.111.03:45:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:45:00.00:scan_name=no0032,e18c21,pv,300,300
+2018.111.03:45:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.03:45:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.03:45:00.00#flagr#flagr/antenna,new-source
+2018.111.03:45:00.00:setup01
+2018.111.03:45:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.03:45:00.00:!2018.111.03:47:50
+2018.111.03:47:50.00:preob
+2018.111.03:47:50.00$preob/"- - - - preob - - - -
+2018.111.03:47:50.00$preob/dbbcifread
+2018.111.03:47:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:47:50.00:!2018.111.03:48:00
+2018.111.03:48:00.00:data_valid=on
+2018.111.03:48:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:48:00.00:midob
+2018.111.03:48:00.00$midob/"- - - - midob - - - -
+2018.111.03:48:00.00$midob/onsource
+2018.111.03:48:00.00/onsource/TRACKING
+2018.111.03:48:00.00$midob/pvwget
+2018.111.03:48:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:48:00.00:!2018.111.03:53:00
+2018.111.03:48:00.00#flagr#flagr/antenna,acquired
+2018.111.03:53:00.00:data_valid=off
+2018.111.03:53:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:53:00.00:postob
+2018.111.03:53:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:53:00.00:scan_name=no0033,e18c21,pv,240,240
+2018.111.03:53:00.00:source=3c279,125611.17,-054721.5,2000.0,
+2018.111.03:53:00.00#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.111.03:53:00.00#flagr#flagr/antenna,new-source
+2018.111.03:53:00.00:setup01
+2018.111.03:53:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.03:53:00.00:!2018.111.03:58:50
+2018.111.03:58:50.00:preob
+2018.111.03:58:50.00$preob/"- - - - preob - - - -
+2018.111.03:58:50.00$preob/dbbcifread
+2018.111.03:58:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:58:50.00:!2018.111.03:59:00
+2018.111.03:59:00.00:data_valid=on
+2018.111.03:59:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.03:59:00.00:midob
+2018.111.03:59:00.00$midob/"- - - - midob - - - -
+2018.111.03:59:00.00$midob/onsource
+2018.111.03:59:00.00/onsource/TRACKING
+2018.111.03:59:00.00$midob/pvwget
+2018.111.03:59:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.03:59:00.00:!2018.111.04:03:00
+2018.111.03:59:00.00#flagr#flagr/antenna,acquired
+2018.111.04:03:00.00:data_valid=off
+2018.111.04:03:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.04:03:00.00:postob
+2018.111.04:03:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.04:03:00.00:scan_name=no0034,e18c21,pv,300,300
+2018.111.04:03:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.04:03:00.01#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.04:03:00.01#flagr#flagr/antenna,new-source
+2018.111.04:03:00.01:setup01
+2018.111.04:03:00.01?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.04:03:00.01:!2018.111.04:11:50
+2018.111.04:11:50.00:preob
+2018.111.04:11:50.00$preob/"- - - - preob - - - -
+2018.111.04:11:50.00$preob/dbbcifread
+2018.111.04:11:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.04:11:50.00:!2018.111.04:12:00
+2018.111.04:12:00.00:data_valid=on
+2018.111.04:12:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.04:12:00.00:midob
+2018.111.04:12:00.00$midob/"- - - - midob - - - -
+2018.111.04:12:00.00$midob/onsource
+2018.111.04:12:00.00/onsource/TRACKING
+2018.111.04:12:00.00$midob/pvwget
+2018.111.04:12:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.04:12:00.00:!2018.111.04:17:00
+2018.111.04:12:00.00#flagr#flagr/antenna,acquired
+2018.111.04:17:00.00:data_valid=off
+2018.111.04:17:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.04:17:00.00:postob
+2018.111.04:17:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.04:17:00.00:scan_name=no0035,e18c21,pv,240,240
+2018.111.04:17:00.00:source=m87,123049.42,122328.0,2000.0,
+2018.111.04:17:00.00#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.111.04:17:00.00#flagr#flagr/antenna,new-source
+2018.111.04:17:00.00:setup01
+2018.111.04:17:00.00?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.111.04:17:00.00:!2018.111.04:19:50
+2018.111.04:19:50.00:preob
+2018.111.04:19:50.00$preob/"- - - - preob - - - -
+2018.111.04:19:50.00$preob/dbbcifread
+2018.111.04:19:50.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.04:19:50.00:!2018.111.04:20:00
+2018.111.04:20:00.00:data_valid=on
+2018.111.04:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.04:20:00.00:midob
+2018.111.04:20:00.00$midob/"- - - - midob - - - -
+2018.111.04:20:00.00$midob/onsource
+2018.111.04:20:00.00/onsource/TRACKING
+2018.111.04:20:00.00$midob/pvwget
+2018.111.04:20:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.04:20:00.00:!2018.111.04:24:00
+2018.111.04:20:00.00#flagr#flagr/antenna,acquired
+2018.111.04:24:00.00:data_valid=off
+2018.111.04:24:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.111.04:24:00.00:postob
+2018.111.04:24:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.04:24:00.00:sched_end
+2018.111.04:24:00.00&sched_end/mk5=status?;
+2018.111.04:24:00.00&sched_end/disk_stats
+2018.111.04:24:00.00&sched_end/"- - - - end of schedule - - - -
+2018.111.04:24:00.00$sched_end/mk5=status?;
+2018.111.04:24:00.00?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.111.04:24:00.00$sched_end/disk_stats
+2018.111.04:24:00.00?ERROR bo -129 Error in new proc routine, stack is flushed, UNIX ?FFF
+2018.111.04:24:00.00:*end of schedule
+2018.111.14:16:46.02;terminate
+2018.111.14:16:46.02:*boss terminated
