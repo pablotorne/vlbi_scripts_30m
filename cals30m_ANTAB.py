@@ -53,6 +53,8 @@ outputfn.write("TSYS PV  FT= 1.0  INDEX = 'R1:32', 'L1:32' ,'R1:32', 'L1:32' /\n
 outputfn.write("!bands             HLI     VLI     HUI     VUI\n")
 outputfn.write("!DOY hh:mm:ss.ss   RCP     LCP     RCP     LCP     !  tau   elv   source\n")
 
+all_timestamp = [] # always save last time stamp to avoid duplicates in the output file
+
 print "Reading information from %d calibration scans from %s ..."%(len(calinfo)/4, args.calinfo_file)
 for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4 IFs:
     # Read and format data:
@@ -80,6 +82,9 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
 
         DOY.append(dayofyear)
         timestamp.append(ts)
+
+        if jj == ii: # Ony append once to the all_timestamps vector
+            all_timestamp.append(ts)
 
         # Extract Tsys values
         tempsys = float( data[1].split()[1] )
@@ -117,8 +122,21 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
     # Check:
     if DOY[1:] == DOY[:-1] and timestamp[1:] == timestamp[:-1] and source[1:] == source [:-1]: # these are four lines corresponding to the same scan
         if args.verbose >= 1: print "Writing to calibration info on %s to ANTAB table ..."%source[-1]
-        # Write one line with the four Tsys in four columns:
-        outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
+
+        if ii == 0: # First entry, no duplicity check
+
+            # Write one line with the four Tsys in four columns:
+            outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
+                                                                            tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
+        elif ii > 0: # Ignore duplicity check for first entry
+
+            if timestamp[-1] == all_timestamp[-2]:  # Do not write repeated cal info (occurs if no new cal is done when calling getcals in FS)
+                print "timestamp = %s | previous = %s"%(timestamp[-1], all_timestamp[-2])
+                print "Detected duplicated timestamp. Ignoring line."
+                continue
+            else:
+                # Write one line with the four Tsys in four columns:
+                outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
                                                                                    tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
          
 print "Writing to %spv.antab ..."%sched
