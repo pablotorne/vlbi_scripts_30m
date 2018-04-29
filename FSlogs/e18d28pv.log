@@ -1,0 +1,1768 @@
+2018.117.20:53:39.60;Log Opened: Mark IV Field System Version 9.11.18
+2018.117.20:53:39.60;location,PICOVEL ,3.39,37.07,2920.0
+2018.117.20:53:39.60;horizon1,0.,10.,360.
+2018.117.20:53:39.60;antenna,30.0,30.0,30.0,60.0,460.0,3.0,88.0,azel
+2018.117.20:53:39.60;equip,dbbc_pfb/fila10g,none,none,none,500.10,3,a/d,101,60,20,none,40,1,in,8bit,cdp,3,return,v105_1,v16_1,1,1,15000,15000,0,vsi2
+2018.117.20:53:39.60;time,-5.411,5.545,rate
+2018.117.20:53:39.60;flagr,200
+2018.117.20:53:39.60:" e18d28    2018 PICOVEL  P Pv
+2018.117.20:53:39.60:" P PICOVEL  AZEL  .0000  30.0   10 -999.9  999.9  30.0   10 -999.9  999.9   .0 Pv
+2018.117.20:53:39.60:" Pv PICOVEL   5088967.74544  -301681.18586  3825012.20561
+2018.117.20:53:39.60:"      PICOVEL     0     8820
+2018.117.20:53:39.60:" drudg version 2016Nov29 compiled under FS  9.11.18
+2018.117.20:53:39.60:" Rack=DBBC_PFB  Recorder 1=none      Recorder 2=none
+2018.117.20:53:39.60:exper_initi
+2018.117.20:53:39.60?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.20:53:39.60:scan_name=no0001,e18d28,pv,300,300
+2018.117.20:53:39.60:source=oj287,085448.87,200630.6,2000.0,
+2018.117.20:53:39.60#antcn#>>SM NONE oj287  8h54m48.9s  20d06'31" 4cm 0 0 2000FS9
+2018.117.20:53:39.60:setup01
+2018.117.20:53:39.60?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.20:53:39.60#flagr#flagr/antenna,new-source
+2018.117.20:53:39.60:!2018.117.21:56:50
+2018.117.20:53:45.68;list
+2018.117.20:54:15.22;getcal
+2018.117.20:54:15.22&getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.20:54:15.22&getcal/!+2s
+2018.117.20:54:15.22$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.20:54:15.45#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s253.xml
+2018.117.20:54:15.45#     #rx: E2HLI ; tsys: 272.23 ; tau: 0.23 ; pwv mm: 3.8 ; trx: 76.4 ; time: 2018-04-27 20:51:36 ; rxFreq: 214.8496 ; elev: 39.4 ; source: 3C279
+2018.117.20:54:15.45#     #rx: E2HUI ; tsys: 274.76 ; tau: 0.23 ; pwv mm: 3.6 ; trx: 78.0 ; time: 2018-04-27 20:51:36 ; rxFreq: 227.3500 ; elev: 39.4 ; source: 3C279
+2018.117.20:54:15.45#     #rx: E2VLI ; tsys: 292.65 ; tau: 0.22 ; pwv mm: 3.6 ; trx: 94.6 ; time: 2018-04-27 20:51:36 ; rxFreq: 214.8496 ; elev: 39.4 ; source: 3C279
+2018.117.20:54:15.45#     #rx: E2VUI ; tsys: 294.99 ; tau: 0.23 ; pwv mm: 3.5 ; trx: 94.1 ; time: 2018-04-27 20:51:36 ; rxFreq: 227.3500 ; elev: 39.4 ; source: 3C279
+2018.117.20:54:15.45$getcal/!+2s
+2018.117.21:56:50.00:preob
+2018.117.21:56:50.00&preob/"- - - - preob - - - -
+2018.117.21:56:50.00&preob/"dbbcifread   ********
+2018.117.21:56:50.00$preob/"- - - - preob - - - -
+2018.117.21:56:50.00$preob/"dbbcifread   ********
+2018.117.21:56:50.00:!2018.117.21:57:00
+2018.117.21:57:00.00:data_valid=on
+2018.117.21:57:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.21:57:00.00:midob
+2018.117.21:57:00.00&midob/"- - - - midob - - - -
+2018.117.21:57:00.00&midob/onsource
+2018.117.21:57:00.00&midob/pvwget
+2018.117.21:57:00.00&midob/getcal
+2018.117.21:57:00.00&midob/"getcal3mm
+2018.117.21:57:00.00&midob/"getcal1mm
+2018.117.21:57:00.00&midob/"dbbcifread  ************************
+2018.117.21:57:00.00$midob/"- - - - midob - - - -
+2018.117.21:57:00.00$midob/onsource
+2018.117.21:57:00.00/onsource/TRACKING
+2018.117.21:57:00.00$midob/pvwget
+2018.117.21:57:00.00&pvwget/"- - - - pvwget - - - -
+2018.117.21:57:00.00&pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.21:57:00.00&pvwget/!+2s
+2018.117.21:57:00.00&pvwget/wx
+2018.117.21:57:00.00$pvwget/"- - - - pvwget - - - -
+2018.117.21:57:00.00#flagr#flagr/antenna,acquired
+2018.117.21:57:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.21:57:00.01$pvwget/!+2s
+2018.117.21:57:02.02$pvwget/wx
+2018.117.21:57:02.02/wx/  1.0,  721.5,100.0
+2018.117.21:57:02.02$midob/getcal
+2018.117.21:57:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.21:57:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s294.xml
+2018.117.21:57:02.24#     #rx: E2HLI ; tsys: 243.16 ; tau: 0.23 ; pwv mm: 3.7 ; trx: 75.3 ; time: 2018-04-27 21:48:09 ; rxFreq: 214.8488 ; elev: 47.0 ; source: OJ287
+2018.117.21:57:02.24#     #rx: E2HUI ; tsys: 244.69 ; tau: 0.23 ; pwv mm: 3.5 ; trx: 76.9 ; time: 2018-04-27 21:48:09 ; rxFreq: 227.3500 ; elev: 47.0 ; source: OJ287
+2018.117.21:57:02.24#     #rx: E2VLI ; tsys: 262.78 ; tau: 0.22 ; pwv mm: 3.5 ; trx: 93.5 ; time: 2018-04-27 21:48:09 ; rxFreq: 214.8488 ; elev: 47.0 ; source: OJ287
+2018.117.21:57:02.24#     #rx: E2VUI ; tsys: 263.43 ; tau: 0.22 ; pwv mm: 3.4 ; trx: 92.8 ; time: 2018-04-27 21:48:09 ; rxFreq: 227.3500 ; elev: 47.0 ; source: OJ287
+2018.117.21:57:02.24$getcal/!+2s
+2018.117.21:57:04.25$midob/"getcal3mm
+2018.117.21:57:04.25$midob/"getcal1mm
+2018.117.21:57:04.25$midob/"dbbcifread  ************************
+2018.117.21:57:04.25:!2018.117.22:02:00
+2018.117.22:02:00.00:data_valid=off
+2018.117.22:02:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:02:00.00:postob
+2018.117.22:02:00.00&postob/"- - - - postob - - - -
+2018.117.22:02:00.00&postob/"dbbcifread ************
+2018.117.22:02:00.00&postob/" mk5=rtime?;*************
+2018.117.22:02:00.00&postob/!+1s
+2018.117.22:02:00.00&postob/"mk5=scan_check?;**************
+2018.117.22:02:00.00&postob/!+1s
+2018.117.22:02:00.00&postob/"mk5=dir_info?;***************
+2018.117.22:02:00.00&postob/!+1s
+2018.117.22:02:00.00&postob/"mk5=bank_set?;***************
+2018.117.22:02:00.00&postob/!+1s
+2018.117.22:02:00.00&postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.22:02:00.00&postob/!+5s
+2018.117.22:02:00.00&postob/wx
+2018.117.22:02:00.00$postob/"- - - - postob - - - -
+2018.117.22:02:00.00$postob/"dbbcifread ************
+2018.117.22:02:00.00$postob/" mk5=rtime?;*************
+2018.117.22:02:00.00$postob/!+1s
+2018.117.22:02:01.01$postob/"mk5=scan_check?;**************
+2018.117.22:02:01.01$postob/!+1s
+2018.117.22:02:02.02$postob/"mk5=dir_info?;***************
+2018.117.22:02:02.02$postob/!+1s
+2018.117.22:02:03.03$postob/"mk5=bank_set?;***************
+2018.117.22:02:03.03$postob/!+1s
+2018.117.22:02:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.22:02:04.66$postob/!+5s
+2018.117.22:02:09.67$postob/wx
+2018.117.22:02:09.67/wx/  1.0,  721.5,100.0
+2018.117.22:02:09.67:scan_name=no0002,e18d28,pv,300,300
+2018.117.22:02:09.67:source=oj287,085448.87,200630.6,2000.0,
+2018.117.22:02:09.67#antcn#>>SM NONE oj287  8h54m48.9s  20d06'31" 4cm 0 0 2000FS9
+2018.117.22:02:09.67#flagr#flagr/antenna,new-source
+2018.117.22:02:09.67:setup01
+2018.117.22:02:09.67?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.22:02:09.67:!2018.117.22:06:50
+2018.117.22:06:50.00:preob
+2018.117.22:06:50.00$preob/"- - - - preob - - - -
+2018.117.22:06:50.01$preob/"dbbcifread   ********
+2018.117.22:06:50.01:!2018.117.22:07:00
+2018.117.22:07:00.00:data_valid=on
+2018.117.22:07:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:07:00.00:midob
+2018.117.22:07:00.00$midob/"- - - - midob - - - -
+2018.117.22:07:00.00$midob/onsource
+2018.117.22:07:00.00#flagr#flagr/antenna,acquired
+2018.117.22:07:00.00/onsource/TRACKING
+2018.117.22:07:00.00$midob/pvwget
+2018.117.22:07:00.00$pvwget/"- - - - pvwget - - - -
+2018.117.22:07:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.22:07:00.00$pvwget/!+2s
+2018.117.22:07:02.01$pvwget/wx
+2018.117.22:07:02.01/wx/  0.9,  721.5,100.0
+2018.117.22:07:02.01$midob/getcal
+2018.117.22:07:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.22:07:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s298.xml
+2018.117.22:07:02.24#     #rx: E2HLI ; tsys: 248.63 ; tau: 0.23 ; pwv mm: 3.7 ; trx: 75.0 ; time: 2018-04-27 22:02:51 ; rxFreq: 214.8488 ; elev: 44.1 ; source: OJ287
+2018.117.22:07:02.24#     #rx: E2HUI ; tsys: 250.12 ; tau: 0.22 ; pwv mm: 3.5 ; trx: 76.5 ; time: 2018-04-27 22:02:51 ; rxFreq: 227.3500 ; elev: 44.1 ; source: OJ287
+2018.117.22:07:02.24#     #rx: E2VLI ; tsys: 268.53 ; tau: 0.21 ; pwv mm: 3.5 ; trx: 93.3 ; time: 2018-04-27 22:02:51 ; rxFreq: 214.8488 ; elev: 44.1 ; source: OJ287
+2018.117.22:07:02.24#     #rx: E2VUI ; tsys: 269.31 ; tau: 0.22 ; pwv mm: 3.4 ; trx: 92.6 ; time: 2018-04-27 22:02:51 ; rxFreq: 227.3500 ; elev: 44.1 ; source: OJ287
+2018.117.22:07:02.25$getcal/!+2s
+2018.117.22:07:04.26$midob/"getcal3mm
+2018.117.22:07:04.26$midob/"getcal1mm
+2018.117.22:07:04.26$midob/"dbbcifread  ************************
+2018.117.22:07:04.26:!2018.117.22:12:00
+2018.117.22:12:00.00:data_valid=off
+2018.117.22:12:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:12:00.00:postob
+2018.117.22:12:00.00$postob/"- - - - postob - - - -
+2018.117.22:12:00.00$postob/"dbbcifread ************
+2018.117.22:12:00.00$postob/" mk5=rtime?;*************
+2018.117.22:12:00.00$postob/!+1s
+2018.117.22:12:01.01$postob/"mk5=scan_check?;**************
+2018.117.22:12:01.01$postob/!+1s
+2018.117.22:12:02.02$postob/"mk5=dir_info?;***************
+2018.117.22:12:02.02$postob/!+1s
+2018.117.22:12:03.03$postob/"mk5=bank_set?;***************
+2018.117.22:12:03.03$postob/!+1s
+2018.117.22:12:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.22:12:04.65$postob/!+5s
+2018.117.22:12:09.66$postob/wx
+2018.117.22:12:09.66/wx/  0.9,  721.5,100.0
+2018.117.22:12:09.66:scan_name=no0003,e18d28,pv,360,360
+2018.117.22:12:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.117.22:12:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.117.22:12:09.66#flagr#flagr/antenna,new-source
+2018.117.22:12:09.66:setup01
+2018.117.22:12:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.22:12:09.66:!2018.117.22:21:50
+2018.117.22:21:50.01:preob
+2018.117.22:21:50.01$preob/"- - - - preob - - - -
+2018.117.22:21:50.01$preob/"dbbcifread   ********
+2018.117.22:21:50.01:!2018.117.22:22:00
+2018.117.22:22:00.00:data_valid=on
+2018.117.22:22:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:22:00.00:midob
+2018.117.22:22:00.00$midob/"- - - - midob - - - -
+2018.117.22:22:00.00$midob/onsource
+2018.117.22:22:00.00#flagr#flagr/antenna,acquired
+2018.117.22:22:00.00/onsource/TRACKING
+2018.117.22:22:00.00$midob/pvwget
+2018.117.22:22:00.00$pvwget/"- - - - pvwget - - - -
+2018.117.22:22:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.22:22:00.00$pvwget/!+2s
+2018.117.22:22:02.01$pvwget/wx
+2018.117.22:22:02.01/wx/  0.9,  721.4,100.0
+2018.117.22:22:02.01$midob/getcal
+2018.117.22:22:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.22:22:02.28#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s307.xml
+2018.117.22:22:02.28#     #rx: E2HLI ; tsys: 210.88 ; tau: 0.22 ; pwv mm: 3.7 ; trx: 74.9 ; time: 2018-04-27 22:19:27 ; rxFreq: 214.8493 ; elev: 65.3 ; source: m87
+2018.117.22:22:02.28#     #rx: E2HUI ; tsys: 211.70 ; tau: 0.22 ; pwv mm: 3.4 ; trx: 76.3 ; time: 2018-04-27 22:19:27 ; rxFreq: 227.3500 ; elev: 65.3 ; source: m87
+2018.117.22:22:02.28#     #rx: E2VLI ; tsys: 229.99 ; tau: 0.21 ; pwv mm: 3.4 ; trx: 93.1 ; time: 2018-04-27 22:19:27 ; rxFreq: 214.8493 ; elev: 65.3 ; source: m87
+2018.117.22:22:02.28#     #rx: E2VUI ; tsys: 229.66 ; tau: 0.21 ; pwv mm: 3.3 ; trx: 92.3 ; time: 2018-04-27 22:19:27 ; rxFreq: 227.3500 ; elev: 65.3 ; source: m87
+2018.117.22:22:02.28$getcal/!+2s
+2018.117.22:22:04.29$midob/"getcal3mm
+2018.117.22:22:04.29$midob/"getcal1mm
+2018.117.22:22:04.29$midob/"dbbcifread  ************************
+2018.117.22:22:04.29:!2018.117.22:28:00
+2018.117.22:28:00.00:data_valid=off
+2018.117.22:28:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:28:00.00:postob
+2018.117.22:28:00.00$postob/"- - - - postob - - - -
+2018.117.22:28:00.00$postob/"dbbcifread ************
+2018.117.22:28:00.00$postob/" mk5=rtime?;*************
+2018.117.22:28:00.00$postob/!+1s
+2018.117.22:28:01.01$postob/"mk5=scan_check?;**************
+2018.117.22:28:01.01$postob/!+1s
+2018.117.22:28:02.02$postob/"mk5=dir_info?;***************
+2018.117.22:28:02.02$postob/!+1s
+2018.117.22:28:03.03$postob/"mk5=bank_set?;***************
+2018.117.22:28:03.03$postob/!+1s
+2018.117.22:28:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.22:28:04.65$postob/!+5s
+2018.117.22:28:09.66$postob/wx
+2018.117.22:28:09.66/wx/  0.9,  721.4,100.0
+2018.117.22:28:09.66:scan_name=no0004,e18d28,pv,360,360
+2018.117.22:28:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.117.22:28:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.117.22:28:09.66#flagr#flagr/antenna,new-source
+2018.117.22:28:09.66:setup01
+2018.117.22:28:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.22:28:09.66:!2018.117.22:36:50
+2018.117.22:36:50.01:preob
+2018.117.22:36:50.01$preob/"- - - - preob - - - -
+2018.117.22:36:50.01$preob/"dbbcifread   ********
+2018.117.22:36:50.01:!2018.117.22:37:00
+2018.117.22:37:00.00:data_valid=on
+2018.117.22:37:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:37:00.00:midob
+2018.117.22:37:00.00$midob/"- - - - midob - - - -
+2018.117.22:37:00.00$midob/onsource
+2018.117.22:37:00.00#flagr#flagr/antenna,acquired
+2018.117.22:37:00.00/onsource/TRACKING
+2018.117.22:37:00.00$midob/pvwget
+2018.117.22:37:00.00$pvwget/"- - - - pvwget - - - -
+2018.117.22:37:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.22:37:00.00$pvwget/!+2s
+2018.117.22:37:02.01$pvwget/wx
+2018.117.22:37:02.01/wx/  1.0,  721.2, 91.9
+2018.117.22:37:02.01$midob/getcal
+2018.117.22:37:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.22:37:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s316.xml
+2018.117.22:37:02.24#     #rx: E2HLI ; tsys: 207.28 ; tau: 0.22 ; pwv mm: 3.6 ; trx: 74.4 ; time: 2018-04-27 22:31:45 ; rxFreq: 214.8493 ; elev: 65.2 ; source: m87
+2018.117.22:37:02.24#     #rx: E2HUI ; tsys: 207.65 ; tau: 0.22 ; pwv mm: 3.3 ; trx: 76.0 ; time: 2018-04-27 22:31:45 ; rxFreq: 227.3500 ; elev: 65.2 ; source: m87
+2018.117.22:37:02.24#     #rx: E2VLI ; tsys: 226.32 ; tau: 0.21 ; pwv mm: 3.3 ; trx: 92.8 ; time: 2018-04-27 22:31:45 ; rxFreq: 214.8493 ; elev: 65.2 ; source: m87
+2018.117.22:37:02.24#     #rx: E2VUI ; tsys: 225.57 ; tau: 0.21 ; pwv mm: 3.2 ; trx: 92.0 ; time: 2018-04-27 22:31:45 ; rxFreq: 227.3500 ; elev: 65.2 ; source: m87
+2018.117.22:37:02.24$getcal/!+2s
+2018.117.22:37:04.25$midob/"getcal3mm
+2018.117.22:37:04.25$midob/"getcal1mm
+2018.117.22:37:04.25$midob/"dbbcifread  ************************
+2018.117.22:37:04.25:!2018.117.22:43:00
+2018.117.22:43:00.00:data_valid=off
+2018.117.22:43:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:43:00.00:postob
+2018.117.22:43:00.00$postob/"- - - - postob - - - -
+2018.117.22:43:00.00$postob/"dbbcifread ************
+2018.117.22:43:00.00$postob/" mk5=rtime?;*************
+2018.117.22:43:00.00$postob/!+1s
+2018.117.22:43:01.01$postob/"mk5=scan_check?;**************
+2018.117.22:43:01.01$postob/!+1s
+2018.117.22:43:02.02$postob/"mk5=dir_info?;***************
+2018.117.22:43:02.02$postob/!+1s
+2018.117.22:43:03.03$postob/"mk5=bank_set?;***************
+2018.117.22:43:03.03$postob/!+1s
+2018.117.22:43:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.22:43:04.65$postob/!+5s
+2018.117.22:43:09.66$postob/wx
+2018.117.22:43:09.66/wx/  1.0,  721.2, 91.9
+2018.117.22:43:09.66:scan_name=no0005,e18d28,pv,360,360
+2018.117.22:43:09.66:source=j1337-1257,133739.78,-125724.7,2000.0,
+2018.117.22:43:09.66#antcn#>>SM NONE j1337-1257 13h37m39.8s -12d57'25" 4cm 0 0 2000FS9
+2018.117.22:43:09.66#flagr#flagr/antenna,new-source
+2018.117.22:43:09.66:setup01
+2018.117.22:43:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.22:43:09.66:!2018.117.22:51:50
+2018.117.22:51:50.00:preob
+2018.117.22:51:50.00$preob/"- - - - preob - - - -
+2018.117.22:51:50.00$preob/"dbbcifread   ********
+2018.117.22:51:50.00:!2018.117.22:52:00
+2018.117.22:52:00.00:data_valid=on
+2018.117.22:52:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:52:00.01:midob
+2018.117.22:52:00.01$midob/"- - - - midob - - - -
+2018.117.22:52:00.01$midob/onsource
+2018.117.22:52:00.01/onsource/TRACKING
+2018.117.22:52:00.01$midob/pvwget
+2018.117.22:52:00.01$pvwget/"- - - - pvwget - - - -
+2018.117.22:52:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.22:52:00.01#flagr#flagr/antenna,acquired
+2018.117.22:52:00.06$pvwget/!+2s
+2018.117.22:52:02.07$pvwget/wx
+2018.117.22:52:02.07/wx/  0.9,  721.2, 87.3
+2018.117.22:52:02.07$midob/getcal
+2018.117.22:52:02.07$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.22:52:02.30#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s325.xml
+2018.117.22:52:02.30#     #rx: E2HLI ; tsys: 239.03 ; tau: 0.20 ; pwv mm: 3.1 ; trx: 73.8 ; time: 2018-04-27 22:47:31 ; rxFreq: 214.8498 ; elev: 39.1 ; source: j1337-1257
+2018.117.22:52:02.30#     #rx: E2HUI ; tsys: 240.17 ; tau: 0.19 ; pwv mm: 3.0 ; trx: 75.4 ; time: 2018-04-27 22:47:31 ; rxFreq: 227.3500 ; elev: 39.1 ; source: j1337-1257
+2018.117.22:52:02.30#     #rx: E2VLI ; tsys: 258.29 ; tau: 0.18 ; pwv mm: 3.0 ; trx: 92.1 ; time: 2018-04-27 22:47:31 ; rxFreq: 214.8498 ; elev: 39.1 ; source: j1337-1257
+2018.117.22:52:02.30#     #rx: E2VUI ; tsys: 257.51 ; tau: 0.19 ; pwv mm: 2.8 ; trx: 91.3 ; time: 2018-04-27 22:47:31 ; rxFreq: 227.3500 ; elev: 39.1 ; source: j1337-1257
+2018.117.22:52:02.30$getcal/!+2s
+2018.117.22:52:04.31$midob/"getcal3mm
+2018.117.22:52:04.31$midob/"getcal1mm
+2018.117.22:52:04.31$midob/"dbbcifread  ************************
+2018.117.22:52:04.31:!2018.117.22:58:00
+2018.117.22:58:00.00:data_valid=off
+2018.117.22:58:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.22:58:00.00:postob
+2018.117.22:58:00.00$postob/"- - - - postob - - - -
+2018.117.22:58:00.00$postob/"dbbcifread ************
+2018.117.22:58:00.00$postob/" mk5=rtime?;*************
+2018.117.22:58:00.00$postob/!+1s
+2018.117.22:58:01.01$postob/"mk5=scan_check?;**************
+2018.117.22:58:01.01$postob/!+1s
+2018.117.22:58:02.02$postob/"mk5=dir_info?;***************
+2018.117.22:58:02.02$postob/!+1s
+2018.117.22:58:03.03$postob/"mk5=bank_set?;***************
+2018.117.22:58:03.03$postob/!+1s
+2018.117.22:58:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.22:58:04.65$postob/!+5s
+2018.117.22:58:09.66$postob/wx
+2018.117.22:58:09.66/wx/  0.9,  721.2, 87.3
+2018.117.22:58:09.66:scan_name=no0006,e18d28,pv,360,360
+2018.117.22:58:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.117.22:58:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.117.22:58:09.66:setup01
+2018.117.22:58:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.22:58:09.66:!2018.117.23:06:50
+2018.117.22:58:09.66#flagr#flagr/antenna,new-source
+2018.117.23:06:50.00:preob
+2018.117.23:06:50.00$preob/"- - - - preob - - - -
+2018.117.23:06:50.01$preob/"dbbcifread   ********
+2018.117.23:06:50.01:!2018.117.23:07:00
+2018.117.23:07:00.00:data_valid=on
+2018.117.23:07:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:07:00.00:midob
+2018.117.23:07:00.00$midob/"- - - - midob - - - -
+2018.117.23:07:00.00$midob/onsource
+2018.117.23:07:00.00#flagr#flagr/antenna,acquired
+2018.117.23:07:00.00/onsource/TRACKING
+2018.117.23:07:00.00$midob/pvwget
+2018.117.23:07:00.00$pvwget/"- - - - pvwget - - - -
+2018.117.23:07:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.23:07:00.00$pvwget/!+2s
+2018.117.23:07:02.01$pvwget/wx
+2018.117.23:07:02.01/wx/  0.8,  721.2, 88.3
+2018.117.23:07:02.01$midob/getcal
+2018.117.23:07:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.23:07:02.27#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s330.xml
+2018.117.23:07:02.27#     #rx: E2HLI ; tsys: 201.29 ; tau: 0.21 ; pwv mm: 3.4 ; trx: 73.4 ; time: 2018-04-27 22:59:40 ; rxFreq: 214.8493 ; elev: 63.8 ; source: m87
+2018.117.23:07:02.27#     #rx: E2HUI ; tsys: 201.64 ; tau: 0.20 ; pwv mm: 3.1 ; trx: 75.0 ; time: 2018-04-27 22:59:40 ; rxFreq: 227.3500 ; elev: 63.8 ; source: m87
+2018.117.23:07:02.27#     #rx: E2VLI ; tsys: 220.07 ; tau: 0.19 ; pwv mm: 3.1 ; trx: 92.1 ; time: 2018-04-27 22:59:40 ; rxFreq: 214.8493 ; elev: 63.8 ; source: m87
+2018.117.23:07:02.27#     #rx: E2VUI ; tsys: 219.02 ; tau: 0.20 ; pwv mm: 3.0 ; trx: 90.8 ; time: 2018-04-27 22:59:40 ; rxFreq: 227.3500 ; elev: 63.8 ; source: m87
+2018.117.23:07:02.27$getcal/!+2s
+2018.117.23:07:04.28$midob/"getcal3mm
+2018.117.23:07:04.28$midob/"getcal1mm
+2018.117.23:07:04.28$midob/"dbbcifread  ************************
+2018.117.23:07:04.28:!2018.117.23:13:00
+2018.117.23:13:00.00:data_valid=off
+2018.117.23:13:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:13:00.00:postob
+2018.117.23:13:00.00$postob/"- - - - postob - - - -
+2018.117.23:13:00.00$postob/"dbbcifread ************
+2018.117.23:13:00.00$postob/" mk5=rtime?;*************
+2018.117.23:13:00.00$postob/!+1s
+2018.117.23:13:01.01$postob/"mk5=scan_check?;**************
+2018.117.23:13:01.01$postob/!+1s
+2018.117.23:13:02.02$postob/"mk5=dir_info?;***************
+2018.117.23:13:02.02$postob/!+1s
+2018.117.23:13:03.03$postob/"mk5=bank_set?;***************
+2018.117.23:13:03.03$postob/!+1s
+2018.117.23:13:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.23:13:04.65$postob/!+5s
+2018.117.23:13:09.66$postob/wx
+2018.117.23:13:09.66/wx/  0.8,  721.2, 88.3
+2018.117.23:13:09.66:scan_name=no0007,e18d28,pv,360,360
+2018.117.23:13:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.117.23:13:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.117.23:13:09.66#flagr#flagr/antenna,new-source
+2018.117.23:13:09.66:setup01
+2018.117.23:13:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.23:13:09.66:!2018.117.23:15:50
+2018.117.23:15:50.00:preob
+2018.117.23:15:50.00$preob/"- - - - preob - - - -
+2018.117.23:15:50.00$preob/"dbbcifread   ********
+2018.117.23:15:50.00:!2018.117.23:16:00
+2018.117.23:16:00.01:data_valid=on
+2018.117.23:16:00.01?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:16:00.01:midob
+2018.117.23:16:00.01$midob/"- - - - midob - - - -
+2018.117.23:16:00.01$midob/onsource
+2018.117.23:16:00.01/onsource/TRACKING
+2018.117.23:16:00.01#flagr#flagr/antenna,acquired
+2018.117.23:16:00.01$midob/pvwget
+2018.117.23:16:00.01$pvwget/"- - - - pvwget - - - -
+2018.117.23:16:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.23:16:00.01$pvwget/!+2s
+2018.117.23:16:02.02$pvwget/wx
+2018.117.23:16:02.02/wx/  0.8,  721.1, 86.7
+2018.117.23:16:02.02$midob/getcal
+2018.117.23:16:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.23:16:02.23#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s334.xml
+2018.117.23:16:02.23#     #rx: E2HLI ; tsys: 201.79 ; tau: 0.21 ; pwv mm: 3.4 ; trx: 72.9 ; time: 2018-04-27 23:13:40 ; rxFreq: 214.8493 ; elev: 62.6 ; source: m87
+2018.117.23:16:02.23#     #rx: E2HUI ; tsys: 201.94 ; tau: 0.20 ; pwv mm: 3.1 ; trx: 74.6 ; time: 2018-04-27 23:13:40 ; rxFreq: 227.3500 ; elev: 62.6 ; source: m87
+2018.117.23:16:02.23#     #rx: E2VLI ; tsys: 220.60 ; tau: 0.19 ; pwv mm: 3.1 ; trx: 91.7 ; time: 2018-04-27 23:13:40 ; rxFreq: 214.8493 ; elev: 62.6 ; source: m87
+2018.117.23:16:02.23#     #rx: E2VUI ; tsys: 219.22 ; tau: 0.19 ; pwv mm: 3.0 ; trx: 90.7 ; time: 2018-04-27 23:13:40 ; rxFreq: 227.3500 ; elev: 62.6 ; source: m87
+2018.117.23:16:02.23$getcal/!+2s
+2018.117.23:16:04.24$midob/"getcal3mm
+2018.117.23:16:04.24$midob/"getcal1mm
+2018.117.23:16:04.24$midob/"dbbcifread  ************************
+2018.117.23:16:04.24:!2018.117.23:22:00
+2018.117.23:22:00.00:data_valid=off
+2018.117.23:22:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:22:00.00:postob
+2018.117.23:22:00.00$postob/"- - - - postob - - - -
+2018.117.23:22:00.00$postob/"dbbcifread ************
+2018.117.23:22:00.00$postob/" mk5=rtime?;*************
+2018.117.23:22:00.00$postob/!+1s
+2018.117.23:22:01.01$postob/"mk5=scan_check?;**************
+2018.117.23:22:01.01$postob/!+1s
+2018.117.23:22:02.02$postob/"mk5=dir_info?;***************
+2018.117.23:22:02.02$postob/!+1s
+2018.117.23:22:03.03$postob/"mk5=bank_set?;***************
+2018.117.23:22:03.03$postob/!+1s
+2018.117.23:22:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.23:22:04.65$postob/!+5s
+2018.117.23:22:09.66$postob/wx
+2018.117.23:22:09.66/wx/  0.8,  721.1, 86.7
+2018.117.23:22:09.66:scan_name=no0008,e18d28,pv,180,180
+2018.117.23:22:09.66:source=3c279,125611.17,-054721.5,2000.0,
+2018.117.23:22:09.66#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.117.23:22:09.66#flagr#flagr/antenna,new-source
+2018.117.23:22:09.66:setup01
+2018.117.23:22:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.23:22:09.66:!2018.117.23:27:50
+2018.117.23:27:50.01:preob
+2018.117.23:27:50.01$preob/"- - - - preob - - - -
+2018.117.23:27:50.01$preob/"dbbcifread   ********
+2018.117.23:27:50.01:!2018.117.23:28:00
+2018.117.23:28:00.00:data_valid=on
+2018.117.23:28:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:28:00.00:midob
+2018.117.23:28:00.00$midob/"- - - - midob - - - -
+2018.117.23:28:00.00$midob/onsource
+2018.117.23:28:00.00/onsource/TRACKING
+2018.117.23:28:00.00$midob/pvwget
+2018.117.23:28:00.00$pvwget/"- - - - pvwget - - - -
+2018.117.23:28:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.23:28:00.00#flagr#flagr/antenna,acquired
+2018.117.23:28:00.00$pvwget/!+2s
+2018.117.23:28:02.01$pvwget/wx
+2018.117.23:28:02.01/wx/  0.6,  721.0, 83.3
+2018.117.23:28:02.01$midob/getcal
+2018.117.23:28:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.23:28:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s337.xml
+2018.117.23:28:02.25#     #rx: E2HLI ; tsys: 215.46 ; tau: 0.19 ; pwv mm: 3.1 ; trx: 72.5 ; time: 2018-04-27 23:23:20 ; rxFreq: 214.8495 ; elev: 46.3 ; source: 3c279
+2018.117.23:28:02.25#     #rx: E2HUI ; tsys: 215.77 ; tau: 0.19 ; pwv mm: 2.9 ; trx: 74.1 ; time: 2018-04-27 23:23:20 ; rxFreq: 227.3500 ; elev: 46.3 ; source: 3c279
+2018.117.23:28:02.25#     #rx: E2VLI ; tsys: 234.24 ; tau: 0.18 ; pwv mm: 2.9 ; trx: 91.2 ; time: 2018-04-27 23:23:20 ; rxFreq: 214.8495 ; elev: 46.3 ; source: 3c279
+2018.117.23:28:02.25#     #rx: E2VUI ; tsys: 233.60 ; tau: 0.18 ; pwv mm: 2.7 ; trx: 90.0 ; time: 2018-04-27 23:23:20 ; rxFreq: 227.3500 ; elev: 46.3 ; source: 3c279
+2018.117.23:28:02.25$getcal/!+2s
+2018.117.23:28:04.26$midob/"getcal3mm
+2018.117.23:28:04.26$midob/"getcal1mm
+2018.117.23:28:04.26$midob/"dbbcifread  ************************
+2018.117.23:28:04.26:!2018.117.23:31:00
+2018.117.23:31:00.00:data_valid=off
+2018.117.23:31:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:31:00.00:postob
+2018.117.23:31:00.00$postob/"- - - - postob - - - -
+2018.117.23:31:00.00$postob/"dbbcifread ************
+2018.117.23:31:00.00$postob/" mk5=rtime?;*************
+2018.117.23:31:00.00$postob/!+1s
+2018.117.23:31:01.01$postob/"mk5=scan_check?;**************
+2018.117.23:31:01.01$postob/!+1s
+2018.117.23:31:02.02$postob/"mk5=dir_info?;***************
+2018.117.23:31:02.02$postob/!+1s
+2018.117.23:31:03.03$postob/"mk5=bank_set?;***************
+2018.117.23:31:03.03$postob/!+1s
+2018.117.23:31:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.23:31:04.65$postob/!+5s
+2018.117.23:31:09.66$postob/wx
+2018.117.23:31:09.66/wx/  0.6,  721.0, 83.3
+2018.117.23:31:09.66:scan_name=no0009,e18d28,pv,180,180
+2018.117.23:31:09.66:source=j1337-1257,133739.78,-125724.7,2000.0,
+2018.117.23:31:09.66#antcn#>>SM NONE j1337-1257 13h37m39.8s -12d57'25" 4cm 0 0 2000FS9
+2018.117.23:31:09.66#flagr#flagr/antenna,new-source
+2018.117.23:31:09.66:setup01
+2018.117.23:31:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.23:31:09.66:!2018.117.23:34:50
+2018.117.23:34:50.00:preob
+2018.117.23:34:50.00$preob/"- - - - preob - - - -
+2018.117.23:34:50.00$preob/"dbbcifread   ********
+2018.117.23:34:50.00:!2018.117.23:35:00
+2018.117.23:35:00.00:data_valid=on
+2018.117.23:35:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:35:00.01:midob
+2018.117.23:35:00.01$midob/"- - - - midob - - - -
+2018.117.23:35:00.01$midob/onsource
+2018.117.23:35:00.01/onsource/TRACKING
+2018.117.23:35:00.01$midob/pvwget
+2018.117.23:35:00.01$pvwget/"- - - - pvwget - - - -
+2018.117.23:35:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.23:35:00.01#flagr#flagr/antenna,acquired
+2018.117.23:35:00.01$pvwget/!+2s
+2018.117.23:35:02.02$pvwget/wx
+2018.117.23:35:02.02/wx/  0.6,  720.9, 84.3
+2018.117.23:35:02.02$midob/getcal
+2018.117.23:35:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.23:35:02.26#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s344.xml
+2018.117.23:35:02.26#     #rx: E2HLI ; tsys: 228.77 ; tau: 0.19 ; pwv mm: 3.0 ; trx: 72.2 ; time: 2018-04-27 23:32:22 ; rxFreq: 214.8498 ; elev: 40.0 ; source: j1337-1257
+2018.117.23:35:02.26#     #rx: E2HUI ; tsys: 229.34 ; tau: 0.19 ; pwv mm: 2.8 ; trx: 73.8 ; time: 2018-04-27 23:32:22 ; rxFreq: 227.3500 ; elev: 40.0 ; source: j1337-1257
+2018.117.23:35:02.26#     #rx: E2VLI ; tsys: 247.83 ; tau: 0.18 ; pwv mm: 2.8 ; trx: 91.0 ; time: 2018-04-27 23:32:22 ; rxFreq: 214.8498 ; elev: 40.0 ; source: j1337-1257
+2018.117.23:35:02.26#     #rx: E2VUI ; tsys: 246.33 ; tau: 0.18 ; pwv mm: 2.7 ; trx: 90.3 ; time: 2018-04-27 23:32:22 ; rxFreq: 227.3500 ; elev: 40.0 ; source: j1337-1257
+2018.117.23:35:02.26$getcal/!+2s
+2018.117.23:35:04.27$midob/"getcal3mm
+2018.117.23:35:04.27$midob/"getcal1mm
+2018.117.23:35:04.27$midob/"dbbcifread  ************************
+2018.117.23:35:04.27:!2018.117.23:38:00
+2018.117.23:38:00.00:data_valid=off
+2018.117.23:38:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:38:00.00:postob
+2018.117.23:38:00.00$postob/"- - - - postob - - - -
+2018.117.23:38:00.00$postob/"dbbcifread ************
+2018.117.23:38:00.00$postob/" mk5=rtime?;*************
+2018.117.23:38:00.00$postob/!+1s
+2018.117.23:38:01.01$postob/"mk5=scan_check?;**************
+2018.117.23:38:01.01$postob/!+1s
+2018.117.23:38:02.02$postob/"mk5=dir_info?;***************
+2018.117.23:38:02.02$postob/!+1s
+2018.117.23:38:03.03$postob/"mk5=bank_set?;***************
+2018.117.23:38:03.03$postob/!+1s
+2018.117.23:38:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.23:38:04.65$postob/!+5s
+2018.117.23:38:09.66$postob/wx
+2018.117.23:38:09.66/wx/  0.6,  720.9, 84.3
+2018.117.23:38:09.66:scan_name=no0010,e18d28,pv,360,360
+2018.117.23:38:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.117.23:38:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.117.23:38:09.66#flagr#flagr/antenna,new-source
+2018.117.23:38:09.66:setup01
+2018.117.23:38:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.23:38:09.66:!2018.117.23:42:50
+2018.117.23:42:50.01:preob
+2018.117.23:42:50.01$preob/"- - - - preob - - - -
+2018.117.23:42:50.01$preob/"dbbcifread   ********
+2018.117.23:42:50.01:!2018.117.23:43:00
+2018.117.23:43:00.00:data_valid=on
+2018.117.23:43:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:43:00.00:midob
+2018.117.23:43:00.00$midob/"- - - - midob - - - -
+2018.117.23:43:00.00$midob/onsource
+2018.117.23:43:00.00/onsource/TRACKING
+2018.117.23:43:00.00$midob/pvwget
+2018.117.23:43:00.00$pvwget/"- - - - pvwget - - - -
+2018.117.23:43:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.23:43:00.00#flagr#flagr/antenna,acquired
+2018.117.23:43:00.00$pvwget/!+2s
+2018.117.23:43:02.01$pvwget/wx
+2018.117.23:43:02.01/wx/  0.6,  720.7, 83.8
+2018.117.23:43:02.01$midob/getcal
+2018.117.23:43:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.23:43:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s348.xml
+2018.117.23:43:02.24#     #rx: E2HLI ; tsys: 200.58 ; tau: 0.20 ; pwv mm: 3.3 ; trx: 72.1 ; time: 2018-04-27 23:39:59 ; rxFreq: 214.8493 ; elev: 59.6 ; source: m87
+2018.117.23:43:02.24#     #rx: E2HUI ; tsys: 200.57 ; tau: 0.20 ; pwv mm: 3.0 ; trx: 73.7 ; time: 2018-04-27 23:39:59 ; rxFreq: 227.3500 ; elev: 59.6 ; source: m87
+2018.117.23:43:02.24#     #rx: E2VLI ; tsys: 218.71 ; tau: 0.19 ; pwv mm: 3.0 ; trx: 90.8 ; time: 2018-04-27 23:39:59 ; rxFreq: 214.8493 ; elev: 59.6 ; source: m87
+2018.117.23:43:02.24#     #rx: E2VUI ; tsys: 217.02 ; tau: 0.19 ; pwv mm: 2.8 ; trx: 90.3 ; time: 2018-04-27 23:39:59 ; rxFreq: 227.3500 ; elev: 59.6 ; source: m87
+2018.117.23:43:02.25$getcal/!+2s
+2018.117.23:43:04.26$midob/"getcal3mm
+2018.117.23:43:04.26$midob/"getcal1mm
+2018.117.23:43:04.26$midob/"dbbcifread  ************************
+2018.117.23:43:04.26:!2018.117.23:49:00
+2018.117.23:49:00.00:data_valid=off
+2018.117.23:49:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:49:00.00:postob
+2018.117.23:49:00.00$postob/"- - - - postob - - - -
+2018.117.23:49:00.00$postob/"dbbcifread ************
+2018.117.23:49:00.00$postob/" mk5=rtime?;*************
+2018.117.23:49:00.00$postob/!+1s
+2018.117.23:49:01.01$postob/"mk5=scan_check?;**************
+2018.117.23:49:01.01$postob/!+1s
+2018.117.23:49:02.02$postob/"mk5=dir_info?;***************
+2018.117.23:49:02.02$postob/!+1s
+2018.117.23:49:03.03$postob/"mk5=bank_set?;***************
+2018.117.23:49:03.03$postob/!+1s
+2018.117.23:49:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.23:49:04.65$postob/!+5s
+2018.117.23:49:09.66$postob/wx
+2018.117.23:49:09.66/wx/  0.6,  720.7, 83.8
+2018.117.23:49:09.66:scan_name=no0011,e18d28,pv,360,360
+2018.117.23:49:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.117.23:49:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.117.23:49:09.66#flagr#flagr/antenna,new-source
+2018.117.23:49:09.66:setup01
+2018.117.23:49:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.23:49:09.66:!2018.117.23:51:50
+2018.117.23:51:50.00:preob
+2018.117.23:51:50.00$preob/"- - - - preob - - - -
+2018.117.23:51:50.00$preob/"dbbcifread   ********
+2018.117.23:51:50.00:!2018.117.23:52:00
+2018.117.23:52:00.01:data_valid=on
+2018.117.23:52:00.01?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:52:00.01:midob
+2018.117.23:52:00.01$midob/"- - - - midob - - - -
+2018.117.23:52:00.01$midob/onsource
+2018.117.23:52:00.01#flagr#flagr/antenna,acquired
+2018.117.23:52:00.01/onsource/TRACKING
+2018.117.23:52:00.01$midob/pvwget
+2018.117.23:52:00.01$pvwget/"- - - - pvwget - - - -
+2018.117.23:52:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.117.23:52:00.01$pvwget/!+2s
+2018.117.23:52:02.02$pvwget/wx
+2018.117.23:52:02.02/wx/  0.6,  720.7, 84.6
+2018.117.23:52:02.02$midob/getcal
+2018.117.23:52:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.117.23:52:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s351.xml
+2018.117.23:52:02.25#     #rx: E2HLI ; tsys: 201.07 ; tau: 0.20 ; pwv mm: 3.3 ; trx: 71.6 ; time: 2018-04-27 23:49:30 ; rxFreq: 214.8493 ; elev: 58.3 ; source: m87
+2018.117.23:52:02.25#     #rx: E2HUI ; tsys: 201.10 ; tau: 0.20 ; pwv mm: 3.0 ; trx: 73.3 ; time: 2018-04-27 23:49:30 ; rxFreq: 227.3500 ; elev: 58.3 ; source: m87
+2018.117.23:52:02.25#     #rx: E2VLI ; tsys: 219.61 ; tau: 0.19 ; pwv mm: 3.0 ; trx: 90.3 ; time: 2018-04-27 23:49:30 ; rxFreq: 214.8493 ; elev: 58.3 ; source: m87
+2018.117.23:52:02.25#     #rx: E2VUI ; tsys: 218.02 ; tau: 0.19 ; pwv mm: 2.8 ; trx: 89.3 ; time: 2018-04-27 23:49:30 ; rxFreq: 227.3500 ; elev: 58.3 ; source: m87
+2018.117.23:52:02.25$getcal/!+2s
+2018.117.23:52:04.26$midob/"getcal3mm
+2018.117.23:52:04.26$midob/"getcal1mm
+2018.117.23:52:04.26$midob/"dbbcifread  ************************
+2018.117.23:52:04.26:!2018.117.23:58:00
+2018.117.23:58:00.00:data_valid=off
+2018.117.23:58:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.117.23:58:00.00:postob
+2018.117.23:58:00.00$postob/"- - - - postob - - - -
+2018.117.23:58:00.00$postob/"dbbcifread ************
+2018.117.23:58:00.00$postob/" mk5=rtime?;*************
+2018.117.23:58:00.00$postob/!+1s
+2018.117.23:58:01.01$postob/"mk5=scan_check?;**************
+2018.117.23:58:01.01$postob/!+1s
+2018.117.23:58:02.02$postob/"mk5=dir_info?;***************
+2018.117.23:58:02.02$postob/!+1s
+2018.117.23:58:03.03$postob/"mk5=bank_set?;***************
+2018.117.23:58:03.03$postob/!+1s
+2018.117.23:58:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.117.23:58:04.65$postob/!+5s
+2018.117.23:58:09.66$postob/wx
+2018.117.23:58:09.66/wx/  0.6,  720.7, 84.6
+2018.117.23:58:09.66:scan_name=no0012,e18d28,pv,300,300
+2018.117.23:58:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.117.23:58:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.117.23:58:09.66#flagr#flagr/antenna,new-source
+2018.117.23:58:09.66:setup01
+2018.117.23:58:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.117.23:58:09.66:!2018.118.00:06:50
+2018.118.00:06:50.00:preob
+2018.118.00:06:50.00$preob/"- - - - preob - - - -
+2018.118.00:06:50.00$preob/"dbbcifread   ********
+2018.118.00:06:50.00:!2018.118.00:07:00
+2018.118.00:07:00.01:data_valid=on
+2018.118.00:07:00.01?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:07:00.01:midob
+2018.118.00:07:00.01$midob/"- - - - midob - - - -
+2018.118.00:07:00.01$midob/onsource
+2018.118.00:07:00.01/onsource/TRACKING
+2018.118.00:07:00.01$midob/pvwget
+2018.118.00:07:00.01$pvwget/"- - - - pvwget - - - -
+2018.118.00:07:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.00:07:00.01#flagr#flagr/antenna,acquired
+2018.118.00:07:00.01$pvwget/!+2s
+2018.118.00:07:02.02$pvwget/wx
+2018.118.00:07:02.02/wx/  0.5,  720.5, 82.8
+2018.118.00:07:02.02$midob/getcal
+2018.118.00:07:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.00:07:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180427s353.xml
+2018.118.00:07:02.25#     #rx: E2HLI ; tsys: 201.00 ; tau: 0.20 ; pwv mm: 3.2 ; trx: 71.2 ; time: 2018-04-27 23:58:40 ; rxFreq: 214.8493 ; elev: 57.0 ; source: m87
+2018.118.00:07:02.25#     #rx: E2HUI ; tsys: 201.04 ; tau: 0.20 ; pwv mm: 3.0 ; trx: 72.9 ; time: 2018-04-27 23:58:40 ; rxFreq: 227.3500 ; elev: 57.0 ; source: m87
+2018.118.00:07:02.25#     #rx: E2VLI ; tsys: 219.64 ; tau: 0.19 ; pwv mm: 3.0 ; trx: 90.1 ; time: 2018-04-27 23:58:40 ; rxFreq: 214.8493 ; elev: 57.0 ; source: m87
+2018.118.00:07:02.25#     #rx: E2VUI ; tsys: 217.96 ; tau: 0.19 ; pwv mm: 2.8 ; trx: 89.1 ; time: 2018-04-27 23:58:40 ; rxFreq: 227.3500 ; elev: 57.0 ; source: m87
+2018.118.00:07:02.25$getcal/!+2s
+2018.118.00:07:04.26$midob/"getcal3mm
+2018.118.00:07:04.26$midob/"getcal1mm
+2018.118.00:07:04.26$midob/"dbbcifread  ************************
+2018.118.00:07:04.26:!2018.118.00:12:00
+2018.118.00:12:00.00:data_valid=off
+2018.118.00:12:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:12:00.00:postob
+2018.118.00:12:00.00$postob/"- - - - postob - - - -
+2018.118.00:12:00.00$postob/"dbbcifread ************
+2018.118.00:12:00.00$postob/" mk5=rtime?;*************
+2018.118.00:12:00.00$postob/!+1s
+2018.118.00:12:01.01$postob/"mk5=scan_check?;**************
+2018.118.00:12:01.01$postob/!+1s
+2018.118.00:12:02.02$postob/"mk5=dir_info?;***************
+2018.118.00:12:02.02$postob/!+1s
+2018.118.00:12:03.03$postob/"mk5=bank_set?;***************
+2018.118.00:12:03.03$postob/!+1s
+2018.118.00:12:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.00:12:04.65$postob/!+5s
+2018.118.00:12:09.66$postob/wx
+2018.118.00:12:09.66/wx/  0.5,  720.5, 82.8
+2018.118.00:12:09.66:scan_name=no0013,e18d28,pv,360,360
+2018.118.00:12:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.00:12:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.00:12:09.66#flagr#flagr/antenna,new-source
+2018.118.00:12:09.66:setup01
+2018.118.00:12:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.00:12:09.66:!2018.118.00:14:50
+2018.118.00:14:50.00:preob
+2018.118.00:14:50.00$preob/"- - - - preob - - - -
+2018.118.00:14:50.00$preob/"dbbcifread   ********
+2018.118.00:14:50.00:!2018.118.00:15:00
+2018.118.00:15:00.00:data_valid=on
+2018.118.00:15:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:15:00.00:midob
+2018.118.00:15:00.00$midob/"- - - - midob - - - -
+2018.118.00:15:00.00$midob/onsource
+2018.118.00:15:00.00#flagr#flagr/antenna,acquired
+2018.118.00:15:00.00/onsource/TRACKING
+2018.118.00:15:00.00$midob/pvwget
+2018.118.00:15:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.00:15:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.00:15:00.01$pvwget/!+2s
+2018.118.00:15:02.02$pvwget/wx
+2018.118.00:15:02.02/wx/  0.5,  720.5, 80.2
+2018.118.00:15:02.02$midob/getcal
+2018.118.00:15:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.00:15:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s2.xml
+2018.118.00:15:02.24#     #rx: E2HLI ; tsys: 200.59 ; tau: 0.20 ; pwv mm: 3.1 ; trx: 70.8 ; time: 2018-04-28 00:12:30 ; rxFreq: 214.8493 ; elev: 54.9 ; source: m87
+2018.118.00:15:02.24#     #rx: E2HUI ; tsys: 200.42 ; tau: 0.19 ; pwv mm: 2.9 ; trx: 72.4 ; time: 2018-04-28 00:12:30 ; rxFreq: 227.3500 ; elev: 54.9 ; source: m87
+2018.118.00:15:02.24#     #rx: E2VLI ; tsys: 218.87 ; tau: 0.18 ; pwv mm: 2.9 ; trx: 89.2 ; time: 2018-04-28 00:12:30 ; rxFreq: 214.8493 ; elev: 54.9 ; source: m87
+2018.118.00:15:02.24#     #rx: E2VUI ; tsys: 216.40 ; tau: 0.18 ; pwv mm: 2.7 ; trx: 88.5 ; time: 2018-04-28 00:12:30 ; rxFreq: 227.3500 ; elev: 54.9 ; source: m87
+2018.118.00:15:02.24$getcal/!+2s
+2018.118.00:15:04.25$midob/"getcal3mm
+2018.118.00:15:04.25$midob/"getcal1mm
+2018.118.00:15:04.25$midob/"dbbcifread  ************************
+2018.118.00:15:04.25:!2018.118.00:21:00
+2018.118.00:21:00.00:data_valid=off
+2018.118.00:21:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:21:00.00:postob
+2018.118.00:21:00.00$postob/"- - - - postob - - - -
+2018.118.00:21:00.00$postob/"dbbcifread ************
+2018.118.00:21:00.00$postob/" mk5=rtime?;*************
+2018.118.00:21:00.00$postob/!+1s
+2018.118.00:21:01.01$postob/"mk5=scan_check?;**************
+2018.118.00:21:01.01$postob/!+1s
+2018.118.00:21:02.02$postob/"mk5=dir_info?;***************
+2018.118.00:21:02.02$postob/!+1s
+2018.118.00:21:03.03$postob/"mk5=bank_set?;***************
+2018.118.00:21:03.03$postob/!+1s
+2018.118.00:21:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.00:21:04.65$postob/!+5s
+2018.118.00:21:09.66$postob/wx
+2018.118.00:21:09.66/wx/  0.5,  720.5, 80.2
+2018.118.00:21:09.66:scan_name=no0014,e18d28,pv,180,180
+2018.118.00:21:09.66:source=j1337-1257,133739.78,-125724.7,2000.0,
+2018.118.00:21:09.66#antcn#>>SM NONE j1337-1257 13h37m39.8s -12d57'25" 4cm 0 0 2000FS9
+2018.118.00:21:09.66#flagr#flagr/antenna,new-source
+2018.118.00:21:09.66:setup01
+2018.118.00:21:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.00:21:09.66:!2018.118.00:24:50
+2018.118.00:24:50.00:preob
+2018.118.00:24:50.01$preob/"- - - - preob - - - -
+2018.118.00:24:50.01$preob/"dbbcifread   ********
+2018.118.00:24:50.01:!2018.118.00:25:00
+2018.118.00:25:00.00:data_valid=on
+2018.118.00:25:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:25:00.00:midob
+2018.118.00:25:00.00$midob/"- - - - midob - - - -
+2018.118.00:25:00.00$midob/onsource
+2018.118.00:25:00.00#flagr#flagr/antenna,acquired
+2018.118.00:25:00.00/onsource/TRACKING
+2018.118.00:25:00.00$midob/pvwget
+2018.118.00:25:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.00:25:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.00:25:00.00$pvwget/!+2s
+2018.118.00:25:02.01$pvwget/wx
+2018.118.00:25:02.01/wx/  0.6,  720.4, 75.5
+2018.118.00:25:02.01$midob/getcal
+2018.118.00:25:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.00:25:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s6.xml
+2018.118.00:25:02.24#     #rx: E2HLI ; tsys: 221.66 ; tau: 0.18 ; pwv mm: 2.8 ; trx: 70.5 ; time: 2018-04-28 00:22:53 ; rxFreq: 214.8498 ; elev: 38.3 ; source: j1337-1257
+2018.118.00:25:02.24#     #rx: E2HUI ; tsys: 221.83 ; tau: 0.17 ; pwv mm: 2.6 ; trx: 72.2 ; time: 2018-04-28 00:22:53 ; rxFreq: 227.3500 ; elev: 38.3 ; source: j1337-1257
+2018.118.00:25:02.24#     #rx: E2VLI ; tsys: 240.82 ; tau: 0.17 ; pwv mm: 2.6 ; trx: 89.1 ; time: 2018-04-28 00:22:53 ; rxFreq: 214.8498 ; elev: 38.3 ; source: j1337-1257
+2018.118.00:25:02.24#     #rx: E2VUI ; tsys: 240.20 ; tau: 0.17 ; pwv mm: 2.5 ; trx: 87.6 ; time: 2018-04-28 00:22:53 ; rxFreq: 227.3500 ; elev: 38.3 ; source: j1337-1257
+2018.118.00:25:02.24$getcal/!+2s
+2018.118.00:25:04.25$midob/"getcal3mm
+2018.118.00:25:04.25$midob/"getcal1mm
+2018.118.00:25:04.25$midob/"dbbcifread  ************************
+2018.118.00:25:04.25:!2018.118.00:28:00
+2018.118.00:28:00.00:data_valid=off
+2018.118.00:28:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:28:00.00:postob
+2018.118.00:28:00.00$postob/"- - - - postob - - - -
+2018.118.00:28:00.00$postob/"dbbcifread ************
+2018.118.00:28:00.00$postob/" mk5=rtime?;*************
+2018.118.00:28:00.00$postob/!+1s
+2018.118.00:28:01.01$postob/"mk5=scan_check?;**************
+2018.118.00:28:01.01$postob/!+1s
+2018.118.00:28:02.02$postob/"mk5=dir_info?;***************
+2018.118.00:28:02.02$postob/!+1s
+2018.118.00:28:03.03$postob/"mk5=bank_set?;***************
+2018.118.00:28:03.03$postob/!+1s
+2018.118.00:28:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.00:28:04.65$postob/!+5s
+2018.118.00:28:09.66$postob/wx
+2018.118.00:28:09.66/wx/  0.6,  720.4, 75.5
+2018.118.00:28:09.66:scan_name=no0015,e18d28,pv,180,180
+2018.118.00:28:09.66:source=3c279,125611.17,-054721.5,2000.0,
+2018.118.00:28:09.66#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.118.00:28:09.66#flagr#flagr/antenna,new-source
+2018.118.00:28:09.66:setup01
+2018.118.00:28:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.00:28:09.66:!2018.118.00:34:50
+2018.118.00:34:50.00:preob
+2018.118.00:34:50.00$preob/"- - - - preob - - - -
+2018.118.00:34:50.00$preob/"dbbcifread   ********
+2018.118.00:34:50.00:!2018.118.00:35:00
+2018.118.00:35:00.00:data_valid=on
+2018.118.00:35:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:35:00.00:midob
+2018.118.00:35:00.00$midob/"- - - - midob - - - -
+2018.118.00:35:00.00$midob/onsource
+2018.118.00:35:00.00/onsource/TRACKING
+2018.118.00:35:00.00$midob/pvwget
+2018.118.00:35:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.00:35:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.00:35:00.00#flagr#flagr/antenna,acquired
+2018.118.00:35:00.00$pvwget/!+2s
+2018.118.00:35:02.01$pvwget/wx
+2018.118.00:35:02.01/wx/  0.5,  720.3, 74.2
+2018.118.00:35:02.01$midob/getcal
+2018.118.00:35:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.00:35:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s9.xml
+2018.118.00:35:02.24#     #rx: E2HLI ; tsys: 215.29 ; tau: 0.18 ; pwv mm: 2.8 ; trx: 70.4 ; time: 2018-04-28 00:29:25 ; rxFreq: 214.8495 ; elev: 40.9 ; source: 3c279
+2018.118.00:35:02.24#     #rx: E2HUI ; tsys: 215.30 ; tau: 0.17 ; pwv mm: 2.6 ; trx: 72.0 ; time: 2018-04-28 00:29:25 ; rxFreq: 227.3500 ; elev: 40.9 ; source: 3c279
+2018.118.00:35:02.24#     #rx: E2VLI ; tsys: 234.25 ; tau: 0.17 ; pwv mm: 2.6 ; trx: 88.9 ; time: 2018-04-28 00:29:25 ; rxFreq: 214.8495 ; elev: 40.9 ; source: 3c279
+2018.118.00:35:02.24#     #rx: E2VUI ; tsys: 232.69 ; tau: 0.17 ; pwv mm: 2.5 ; trx: 88.1 ; time: 2018-04-28 00:29:25 ; rxFreq: 227.3500 ; elev: 40.9 ; source: 3c279
+2018.118.00:35:02.24$getcal/!+2s
+2018.118.00:35:04.25$midob/"getcal3mm
+2018.118.00:35:04.25$midob/"getcal1mm
+2018.118.00:35:04.25$midob/"dbbcifread  ************************
+2018.118.00:35:04.25:!2018.118.00:38:00
+2018.118.00:38:00.00:data_valid=off
+2018.118.00:38:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:38:00.00:postob
+2018.118.00:38:00.00$postob/"- - - - postob - - - -
+2018.118.00:38:00.00$postob/"dbbcifread ************
+2018.118.00:38:00.00$postob/" mk5=rtime?;*************
+2018.118.00:38:00.00$postob/!+1s
+2018.118.00:38:01.01$postob/"mk5=scan_check?;**************
+2018.118.00:38:01.01$postob/!+1s
+2018.118.00:38:02.02$postob/"mk5=dir_info?;***************
+2018.118.00:38:02.02$postob/!+1s
+2018.118.00:38:03.03$postob/"mk5=bank_set?;***************
+2018.118.00:38:03.03$postob/!+1s
+2018.118.00:38:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.00:38:04.65$postob/!+5s
+2018.118.00:38:09.66$postob/wx
+2018.118.00:38:09.66/wx/  0.5,  720.3, 74.2
+2018.118.00:38:09.66:scan_name=no0016,e18d28,pv,360,360
+2018.118.00:38:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.00:38:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.00:38:09.66#flagr#flagr/antenna,new-source
+2018.118.00:38:09.66:setup01
+2018.118.00:38:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.00:38:09.66:!2018.118.00:41:50
+2018.118.00:41:50.00:preob
+2018.118.00:41:50.00$preob/"- - - - preob - - - -
+2018.118.00:41:50.00$preob/"dbbcifread   ********
+2018.118.00:41:50.00:!2018.118.00:42:00
+2018.118.00:42:00.00:data_valid=on
+2018.118.00:42:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:42:00.01:midob
+2018.118.00:42:00.01$midob/"- - - - midob - - - -
+2018.118.00:42:00.01$midob/onsource
+2018.118.00:42:00.01/onsource/TRACKING
+2018.118.00:42:00.01$midob/pvwget
+2018.118.00:42:00.01$pvwget/"- - - - pvwget - - - -
+2018.118.00:42:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.00:42:00.01#flagr#flagr/antenna,acquired
+2018.118.00:42:00.01$pvwget/!+2s
+2018.118.00:42:02.02$pvwget/wx
+2018.118.00:42:02.02/wx/  0.5,  720.2, 67.7
+2018.118.00:42:02.02$midob/getcal
+2018.118.00:42:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.00:42:02.26#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s14.xml
+2018.118.00:42:02.26#     #rx: E2HLI ; tsys: 199.55 ; tau: 0.18 ; pwv mm: 2.9 ; trx: 70.0 ; time: 2018-04-28 00:39:33 ; rxFreq: 214.8493 ; elev: 50.4 ; source: m87
+2018.118.00:42:02.26#     #rx: E2HUI ; tsys: 199.09 ; tau: 0.18 ; pwv mm: 2.7 ; trx: 71.6 ; time: 2018-04-28 00:39:33 ; rxFreq: 227.3500 ; elev: 50.4 ; source: m87
+2018.118.00:42:02.26#     #rx: E2VLI ; tsys: 217.54 ; tau: 0.17 ; pwv mm: 2.7 ; trx: 88.4 ; time: 2018-04-28 00:39:33 ; rxFreq: 214.8493 ; elev: 50.4 ; source: m87
+2018.118.00:42:02.26#     #rx: E2VUI ; tsys: 215.80 ; tau: 0.17 ; pwv mm: 2.6 ; trx: 87.5 ; time: 2018-04-28 00:39:33 ; rxFreq: 227.3500 ; elev: 50.4 ; source: m87
+2018.118.00:42:02.26$getcal/!+2s
+2018.118.00:42:04.27$midob/"getcal3mm
+2018.118.00:42:04.27$midob/"getcal1mm
+2018.118.00:42:04.27$midob/"dbbcifread  ************************
+2018.118.00:42:04.27:!2018.118.00:48:00
+2018.118.00:48:00.00:data_valid=off
+2018.118.00:48:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:48:00.00:postob
+2018.118.00:48:00.00$postob/"- - - - postob - - - -
+2018.118.00:48:00.00$postob/"dbbcifread ************
+2018.118.00:48:00.00$postob/" mk5=rtime?;*************
+2018.118.00:48:00.00$postob/!+1s
+2018.118.00:48:01.01$postob/"mk5=scan_check?;**************
+2018.118.00:48:01.01$postob/!+1s
+2018.118.00:48:02.02$postob/"mk5=dir_info?;***************
+2018.118.00:48:02.02$postob/!+1s
+2018.118.00:48:03.03$postob/"mk5=bank_set?;***************
+2018.118.00:48:03.03$postob/!+1s
+2018.118.00:48:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.00:48:04.65$postob/!+5s
+2018.118.00:48:09.66$postob/wx
+2018.118.00:48:09.66/wx/  0.5,  720.2, 67.7
+2018.118.00:48:09.66:scan_name=no0017,e18d28,pv,360,360
+2018.118.00:48:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.00:48:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.00:48:09.66#flagr#flagr/antenna,new-source
+2018.118.00:48:09.66:setup01
+2018.118.00:48:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.00:48:09.66:!2018.118.00:50:50
+2018.118.00:50:50.00:preob
+2018.118.00:50:50.00$preob/"- - - - preob - - - -
+2018.118.00:50:50.00$preob/"dbbcifread   ********
+2018.118.00:50:50.00:!2018.118.00:51:00
+2018.118.00:51:00.00:data_valid=on
+2018.118.00:51:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:51:00.01:midob
+2018.118.00:51:00.01$midob/"- - - - midob - - - -
+2018.118.00:51:00.01$midob/onsource
+2018.118.00:51:00.01#flagr#flagr/antenna,acquired
+2018.118.00:51:00.01/onsource/TRACKING
+2018.118.00:51:00.01$midob/pvwget
+2018.118.00:51:00.01$pvwget/"- - - - pvwget - - - -
+2018.118.00:51:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.00:51:00.01$pvwget/!+2s
+2018.118.00:51:02.02$pvwget/wx
+2018.118.00:51:02.02/wx/  0.5,  720.1, 68.0
+2018.118.00:51:02.02$midob/getcal
+2018.118.00:51:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.00:51:02.21#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s14.xml
+2018.118.00:51:02.21#     #rx: E2HLI ; tsys: 199.55 ; tau: 0.18 ; pwv mm: 2.9 ; trx: 70.0 ; time: 2018-04-28 00:39:33 ; rxFreq: 214.8493 ; elev: 50.4 ; source: m87
+2018.118.00:51:02.21#     #rx: E2HUI ; tsys: 199.09 ; tau: 0.18 ; pwv mm: 2.7 ; trx: 71.6 ; time: 2018-04-28 00:39:33 ; rxFreq: 227.3500 ; elev: 50.4 ; source: m87
+2018.118.00:51:02.21#     #rx: E2VLI ; tsys: 217.54 ; tau: 0.17 ; pwv mm: 2.7 ; trx: 88.4 ; time: 2018-04-28 00:39:33 ; rxFreq: 214.8493 ; elev: 50.4 ; source: m87
+2018.118.00:51:02.21#     #rx: E2VUI ; tsys: 215.80 ; tau: 0.17 ; pwv mm: 2.6 ; trx: 87.5 ; time: 2018-04-28 00:39:33 ; rxFreq: 227.3500 ; elev: 50.4 ; source: m87
+2018.118.00:51:02.22$getcal/!+2s
+2018.118.00:51:04.23$midob/"getcal3mm
+2018.118.00:51:04.23$midob/"getcal1mm
+2018.118.00:51:04.23$midob/"dbbcifread  ************************
+2018.118.00:51:04.23:!2018.118.00:57:00
+2018.118.00:57:00.00:data_valid=off
+2018.118.00:57:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.00:57:00.00:postob
+2018.118.00:57:00.00$postob/"- - - - postob - - - -
+2018.118.00:57:00.00$postob/"dbbcifread ************
+2018.118.00:57:00.00$postob/" mk5=rtime?;*************
+2018.118.00:57:00.00$postob/!+1s
+2018.118.00:57:01.01$postob/"mk5=scan_check?;**************
+2018.118.00:57:01.01$postob/!+1s
+2018.118.00:57:02.02$postob/"mk5=dir_info?;***************
+2018.118.00:57:02.02$postob/!+1s
+2018.118.00:57:03.03$postob/"mk5=bank_set?;***************
+2018.118.00:57:03.03$postob/!+1s
+2018.118.00:57:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.00:57:04.65$postob/!+5s
+2018.118.00:57:09.66$postob/wx
+2018.118.00:57:09.66/wx/  0.5,  720.1, 68.0
+2018.118.00:57:09.66:scan_name=no0018,e18d28,pv,360,360
+2018.118.00:57:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.00:57:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.00:57:09.66#flagr#flagr/antenna,new-source
+2018.118.00:57:09.66:setup01
+2018.118.00:57:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.00:57:09.66:!2018.118.00:59:50
+2018.118.00:59:50.00:preob
+2018.118.00:59:50.00$preob/"- - - - preob - - - -
+2018.118.00:59:50.00$preob/"dbbcifread   ********
+2018.118.00:59:50.00:!2018.118.01:00:00
+2018.118.01:00:00.00:data_valid=on
+2018.118.01:00:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:00:00.01:midob
+2018.118.01:00:00.01$midob/"- - - - midob - - - -
+2018.118.01:00:00.01$midob/onsource
+2018.118.01:00:00.01/onsource/TRACKING
+2018.118.01:00:00.01$midob/pvwget
+2018.118.01:00:00.01$pvwget/"- - - - pvwget - - - -
+2018.118.01:00:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.01:00:00.01#flagr#flagr/antenna,acquired
+2018.118.01:00:00.01$pvwget/!+2s
+2018.118.01:00:02.02$pvwget/wx
+2018.118.01:00:02.02/wx/  0.7,  719.7, 63.2
+2018.118.01:00:02.02$midob/getcal
+2018.118.01:00:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.01:00:02.29#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s18.xml
+2018.118.01:00:02.29#     #rx: E2HLI ; tsys: 198.44 ; tau: 0.17 ; pwv mm: 2.8 ; trx: 69.9 ; time: 2018-04-28 00:57:44 ; rxFreq: 214.8493 ; elev: 47.2 ; source: m87
+2018.118.01:00:02.29#     #rx: E2HUI ; tsys: 197.95 ; tau: 0.17 ; pwv mm: 2.5 ; trx: 71.5 ; time: 2018-04-28 00:57:44 ; rxFreq: 227.3500 ; elev: 47.2 ; source: m87
+2018.118.01:00:02.29#     #rx: E2VLI ; tsys: 216.69 ; tau: 0.16 ; pwv mm: 2.6 ; trx: 88.2 ; time: 2018-04-28 00:57:44 ; rxFreq: 214.8493 ; elev: 47.2 ; source: m87
+2018.118.01:00:02.29#     #rx: E2VUI ; tsys: 214.65 ; tau: 0.16 ; pwv mm: 2.4 ; trx: 87.3 ; time: 2018-04-28 00:57:44 ; rxFreq: 227.3500 ; elev: 47.2 ; source: m87
+2018.118.01:00:02.30$getcal/!+2s
+2018.118.01:00:04.31$midob/"getcal3mm
+2018.118.01:00:04.31$midob/"getcal1mm
+2018.118.01:00:04.31$midob/"dbbcifread  ************************
+2018.118.01:00:04.31:!2018.118.01:06:00
+2018.118.01:06:00.00:data_valid=off
+2018.118.01:06:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:06:00.00:postob
+2018.118.01:06:00.00$postob/"- - - - postob - - - -
+2018.118.01:06:00.00$postob/"dbbcifread ************
+2018.118.01:06:00.00$postob/" mk5=rtime?;*************
+2018.118.01:06:00.00$postob/!+1s
+2018.118.01:06:01.01$postob/"mk5=scan_check?;**************
+2018.118.01:06:01.01$postob/!+1s
+2018.118.01:06:02.02$postob/"mk5=dir_info?;***************
+2018.118.01:06:02.02$postob/!+1s
+2018.118.01:06:03.03$postob/"mk5=bank_set?;***************
+2018.118.01:06:03.03$postob/!+1s
+2018.118.01:06:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.01:06:04.65$postob/!+5s
+2018.118.01:06:09.66$postob/wx
+2018.118.01:06:09.66/wx/  0.7,  719.7, 63.2
+2018.118.01:06:09.66:scan_name=no0019,e18d28,pv,180,180
+2018.118.01:06:09.66:source=j1337-1257,133739.78,-125724.7,2000.0,
+2018.118.01:06:09.66#antcn#>>SM NONE j1337-1257 13h37m39.8s -12d57'25" 4cm 0 0 2000FS9
+2018.118.01:06:09.66#flagr#flagr/antenna,new-source
+2018.118.01:06:09.67:setup01
+2018.118.01:06:09.67?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.01:06:09.67:!2018.118.01:12:50
+2018.118.01:12:50.00:preob
+2018.118.01:12:50.00$preob/"- - - - preob - - - -
+2018.118.01:12:50.00$preob/"dbbcifread   ********
+2018.118.01:12:50.00:!2018.118.01:13:00
+2018.118.01:13:00.00:data_valid=on
+2018.118.01:13:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:13:00.00:midob
+2018.118.01:13:00.00$midob/"- - - - midob - - - -
+2018.118.01:13:00.00$midob/onsource
+2018.118.01:13:00.00/onsource/TRACKING
+2018.118.01:13:00.00$midob/pvwget
+2018.118.01:13:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.01:13:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.01:13:00.00#flagr#flagr/antenna,acquired
+2018.118.01:13:00.01$pvwget/!+2s
+2018.118.01:13:02.02$pvwget/wx
+2018.118.01:13:02.02/wx/  0.7,  719.8, 54.1
+2018.118.01:13:02.02$midob/getcal
+2018.118.01:13:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.01:13:02.55#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s21.xml
+2018.118.01:13:02.55#     #rx: E2HLI ; tsys: 215.14 ; tau: 0.16 ; pwv mm: 2.5 ; trx: 69.7 ; time: 2018-04-28 01:08:00 ; rxFreq: 214.8498 ; elev: 34.7 ; source: j1337-1257
+2018.118.01:13:02.55#     #rx: E2HUI ; tsys: 214.36 ; tau: 0.15 ; pwv mm: 2.3 ; trx: 71.3 ; time: 2018-04-28 01:08:00 ; rxFreq: 227.3500 ; elev: 34.7 ; source: j1337-1257
+2018.118.01:13:02.55#     #rx: E2VLI ; tsys: 233.19 ; tau: 0.15 ; pwv mm: 2.3 ; trx: 87.9 ; time: 2018-04-28 01:08:00 ; rxFreq: 214.8498 ; elev: 34.7 ; source: j1337-1257
+2018.118.01:13:02.55#     #rx: E2VUI ; tsys: 231.24 ; tau: 0.15 ; pwv mm: 2.1 ; trx: 87.1 ; time: 2018-04-28 01:08:00 ; rxFreq: 227.3500 ; elev: 34.7 ; source: j1337-1257
+2018.118.01:13:02.56$getcal/!+2s
+2018.118.01:13:04.57$midob/"getcal3mm
+2018.118.01:13:04.57$midob/"getcal1mm
+2018.118.01:13:04.57$midob/"dbbcifread  ************************
+2018.118.01:13:04.57:!2018.118.01:16:00
+2018.118.01:16:00.00:data_valid=off
+2018.118.01:16:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:16:00.00:postob
+2018.118.01:16:00.00$postob/"- - - - postob - - - -
+2018.118.01:16:00.00$postob/"dbbcifread ************
+2018.118.01:16:00.00$postob/" mk5=rtime?;*************
+2018.118.01:16:00.00$postob/!+1s
+2018.118.01:16:01.01$postob/"mk5=scan_check?;**************
+2018.118.01:16:01.01$postob/!+1s
+2018.118.01:16:02.02$postob/"mk5=dir_info?;***************
+2018.118.01:16:02.02$postob/!+1s
+2018.118.01:16:03.03$postob/"mk5=bank_set?;***************
+2018.118.01:16:03.03$postob/!+1s
+2018.118.01:16:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.01:16:04.65$postob/!+5s
+2018.118.01:16:09.66$postob/wx
+2018.118.01:16:09.66/wx/  0.7,  719.8, 54.1
+2018.118.01:16:09.66:scan_name=no0020,e18d28,pv,240,240
+2018.118.01:16:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.01:16:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.01:16:09.66#flagr#flagr/antenna,new-source
+2018.118.01:16:09.66:setup01
+2018.118.01:16:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.01:16:09.66:!2018.118.01:24:50
+2018.118.01:24:50.00:preob
+2018.118.01:24:50.00$preob/"- - - - preob - - - -
+2018.118.01:24:50.00$preob/"dbbcifread   ********
+2018.118.01:24:50.00:!2018.118.01:25:00
+2018.118.01:25:00.00:data_valid=on
+2018.118.01:25:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:25:00.00:midob
+2018.118.01:25:00.00$midob/"- - - - midob - - - -
+2018.118.01:25:00.00$midob/onsource
+2018.118.01:25:00.00/onsource/TRACKING
+2018.118.01:25:00.00#flagr#flagr/antenna,acquired
+2018.118.01:25:00.00$midob/pvwget
+2018.118.01:25:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.01:25:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.01:25:00.01$pvwget/!+2s
+2018.118.01:25:02.02$pvwget/wx
+2018.118.01:25:02.02/wx/  0.8,  719.8, 48.9
+2018.118.01:25:02.02$midob/getcal
+2018.118.01:25:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.01:25:02.40#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s26.xml
+2018.118.01:25:02.40#     #rx: E2HLI ; tsys: 195.26 ; tau: 0.16 ; pwv mm: 2.5 ; trx: 69.6 ; time: 2018-04-28 01:18:10 ; rxFreq: 214.8493 ; elev: 43.4 ; source: m87
+2018.118.01:25:02.40#     #rx: E2HUI ; tsys: 194.50 ; tau: 0.15 ; pwv mm: 2.3 ; trx: 71.2 ; time: 2018-04-28 01:18:10 ; rxFreq: 227.3500 ; elev: 43.4 ; source: m87
+2018.118.01:25:02.40#     #rx: E2VLI ; tsys: 213.66 ; tau: 0.15 ; pwv mm: 2.3 ; trx: 87.9 ; time: 2018-04-28 01:18:10 ; rxFreq: 214.8493 ; elev: 43.4 ; source: m87
+2018.118.01:25:02.40#     #rx: E2VUI ; tsys: 211.40 ; tau: 0.15 ; pwv mm: 2.2 ; trx: 87.1 ; time: 2018-04-28 01:18:10 ; rxFreq: 227.3500 ; elev: 43.4 ; source: m87
+2018.118.01:25:02.41$getcal/!+2s
+2018.118.01:25:04.42$midob/"getcal3mm
+2018.118.01:25:04.42$midob/"getcal1mm
+2018.118.01:25:04.42$midob/"dbbcifread  ************************
+2018.118.01:25:04.42:!2018.118.01:29:00
+2018.118.01:29:00.00:data_valid=off
+2018.118.01:29:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:29:00.00:postob
+2018.118.01:29:00.00$postob/"- - - - postob - - - -
+2018.118.01:29:00.00$postob/"dbbcifread ************
+2018.118.01:29:00.00$postob/" mk5=rtime?;*************
+2018.118.01:29:00.00$postob/!+1s
+2018.118.01:29:01.01$postob/"mk5=scan_check?;**************
+2018.118.01:29:01.01$postob/!+1s
+2018.118.01:29:02.02$postob/"mk5=dir_info?;***************
+2018.118.01:29:02.02$postob/!+1s
+2018.118.01:29:03.03$postob/"mk5=bank_set?;***************
+2018.118.01:29:03.03$postob/!+1s
+2018.118.01:29:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.01:29:04.65$postob/!+5s
+2018.118.01:29:09.66$postob/wx
+2018.118.01:29:09.66/wx/  0.8,  719.8, 48.9
+2018.118.01:29:09.66:scan_name=no0021,e18d28,pv,300,300
+2018.118.01:29:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.01:29:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.01:29:09.66#flagr#flagr/antenna,new-source
+2018.118.01:29:09.66:setup01
+2018.118.01:29:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.01:29:09.66:!2018.118.01:31:50
+2018.118.01:31:50.01:preob
+2018.118.01:31:50.01$preob/"- - - - preob - - - -
+2018.118.01:31:50.01$preob/"dbbcifread   ********
+2018.118.01:31:50.01:!2018.118.01:32:00
+2018.118.01:32:00.00:data_valid=on
+2018.118.01:32:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:32:00.00:midob
+2018.118.01:32:00.00$midob/"- - - - midob - - - -
+2018.118.01:32:00.00$midob/onsource
+2018.118.01:32:00.00/onsource/TRACKING
+2018.118.01:32:00.00$midob/pvwget
+2018.118.01:32:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.01:32:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.01:32:00.00#flagr#flagr/antenna,acquired
+2018.118.01:32:00.00$pvwget/!+2s
+2018.118.01:32:02.01$pvwget/wx
+2018.118.01:32:02.01/wx/  0.9,  719.5, 44.1
+2018.118.01:32:02.01$midob/getcal
+2018.118.01:32:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.01:32:02.39#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s30.xml
+2018.118.01:32:02.39#     #rx: E2HLI ; tsys: 195.00 ; tau: 0.15 ; pwv mm: 2.4 ; trx: 69.5 ; time: 2018-04-28 01:29:26 ; rxFreq: 214.8493 ; elev: 41.3 ; source: m87
+2018.118.01:32:02.39#     #rx: E2HUI ; tsys: 194.04 ; tau: 0.15 ; pwv mm: 2.2 ; trx: 71.1 ; time: 2018-04-28 01:29:26 ; rxFreq: 227.3500 ; elev: 41.3 ; source: m87
+2018.118.01:32:02.39#     #rx: E2VLI ; tsys: 213.28 ; tau: 0.14 ; pwv mm: 2.2 ; trx: 87.6 ; time: 2018-04-28 01:29:26 ; rxFreq: 214.8493 ; elev: 41.3 ; source: m87
+2018.118.01:32:02.39#     #rx: E2VUI ; tsys: 210.69 ; tau: 0.14 ; pwv mm: 2.1 ; trx: 86.7 ; time: 2018-04-28 01:29:26 ; rxFreq: 227.3500 ; elev: 41.3 ; source: m87
+2018.118.01:32:02.39$getcal/!+2s
+2018.118.01:32:04.40$midob/"getcal3mm
+2018.118.01:32:04.40$midob/"getcal1mm
+2018.118.01:32:04.40$midob/"dbbcifread  ************************
+2018.118.01:32:04.40:!2018.118.01:37:00
+2018.118.01:37:00.00:data_valid=off
+2018.118.01:37:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:37:00.00:postob
+2018.118.01:37:00.00$postob/"- - - - postob - - - -
+2018.118.01:37:00.00$postob/"dbbcifread ************
+2018.118.01:37:00.00$postob/" mk5=rtime?;*************
+2018.118.01:37:00.00$postob/!+1s
+2018.118.01:37:01.01$postob/"mk5=scan_check?;**************
+2018.118.01:37:01.01$postob/!+1s
+2018.118.01:37:02.02$postob/"mk5=dir_info?;***************
+2018.118.01:37:02.02$postob/!+1s
+2018.118.01:37:03.03$postob/"mk5=bank_set?;***************
+2018.118.01:37:03.03$postob/!+1s
+2018.118.01:37:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.01:37:04.65$postob/!+5s
+2018.118.01:37:09.66$postob/wx
+2018.118.01:37:09.66/wx/  0.9,  719.5, 44.1
+2018.118.01:37:09.66:scan_name=no0022,e18d28,pv,180,180
+2018.118.01:37:09.66:source=j1337-1257,133739.78,-125724.7,2000.0,
+2018.118.01:37:09.66#antcn#>>SM NONE j1337-1257 13h37m39.8s -12d57'25" 4cm 0 0 2000FS9
+2018.118.01:37:09.66#flagr#flagr/antenna,new-source
+2018.118.01:37:09.66:setup01
+2018.118.01:37:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.01:37:09.66:!2018.118.01:40:50
+2018.118.01:40:50.00:preob
+2018.118.01:40:50.01$preob/"- - - - preob - - - -
+2018.118.01:40:50.01$preob/"dbbcifread   ********
+2018.118.01:40:50.01:!2018.118.01:41:00
+2018.118.01:41:00.00:data_valid=on
+2018.118.01:41:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:41:00.00:midob
+2018.118.01:41:00.00$midob/"- - - - midob - - - -
+2018.118.01:41:00.00$midob/onsource
+2018.118.01:41:00.00#flagr#flagr/antenna,acquired
+2018.118.01:41:00.00/onsource/TRACKING
+2018.118.01:41:00.00$midob/pvwget
+2018.118.01:41:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.01:41:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.01:41:00.00$pvwget/!+2s
+2018.118.01:41:02.01$pvwget/wx
+2018.118.01:41:02.01/wx/  0.9,  719.5, 39.5
+2018.118.01:41:02.01$midob/getcal
+2018.118.01:41:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.01:41:02.52#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s34.xml
+2018.118.01:41:02.52#     #rx: E2HLI ; tsys: 213.00 ; tau: 0.14 ; pwv mm: 2.2 ; trx: 69.3 ; time: 2018-04-28 01:38:51 ; rxFreq: 214.8498 ; elev: 31.3 ; source: j1337-1257
+2018.118.01:41:02.52#     #rx: E2HUI ; tsys: 211.98 ; tau: 0.14 ; pwv mm: 2.0 ; trx: 71.0 ; time: 2018-04-28 01:38:51 ; rxFreq: 227.3500 ; elev: 31.3 ; source: j1337-1257
+2018.118.01:41:02.52#     #rx: E2VLI ; tsys: 231.64 ; tau: 0.13 ; pwv mm: 2.0 ; trx: 87.4 ; time: 2018-04-28 01:38:51 ; rxFreq: 214.8498 ; elev: 31.3 ; source: j1337-1257
+2018.118.01:41:02.52#     #rx: E2VUI ; tsys: 229.24 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 86.8 ; time: 2018-04-28 01:38:51 ; rxFreq: 227.3500 ; elev: 31.3 ; source: j1337-1257
+2018.118.01:41:02.52$getcal/!+2s
+2018.118.01:41:04.53$midob/"getcal3mm
+2018.118.01:41:04.53$midob/"getcal1mm
+2018.118.01:41:04.53$midob/"dbbcifread  ************************
+2018.118.01:41:04.53:!2018.118.01:44:00
+2018.118.01:44:00.00:data_valid=off
+2018.118.01:44:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:44:00.00:postob
+2018.118.01:44:00.00$postob/"- - - - postob - - - -
+2018.118.01:44:00.00$postob/"dbbcifread ************
+2018.118.01:44:00.00$postob/" mk5=rtime?;*************
+2018.118.01:44:00.00$postob/!+1s
+2018.118.01:44:01.01$postob/"mk5=scan_check?;**************
+2018.118.01:44:01.01$postob/!+1s
+2018.118.01:44:02.02$postob/"mk5=dir_info?;***************
+2018.118.01:44:02.02$postob/!+1s
+2018.118.01:44:03.03$postob/"mk5=bank_set?;***************
+2018.118.01:44:03.03$postob/!+1s
+2018.118.01:44:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.01:44:04.65$postob/!+5s
+2018.118.01:44:09.66$postob/wx
+2018.118.01:44:09.66/wx/  0.9,  719.5, 39.5
+2018.118.01:44:09.66:scan_name=no0023,e18d28,pv,180,180
+2018.118.01:44:09.66:source=3c279,125611.17,-054721.5,2000.0,
+2018.118.01:44:09.66#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.118.01:44:09.66#flagr#flagr/antenna,new-source
+2018.118.01:44:09.66:setup01
+2018.118.01:44:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.01:44:09.66:!2018.118.01:49:50
+2018.118.01:49:50.00:preob
+2018.118.01:49:50.00$preob/"- - - - preob - - - -
+2018.118.01:49:50.00$preob/"dbbcifread   ********
+2018.118.01:49:50.00:!2018.118.01:50:00
+2018.118.01:50:00.00:data_valid=on
+2018.118.01:50:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:50:00.00:midob
+2018.118.01:50:00.00$midob/"- - - - midob - - - -
+2018.118.01:50:00.00$midob/onsource
+2018.118.01:50:00.00#flagr#flagr/antenna,acquired
+2018.118.01:50:00.00/onsource/TRACKING
+2018.118.01:50:00.00$midob/pvwget
+2018.118.01:50:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.01:50:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.01:50:00.01$pvwget/!+2s
+2018.118.01:50:02.02$pvwget/wx
+2018.118.01:50:02.02/wx/  0.7,  719.3, 37.8
+2018.118.01:50:02.02$midob/getcal
+2018.118.01:50:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.01:50:02.57#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s39.xml
+2018.118.01:50:02.57#     #rx: E2HLI ; tsys: 213.96 ; tau: 0.14 ; pwv mm: 2.1 ; trx: 69.2 ; time: 2018-04-28 01:48:27 ; rxFreq: 214.8495 ; elev: 29.7 ; source: 3c279
+2018.118.01:50:02.57#     #rx: E2HUI ; tsys: 212.77 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 70.8 ; time: 2018-04-28 01:48:27 ; rxFreq: 227.3500 ; elev: 29.7 ; source: 3c279
+2018.118.01:50:02.57#     #rx: E2VLI ; tsys: 232.46 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 87.1 ; time: 2018-04-28 01:48:27 ; rxFreq: 214.8495 ; elev: 29.7 ; source: 3c279
+2018.118.01:50:02.57#     #rx: E2VUI ; tsys: 229.60 ; tau: 0.13 ; pwv mm: 1.8 ; trx: 86.2 ; time: 2018-04-28 01:48:27 ; rxFreq: 227.3500 ; elev: 29.7 ; source: 3c279
+2018.118.01:50:02.57$getcal/!+2s
+2018.118.01:50:04.58$midob/"getcal3mm
+2018.118.01:50:04.58$midob/"getcal1mm
+2018.118.01:50:04.58$midob/"dbbcifread  ************************
+2018.118.01:50:04.58:!2018.118.01:53:00
+2018.118.01:53:00.00:data_valid=off
+2018.118.01:53:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:53:00.00:postob
+2018.118.01:53:00.00$postob/"- - - - postob - - - -
+2018.118.01:53:00.00$postob/"dbbcifread ************
+2018.118.01:53:00.00$postob/" mk5=rtime?;*************
+2018.118.01:53:00.00$postob/!+1s
+2018.118.01:53:01.01$postob/"mk5=scan_check?;**************
+2018.118.01:53:01.01$postob/!+1s
+2018.118.01:53:02.02$postob/"mk5=dir_info?;***************
+2018.118.01:53:02.02$postob/!+1s
+2018.118.01:53:03.03$postob/"mk5=bank_set?;***************
+2018.118.01:53:03.03$postob/!+1s
+2018.118.01:53:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.01:53:04.65$postob/!+5s
+2018.118.01:53:09.66$postob/wx
+2018.118.01:53:09.66/wx/  0.7,  719.3, 37.8
+2018.118.01:53:09.66:scan_name=no0024,e18d28,pv,300,300
+2018.118.01:53:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.01:53:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.01:53:09.66:setup01
+2018.118.01:53:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.01:53:09.66#flagr#flagr/antenna,new-source
+2018.118.01:53:09.66:!2018.118.01:56:50
+2018.118.01:56:50.00:preob
+2018.118.01:56:50.01$preob/"- - - - preob - - - -
+2018.118.01:56:50.01$preob/"dbbcifread   ********
+2018.118.01:56:50.01:!2018.118.01:57:00
+2018.118.01:57:00.00:data_valid=on
+2018.118.01:57:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.01:57:00.00:midob
+2018.118.01:57:00.00$midob/"- - - - midob - - - -
+2018.118.01:57:00.00$midob/onsource
+2018.118.01:57:00.00#flagr#flagr/antenna,acquired
+2018.118.01:57:00.00/onsource/TRACKING
+2018.118.01:57:00.00$midob/pvwget
+2018.118.01:57:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.01:57:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.01:57:00.00$pvwget/!+2s
+2018.118.01:57:02.01$pvwget/wx
+2018.118.01:57:02.01/wx/  0.7,  719.3, 35.1
+2018.118.01:57:02.01$midob/getcal
+2018.118.01:57:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.01:57:02.33#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s42.xml
+2018.118.01:57:02.33#     #rx: E2HLI ; tsys: 196.23 ; tau: 0.14 ; pwv mm: 2.2 ; trx: 69.0 ; time: 2018-04-28 01:54:42 ; rxFreq: 214.8493 ; elev: 36.4 ; source: m87
+2018.118.01:57:02.33#     #rx: E2HUI ; tsys: 194.88 ; tau: 0.13 ; pwv mm: 2.0 ; trx: 70.7 ; time: 2018-04-28 01:54:42 ; rxFreq: 227.3500 ; elev: 36.4 ; source: m87
+2018.118.01:57:02.33#     #rx: E2VLI ; tsys: 214.43 ; tau: 0.13 ; pwv mm: 2.0 ; trx: 87.1 ; time: 2018-04-28 01:54:42 ; rxFreq: 214.8493 ; elev: 36.4 ; source: m87
+2018.118.01:57:02.33#     #rx: E2VUI ; tsys: 211.63 ; tau: 0.13 ; pwv mm: 1.8 ; trx: 86.3 ; time: 2018-04-28 01:54:42 ; rxFreq: 227.3500 ; elev: 36.4 ; source: m87
+2018.118.01:57:02.33$getcal/!+2s
+2018.118.01:57:04.34$midob/"getcal3mm
+2018.118.01:57:04.34$midob/"getcal1mm
+2018.118.01:57:04.34$midob/"dbbcifread  ************************
+2018.118.01:57:04.34:!2018.118.02:02:00
+2018.118.02:02:00.00:data_valid=off
+2018.118.02:02:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:02:00.00:postob
+2018.118.02:02:00.00$postob/"- - - - postob - - - -
+2018.118.02:02:00.00$postob/"dbbcifread ************
+2018.118.02:02:00.00$postob/" mk5=rtime?;*************
+2018.118.02:02:00.00$postob/!+1s
+2018.118.02:02:01.01$postob/"mk5=scan_check?;**************
+2018.118.02:02:01.01$postob/!+1s
+2018.118.02:02:02.02$postob/"mk5=dir_info?;***************
+2018.118.02:02:02.02$postob/!+1s
+2018.118.02:02:03.03$postob/"mk5=bank_set?;***************
+2018.118.02:02:03.03$postob/!+1s
+2018.118.02:02:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.02:02:04.65$postob/!+5s
+2018.118.02:02:09.66$postob/wx
+2018.118.02:02:09.66/wx/  0.7,  719.3, 35.1
+2018.118.02:02:09.66:scan_name=no0025,e18d28,pv,300,300
+2018.118.02:02:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.02:02:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.02:02:09.66#flagr#flagr/antenna,new-source
+2018.118.02:02:09.66:setup01
+2018.118.02:02:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.02:02:09.66:!2018.118.02:04:50
+2018.118.02:04:50.01:preob
+2018.118.02:04:50.01$preob/"- - - - preob - - - -
+2018.118.02:04:50.01$preob/"dbbcifread   ********
+2018.118.02:04:50.01:!2018.118.02:05:00
+2018.118.02:05:00.00:data_valid=on
+2018.118.02:05:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:05:00.00:midob
+2018.118.02:05:00.00$midob/"- - - - midob - - - -
+2018.118.02:05:00.00$midob/onsource
+2018.118.02:05:00.00#flagr#flagr/antenna,acquired
+2018.118.02:05:00.00/onsource/TRACKING
+2018.118.02:05:00.00$midob/pvwget
+2018.118.02:05:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.02:05:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.02:05:00.00$pvwget/!+2s
+2018.118.02:05:02.01$pvwget/wx
+2018.118.02:05:02.01/wx/  0.8,  719.2, 33.1
+2018.118.02:05:02.01$midob/getcal
+2018.118.02:05:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.02:05:02.36#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s44.xml
+2018.118.02:05:02.36#     #rx: E2HLI ; tsys: 198.96 ; tau: 0.14 ; pwv mm: 2.1 ; trx: 69.0 ; time: 2018-04-28 02:02:28 ; rxFreq: 214.8493 ; elev: 34.9 ; source: m87
+2018.118.02:05:02.36#     #rx: E2HUI ; tsys: 197.56 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 70.6 ; time: 2018-04-28 02:02:28 ; rxFreq: 227.3500 ; elev: 34.9 ; source: m87
+2018.118.02:05:02.36#     #rx: E2VLI ; tsys: 216.98 ; tau: 0.13 ; pwv mm: 2.0 ; trx: 86.8 ; time: 2018-04-28 02:02:28 ; rxFreq: 214.8493 ; elev: 34.9 ; source: m87
+2018.118.02:05:02.36#     #rx: E2VUI ; tsys: 214.45 ; tau: 0.13 ; pwv mm: 1.8 ; trx: 86.0 ; time: 2018-04-28 02:02:28 ; rxFreq: 227.3500 ; elev: 34.9 ; source: m87
+2018.118.02:05:02.36$getcal/!+2s
+2018.118.02:05:04.37$midob/"getcal3mm
+2018.118.02:05:04.37$midob/"getcal1mm
+2018.118.02:05:04.37$midob/"dbbcifread  ************************
+2018.118.02:05:04.37:!2018.118.02:10:00
+2018.118.02:10:00.00:data_valid=off
+2018.118.02:10:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:10:00.00:postob
+2018.118.02:10:00.00$postob/"- - - - postob - - - -
+2018.118.02:10:00.00$postob/"dbbcifread ************
+2018.118.02:10:00.00$postob/" mk5=rtime?;*************
+2018.118.02:10:00.00$postob/!+1s
+2018.118.02:10:01.01$postob/"mk5=scan_check?;**************
+2018.118.02:10:01.01$postob/!+1s
+2018.118.02:10:02.02$postob/"mk5=dir_info?;***************
+2018.118.02:10:02.02$postob/!+1s
+2018.118.02:10:03.03$postob/"mk5=bank_set?;***************
+2018.118.02:10:03.03$postob/!+1s
+2018.118.02:10:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.02:10:04.65$postob/!+5s
+2018.118.02:10:09.66$postob/wx
+2018.118.02:10:09.66/wx/  0.8,  719.2, 33.1
+2018.118.02:10:09.66:scan_name=no0026,e18d28,pv,180,180
+2018.118.02:10:09.66:source=j1337-1257,133739.78,-125724.7,2000.0,
+2018.118.02:10:09.66#antcn#>>SM NONE j1337-1257 13h37m39.8s -12d57'25" 4cm 0 0 2000FS9
+2018.118.02:10:09.66#flagr#flagr/antenna,new-source
+2018.118.02:10:09.66:setup01
+2018.118.02:10:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.02:10:09.66:!2018.118.02:16:50
+2018.118.02:16:50.00:preob
+2018.118.02:16:50.01$preob/"- - - - preob - - - -
+2018.118.02:16:50.01$preob/"dbbcifread   ********
+2018.118.02:16:50.01:!2018.118.02:17:00
+2018.118.02:17:00.00:data_valid=on
+2018.118.02:17:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:17:00.00:midob
+2018.118.02:17:00.00$midob/"- - - - midob - - - -
+2018.118.02:17:00.00$midob/onsource
+2018.118.02:17:00.00#flagr#flagr/antenna,acquired
+2018.118.02:17:00.00/onsource/TRACKING
+2018.118.02:17:00.00$midob/pvwget
+2018.118.02:17:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.02:17:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.02:17:00.00$pvwget/!+2s
+2018.118.02:17:02.01$pvwget/wx
+2018.118.02:17:02.01/wx/  0.7,  719.3, 29.1
+2018.118.02:17:02.01$midob/getcal
+2018.118.02:17:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.02:17:02.69#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s47.xml
+2018.118.02:17:02.69#     #rx: E2HLI ; tsys: 217.19 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 68.9 ; time: 2018-04-28 02:11:46 ; rxFreq: 214.8498 ; elev: 26.9 ; source: j1337-1257
+2018.118.02:17:02.69#     #rx: E2HUI ; tsys: 215.95 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 70.5 ; time: 2018-04-28 02:11:46 ; rxFreq: 227.3500 ; elev: 26.9 ; source: j1337-1257
+2018.118.02:17:02.69#     #rx: E2VLI ; tsys: 236.00 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 86.7 ; time: 2018-04-28 02:11:46 ; rxFreq: 214.8498 ; elev: 26.9 ; source: j1337-1257
+2018.118.02:17:02.69#     #rx: E2VUI ; tsys: 233.13 ; tau: 0.12 ; pwv mm: 1.7 ; trx: 86.0 ; time: 2018-04-28 02:11:46 ; rxFreq: 227.3500 ; elev: 26.9 ; source: j1337-1257
+2018.118.02:17:02.69$getcal/!+2s
+2018.118.02:17:04.70$midob/"getcal3mm
+2018.118.02:17:04.70$midob/"getcal1mm
+2018.118.02:17:04.70$midob/"dbbcifread  ************************
+2018.118.02:17:04.70:!2018.118.02:20:00
+2018.118.02:20:00.00:data_valid=off
+2018.118.02:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:20:00.00:postob
+2018.118.02:20:00.00$postob/"- - - - postob - - - -
+2018.118.02:20:00.00$postob/"dbbcifread ************
+2018.118.02:20:00.00$postob/" mk5=rtime?;*************
+2018.118.02:20:00.00$postob/!+1s
+2018.118.02:20:01.01$postob/"mk5=scan_check?;**************
+2018.118.02:20:01.01$postob/!+1s
+2018.118.02:20:02.02$postob/"mk5=dir_info?;***************
+2018.118.02:20:02.02$postob/!+1s
+2018.118.02:20:03.03$postob/"mk5=bank_set?;***************
+2018.118.02:20:03.03$postob/!+1s
+2018.118.02:20:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.02:20:04.65$postob/!+5s
+2018.118.02:20:09.66$postob/wx
+2018.118.02:20:09.67/wx/  0.7,  719.3, 29.1
+2018.118.02:20:09.67:scan_name=no0029,e18d28,pv,180,180
+2018.118.02:20:09.67:source=3c279,125611.17,-054721.5,2000.0,
+2018.118.02:20:09.67#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.118.02:20:09.67#flagr#flagr/antenna,new-source
+2018.118.02:20:09.67:setup01
+2018.118.02:20:09.67?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.02:20:09.67:!2018.118.02:46:50
+2018.118.02:46:50.00:preob
+2018.118.02:46:50.00$preob/"- - - - preob - - - -
+2018.118.02:46:50.00$preob/"dbbcifread   ********
+2018.118.02:46:50.00:!2018.118.02:47:00
+2018.118.02:47:00.00:data_valid=on
+2018.118.02:47:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:47:00.00:midob
+2018.118.02:47:00.00$midob/"- - - - midob - - - -
+2018.118.02:47:00.00$midob/onsource
+2018.118.02:47:00.00/onsource/TRACKING
+2018.118.02:47:00.00$midob/pvwget
+2018.118.02:47:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.02:47:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.02:47:00.00#flagr#flagr/antenna,acquired
+2018.118.02:47:00.01$pvwget/!+2s
+2018.118.02:47:02.02$pvwget/wx
+2018.118.02:47:02.02/wx/  0.4,  719.3, 25.2
+2018.118.02:47:02.02$midob/getcal
+2018.118.02:47:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.02:47:04.67#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s68.xml
+2018.118.02:47:04.67#     #rx: E2HLI ; tsys: 251.44 ; tau: 0.12 ; pwv mm: 1.9 ; trx: 68.7 ; time: 2018-04-28 02:41:00 ; rxFreq: 214.8495 ; elev: 20.6 ; source: 3c279
+2018.118.02:47:04.67#     #rx: E2HUI ; tsys: 250.49 ; tau: 0.12 ; pwv mm: 1.7 ; trx: 70.3 ; time: 2018-04-28 02:41:00 ; rxFreq: 227.3500 ; elev: 20.6 ; source: 3c279
+2018.118.02:47:04.67#     #rx: E2VLI ; tsys: 270.72 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 86.4 ; time: 2018-04-28 02:41:00 ; rxFreq: 214.8495 ; elev: 20.6 ; source: 3c279
+2018.118.02:47:04.67#     #rx: E2VUI ; tsys: 268.06 ; tau: 0.12 ; pwv mm: 1.7 ; trx: 85.6 ; time: 2018-04-28 02:41:00 ; rxFreq: 227.3500 ; elev: 20.6 ; source: 3c279
+2018.118.02:47:04.67$getcal/!+2s
+2018.118.02:47:06.69$midob/"getcal3mm
+2018.118.02:47:06.69$midob/"getcal1mm
+2018.118.02:47:06.69$midob/"dbbcifread  ************************
+2018.118.02:47:06.69:!2018.118.02:50:00
+2018.118.02:50:00.00:data_valid=off
+2018.118.02:50:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:50:00.00:postob
+2018.118.02:50:00.00$postob/"- - - - postob - - - -
+2018.118.02:50:00.00$postob/"dbbcifread ************
+2018.118.02:50:00.00$postob/" mk5=rtime?;*************
+2018.118.02:50:00.00$postob/!+1s
+2018.118.02:50:01.01$postob/"mk5=scan_check?;**************
+2018.118.02:50:01.01$postob/!+1s
+2018.118.02:50:02.02$postob/"mk5=dir_info?;***************
+2018.118.02:50:02.02$postob/!+1s
+2018.118.02:50:03.03$postob/"mk5=bank_set?;***************
+2018.118.02:50:03.03$postob/!+1s
+2018.118.02:50:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.02:50:04.65$postob/!+5s
+2018.118.02:50:09.66$postob/wx
+2018.118.02:50:09.66/wx/  0.4,  719.3, 25.2
+2018.118.02:50:09.66:scan_name=no0030,e18d28,pv,180,180
+2018.118.02:50:09.66:source=j1337-1257,133739.78,-125724.7,2000.0,
+2018.118.02:50:09.66#antcn#>>SM NONE j1337-1257 13h37m39.8s -12d57'25" 4cm 0 0 2000FS9
+2018.118.02:50:09.66#flagr#flagr/antenna,new-source
+2018.118.02:50:09.66:setup01
+2018.118.02:50:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.02:50:09.66:!2018.118.02:53:50
+2018.118.02:53:50.00:preob
+2018.118.02:53:50.00$preob/"- - - - preob - - - -
+2018.118.02:53:50.00$preob/"dbbcifread   ********
+2018.118.02:53:50.00:!2018.118.02:54:00
+2018.118.02:54:00.00:data_valid=on
+2018.118.02:54:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:54:00.00:midob
+2018.118.02:54:00.00$midob/"- - - - midob - - - -
+2018.118.02:54:00.01$midob/onsource
+2018.118.02:54:00.01/onsource/TRACKING
+2018.118.02:54:00.01$midob/pvwget
+2018.118.02:54:00.01$pvwget/"- - - - pvwget - - - -
+2018.118.02:54:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.02:54:00.01#flagr#flagr/antenna,acquired
+2018.118.02:54:00.01$pvwget/!+2s
+2018.118.02:54:02.02$pvwget/wx
+2018.118.02:54:02.02/wx/  0.3,  719.2, 25.2
+2018.118.02:54:02.02$midob/getcal
+2018.118.02:54:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.02:54:03.99#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s73.xml
+2018.118.02:54:03.99#     #rx: E2HLI ; tsys: 250.81 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 68.6 ; time: 2018-04-28 02:51:11 ; rxFreq: 214.8498 ; elev: 20.8 ; source: j1337-1257
+2018.118.02:54:04.00#     #rx: E2HUI ; tsys: 250.10 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 70.2 ; time: 2018-04-28 02:51:11 ; rxFreq: 227.3500 ; elev: 20.8 ; source: j1337-1257
+2018.118.02:54:04.00#     #rx: E2VLI ; tsys: 270.62 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 86.3 ; time: 2018-04-28 02:51:11 ; rxFreq: 214.8498 ; elev: 20.8 ; source: j1337-1257
+2018.118.02:54:04.00#     #rx: E2VUI ; tsys: 267.78 ; tau: 0.12 ; pwv mm: 1.7 ; trx: 85.5 ; time: 2018-04-28 02:51:11 ; rxFreq: 227.3500 ; elev: 20.8 ; source: j1337-1257
+2018.118.02:54:04.00$getcal/!+2s
+2018.118.02:54:06.01$midob/"getcal3mm
+2018.118.02:54:06.01$midob/"getcal1mm
+2018.118.02:54:06.01$midob/"dbbcifread  ************************
+2018.118.02:54:06.01:!2018.118.02:57:00
+2018.118.02:57:00.00:data_valid=off
+2018.118.02:57:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.02:57:00.00:postob
+2018.118.02:57:00.00$postob/"- - - - postob - - - -
+2018.118.02:57:00.00$postob/"dbbcifread ************
+2018.118.02:57:00.00$postob/" mk5=rtime?;*************
+2018.118.02:57:00.00$postob/!+1s
+2018.118.02:57:01.01$postob/"mk5=scan_check?;**************
+2018.118.02:57:01.01$postob/!+1s
+2018.118.02:57:02.02$postob/"mk5=dir_info?;***************
+2018.118.02:57:02.02$postob/!+1s
+2018.118.02:57:03.03$postob/"mk5=bank_set?;***************
+2018.118.02:57:03.03$postob/!+1s
+2018.118.02:57:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.02:57:04.65$postob/!+5s
+2018.118.02:57:09.66$postob/wx
+2018.118.02:57:09.66/wx/  0.3,  719.2, 25.2
+2018.118.02:57:09.66:scan_name=no0033,e18d28,pv,180,180
+2018.118.02:57:09.66:source=j1337-1257,133739.78,-125724.7,2000.0,
+2018.118.02:57:09.66#antcn#>>SM NONE j1337-1257 13h37m39.8s -12d57'25" 4cm 0 0 2000FS9
+2018.118.02:57:09.66:setup01
+2018.118.02:57:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.02:57:09.66:!2018.118.03:19:50
+2018.118.02:57:09.66#flagr#flagr/antenna,new-source
+2018.118.03:19:50.00:preob
+2018.118.03:19:50.01$preob/"- - - - preob - - - -
+2018.118.03:19:50.01$preob/"dbbcifread   ********
+2018.118.03:19:50.01:!2018.118.03:20:00
+2018.118.03:20:00.00:data_valid=on
+2018.118.03:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.03:20:00.00:midob
+2018.118.03:20:00.00$midob/"- - - - midob - - - -
+2018.118.03:20:00.00$midob/onsource
+2018.118.03:20:00.00#flagr#flagr/antenna,acquired
+2018.118.03:20:00.00/onsource/TRACKING
+2018.118.03:20:00.00$midob/pvwget
+2018.118.03:20:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.03:20:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.03:20:00.00$pvwget/!+2s
+2018.118.03:20:02.01$pvwget/wx
+2018.118.03:20:02.01/wx/  0.6,  719.1, 22.6
+2018.118.03:20:02.01$midob/getcal
+2018.118.03:20:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.03:20:02.36#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s84.xml
+2018.118.03:20:02.36#     #rx: E2HLI ; tsys: 284.29 ; tau: 0.12 ; pwv mm: 1.9 ; trx: 68.5 ; time: 2018-04-28 03:11:35 ; rxFreq: 214.8498 ; elev: 17.5 ; source: j1337-1257
+2018.118.03:20:02.36#     #rx: E2HUI ; tsys: 284.22 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 70.1 ; time: 2018-04-28 03:11:35 ; rxFreq: 227.3500 ; elev: 17.5 ; source: j1337-1257
+2018.118.03:20:02.36#     #rx: E2VLI ; tsys: 304.45 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 86.1 ; time: 2018-04-28 03:11:35 ; rxFreq: 214.8498 ; elev: 17.5 ; source: j1337-1257
+2018.118.03:20:02.36#     #rx: E2VUI ; tsys: 301.94 ; tau: 0.12 ; pwv mm: 1.7 ; trx: 85.3 ; time: 2018-04-28 03:11:35 ; rxFreq: 227.3500 ; elev: 17.5 ; source: j1337-1257
+2018.118.03:20:02.36$getcal/!+2s
+2018.118.03:20:04.37$midob/"getcal3mm
+2018.118.03:20:04.37$midob/"getcal1mm
+2018.118.03:20:04.37$midob/"dbbcifread  ************************
+2018.118.03:20:04.37:!2018.118.03:23:00
+2018.118.03:23:00.00:data_valid=off
+2018.118.03:23:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.03:23:00.00:postob
+2018.118.03:23:00.00$postob/"- - - - postob - - - -
+2018.118.03:23:00.00$postob/"dbbcifread ************
+2018.118.03:23:00.00$postob/" mk5=rtime?;*************
+2018.118.03:23:00.00$postob/!+1s
+2018.118.03:23:01.01$postob/"mk5=scan_check?;**************
+2018.118.03:23:01.01$postob/!+1s
+2018.118.03:23:02.02$postob/"mk5=dir_info?;***************
+2018.118.03:23:02.02$postob/!+1s
+2018.118.03:23:03.03$postob/"mk5=bank_set?;***************
+2018.118.03:23:03.03$postob/!+1s
+2018.118.03:23:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.03:23:04.65$postob/!+5s
+2018.118.03:23:09.67$postob/wx
+2018.118.03:23:09.67/wx/  0.6,  719.1, 22.6
+2018.118.03:23:09.67:scan_name=no0034,e18d28,pv,420,420
+2018.118.03:23:09.67:source=m87,123049.42,122328.0,2000.0,
+2018.118.03:23:09.67#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.03:23:09.67#flagr#flagr/antenna,new-source
+2018.118.03:23:09.67:setup01
+2018.118.03:23:09.67?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.03:23:09.67:!2018.118.03:32:50
+2018.118.03:32:50.00:preob
+2018.118.03:32:50.00$preob/"- - - - preob - - - -
+2018.118.03:32:50.00$preob/"dbbcifread   ********
+2018.118.03:32:50.00:!2018.118.03:33:00
+2018.118.03:33:00.00:data_valid=on
+2018.118.03:33:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.03:33:00.00:midob
+2018.118.03:33:00.00$midob/"- - - - midob - - - -
+2018.118.03:33:00.00$midob/onsource
+2018.118.03:33:00.00#flagr#flagr/antenna,acquired
+2018.118.03:33:00.00/onsource/TRACKING
+2018.118.03:33:00.00$midob/pvwget
+2018.118.03:33:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.03:33:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.03:33:00.01$pvwget/!+2s
+2018.118.03:33:02.02$pvwget/wx
+2018.118.03:33:02.02/wx/  0.2,  719.0, 23.4
+2018.118.03:33:02.02$midob/getcal
+2018.118.03:33:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.03:33:02.31#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s89.xml
+2018.118.03:33:02.31#     #rx: E2HLI ; tsys: 280.58 ; tau: 0.13 ; pwv mm: 2.0 ; trx: 68.4 ; time: 2018-04-28 03:24:45 ; rxFreq: 214.8493 ; elev: 18.5 ; source: m87
+2018.118.03:33:02.31#     #rx: E2HUI ; tsys: 280.63 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 69.9 ; time: 2018-04-28 03:24:45 ; rxFreq: 227.3500 ; elev: 18.5 ; source: m87
+2018.118.03:33:02.31#     #rx: E2VLI ; tsys: 301.24 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 86.0 ; time: 2018-04-28 03:24:45 ; rxFreq: 214.8493 ; elev: 18.5 ; source: m87
+2018.118.03:33:02.31#     #rx: E2VUI ; tsys: 298.97 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 85.3 ; time: 2018-04-28 03:24:45 ; rxFreq: 227.3500 ; elev: 18.5 ; source: m87
+2018.118.03:33:02.31$getcal/!+2s
+2018.118.03:33:04.32$midob/"getcal3mm
+2018.118.03:33:04.32$midob/"getcal1mm
+2018.118.03:33:04.32$midob/"dbbcifread  ************************
+2018.118.03:33:04.32:!2018.118.03:40:00
+2018.118.03:40:00.00:data_valid=off
+2018.118.03:40:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.03:40:00.00:postob
+2018.118.03:40:00.00$postob/"- - - - postob - - - -
+2018.118.03:40:00.00$postob/"dbbcifread ************
+2018.118.03:40:00.00$postob/" mk5=rtime?;*************
+2018.118.03:40:00.00$postob/!+1s
+2018.118.03:40:01.01$postob/"mk5=scan_check?;**************
+2018.118.03:40:01.01$postob/!+1s
+2018.118.03:40:02.02$postob/"mk5=dir_info?;***************
+2018.118.03:40:02.02$postob/!+1s
+2018.118.03:40:03.03$postob/"mk5=bank_set?;***************
+2018.118.03:40:03.03$postob/!+1s
+2018.118.03:40:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.03:40:04.65$postob/!+5s
+2018.118.03:40:09.66$postob/wx
+2018.118.03:40:09.66/wx/  0.2,  719.0, 23.4
+2018.118.03:40:09.66:scan_name=no0035,e18d28,pv,360,360
+2018.118.03:40:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.03:40:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.03:40:09.66#flagr#flagr/antenna,new-source
+2018.118.03:40:09.67:setup01
+2018.118.03:40:09.67?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.03:40:09.67:!2018.118.03:42:50
+2018.118.03:42:50.00:preob
+2018.118.03:42:50.00$preob/"- - - - preob - - - -
+2018.118.03:42:50.00$preob/"dbbcifread   ********
+2018.118.03:42:50.00:!2018.118.03:43:00
+2018.118.03:43:00.00:data_valid=on
+2018.118.03:43:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.03:43:00.00:midob
+2018.118.03:43:00.00$midob/"- - - - midob - - - -
+2018.118.03:43:00.00$midob/onsource
+2018.118.03:43:00.00/onsource/TRACKING
+2018.118.03:43:00.00$midob/pvwget
+2018.118.03:43:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.03:43:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.03:43:00.00#flagr#flagr/antenna,acquired
+2018.118.03:43:00.00$pvwget/!+2s
+2018.118.03:43:02.01$pvwget/wx
+2018.118.03:43:02.01/wx/  0.2,  718.9, 23.8
+2018.118.03:43:02.01$midob/getcal
+2018.118.03:43:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.03:43:02.22#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s93.xml
+2018.118.03:43:02.22#     #rx: E2HLI ; tsys: 320.65 ; tau: 0.13 ; pwv mm: 2.0 ; trx: 68.3 ; time: 2018-04-28 03:40:33 ; rxFreq: 214.8493 ; elev: 15.4 ; source: m87
+2018.118.03:43:02.22#     #rx: E2HUI ; tsys: 322.12 ; tau: 0.13 ; pwv mm: 1.8 ; trx: 69.9 ; time: 2018-04-28 03:40:33 ; rxFreq: 227.3500 ; elev: 15.4 ; source: m87
+2018.118.03:43:02.22#     #rx: E2VLI ; tsys: 342.19 ; tau: 0.12 ; pwv mm: 1.9 ; trx: 85.8 ; time: 2018-04-28 03:40:33 ; rxFreq: 214.8493 ; elev: 15.4 ; source: m87
+2018.118.03:43:02.22#     #rx: E2VUI ; tsys: 340.53 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 85.1 ; time: 2018-04-28 03:40:33 ; rxFreq: 227.3500 ; elev: 15.4 ; source: m87
+2018.118.03:43:02.22$getcal/!+2s
+2018.118.03:43:04.23$midob/"getcal3mm
+2018.118.03:43:04.23$midob/"getcal1mm
+2018.118.03:43:04.23$midob/"dbbcifread  ************************
+2018.118.03:43:04.23:!2018.118.03:49:00
+2018.118.03:49:00.00:data_valid=off
+2018.118.03:49:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.03:49:00.00:postob
+2018.118.03:49:00.00$postob/"- - - - postob - - - -
+2018.118.03:49:00.00$postob/"dbbcifread ************
+2018.118.03:49:00.00$postob/" mk5=rtime?;*************
+2018.118.03:49:00.00$postob/!+1s
+2018.118.03:49:01.01$postob/"mk5=scan_check?;**************
+2018.118.03:49:01.01$postob/!+1s
+2018.118.03:49:02.02$postob/"mk5=dir_info?;***************
+2018.118.03:49:02.02$postob/!+1s
+2018.118.03:49:03.03$postob/"mk5=bank_set?;***************
+2018.118.03:49:03.03$postob/!+1s
+2018.118.03:49:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.03:49:04.65$postob/!+5s
+2018.118.03:49:09.66$postob/wx
+2018.118.03:49:09.66/wx/  0.2,  718.9, 23.8
+2018.118.03:49:09.66:scan_name=no0036,e18d28,pv,420,420
+2018.118.03:49:09.66:source=m87,123049.42,122328.0,2000.0,
+2018.118.03:49:09.66#antcn#>>SM NONE m87 12h30m49.4s  12d23'28" 4cm 0 0 2000FS9
+2018.118.03:49:09.66#flagr#flagr/antenna,new-source
+2018.118.03:49:09.66:setup01
+2018.118.03:49:09.66?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.118.03:49:09.66:!2018.118.03:51:50
+2018.118.03:51:50.01:preob
+2018.118.03:51:50.01$preob/"- - - - preob - - - -
+2018.118.03:51:50.01$preob/"dbbcifread   ********
+2018.118.03:51:50.01:!2018.118.03:52:00
+2018.118.03:52:00.00:data_valid=on
+2018.118.03:52:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.03:52:00.00:midob
+2018.118.03:52:00.00$midob/"- - - - midob - - - -
+2018.118.03:52:00.00$midob/onsource
+2018.118.03:52:00.00#flagr#flagr/antenna,acquired
+2018.118.03:52:00.00/onsource/TRACKING
+2018.118.03:52:00.00$midob/pvwget
+2018.118.03:52:00.00$pvwget/"- - - - pvwget - - - -
+2018.118.03:52:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.118.03:52:00.00$pvwget/!+2s
+2018.118.03:52:02.01$pvwget/wx
+2018.118.03:52:02.01/wx/  0.2,  718.9, 22.8
+2018.118.03:52:02.01$midob/getcal
+2018.118.03:52:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.03:52:02.23#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180428s95.xml
+2018.118.03:52:02.23#     #rx: E2HLI ; tsys: 353.87 ; tau: 0.13 ; pwv mm: 1.9 ; trx: 68.2 ; time: 2018-04-28 03:49:27 ; rxFreq: 214.8493 ; elev: 13.6 ; source: m87
+2018.118.03:52:02.23#     #rx: E2HUI ; tsys: 356.59 ; tau: 0.13 ; pwv mm: 1.8 ; trx: 69.9 ; time: 2018-04-28 03:49:27 ; rxFreq: 227.3500 ; elev: 13.6 ; source: m87
+2018.118.03:52:02.23#     #rx: E2VLI ; tsys: 377.23 ; tau: 0.12 ; pwv mm: 1.9 ; trx: 85.9 ; time: 2018-04-28 03:49:27 ; rxFreq: 214.8493 ; elev: 13.6 ; source: m87
+2018.118.03:52:02.23#     #rx: E2VUI ; tsys: 375.65 ; tau: 0.12 ; pwv mm: 1.8 ; trx: 85.1 ; time: 2018-04-28 03:49:27 ; rxFreq: 227.3500 ; elev: 13.6 ; source: m87
+2018.118.03:52:02.23$getcal/!+2s
+2018.118.03:52:04.24$midob/"getcal3mm
+2018.118.03:52:04.24$midob/"getcal1mm
+2018.118.03:52:04.24$midob/"dbbcifread  ************************
+2018.118.03:52:04.24:!2018.118.03:59:00
+2018.118.03:59:00.00:data_valid=off
+2018.118.03:59:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.118.03:59:00.00:postob
+2018.118.03:59:00.00$postob/"- - - - postob - - - -
+2018.118.03:59:00.00$postob/"dbbcifread ************
+2018.118.03:59:00.00$postob/" mk5=rtime?;*************
+2018.118.03:59:00.00$postob/!+1s
+2018.118.03:59:01.01$postob/"mk5=scan_check?;**************
+2018.118.03:59:01.01$postob/!+1s
+2018.118.03:59:02.02$postob/"mk5=dir_info?;***************
+2018.118.03:59:02.02$postob/!+1s
+2018.118.03:59:03.03$postob/"mk5=bank_set?;***************
+2018.118.03:59:03.03$postob/!+1s
+2018.118.03:59:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.118.03:59:04.65$postob/!+5s
+2018.118.03:59:09.66$postob/wx
+2018.118.03:59:09.66/wx/  0.2,  718.9, 22.8
+2018.118.03:59:09.66:sched_end
+2018.118.03:59:09.66&sched_end/"mk5=status?;   *****************
+2018.118.03:59:09.66&sched_end/"disk_stats     *****************
+2018.118.03:59:09.66&sched_end/"- - - - end of schedule - - - -
+2018.118.03:59:09.66$sched_end/"mk5=status?;   *****************
+2018.118.03:59:09.66$sched_end/"disk_stats     *****************
+2018.118.03:59:09.66$sched_end/"- - - - end of schedule - - - -
+2018.118.03:59:09.66:*end of schedule
+2018.118.13:15:28.17;getcal
+2018.118.13:15:28.17$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.118.13:15:29.41#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-BBC-20180428s232.xml
+2018.118.13:15:29.41#     #rx: E2HLS ; tsys: 195.33 ; tau: 0.13 ; pwv mm: 2.1 ; trx: 70.6 ; time: 2018-04-28 13:02:16 ; rxFreq: 216.4300 ; elev: 41.0 ; source: Mercury
+2018.118.13:15:29.41#     #rx: E2HUS ; tsys: 211.02 ; tau: 0.16 ; pwv mm: 2.1 ; trx: 70.0 ; time: 2018-04-28 13:02:16 ; rxFreq: 232.4314 ; elev: 41.0 ; source: Mercury
+2018.118.13:15:29.41#     #rx: E2VLS ; tsys: 204.52 ; tau: 0.13 ; pwv mm: 2.0 ; trx: 80.2 ; time: 2018-04-28 13:02:16 ; rxFreq: 216.4300 ; elev: 41.0 ; source: Mercury
+2018.118.13:15:29.41#     #rx: E2VUS ; tsys: 235.18 ; tau: 0.15 ; pwv mm: 2.0 ; trx: 90.0 ; time: 2018-04-28 13:02:16 ; rxFreq: 232.4314 ; elev: 41.0 ; source: Mercury
+2018.118.13:15:29.42$getcal/!+2s
+2018.118.13:16:16.45;wx
+2018.118.13:16:16.45/wx/  0.2,  718.9, 22.8
+2018.118.13:16:20.89;terminate
+2018.118.13:16:20.89:*boss terminated

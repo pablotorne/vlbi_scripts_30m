@@ -1,0 +1,1800 @@
+2018.113.20:25:26.76;Log Opened: Mark IV Field System Version 9.11.18
+2018.113.20:25:26.76;location,PICOVEL ,3.39,37.07,2920.0
+2018.113.20:25:26.76;horizon1,0.,10.,360.
+2018.113.20:25:26.76;antenna,30.0,30.0,30.0,60.0,460.0,3.0,88.0,azel
+2018.113.20:25:26.76;equip,dbbc_pfb/fila10g,none,none,none,500.10,3,a/d,101,60,20,none,40,1,in,8bit,cdp,3,return,v105_1,v16_1,1,1,15000,15000,0,vsi2
+2018.113.20:25:26.76;time,-5.411,5.545,rate
+2018.113.20:25:26.76;flagr,200
+2018.113.20:25:26.76:" e18a24    2018 PICOVEL  C Pv
+2018.113.20:25:26.76:" C PICOVEL  AZEL  .0000  30.0   10 -999.9  999.9  30.0   10 -999.9  999.9   .0 Pv
+2018.113.20:25:26.76:" Pv PICOVEL   5088967.74544  -301681.18586  3825012.20561
+2018.113.20:25:26.76:"      PICOVEL     0     8820
+2018.113.20:25:26.76:" drudg version 2016Nov29 compiled under FS  9.11.18
+2018.113.20:25:26.76:" Rack=DBBC_PFB  Recorder 1=none      Recorder 2=none
+2018.113.20:25:26.76:exper_initi
+2018.113.20:25:26.76?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.113.20:25:26.76:scan_name=no0001,e18a24,pv,480,480
+2018.113.20:25:26.81:source=sgra,174540.04,-290028.1,2000.0,
+2018.113.20:25:26.82#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.113.20:25:26.82#flagr#flagr/antenna,new-source
+2018.113.20:25:26.82:setup01
+2018.113.20:25:26.82?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.113.20:25:26.82:!2018.114.03:01:50
+2018.114.03:01:50.00:preob
+2018.114.03:01:50.00&preob/"- - - - preob - - - -
+2018.114.03:01:50.00&preob/dbbcifread
+2018.114.03:01:50.00$preob/"- - - - preob - - - -
+2018.114.03:01:50.00$preob/dbbcifread
+2018.114.03:01:50.00&dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:01:50.00&dbbcifread/dbbc=dbbcifa
+2018.114.03:01:50.00&dbbcifread/dbbc=dbbcifb
+2018.114.03:01:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:01:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.03:01:53.03?ERROR un  113 No route to host
+2018.114.03:01:53.03?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:01:53.03$dbbcifread/dbbc=dbbcifb
+2018.114.03:01:56.04?ERROR un  113 No route to host
+2018.114.03:01:56.04?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:01:56.04:!2018.114.03:02:00
+2018.114.03:02:00.00:data_valid=on
+2018.114.03:02:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:02:00.00:midob
+2018.114.03:02:00.00&midob/"- - - - midob - - - -
+2018.114.03:02:00.00&midob/onsource
+2018.114.03:02:00.00&midob/pvwget
+2018.114.03:02:00.00&midob/getcal
+2018.114.03:02:00.00&midob/"getcal3mm
+2018.114.03:02:00.00&midob/"getcal1mm
+2018.114.03:02:00.00&midob/dbbcifread
+2018.114.03:02:00.00$midob/"- - - - midob - - - -
+2018.114.03:02:00.00$midob/onsource
+2018.114.03:02:00.00/onsource/TRACKING
+2018.114.03:02:00.00$midob/pvwget
+2018.114.03:02:00.00&pvwget/"- - - - pvwget - - - -
+2018.114.03:02:00.00&pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.03:02:00.00&pvwget/!+2s
+2018.114.03:02:00.00&pvwget/wx
+2018.114.03:02:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.03:02:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.03:02:00.00#flagr#flagr/antenna,acquired
+2018.114.03:02:00.01$pvwget/!+2s
+2018.114.03:02:02.02$pvwget/wx
+2018.114.03:02:02.02/wx/  4.1,  720.6, 62.5
+2018.114.03:02:02.02$midob/getcal
+2018.114.03:02:02.02&getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.03:02:02.02&getcal/!+2s
+2018.114.03:02:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.03:02:02.82#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.03:02:02.82#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:02:02.82#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:02:02.82#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:02:02.82#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:02:02.82$getcal/!+2s
+2018.114.03:02:04.83$midob/"getcal3mm
+2018.114.03:02:04.83$midob/"getcal1mm
+2018.114.03:02:04.83$midob/dbbcifread
+2018.114.03:02:04.83$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:02:04.83$dbbcifread/dbbc=dbbcifa
+2018.114.03:02:07.83?ERROR un  113 No route to host
+2018.114.03:02:07.83?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:02:07.83$dbbcifread/dbbc=dbbcifb
+2018.114.03:02:10.83?ERROR un  113 No route to host
+2018.114.03:02:10.83?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:02:10.83:!2018.114.03:10:00
+2018.114.03:10:00.00:data_valid=off
+2018.114.03:10:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:10:00.00:postob
+2018.114.03:10:00.00&postob/"- - - - postob - - - -
+2018.114.03:10:00.00&postob/dbbcifread
+2018.114.03:10:00.00&postob/mk5=rtime?;
+2018.114.03:10:00.00&postob/!+1s
+2018.114.03:10:00.00&postob/mk5=scan_check?;
+2018.114.03:10:00.00&postob/!+1s
+2018.114.03:10:00.00&postob/mk5=dir_info?;
+2018.114.03:10:00.00&postob/!+1s
+2018.114.03:10:00.00&postob/mk5=bank_set?;
+2018.114.03:10:00.00&postob/!+1s
+2018.114.03:10:00.00&postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.03:10:00.00&postob/!+5s
+2018.114.03:10:00.00&postob/wx
+2018.114.03:10:00.00$postob/"- - - - postob - - - -
+2018.114.03:10:00.00$postob/dbbcifread
+2018.114.03:10:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:10:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.03:10:03.01?ERROR un  113 No route to host
+2018.114.03:10:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:10:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.03:10:06.01?ERROR un  113 No route to host
+2018.114.03:10:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:10:06.01$postob/mk5=rtime?;
+2018.114.03:10:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:10:06.01$postob/!+1s
+2018.114.03:10:07.02$postob/mk5=scan_check?;
+2018.114.03:10:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:10:07.02$postob/!+1s
+2018.114.03:10:08.03$postob/mk5=dir_info?;
+2018.114.03:10:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:10:08.03$postob/!+1s
+2018.114.03:10:09.04$postob/mk5=bank_set?;
+2018.114.03:10:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:10:09.04$postob/!+1s
+2018.114.03:10:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.03:10:10.74$postob/!+5s
+2018.114.03:10:15.75$postob/wx
+2018.114.03:10:15.75/wx/  4.1,  720.6, 62.5
+2018.114.03:10:15.75:scan_name=no0002,e18a24,pv,540,540
+2018.114.03:10:15.75:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.03:10:15.75#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.03:10:15.75#flagr#flagr/antenna,new-source
+2018.114.03:10:15.75:setup01
+2018.114.03:10:15.75?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.03:10:15.75:!2018.114.03:12:50
+2018.114.03:12:50.01:preob
+2018.114.03:12:50.01$preob/"- - - - preob - - - -
+2018.114.03:12:50.01$preob/dbbcifread
+2018.114.03:12:50.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:12:50.01$dbbcifread/dbbc=dbbcifa
+2018.114.03:12:53.01?ERROR un  113 No route to host
+2018.114.03:12:53.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:12:53.01$dbbcifread/dbbc=dbbcifb
+2018.114.03:12:56.01?ERROR un  113 No route to host
+2018.114.03:12:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:12:56.01:!2018.114.03:13:00
+2018.114.03:13:00.00:data_valid=on
+2018.114.03:13:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:13:00.00:midob
+2018.114.03:13:00.00$midob/"- - - - midob - - - -
+2018.114.03:13:00.00$midob/onsource
+2018.114.03:13:00.00/onsource/TRACKING
+2018.114.03:13:00.00$midob/pvwget
+2018.114.03:13:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.03:13:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.03:13:00.00#flagr#flagr/antenna,acquired
+2018.114.03:13:00.01$pvwget/!+2s
+2018.114.03:13:02.02$pvwget/wx
+2018.114.03:13:02.02/wx/  3.9,  720.5, 64.8
+2018.114.03:13:02.02$midob/getcal
+2018.114.03:13:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.03:13:02.34#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.03:13:02.34#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:13:02.34#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:13:02.34#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:13:02.34#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:13:02.34$getcal/!+2s
+2018.114.03:13:04.35$midob/"getcal3mm
+2018.114.03:13:04.35$midob/"getcal1mm
+2018.114.03:13:04.35$midob/dbbcifread
+2018.114.03:13:04.35$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:13:04.35$dbbcifread/dbbc=dbbcifa
+2018.114.03:13:07.35?ERROR un  113 No route to host
+2018.114.03:13:07.35?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:13:07.35$dbbcifread/dbbc=dbbcifb
+2018.114.03:13:10.35?ERROR un  113 No route to host
+2018.114.03:13:10.35?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:13:10.35:!2018.114.03:22:00
+2018.114.03:22:00.00:data_valid=off
+2018.114.03:22:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:22:00.00:postob
+2018.114.03:22:00.00$postob/"- - - - postob - - - -
+2018.114.03:22:00.00$postob/dbbcifread
+2018.114.03:22:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:22:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.03:22:03.00?ERROR un  113 No route to host
+2018.114.03:22:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:22:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.03:22:06.01?ERROR un  113 No route to host
+2018.114.03:22:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:22:06.01$postob/mk5=rtime?;
+2018.114.03:22:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:22:06.01$postob/!+1s
+2018.114.03:22:07.02$postob/mk5=scan_check?;
+2018.114.03:22:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:22:07.02$postob/!+1s
+2018.114.03:22:08.03$postob/mk5=dir_info?;
+2018.114.03:22:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:22:08.03$postob/!+1s
+2018.114.03:22:09.04$postob/mk5=bank_set?;
+2018.114.03:22:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:22:09.04$postob/!+1s
+2018.114.03:22:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.03:22:10.66$postob/!+5s
+2018.114.03:22:15.68$postob/wx
+2018.114.03:22:15.68/wx/  3.9,  720.5, 64.8
+2018.114.03:22:15.68:scan_name=no0003,e18a24,pv,120,120
+2018.114.03:22:15.68:source=3c279,125611.17,-054721.5,2000.0,
+2018.114.03:22:15.68#antcn#>>SM NONE 3c279 12h56m11.2s  -5d47'22" 4cm 0 0 2000FS9
+2018.114.03:22:15.68#flagr#flagr/antenna,new-source
+2018.114.03:22:15.68:setup01
+2018.114.03:22:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.03:22:15.68:!2018.114.03:27:50
+2018.114.03:27:50.00:preob
+2018.114.03:27:50.00$preob/"- - - - preob - - - -
+2018.114.03:27:50.00$preob/dbbcifread
+2018.114.03:27:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:27:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.03:27:53.00?ERROR un  113 No route to host
+2018.114.03:27:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:27:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.03:27:56.00?ERROR un  113 No route to host
+2018.114.03:27:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:27:56.00:!2018.114.03:28:00
+2018.114.03:28:00.00:data_valid=on
+2018.114.03:28:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:28:00.00:midob
+2018.114.03:28:00.01$midob/"- - - - midob - - - -
+2018.114.03:28:00.01$midob/onsource
+2018.114.03:28:00.01#flagr#flagr/antenna,acquired
+2018.114.03:28:00.01/onsource/TRACKING
+2018.114.03:28:00.01$midob/pvwget
+2018.114.03:28:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.03:28:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.03:28:00.01$pvwget/!+2s
+2018.114.03:28:02.02$pvwget/wx
+2018.114.03:28:02.02/wx/  3.8,  720.6, 63.8
+2018.114.03:28:02.02$midob/getcal
+2018.114.03:28:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.03:28:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.03:28:02.25#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:28:02.25#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:28:02.25#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:28:02.25#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:28:02.25$getcal/!+2s
+2018.114.03:28:04.26$midob/"getcal3mm
+2018.114.03:28:04.26$midob/"getcal1mm
+2018.114.03:28:04.26$midob/dbbcifread
+2018.114.03:28:04.26$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:28:04.26$dbbcifread/dbbc=dbbcifa
+2018.114.03:28:07.26?ERROR un  113 No route to host
+2018.114.03:28:07.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:28:07.26$dbbcifread/dbbc=dbbcifb
+2018.114.03:28:10.26?ERROR un  113 No route to host
+2018.114.03:28:10.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:28:10.26:!2018.114.03:30:00
+2018.114.03:30:00.00:data_valid=off
+2018.114.03:30:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:30:00.00:postob
+2018.114.03:30:00.01$postob/"- - - - postob - - - -
+2018.114.03:30:00.01$postob/dbbcifread
+2018.114.03:30:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:30:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.03:30:03.01?ERROR un  113 No route to host
+2018.114.03:30:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:30:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.03:30:06.01?ERROR un  113 No route to host
+2018.114.03:30:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:30:06.01$postob/mk5=rtime?;
+2018.114.03:30:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:30:06.01$postob/!+1s
+2018.114.03:30:07.02$postob/mk5=scan_check?;
+2018.114.03:30:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:30:07.02$postob/!+1s
+2018.114.03:30:08.03$postob/mk5=dir_info?;
+2018.114.03:30:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:30:08.03$postob/!+1s
+2018.114.03:30:09.04$postob/mk5=bank_set?;
+2018.114.03:30:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:30:09.04$postob/!+1s
+2018.114.03:30:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.03:30:10.67$postob/!+5s
+2018.114.03:30:15.68$postob/wx
+2018.114.03:30:15.68/wx/  3.8,  720.6, 63.8
+2018.114.03:30:15.68:scan_name=no0004,e18a24,pv,120,120
+2018.114.03:30:15.68:source=nrao530,173302.71,-130449.5,2000.0,
+2018.114.03:30:15.68#antcn#>>SM NONE nrao530 17h33m02.7s -13d04'50" 4cm 0 0 2000FS9
+2018.114.03:30:15.68#flagr#flagr/antenna,new-source
+2018.114.03:30:15.68:setup01
+2018.114.03:30:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.03:30:15.68:!2018.114.03:38:50
+2018.114.03:38:50.00:preob
+2018.114.03:38:50.00$preob/"- - - - preob - - - -
+2018.114.03:38:50.00$preob/dbbcifread
+2018.114.03:38:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:38:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.03:38:53.00?ERROR un  113 No route to host
+2018.114.03:38:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:38:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.03:38:56.01?ERROR un  113 No route to host
+2018.114.03:38:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:38:56.01:!2018.114.03:39:00
+2018.114.03:39:00.00:data_valid=on
+2018.114.03:39:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:39:00.00:midob
+2018.114.03:39:00.00$midob/"- - - - midob - - - -
+2018.114.03:39:00.00$midob/onsource
+2018.114.03:39:00.00/onsource/TRACKING
+2018.114.03:39:00.00$midob/pvwget
+2018.114.03:39:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.03:39:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.03:39:00.00#flagr#flagr/antenna,acquired
+2018.114.03:39:00.01$pvwget/!+2s
+2018.114.03:39:02.02$pvwget/wx
+2018.114.03:39:02.02/wx/  3.9,  720.4, 62.1
+2018.114.03:39:02.02$midob/getcal
+2018.114.03:39:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.03:39:02.23#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.03:39:02.23#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:39:02.23#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:39:02.23#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:39:02.23#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:39:02.23$getcal/!+2s
+2018.114.03:39:04.24$midob/"getcal3mm
+2018.114.03:39:04.24$midob/"getcal1mm
+2018.114.03:39:04.24$midob/dbbcifread
+2018.114.03:39:04.24$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:39:04.24$dbbcifread/dbbc=dbbcifa
+2018.114.03:39:07.24?ERROR un  113 No route to host
+2018.114.03:39:07.24?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:39:07.24$dbbcifread/dbbc=dbbcifb
+2018.114.03:39:10.24?ERROR un  113 No route to host
+2018.114.03:39:10.24?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:39:10.24:!2018.114.03:41:00
+2018.114.03:41:00.00:data_valid=off
+2018.114.03:41:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:41:00.00:postob
+2018.114.03:41:00.01$postob/"- - - - postob - - - -
+2018.114.03:41:00.01$postob/dbbcifread
+2018.114.03:41:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:41:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.03:41:03.01?ERROR un  113 No route to host
+2018.114.03:41:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:41:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.03:41:06.01?ERROR un  113 No route to host
+2018.114.03:41:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:41:06.01$postob/mk5=rtime?;
+2018.114.03:41:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:41:06.01$postob/!+1s
+2018.114.03:41:07.02$postob/mk5=scan_check?;
+2018.114.03:41:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:41:07.02$postob/!+1s
+2018.114.03:41:08.03$postob/mk5=dir_info?;
+2018.114.03:41:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:41:08.03$postob/!+1s
+2018.114.03:41:09.04$postob/mk5=bank_set?;
+2018.114.03:41:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:41:09.04$postob/!+1s
+2018.114.03:41:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.03:41:10.67$postob/!+5s
+2018.114.03:41:15.68$postob/wx
+2018.114.03:41:15.68/wx/  3.9,  720.4, 62.1
+2018.114.03:41:15.68:scan_name=no0005,e18a24,pv,300,300
+2018.114.03:41:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.03:41:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.03:41:15.68#flagr#flagr/antenna,new-source
+2018.114.03:41:15.68:setup01
+2018.114.03:41:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.03:41:15.68:!2018.114.03:44:50
+2018.114.03:44:50.00:preob
+2018.114.03:44:50.00$preob/"- - - - preob - - - -
+2018.114.03:44:50.00$preob/dbbcifread
+2018.114.03:44:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:44:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.03:44:53.00?ERROR un  113 No route to host
+2018.114.03:44:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:44:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.03:44:56.00?ERROR un  113 No route to host
+2018.114.03:44:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:44:56.00:!2018.114.03:45:00
+2018.114.03:45:00.00:data_valid=on
+2018.114.03:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:45:00.00:midob
+2018.114.03:45:00.01$midob/"- - - - midob - - - -
+2018.114.03:45:00.01$midob/onsource
+2018.114.03:45:00.01/onsource/TRACKING
+2018.114.03:45:00.01$midob/pvwget
+2018.114.03:45:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.03:45:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.03:45:00.01#flagr#flagr/antenna,acquired
+2018.114.03:45:00.01$pvwget/!+2s
+2018.114.03:45:02.02$pvwget/wx
+2018.114.03:45:02.02/wx/  3.8,  720.5, 63.1
+2018.114.03:45:02.02$midob/getcal
+2018.114.03:45:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.03:45:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.03:45:02.25#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:45:02.25#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:45:02.25#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:45:02.25#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:45:02.25$getcal/!+2s
+2018.114.03:45:04.26$midob/"getcal3mm
+2018.114.03:45:04.26$midob/"getcal1mm
+2018.114.03:45:04.26$midob/dbbcifread
+2018.114.03:45:04.26$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:45:04.26$dbbcifread/dbbc=dbbcifa
+2018.114.03:45:07.26?ERROR un  113 No route to host
+2018.114.03:45:07.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:45:07.26$dbbcifread/dbbc=dbbcifb
+2018.114.03:45:10.26?ERROR un  113 No route to host
+2018.114.03:45:10.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:45:10.26:!2018.114.03:50:00
+2018.114.03:50:00.00:data_valid=off
+2018.114.03:50:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:50:00.00:postob
+2018.114.03:50:00.00$postob/"- - - - postob - - - -
+2018.114.03:50:00.00$postob/dbbcifread
+2018.114.03:50:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:50:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.03:50:03.00?ERROR un  113 No route to host
+2018.114.03:50:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:50:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.03:50:06.01?ERROR un  113 No route to host
+2018.114.03:50:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:50:06.01$postob/mk5=rtime?;
+2018.114.03:50:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:50:06.01$postob/!+1s
+2018.114.03:50:07.02$postob/mk5=scan_check?;
+2018.114.03:50:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:50:07.02$postob/!+1s
+2018.114.03:50:08.03$postob/mk5=dir_info?;
+2018.114.03:50:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:50:08.03$postob/!+1s
+2018.114.03:50:09.04$postob/mk5=bank_set?;
+2018.114.03:50:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.03:50:09.04$postob/!+1s
+2018.114.03:50:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.03:50:10.67$postob/!+5s
+2018.114.03:50:15.68$postob/wx
+2018.114.03:50:15.68/wx/  3.8,  720.5, 63.1
+2018.114.03:50:15.68:scan_name=no0006,e18a24,pv,540,540
+2018.114.03:50:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.03:50:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.03:50:15.68#flagr#flagr/antenna,new-source
+2018.114.03:50:15.68:setup01
+2018.114.03:50:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.03:50:15.68:!2018.114.03:52:50
+2018.114.03:52:50.00:preob
+2018.114.03:52:50.00$preob/"- - - - preob - - - -
+2018.114.03:52:50.00$preob/dbbcifread
+2018.114.03:52:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:52:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.03:52:53.00?ERROR un  113 No route to host
+2018.114.03:52:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:52:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.03:52:56.00?ERROR un  113 No route to host
+2018.114.03:52:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:52:56.00:!2018.114.03:53:00
+2018.114.03:53:00.00:data_valid=on
+2018.114.03:53:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.03:53:00.00:midob
+2018.114.03:53:00.01$midob/"- - - - midob - - - -
+2018.114.03:53:00.01$midob/onsource
+2018.114.03:53:00.01/onsource/TRACKING
+2018.114.03:53:00.01$midob/pvwget
+2018.114.03:53:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.03:53:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.03:53:00.01#flagr#flagr/antenna,acquired
+2018.114.03:53:00.01$pvwget/!+2s
+2018.114.03:53:02.02$pvwget/wx
+2018.114.03:53:02.02/wx/  3.7,  720.3, 64.0
+2018.114.03:53:02.02$midob/getcal
+2018.114.03:53:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.03:53:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.03:53:02.24#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:53:02.24#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:53:02.24#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.03:53:02.24#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.03:53:02.24$getcal/!+2s
+2018.114.03:53:04.25$midob/"getcal3mm
+2018.114.03:53:04.25$midob/"getcal1mm
+2018.114.03:53:04.25$midob/dbbcifread
+2018.114.03:53:04.25$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.03:53:04.25$dbbcifread/dbbc=dbbcifa
+2018.114.03:53:07.25?ERROR un  113 No route to host
+2018.114.03:53:07.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:53:07.25$dbbcifread/dbbc=dbbcifb
+2018.114.03:53:10.25?ERROR un  113 No route to host
+2018.114.03:53:10.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.03:53:10.25:!2018.114.04:02:00
+2018.114.04:02:00.00:data_valid=off
+2018.114.04:02:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:02:00.00:postob
+2018.114.04:02:00.00$postob/"- - - - postob - - - -
+2018.114.04:02:00.00$postob/dbbcifread
+2018.114.04:02:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:02:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.04:02:03.01?ERROR un  113 No route to host
+2018.114.04:02:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:02:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.04:02:06.01?ERROR un  113 No route to host
+2018.114.04:02:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:02:06.01$postob/mk5=rtime?;
+2018.114.04:02:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:02:06.01$postob/!+1s
+2018.114.04:02:07.02$postob/mk5=scan_check?;
+2018.114.04:02:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:02:07.02$postob/!+1s
+2018.114.04:02:08.03$postob/mk5=dir_info?;
+2018.114.04:02:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:02:08.03$postob/!+1s
+2018.114.04:02:09.04$postob/mk5=bank_set?;
+2018.114.04:02:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:02:09.04$postob/!+1s
+2018.114.04:02:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.04:02:10.67$postob/!+5s
+2018.114.04:02:15.68$postob/wx
+2018.114.04:02:15.68/wx/  3.7,  720.3, 64.0
+2018.114.04:02:15.68:scan_name=no0007,e18a24,pv,420,420
+2018.114.04:02:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.04:02:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.04:02:15.68#flagr#flagr/antenna,new-source
+2018.114.04:02:15.68:setup01
+2018.114.04:02:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.04:02:15.68:!2018.114.04:10:50
+2018.114.04:10:50.00:preob
+2018.114.04:10:50.00$preob/"- - - - preob - - - -
+2018.114.04:10:50.00$preob/dbbcifread
+2018.114.04:10:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:10:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.04:10:53.00?ERROR un  113 No route to host
+2018.114.04:10:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:10:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.04:10:56.01?ERROR un  113 No route to host
+2018.114.04:10:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:10:56.01:!2018.114.04:11:00
+2018.114.04:11:00.00:data_valid=on
+2018.114.04:11:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:11:00.00:midob
+2018.114.04:11:00.00$midob/"- - - - midob - - - -
+2018.114.04:11:00.00$midob/onsource
+2018.114.04:11:00.00/onsource/TRACKING
+2018.114.04:11:00.00$midob/pvwget
+2018.114.04:11:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.04:11:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.04:11:00.00#flagr#flagr/antenna,acquired
+2018.114.04:11:00.01$pvwget/!+2s
+2018.114.04:11:02.02$pvwget/wx
+2018.114.04:11:02.02/wx/  3.6,  720.1, 65.3
+2018.114.04:11:02.02$midob/getcal
+2018.114.04:11:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.04:11:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.04:11:02.24#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:11:02.24#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:11:02.24#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:11:02.24#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:11:02.24$getcal/!+2s
+2018.114.04:11:04.25$midob/"getcal3mm
+2018.114.04:11:04.25$midob/"getcal1mm
+2018.114.04:11:04.25$midob/dbbcifread
+2018.114.04:11:04.25$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:11:04.25$dbbcifread/dbbc=dbbcifa
+2018.114.04:11:07.25?ERROR un  113 No route to host
+2018.114.04:11:07.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:11:07.25$dbbcifread/dbbc=dbbcifb
+2018.114.04:11:10.25?ERROR un  113 No route to host
+2018.114.04:11:10.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:11:10.25:!2018.114.04:18:00
+2018.114.04:18:00.00:data_valid=off
+2018.114.04:18:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:18:00.00:postob
+2018.114.04:18:00.00$postob/"- - - - postob - - - -
+2018.114.04:18:00.00$postob/dbbcifread
+2018.114.04:18:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:18:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.04:18:03.00?ERROR un  113 No route to host
+2018.114.04:18:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:18:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.04:18:06.01?ERROR un  113 No route to host
+2018.114.04:18:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:18:06.01$postob/mk5=rtime?;
+2018.114.04:18:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:18:06.01$postob/!+1s
+2018.114.04:18:07.02$postob/mk5=scan_check?;
+2018.114.04:18:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:18:07.02$postob/!+1s
+2018.114.04:18:08.03$postob/mk5=dir_info?;
+2018.114.04:18:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:18:08.03$postob/!+1s
+2018.114.04:18:09.04$postob/mk5=bank_set?;
+2018.114.04:18:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:18:09.04$postob/!+1s
+2018.114.04:18:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.04:18:10.67$postob/!+5s
+2018.114.04:18:15.68$postob/wx
+2018.114.04:18:15.68/wx/  3.6,  720.1, 65.3
+2018.114.04:18:15.68:scan_name=no0008,e18a24,pv,480,480
+2018.114.04:18:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.04:18:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.04:18:15.68#flagr#flagr/antenna,new-source
+2018.114.04:18:15.68:setup01
+2018.114.04:18:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.04:18:15.68:!2018.114.04:20:50
+2018.114.04:20:50.00:preob
+2018.114.04:20:50.00$preob/"- - - - preob - - - -
+2018.114.04:20:50.00$preob/dbbcifread
+2018.114.04:20:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:20:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.04:20:53.00?ERROR un  113 No route to host
+2018.114.04:20:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:20:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.04:20:56.00?ERROR un  113 No route to host
+2018.114.04:20:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:20:56.00:!2018.114.04:21:00
+2018.114.04:21:00.00:data_valid=on
+2018.114.04:21:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:21:00.00:midob
+2018.114.04:21:00.01$midob/"- - - - midob - - - -
+2018.114.04:21:00.01$midob/onsource
+2018.114.04:21:00.01/onsource/TRACKING
+2018.114.04:21:00.01$midob/pvwget
+2018.114.04:21:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.04:21:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.04:21:00.01#flagr#flagr/antenna,acquired
+2018.114.04:21:00.01$pvwget/!+2s
+2018.114.04:21:02.02$pvwget/wx
+2018.114.04:21:02.02/wx/  3.5,  720.1, 66.9
+2018.114.04:21:02.02$midob/getcal
+2018.114.04:21:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.04:21:02.30#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.04:21:02.30#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:21:02.30#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:21:02.30#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:21:02.30#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:21:02.30$getcal/!+2s
+2018.114.04:21:04.31$midob/"getcal3mm
+2018.114.04:21:04.31$midob/"getcal1mm
+2018.114.04:21:04.31$midob/dbbcifread
+2018.114.04:21:04.31$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:21:04.31$dbbcifread/dbbc=dbbcifa
+2018.114.04:21:07.31?ERROR un  113 No route to host
+2018.114.04:21:07.31?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:21:07.31$dbbcifread/dbbc=dbbcifb
+2018.114.04:21:10.31?ERROR un  113 No route to host
+2018.114.04:21:10.31?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:21:10.31:!2018.114.04:29:00
+2018.114.04:29:00.00:data_valid=off
+2018.114.04:29:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:29:00.00:postob
+2018.114.04:29:00.00$postob/"- - - - postob - - - -
+2018.114.04:29:00.00$postob/dbbcifread
+2018.114.04:29:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:29:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.04:29:03.00?ERROR un  113 No route to host
+2018.114.04:29:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:29:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.04:29:06.01?ERROR un  113 No route to host
+2018.114.04:29:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:29:06.01$postob/mk5=rtime?;
+2018.114.04:29:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:29:06.01$postob/!+1s
+2018.114.04:29:07.02$postob/mk5=scan_check?;
+2018.114.04:29:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:29:07.02$postob/!+1s
+2018.114.04:29:08.03$postob/mk5=dir_info?;
+2018.114.04:29:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:29:08.03$postob/!+1s
+2018.114.04:29:09.04$postob/mk5=bank_set?;
+2018.114.04:29:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:29:09.04$postob/!+1s
+2018.114.04:29:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.04:29:10.66$postob/!+5s
+2018.114.04:29:15.68$postob/wx
+2018.114.04:29:15.68/wx/  3.5,  720.1, 66.9
+2018.114.04:29:15.68:scan_name=no0009,e18a24,pv,540,540
+2018.114.04:29:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.04:29:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.04:29:15.68#flagr#flagr/antenna,new-source
+2018.114.04:29:15.68:setup01
+2018.114.04:29:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.04:29:15.68:!2018.114.04:29:50
+2018.114.04:29:50.00:preob
+2018.114.04:29:50.00$preob/"- - - - preob - - - -
+2018.114.04:29:50.00$preob/dbbcifread
+2018.114.04:29:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:29:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.04:29:53.00?ERROR un  113 No route to host
+2018.114.04:29:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:29:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.04:29:56.00?ERROR un  113 No route to host
+2018.114.04:29:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:29:56.00:!2018.114.04:30:00
+2018.114.04:30:00.00:data_valid=on
+2018.114.04:30:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:30:00.00:midob
+2018.114.04:30:00.01$midob/"- - - - midob - - - -
+2018.114.04:30:00.01$midob/onsource
+2018.114.04:30:00.01/onsource/TRACKING
+2018.114.04:30:00.01$midob/pvwget
+2018.114.04:30:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.04:30:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.04:30:00.01#flagr#flagr/antenna,acquired
+2018.114.04:30:00.01$pvwget/!+2s
+2018.114.04:30:02.02$pvwget/wx
+2018.114.04:30:02.02/wx/  3.5,  720.3, 66.8
+2018.114.04:30:02.02$midob/getcal
+2018.114.04:30:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.04:30:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.04:30:02.25#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:30:02.25#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:30:02.25#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:30:02.25#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:30:02.25$getcal/!+2s
+2018.114.04:30:04.26$midob/"getcal3mm
+2018.114.04:30:04.26$midob/"getcal1mm
+2018.114.04:30:04.26$midob/dbbcifread
+2018.114.04:30:04.26$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:30:04.26$dbbcifread/dbbc=dbbcifa
+2018.114.04:30:07.26?ERROR un  113 No route to host
+2018.114.04:30:07.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:30:07.26$dbbcifread/dbbc=dbbcifb
+2018.114.04:30:10.26?ERROR un  113 No route to host
+2018.114.04:30:10.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:30:10.26:!2018.114.04:39:00
+2018.114.04:39:00.00:data_valid=off
+2018.114.04:39:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:39:00.00:postob
+2018.114.04:39:00.01$postob/"- - - - postob - - - -
+2018.114.04:39:00.01$postob/dbbcifread
+2018.114.04:39:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:39:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.04:39:03.01?ERROR un  113 No route to host
+2018.114.04:39:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:39:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.04:39:06.01?ERROR un  113 No route to host
+2018.114.04:39:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:39:06.01$postob/mk5=rtime?;
+2018.114.04:39:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:39:06.01$postob/!+1s
+2018.114.04:39:07.02$postob/mk5=scan_check?;
+2018.114.04:39:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:39:07.02$postob/!+1s
+2018.114.04:39:08.03$postob/mk5=dir_info?;
+2018.114.04:39:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:39:08.03$postob/!+1s
+2018.114.04:39:09.04$postob/mk5=bank_set?;
+2018.114.04:39:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:39:09.04$postob/!+1s
+2018.114.04:39:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.04:39:10.67$postob/!+5s
+2018.114.04:39:15.68$postob/wx
+2018.114.04:39:15.68/wx/  3.5,  720.3, 66.8
+2018.114.04:39:15.68:scan_name=no0010,e18a24,pv,180,180
+2018.114.04:39:15.68:source=nrao530,173302.71,-130449.5,2000.0,
+2018.114.04:39:15.68#antcn#>>SM NONE nrao530 17h33m02.7s -13d04'50" 4cm 0 0 2000FS9
+2018.114.04:39:15.68#flagr#flagr/antenna,new-source
+2018.114.04:39:15.68:setup01
+2018.114.04:39:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.04:39:15.68:!2018.114.04:44:50
+2018.114.04:44:50.00:preob
+2018.114.04:44:50.00$preob/"- - - - preob - - - -
+2018.114.04:44:50.00$preob/dbbcifread
+2018.114.04:44:50.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:44:50.01$dbbcifread/dbbc=dbbcifa
+2018.114.04:44:53.01?ERROR un  113 No route to host
+2018.114.04:44:53.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:44:53.01$dbbcifread/dbbc=dbbcifb
+2018.114.04:44:56.01?ERROR un  113 No route to host
+2018.114.04:44:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:44:56.01:!2018.114.04:45:00
+2018.114.04:45:00.00:data_valid=on
+2018.114.04:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:45:00.00:midob
+2018.114.04:45:00.00$midob/"- - - - midob - - - -
+2018.114.04:45:00.00$midob/onsource
+2018.114.04:45:00.00/onsource/TRACKING
+2018.114.04:45:00.00$midob/pvwget
+2018.114.04:45:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.04:45:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.04:45:00.00#flagr#flagr/antenna,acquired
+2018.114.04:45:00.01$pvwget/!+2s
+2018.114.04:45:02.02$pvwget/wx
+2018.114.04:45:02.02/wx/  3.4,  720.3, 68.1
+2018.114.04:45:02.02$midob/getcal
+2018.114.04:45:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.04:45:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.04:45:02.25#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:45:02.25#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:45:02.25#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:45:02.25#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:45:02.25$getcal/!+2s
+2018.114.04:45:04.26$midob/"getcal3mm
+2018.114.04:45:04.26$midob/"getcal1mm
+2018.114.04:45:04.26$midob/dbbcifread
+2018.114.04:45:04.26$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:45:04.26$dbbcifread/dbbc=dbbcifa
+2018.114.04:45:07.26?ERROR un  113 No route to host
+2018.114.04:45:07.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:45:07.26$dbbcifread/dbbc=dbbcifb
+2018.114.04:45:10.26?ERROR un  113 No route to host
+2018.114.04:45:10.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:45:10.26:!2018.114.04:48:00
+2018.114.04:48:00.00:data_valid=off
+2018.114.04:48:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:48:00.00:postob
+2018.114.04:48:00.01$postob/"- - - - postob - - - -
+2018.114.04:48:00.01$postob/dbbcifread
+2018.114.04:48:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:48:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.04:48:03.01?ERROR un  113 No route to host
+2018.114.04:48:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:48:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.04:48:06.01?ERROR un  113 No route to host
+2018.114.04:48:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:48:06.01$postob/mk5=rtime?;
+2018.114.04:48:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:48:06.01$postob/!+1s
+2018.114.04:48:07.02$postob/mk5=scan_check?;
+2018.114.04:48:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:48:07.02$postob/!+1s
+2018.114.04:48:08.03$postob/mk5=dir_info?;
+2018.114.04:48:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:48:08.03$postob/!+1s
+2018.114.04:48:09.04$postob/mk5=bank_set?;
+2018.114.04:48:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.04:48:09.04$postob/!+1s
+2018.114.04:48:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.04:48:10.67$postob/!+5s
+2018.114.04:48:15.68$postob/wx
+2018.114.04:48:15.68/wx/  3.4,  720.3, 68.1
+2018.114.04:48:15.68:scan_name=no0011,e18a24,pv,480,480
+2018.114.04:48:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.04:48:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.04:48:15.68#flagr#flagr/antenna,new-source
+2018.114.04:48:15.68:setup01
+2018.114.04:48:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.04:48:15.68:!2018.114.04:51:50
+2018.114.04:51:50.01:preob
+2018.114.04:51:50.01$preob/"- - - - preob - - - -
+2018.114.04:51:50.01$preob/dbbcifread
+2018.114.04:51:50.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:51:50.01$dbbcifread/dbbc=dbbcifa
+2018.114.04:51:53.01?ERROR un  113 No route to host
+2018.114.04:51:53.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:51:53.01$dbbcifread/dbbc=dbbcifb
+2018.114.04:51:56.01?ERROR un  113 No route to host
+2018.114.04:51:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:51:56.01:!2018.114.04:52:00
+2018.114.04:52:00.00:data_valid=on
+2018.114.04:52:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.04:52:00.00:midob
+2018.114.04:52:00.00$midob/"- - - - midob - - - -
+2018.114.04:52:00.00$midob/onsource
+2018.114.04:52:00.00#flagr#flagr/antenna,acquired
+2018.114.04:52:00.00/onsource/TRACKING
+2018.114.04:52:00.00$midob/pvwget
+2018.114.04:52:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.04:52:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.04:52:00.01$pvwget/!+2s
+2018.114.04:52:02.02$pvwget/wx
+2018.114.04:52:02.02/wx/  3.2,  720.5, 70.6
+2018.114.04:52:02.02$midob/getcal
+2018.114.04:52:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.04:52:02.26#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.04:52:02.26#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:52:02.26#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:52:02.26#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.04:52:02.26#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.04:52:02.26$getcal/!+2s
+2018.114.04:52:04.27$midob/"getcal3mm
+2018.114.04:52:04.27$midob/"getcal1mm
+2018.114.04:52:04.27$midob/dbbcifread
+2018.114.04:52:04.27$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.04:52:04.27$dbbcifread/dbbc=dbbcifa
+2018.114.04:52:07.27?ERROR un  113 No route to host
+2018.114.04:52:07.27?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:52:07.27$dbbcifread/dbbc=dbbcifb
+2018.114.04:52:10.27?ERROR un  113 No route to host
+2018.114.04:52:10.27?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.04:52:10.27:!2018.114.05:00:00
+2018.114.05:00:00.00:data_valid=off
+2018.114.05:00:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:00:00.00:postob
+2018.114.05:00:00.00$postob/"- - - - postob - - - -
+2018.114.05:00:00.00$postob/dbbcifread
+2018.114.05:00:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:00:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.05:00:03.00?ERROR un  113 No route to host
+2018.114.05:00:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:00:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.05:00:06.01?ERROR un  113 No route to host
+2018.114.05:00:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:00:06.01$postob/mk5=rtime?;
+2018.114.05:00:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:00:06.01$postob/!+1s
+2018.114.05:00:07.02$postob/mk5=scan_check?;
+2018.114.05:00:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:00:07.02$postob/!+1s
+2018.114.05:00:08.03$postob/mk5=dir_info?;
+2018.114.05:00:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:00:08.03$postob/!+1s
+2018.114.05:00:09.04$postob/mk5=bank_set?;
+2018.114.05:00:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:00:09.04$postob/!+1s
+2018.114.05:00:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.05:00:10.66$postob/!+5s
+2018.114.05:00:15.68$postob/wx
+2018.114.05:00:15.68/wx/  3.2,  720.5, 70.6
+2018.114.05:00:15.68:scan_name=no0012,e18a24,pv,180,180
+2018.114.05:00:15.68:source=nrao530,173302.71,-130449.5,2000.0,
+2018.114.05:00:15.68#antcn#>>SM NONE nrao530 17h33m02.7s -13d04'50" 4cm 0 0 2000FS9
+2018.114.05:00:15.68#flagr#flagr/antenna,new-source
+2018.114.05:00:15.68:setup01
+2018.114.05:00:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.05:00:15.68:!2018.114.05:05:50
+2018.114.05:05:50.00:preob
+2018.114.05:05:50.00$preob/"- - - - preob - - - -
+2018.114.05:05:50.00$preob/dbbcifread
+2018.114.05:05:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:05:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.05:05:53.00?ERROR un  113 No route to host
+2018.114.05:05:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:05:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.05:05:56.00?ERROR un  113 No route to host
+2018.114.05:05:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:05:56.00:!2018.114.05:06:00
+2018.114.05:06:00.00:data_valid=on
+2018.114.05:06:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:06:00.00:midob
+2018.114.05:06:00.01$midob/"- - - - midob - - - -
+2018.114.05:06:00.01$midob/onsource
+2018.114.05:06:00.01/onsource/TRACKING
+2018.114.05:06:00.01$midob/pvwget
+2018.114.05:06:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.05:06:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.05:06:00.01#flagr#flagr/antenna,acquired
+2018.114.05:06:00.01$pvwget/!+2s
+2018.114.05:06:02.02$pvwget/wx
+2018.114.05:06:02.02/wx/  3.2,  720.4, 66.0
+2018.114.05:06:02.02$midob/getcal
+2018.114.05:06:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.05:06:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.05:06:02.24#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.05:06:02.24#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.05:06:02.24#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.05:06:02.24#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.05:06:02.25$getcal/!+2s
+2018.114.05:06:04.26$midob/"getcal3mm
+2018.114.05:06:04.26$midob/"getcal1mm
+2018.114.05:06:04.26$midob/dbbcifread
+2018.114.05:06:04.26$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:06:04.26$dbbcifread/dbbc=dbbcifa
+2018.114.05:06:07.26?ERROR un  113 No route to host
+2018.114.05:06:07.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:06:07.26$dbbcifread/dbbc=dbbcifb
+2018.114.05:06:10.26?ERROR un  113 No route to host
+2018.114.05:06:10.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:06:10.26:!2018.114.05:09:00
+2018.114.05:09:00.00:data_valid=off
+2018.114.05:09:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:09:00.00:postob
+2018.114.05:09:00.01$postob/"- - - - postob - - - -
+2018.114.05:09:00.01$postob/dbbcifread
+2018.114.05:09:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:09:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.05:09:03.01?ERROR un  113 No route to host
+2018.114.05:09:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:09:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.05:09:06.01?ERROR un  113 No route to host
+2018.114.05:09:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:09:06.01$postob/mk5=rtime?;
+2018.114.05:09:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:09:06.01$postob/!+1s
+2018.114.05:09:07.02$postob/mk5=scan_check?;
+2018.114.05:09:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:09:07.02$postob/!+1s
+2018.114.05:09:08.03$postob/mk5=dir_info?;
+2018.114.05:09:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:09:08.03$postob/!+1s
+2018.114.05:09:09.04$postob/mk5=bank_set?;
+2018.114.05:09:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:09:09.04$postob/!+1s
+2018.114.05:09:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.05:09:10.67$postob/!+5s
+2018.114.05:09:15.68$postob/wx
+2018.114.05:09:15.68/wx/  3.2,  720.4, 66.0
+2018.114.05:09:15.68:scan_name=no0013,e18a24,pv,480,480
+2018.114.05:09:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.05:09:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.05:09:15.68#flagr#flagr/antenna,new-source
+2018.114.05:09:15.68:setup01
+2018.114.05:09:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.05:09:15.68:!2018.114.05:17:50
+2018.114.05:17:50.01:preob
+2018.114.05:17:50.01$preob/"- - - - preob - - - -
+2018.114.05:17:50.01$preob/dbbcifread
+2018.114.05:17:50.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:17:50.01$dbbcifread/dbbc=dbbcifa
+2018.114.05:17:53.01?ERROR un  113 No route to host
+2018.114.05:17:53.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:17:53.01$dbbcifread/dbbc=dbbcifb
+2018.114.05:17:56.01?ERROR un  113 No route to host
+2018.114.05:17:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:17:56.01:!2018.114.05:18:00
+2018.114.05:18:00.00:data_valid=on
+2018.114.05:18:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:18:00.00:midob
+2018.114.05:18:00.00$midob/"- - - - midob - - - -
+2018.114.05:18:00.00$midob/onsource
+2018.114.05:18:00.00/onsource/TRACKING
+2018.114.05:18:00.00$midob/pvwget
+2018.114.05:18:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.05:18:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.05:18:00.00#flagr#flagr/antenna,acquired
+2018.114.05:18:00.01$pvwget/!+2s
+2018.114.05:18:02.02$pvwget/wx
+2018.114.05:18:02.02/wx/  3.5,  720.6, 64.6
+2018.114.05:18:02.02$midob/getcal
+2018.114.05:18:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.05:18:02.27#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.05:18:02.27#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.05:18:02.27#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.05:18:02.27#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.05:18:02.27#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.05:18:02.27$getcal/!+2s
+2018.114.05:18:04.28$midob/"getcal3mm
+2018.114.05:18:04.28$midob/"getcal1mm
+2018.114.05:18:04.28$midob/dbbcifread
+2018.114.05:18:04.28$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:18:04.28$dbbcifread/dbbc=dbbcifa
+2018.114.05:18:07.28?ERROR un  113 No route to host
+2018.114.05:18:07.28?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:18:07.28$dbbcifread/dbbc=dbbcifb
+2018.114.05:18:10.28?ERROR un  113 No route to host
+2018.114.05:18:10.28?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:18:10.28:!2018.114.05:26:00
+2018.114.05:26:00.00:data_valid=off
+2018.114.05:26:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:26:00.01:postob
+2018.114.05:26:00.01$postob/"- - - - postob - - - -
+2018.114.05:26:00.01$postob/dbbcifread
+2018.114.05:26:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:26:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.05:26:03.01?ERROR un  113 No route to host
+2018.114.05:26:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:26:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.05:26:06.01?ERROR un  113 No route to host
+2018.114.05:26:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:26:06.01$postob/mk5=rtime?;
+2018.114.05:26:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:26:06.01$postob/!+1s
+2018.114.05:26:07.02$postob/mk5=scan_check?;
+2018.114.05:26:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:26:07.02$postob/!+1s
+2018.114.05:26:08.03$postob/mk5=dir_info?;
+2018.114.05:26:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:26:08.03$postob/!+1s
+2018.114.05:26:09.04$postob/mk5=bank_set?;
+2018.114.05:26:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:26:09.04$postob/!+1s
+2018.114.05:26:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.05:26:10.67$postob/!+5s
+2018.114.05:26:15.68$postob/wx
+2018.114.05:26:15.68/wx/  3.5,  720.6, 64.6
+2018.114.05:26:15.68:scan_name=no0014,e18a24,pv,600,600
+2018.114.05:26:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.05:26:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.05:26:15.68#flagr#flagr/antenna,new-source
+2018.114.05:26:15.68:setup01
+2018.114.05:26:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.05:26:15.68:!2018.114.05:28:50
+2018.114.05:28:50.00:preob
+2018.114.05:28:50.00$preob/"- - - - preob - - - -
+2018.114.05:28:50.00$preob/dbbcifread
+2018.114.05:28:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:28:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.05:28:53.00?ERROR un  113 No route to host
+2018.114.05:28:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:28:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.05:28:56.01?ERROR un  113 No route to host
+2018.114.05:28:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:28:56.01:!2018.114.05:29:00
+2018.114.05:29:00.00:data_valid=on
+2018.114.05:29:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:29:00.00:midob
+2018.114.05:29:00.00$midob/"- - - - midob - - - -
+2018.114.05:29:00.00$midob/onsource
+2018.114.05:29:00.00/onsource/TRACKING
+2018.114.05:29:00.00$midob/pvwget
+2018.114.05:29:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.05:29:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.05:29:00.00#flagr#flagr/antenna,acquired
+2018.114.05:29:00.01$pvwget/!+2s
+2018.114.05:29:02.02$pvwget/wx
+2018.114.05:29:02.02/wx/  3.2,  720.8, 65.8
+2018.114.05:29:02.02$midob/getcal
+2018.114.05:29:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.05:29:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
+2018.114.05:29:02.25#     #rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.05:29:02.25#     #rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.05:29:02.25#     #rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
+2018.114.05:29:02.25#     #rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+2018.114.05:29:02.25$getcal/!+2s
+2018.114.05:29:04.26$midob/"getcal3mm
+2018.114.05:29:04.26$midob/"getcal1mm
+2018.114.05:29:04.26$midob/dbbcifread
+2018.114.05:29:04.26$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:29:04.26$dbbcifread/dbbc=dbbcifa
+2018.114.05:29:07.26?ERROR un  113 No route to host
+2018.114.05:29:07.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:29:07.26$dbbcifread/dbbc=dbbcifb
+2018.114.05:29:10.26?ERROR un  113 No route to host
+2018.114.05:29:10.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:29:10.26:!2018.114.05:39:00
+2018.114.05:39:00.00:data_valid=off
+2018.114.05:39:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:39:00.00:postob
+2018.114.05:39:00.01$postob/"- - - - postob - - - -
+2018.114.05:39:00.01$postob/dbbcifread
+2018.114.05:39:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:39:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.05:39:03.01?ERROR un  113 No route to host
+2018.114.05:39:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:39:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.05:39:06.01?ERROR un  113 No route to host
+2018.114.05:39:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:39:06.01$postob/mk5=rtime?;
+2018.114.05:39:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:39:06.01$postob/!+1s
+2018.114.05:39:07.02$postob/mk5=scan_check?;
+2018.114.05:39:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:39:07.02$postob/!+1s
+2018.114.05:39:08.03$postob/mk5=dir_info?;
+2018.114.05:39:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:39:08.03$postob/!+1s
+2018.114.05:39:09.04$postob/mk5=bank_set?;
+2018.114.05:39:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:39:09.04$postob/!+1s
+2018.114.05:39:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.05:39:10.67$postob/!+5s
+2018.114.05:39:15.68$postob/wx
+2018.114.05:39:15.68/wx/  3.2,  720.8, 65.8
+2018.114.05:39:15.68:scan_name=no0015,e18a24,pv,180,180
+2018.114.05:39:15.68:source=j1924-2914,192451.06,-291430.1,2000.0,
+2018.114.05:39:15.68#antcn#>>SM NONE j1924-2914 19h24m51.1s -29d14'30" 4cm 0 0 2000FS9
+2018.114.05:39:15.68#flagr#flagr/antenna,new-source
+2018.114.05:39:15.68:setup01
+2018.114.05:39:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.05:39:15.68:!2018.114.05:45:50
+2018.114.05:45:50.00:preob
+2018.114.05:45:50.00$preob/"- - - - preob - - - -
+2018.114.05:45:50.00$preob/dbbcifread
+2018.114.05:45:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:45:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.05:45:53.00?ERROR un  113 No route to host
+2018.114.05:45:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:45:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.05:45:56.01?ERROR un  113 No route to host
+2018.114.05:45:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:45:56.01:!2018.114.05:46:00
+2018.114.05:46:00.00:data_valid=on
+2018.114.05:46:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:46:00.00:midob
+2018.114.05:46:00.00$midob/"- - - - midob - - - -
+2018.114.05:46:00.00$midob/onsource
+2018.114.05:46:00.00/onsource/TRACKING
+2018.114.05:46:00.00$midob/pvwget
+2018.114.05:46:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.05:46:00.00#flagr#flagr/antenna,acquired
+2018.114.05:46:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.05:46:00.01$pvwget/!+2s
+2018.114.05:46:02.02$pvwget/wx
+2018.114.05:46:02.02/wx/  3.3,  721.0, 61.6
+2018.114.05:46:02.02$midob/getcal
+2018.114.05:46:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.05:46:02.31#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180424s7.xml
+2018.114.05:46:02.31#     #rx: E2HLI ; tsys: 500.35 ; tau: 0.36 ; pwv mm: 6.1 ; trx: 76.9 ; time: 2018-04-24 05:45:18 ; rxFreq: 214.8506 ; elev: 30.0 ; source: Mars
+2018.114.05:46:02.31#     #rx: E2HUI ; tsys: 514.62 ; tau: 0.37 ; pwv mm: 5.9 ; trx: 77.7 ; time: 2018-04-24 05:45:18 ; rxFreq: 227.3500 ; elev: 30.0 ; source: Mars
+2018.114.05:46:02.31#     #rx: E2VLI ; tsys: 516.76 ; tau: 0.35 ; pwv mm: 5.8 ; trx: 94.9 ; time: 2018-04-24 05:45:18 ; rxFreq: 214.8506 ; elev: 30.0 ; source: Mars
+2018.114.05:46:02.31#     #rx: E2VUI ; tsys: 531.27 ; tau: 0.36 ; pwv mm: 5.7 ; trx: 93.5 ; time: 2018-04-24 05:45:18 ; rxFreq: 227.3500 ; elev: 30.0 ; source: Mars
+2018.114.05:46:02.31$getcal/!+2s
+2018.114.05:46:04.32$midob/"getcal3mm
+2018.114.05:46:04.32$midob/"getcal1mm
+2018.114.05:46:04.32$midob/dbbcifread
+2018.114.05:46:04.32$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:46:04.32$dbbcifread/dbbc=dbbcifa
+2018.114.05:46:07.32?ERROR un  113 No route to host
+2018.114.05:46:07.32?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:46:07.32$dbbcifread/dbbc=dbbcifb
+2018.114.05:46:10.32?ERROR un  113 No route to host
+2018.114.05:46:10.32?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:46:10.32:!2018.114.05:49:00
+2018.114.05:49:00.00:data_valid=off
+2018.114.05:49:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:49:00.00:postob
+2018.114.05:49:00.00$postob/"- - - - postob - - - -
+2018.114.05:49:00.00$postob/dbbcifread
+2018.114.05:49:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:49:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.05:49:03.00?ERROR un  113 No route to host
+2018.114.05:49:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:49:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.05:49:06.01?ERROR un  113 No route to host
+2018.114.05:49:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:49:06.01$postob/mk5=rtime?;
+2018.114.05:49:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:49:06.01$postob/!+1s
+2018.114.05:49:07.02$postob/mk5=scan_check?;
+2018.114.05:49:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:49:07.02$postob/!+1s
+2018.114.05:49:08.03$postob/mk5=dir_info?;
+2018.114.05:49:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:49:08.03$postob/!+1s
+2018.114.05:49:09.04$postob/mk5=bank_set?;
+2018.114.05:49:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.05:49:09.04$postob/!+1s
+2018.114.05:49:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.05:49:10.67$postob/!+5s
+2018.114.05:49:15.68$postob/wx
+2018.114.05:49:15.68/wx/  3.3,  721.0, 61.6
+2018.114.05:49:15.68:scan_name=no0016,e18a24,pv,900,900
+2018.114.05:49:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.05:49:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.05:49:15.68#flagr#flagr/antenna,new-source
+2018.114.05:49:15.68:setup01
+2018.114.05:49:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.05:49:15.68:!2018.114.05:52:50
+2018.114.05:52:50.00:preob
+2018.114.05:52:50.00$preob/"- - - - preob - - - -
+2018.114.05:52:50.00$preob/dbbcifread
+2018.114.05:52:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:52:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.05:52:53.00?ERROR un  113 No route to host
+2018.114.05:52:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:52:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.05:52:56.00?ERROR un  113 No route to host
+2018.114.05:52:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:52:56.00:!2018.114.05:53:00
+2018.114.05:53:00.00:data_valid=on
+2018.114.05:53:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.05:53:00.00:midob
+2018.114.05:53:00.01$midob/"- - - - midob - - - -
+2018.114.05:53:00.01$midob/onsource
+2018.114.05:53:00.01/onsource/TRACKING
+2018.114.05:53:00.01$midob/pvwget
+2018.114.05:53:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.05:53:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.05:53:00.01#flagr#flagr/antenna,acquired
+2018.114.05:53:00.01$pvwget/!+2s
+2018.114.05:53:02.02$pvwget/wx
+2018.114.05:53:02.02/wx/  3.4,  721.0, 60.5
+2018.114.05:53:02.02$midob/getcal
+2018.114.05:53:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.05:53:02.23#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180424s7.xml
+2018.114.05:53:02.23#     #rx: E2HLI ; tsys: 500.35 ; tau: 0.36 ; pwv mm: 6.1 ; trx: 76.9 ; time: 2018-04-24 05:45:18 ; rxFreq: 214.8506 ; elev: 30.0 ; source: Mars
+2018.114.05:53:02.23#     #rx: E2HUI ; tsys: 514.62 ; tau: 0.37 ; pwv mm: 5.9 ; trx: 77.7 ; time: 2018-04-24 05:45:18 ; rxFreq: 227.3500 ; elev: 30.0 ; source: Mars
+2018.114.05:53:02.23#     #rx: E2VLI ; tsys: 516.76 ; tau: 0.35 ; pwv mm: 5.8 ; trx: 94.9 ; time: 2018-04-24 05:45:18 ; rxFreq: 214.8506 ; elev: 30.0 ; source: Mars
+2018.114.05:53:02.23#     #rx: E2VUI ; tsys: 531.27 ; tau: 0.36 ; pwv mm: 5.7 ; trx: 93.5 ; time: 2018-04-24 05:45:18 ; rxFreq: 227.3500 ; elev: 30.0 ; source: Mars
+2018.114.05:53:02.24$getcal/!+2s
+2018.114.05:53:04.25$midob/"getcal3mm
+2018.114.05:53:04.25$midob/"getcal1mm
+2018.114.05:53:04.25$midob/dbbcifread
+2018.114.05:53:04.25$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.05:53:04.25$dbbcifread/dbbc=dbbcifa
+2018.114.05:53:07.25?ERROR un  113 No route to host
+2018.114.05:53:07.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:53:07.25$dbbcifread/dbbc=dbbcifb
+2018.114.05:53:10.25?ERROR un  113 No route to host
+2018.114.05:53:10.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.05:53:10.25:!2018.114.06:08:00
+2018.114.06:08:00.00:data_valid=off
+2018.114.06:08:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:08:00.00:postob
+2018.114.06:08:00.00$postob/"- - - - postob - - - -
+2018.114.06:08:00.00$postob/dbbcifread
+2018.114.06:08:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:08:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.06:08:03.00?ERROR un  113 No route to host
+2018.114.06:08:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:08:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.06:08:06.01?ERROR un  113 No route to host
+2018.114.06:08:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:08:06.01$postob/mk5=rtime?;
+2018.114.06:08:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:08:06.01$postob/!+1s
+2018.114.06:08:07.02$postob/mk5=scan_check?;
+2018.114.06:08:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:08:07.02$postob/!+1s
+2018.114.06:08:08.03$postob/mk5=dir_info?;
+2018.114.06:08:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:08:08.03$postob/!+1s
+2018.114.06:08:09.04$postob/mk5=bank_set?;
+2018.114.06:08:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:08:09.04$postob/!+1s
+2018.114.06:08:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.06:08:10.67$postob/!+5s
+2018.114.06:08:15.68$postob/wx
+2018.114.06:08:15.68/wx/  3.4,  721.0, 60.5
+2018.114.06:08:15.68:scan_name=no0017,e18a24,pv,180,180
+2018.114.06:08:15.68:source=nrao530,173302.71,-130449.5,2000.0,
+2018.114.06:08:15.68#antcn#>>SM NONE nrao530 17h33m02.7s -13d04'50" 4cm 0 0 2000FS9
+2018.114.06:08:15.68#flagr#flagr/antenna,new-source
+2018.114.06:08:15.68:setup01
+2018.114.06:08:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.06:08:15.68:!2018.114.06:13:50
+2018.114.06:13:50.00:preob
+2018.114.06:13:50.00$preob/"- - - - preob - - - -
+2018.114.06:13:50.00$preob/dbbcifread
+2018.114.06:13:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:13:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.06:13:53.00?ERROR un  113 No route to host
+2018.114.06:13:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:13:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.06:13:56.00?ERROR un  113 No route to host
+2018.114.06:13:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:13:56.00:!2018.114.06:14:00
+2018.114.06:14:00.00:data_valid=on
+2018.114.06:14:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:14:00.00:midob
+2018.114.06:14:00.01$midob/"- - - - midob - - - -
+2018.114.06:14:00.01$midob/onsource
+2018.114.06:14:00.01/onsource/TRACKING
+2018.114.06:14:00.01$midob/pvwget
+2018.114.06:14:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.06:14:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.06:14:00.01#flagr#flagr/antenna,acquired
+2018.114.06:14:00.01$pvwget/!+2s
+2018.114.06:14:02.02$pvwget/wx
+2018.114.06:14:02.02/wx/  3.5,  721.2, 60.1
+2018.114.06:14:02.02$midob/getcal
+2018.114.06:14:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.06:14:02.26#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180424s7.xml
+2018.114.06:14:02.26#     #rx: E2HLI ; tsys: 500.35 ; tau: 0.36 ; pwv mm: 6.1 ; trx: 76.9 ; time: 2018-04-24 05:45:18 ; rxFreq: 214.8506 ; elev: 30.0 ; source: Mars
+2018.114.06:14:02.26#     #rx: E2HUI ; tsys: 514.62 ; tau: 0.37 ; pwv mm: 5.9 ; trx: 77.7 ; time: 2018-04-24 05:45:18 ; rxFreq: 227.3500 ; elev: 30.0 ; source: Mars
+2018.114.06:14:02.26#     #rx: E2VLI ; tsys: 516.76 ; tau: 0.35 ; pwv mm: 5.8 ; trx: 94.9 ; time: 2018-04-24 05:45:18 ; rxFreq: 214.8506 ; elev: 30.0 ; source: Mars
+2018.114.06:14:02.26#     #rx: E2VUI ; tsys: 531.27 ; tau: 0.36 ; pwv mm: 5.7 ; trx: 93.5 ; time: 2018-04-24 05:45:18 ; rxFreq: 227.3500 ; elev: 30.0 ; source: Mars
+2018.114.06:14:02.27$getcal/!+2s
+2018.114.06:14:04.28$midob/"getcal3mm
+2018.114.06:14:04.28$midob/"getcal1mm
+2018.114.06:14:04.28$midob/dbbcifread
+2018.114.06:14:04.28$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:14:04.28$dbbcifread/dbbc=dbbcifa
+2018.114.06:14:07.28?ERROR un  113 No route to host
+2018.114.06:14:07.28?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:14:07.28$dbbcifread/dbbc=dbbcifb
+2018.114.06:14:10.28?ERROR un  113 No route to host
+2018.114.06:14:10.28?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:14:10.28:!2018.114.06:17:00
+2018.114.06:17:00.00:data_valid=off
+2018.114.06:17:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:17:00.00:postob
+2018.114.06:17:00.01$postob/"- - - - postob - - - -
+2018.114.06:17:00.01$postob/dbbcifread
+2018.114.06:17:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:17:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.06:17:03.01?ERROR un  113 No route to host
+2018.114.06:17:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:17:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.06:17:06.01?ERROR un  113 No route to host
+2018.114.06:17:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:17:06.01$postob/mk5=rtime?;
+2018.114.06:17:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:17:06.01$postob/!+1s
+2018.114.06:17:07.02$postob/mk5=scan_check?;
+2018.114.06:17:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:17:07.02$postob/!+1s
+2018.114.06:17:08.03$postob/mk5=dir_info?;
+2018.114.06:17:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:17:08.03$postob/!+1s
+2018.114.06:17:09.04$postob/mk5=bank_set?;
+2018.114.06:17:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:17:09.04$postob/!+1s
+2018.114.06:17:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.06:17:10.67$postob/!+5s
+2018.114.06:17:15.68$postob/wx
+2018.114.06:17:15.68/wx/  3.5,  721.2, 60.1
+2018.114.06:17:15.68:scan_name=no0018,e18a24,pv,540,540
+2018.114.06:17:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.06:17:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.06:17:15.68#flagr#flagr/antenna,new-source
+2018.114.06:17:15.68:setup01
+2018.114.06:17:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.06:17:15.68:!2018.114.06:25:50
+2018.114.06:25:50.00:preob
+2018.114.06:25:50.00$preob/"- - - - preob - - - -
+2018.114.06:25:50.00$preob/dbbcifread
+2018.114.06:25:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:25:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.06:25:53.00?ERROR un  113 No route to host
+2018.114.06:25:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:25:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.06:25:56.01?ERROR un  113 No route to host
+2018.114.06:25:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:25:56.01:!2018.114.06:26:00
+2018.114.06:26:00.00:data_valid=on
+2018.114.06:26:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:26:00.00:midob
+2018.114.06:26:00.00$midob/"- - - - midob - - - -
+2018.114.06:26:00.00$midob/onsource
+2018.114.06:26:00.00/onsource/TRACKING
+2018.114.06:26:00.00$midob/pvwget
+2018.114.06:26:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.06:26:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.06:26:00.00#flagr#flagr/antenna,acquired
+2018.114.06:26:00.01$pvwget/!+2s
+2018.114.06:26:02.02$pvwget/wx
+2018.114.06:26:02.02/wx/  3.8,  721.3, 57.1
+2018.114.06:26:02.02$midob/getcal
+2018.114.06:26:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.06:26:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180424s21.xml
+2018.114.06:26:02.25#     #rx: E2HLI ; tsys: 1348.80 ; tau: 0.39 ; pwv mm: 6.6 ; trx: 75.1 ; time: 2018-04-24 06:21:40 ; rxFreq: 214.8510 ; elev: 15.2 ; source: sgra
+2018.114.06:26:02.25#     #rx: E2HUI ; tsys: 1476.16 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 76.6 ; time: 2018-04-24 06:21:40 ; rxFreq: 227.3500 ; elev: 15.2 ; source: sgra
+2018.114.06:26:02.25#     #rx: E2VLI ; tsys: 1366.29 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 92.9 ; time: 2018-04-24 06:21:40 ; rxFreq: 214.8510 ; elev: 15.2 ; source: sgra
+2018.114.06:26:02.25#     #rx: E2VUI ; tsys: 1460.91 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 92.3 ; time: 2018-04-24 06:21:40 ; rxFreq: 227.3500 ; elev: 15.2 ; source: sgra
+2018.114.06:26:02.25$getcal/!+2s
+2018.114.06:26:04.26$midob/"getcal3mm
+2018.114.06:26:04.26$midob/"getcal1mm
+2018.114.06:26:04.26$midob/dbbcifread
+2018.114.06:26:04.26$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:26:04.26$dbbcifread/dbbc=dbbcifa
+2018.114.06:26:07.26?ERROR un  113 No route to host
+2018.114.06:26:07.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:26:07.26$dbbcifread/dbbc=dbbcifb
+2018.114.06:26:10.26?ERROR un  113 No route to host
+2018.114.06:26:10.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:26:10.26:!2018.114.06:35:00
+2018.114.06:35:00.00:data_valid=off
+2018.114.06:35:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:35:00.00:postob
+2018.114.06:35:00.00$postob/"- - - - postob - - - -
+2018.114.06:35:00.00$postob/dbbcifread
+2018.114.06:35:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:35:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.06:35:03.00?ERROR un  113 No route to host
+2018.114.06:35:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:35:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.06:35:06.01?ERROR un  113 No route to host
+2018.114.06:35:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:35:06.01$postob/mk5=rtime?;
+2018.114.06:35:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:35:06.01$postob/!+1s
+2018.114.06:35:07.02$postob/mk5=scan_check?;
+2018.114.06:35:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:35:07.02$postob/!+1s
+2018.114.06:35:08.03$postob/mk5=dir_info?;
+2018.114.06:35:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:35:08.03$postob/!+1s
+2018.114.06:35:09.04$postob/mk5=bank_set?;
+2018.114.06:35:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:35:09.04$postob/!+1s
+2018.114.06:35:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.06:35:10.67$postob/!+5s
+2018.114.06:35:15.68$postob/wx
+2018.114.06:35:15.68/wx/  3.8,  721.3, 57.1
+2018.114.06:35:15.68:scan_name=no0019,e18a24,pv,360,360
+2018.114.06:35:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.06:35:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.06:35:15.68#flagr#flagr/antenna,new-source
+2018.114.06:35:15.68:setup01
+2018.114.06:35:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.06:35:15.68:!2018.114.06:37:50
+2018.114.06:37:50.00:preob
+2018.114.06:37:50.00$preob/"- - - - preob - - - -
+2018.114.06:37:50.00$preob/dbbcifread
+2018.114.06:37:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:37:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.06:37:53.00?ERROR un  113 No route to host
+2018.114.06:37:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:37:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.06:37:56.00?ERROR un  113 No route to host
+2018.114.06:37:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:37:56.00:!2018.114.06:38:00
+2018.114.06:38:00.00:data_valid=on
+2018.114.06:38:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:38:00.00:midob
+2018.114.06:38:00.01$midob/"- - - - midob - - - -
+2018.114.06:38:00.01$midob/onsource
+2018.114.06:38:00.01/onsource/TRACKING
+2018.114.06:38:00.01$midob/pvwget
+2018.114.06:38:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.06:38:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.06:38:00.01#flagr#flagr/antenna,acquired
+2018.114.06:38:00.01$pvwget/!+2s
+2018.114.06:38:02.02$pvwget/wx
+2018.114.06:38:02.02/wx/  4.1,  721.2, 55.0
+2018.114.06:38:02.02$midob/getcal
+2018.114.06:38:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.06:38:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180424s24.xml
+2018.114.06:38:02.25#     #rx: E2HLI ; tsys: 1660.20 ; tau: 0.39 ; pwv mm: 6.6 ; trx: 74.8 ; time: 2018-04-24 06:35:17 ; rxFreq: 214.8510 ; elev: 13.6 ; source: sgra
+2018.114.06:38:02.25#     #rx: E2HUI ; tsys: 1836.15 ; tau: 0.41 ; pwv mm: 6.7 ; trx: 76.3 ; time: 2018-04-24 06:35:17 ; rxFreq: 227.3500 ; elev: 13.6 ; source: sgra
+2018.114.06:38:02.25#     #rx: E2VLI ; tsys: 1668.52 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 92.4 ; time: 2018-04-24 06:35:17 ; rxFreq: 214.8510 ; elev: 13.6 ; source: sgra
+2018.114.06:38:02.25#     #rx: E2VUI ; tsys: 1802.95 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 91.8 ; time: 2018-04-24 06:35:17 ; rxFreq: 227.3500 ; elev: 13.6 ; source: sgra
+2018.114.06:38:02.25$getcal/!+2s
+2018.114.06:38:04.26$midob/"getcal3mm
+2018.114.06:38:04.26$midob/"getcal1mm
+2018.114.06:38:04.26$midob/dbbcifread
+2018.114.06:38:04.26$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:38:04.26$dbbcifread/dbbc=dbbcifa
+2018.114.06:38:07.26?ERROR un  113 No route to host
+2018.114.06:38:07.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:38:07.26$dbbcifread/dbbc=dbbcifb
+2018.114.06:38:10.26?ERROR un  113 No route to host
+2018.114.06:38:10.26?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:38:10.26:!2018.114.06:44:00
+2018.114.06:44:00.00:data_valid=off
+2018.114.06:44:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:44:00.01:postob
+2018.114.06:44:00.01$postob/"- - - - postob - - - -
+2018.114.06:44:00.01$postob/dbbcifread
+2018.114.06:44:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:44:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.06:44:03.01?ERROR un  113 No route to host
+2018.114.06:44:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:44:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.06:44:06.01?ERROR un  113 No route to host
+2018.114.06:44:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:44:06.01$postob/mk5=rtime?;
+2018.114.06:44:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:44:06.01$postob/!+1s
+2018.114.06:44:07.02$postob/mk5=scan_check?;
+2018.114.06:44:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:44:07.02$postob/!+1s
+2018.114.06:44:08.03$postob/mk5=dir_info?;
+2018.114.06:44:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:44:08.03$postob/!+1s
+2018.114.06:44:09.04$postob/mk5=bank_set?;
+2018.114.06:44:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:44:09.04$postob/!+1s
+2018.114.06:44:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.06:44:10.67$postob/!+5s
+2018.114.06:44:15.68$postob/wx
+2018.114.06:44:15.68/wx/  4.1,  721.2, 55.0
+2018.114.06:44:15.68:scan_name=no0020,e18a24,pv,600,600
+2018.114.06:44:15.68:source=sgra,174540.04,-290028.1,2000.0,
+2018.114.06:44:15.68#antcn#>>SM NONE sgra 17h45m40.0s -29d00'28" 4cm 0 0 2000FS9
+2018.114.06:44:15.68#flagr#flagr/antenna,new-source
+2018.114.06:44:15.68:setup01
+2018.114.06:44:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.06:44:15.68:!2018.114.06:44:50
+2018.114.06:44:50.00:preob
+2018.114.06:44:50.00$preob/"- - - - preob - - - -
+2018.114.06:44:50.00$preob/dbbcifread
+2018.114.06:44:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:44:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.06:44:53.00?ERROR un  113 No route to host
+2018.114.06:44:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:44:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.06:44:56.01?ERROR un  113 No route to host
+2018.114.06:44:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:44:56.01:!2018.114.06:45:00
+2018.114.06:45:00.00:data_valid=on
+2018.114.06:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:45:00.00:midob
+2018.114.06:45:00.00$midob/"- - - - midob - - - -
+2018.114.06:45:00.00$midob/onsource
+2018.114.06:45:00.00/onsource/TRACKING
+2018.114.06:45:00.00$midob/pvwget
+2018.114.06:45:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.06:45:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.06:45:00.00#flagr#flagr/antenna,acquired
+2018.114.06:45:00.01$pvwget/!+2s
+2018.114.06:45:02.02$pvwget/wx
+2018.114.06:45:02.02/wx/  4.1,  721.2, 55.8
+2018.114.06:45:02.02$midob/getcal
+2018.114.06:45:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.06:45:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180424s27.xml
+2018.114.06:45:02.24#     #rx: E2HLI ; tsys: 1814.32 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 74.6 ; time: 2018-04-24 06:44:33 ; rxFreq: 214.8510 ; elev: 12.5 ; source: sgra
+2018.114.06:45:02.24#     #rx: E2HUI ; tsys: 2012.37 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 76.1 ; time: 2018-04-24 06:44:33 ; rxFreq: 227.3500 ; elev: 12.5 ; source: sgra
+2018.114.06:45:02.24#     #rx: E2VLI ; tsys: 1819.98 ; tau: 0.37 ; pwv mm: 6.2 ; trx: 92.2 ; time: 2018-04-24 06:44:33 ; rxFreq: 214.8510 ; elev: 12.5 ; source: sgra
+2018.114.06:45:02.24#     #rx: E2VUI ; tsys: 1966.96 ; tau: 0.38 ; pwv mm: 6.2 ; trx: 91.5 ; time: 2018-04-24 06:44:33 ; rxFreq: 227.3500 ; elev: 12.5 ; source: sgra
+2018.114.06:45:02.24$getcal/!+2s
+2018.114.06:45:04.25$midob/"getcal3mm
+2018.114.06:45:04.25$midob/"getcal1mm
+2018.114.06:45:04.25$midob/dbbcifread
+2018.114.06:45:04.25$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:45:04.25$dbbcifread/dbbc=dbbcifa
+2018.114.06:45:07.25?ERROR un  113 No route to host
+2018.114.06:45:07.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:45:07.25$dbbcifread/dbbc=dbbcifb
+2018.114.06:45:10.25?ERROR un  113 No route to host
+2018.114.06:45:10.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:45:10.25:!2018.114.06:55:00
+2018.114.06:55:00.00:data_valid=off
+2018.114.06:55:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.06:55:00.00:postob
+2018.114.06:55:00.00$postob/"- - - - postob - - - -
+2018.114.06:55:00.00$postob/dbbcifread
+2018.114.06:55:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.06:55:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.06:55:03.00?ERROR un  113 No route to host
+2018.114.06:55:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:55:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.06:55:06.01?ERROR un  113 No route to host
+2018.114.06:55:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.06:55:06.01$postob/mk5=rtime?;
+2018.114.06:55:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:55:06.01$postob/!+1s
+2018.114.06:55:07.02$postob/mk5=scan_check?;
+2018.114.06:55:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:55:07.02$postob/!+1s
+2018.114.06:55:08.03$postob/mk5=dir_info?;
+2018.114.06:55:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:55:08.03$postob/!+1s
+2018.114.06:55:09.04$postob/mk5=bank_set?;
+2018.114.06:55:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.06:55:09.04$postob/!+1s
+2018.114.06:55:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.06:55:10.66$postob/!+5s
+2018.114.06:55:15.68$postob/wx
+2018.114.06:55:15.68/wx/  4.1,  721.2, 55.8
+2018.114.06:55:15.68:scan_name=no0021,e18a24,pv,180,180
+2018.114.06:55:15.68:source=j1924-2914,192451.06,-291430.1,2000.0,
+2018.114.06:55:15.68#antcn#>>SM NONE j1924-2914 19h24m51.1s -29d14'30" 4cm 0 0 2000FS9
+2018.114.06:55:15.68#flagr#flagr/antenna,new-source
+2018.114.06:55:15.68:setup01
+2018.114.06:55:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.06:55:15.68:!2018.114.07:01:50
+2018.114.07:01:50.00:preob
+2018.114.07:01:50.00$preob/"- - - - preob - - - -
+2018.114.07:01:50.00$preob/dbbcifread
+2018.114.07:01:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.07:01:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.07:01:53.00?ERROR un  113 No route to host
+2018.114.07:01:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:01:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.07:01:56.00?ERROR un  113 No route to host
+2018.114.07:01:56.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:01:56.00:!2018.114.07:02:00
+2018.114.07:02:00.00:data_valid=on
+2018.114.07:02:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.07:02:00.00:midob
+2018.114.07:02:00.01$midob/"- - - - midob - - - -
+2018.114.07:02:00.01$midob/onsource
+2018.114.07:02:00.01/onsource/TRACKING
+2018.114.07:02:00.01$midob/pvwget
+2018.114.07:02:00.01$pvwget/"- - - - pvwget - - - -
+2018.114.07:02:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.07:02:00.01#flagr#flagr/antenna,acquired
+2018.114.07:02:00.01$pvwget/!+2s
+2018.114.07:02:02.02$pvwget/wx
+2018.114.07:02:02.02/wx/  4.5,  721.3, 51.9
+2018.114.07:02:02.02$midob/getcal
+2018.114.07:02:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.07:02:02.28#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180424s30.xml
+2018.114.07:02:02.28#     #rx: E2HLI ; tsys: 801.74 ; tau: 0.38 ; pwv mm: 6.4 ; trx: 74.3 ; time: 2018-04-24 06:56:42 ; rxFreq: 214.8512 ; elev: 20.8 ; source: j1924-2914
+2018.114.07:02:02.28#     #rx: E2HUI ; tsys: 851.99 ; tau: 0.39 ; pwv mm: 6.3 ; trx: 75.8 ; time: 2018-04-24 06:56:42 ; rxFreq: 227.3500 ; elev: 20.8 ; source: j1924-2914
+2018.114.07:02:02.28#     #rx: E2VLI ; tsys: 826.90 ; tau: 0.37 ; pwv mm: 6.2 ; trx: 92.1 ; time: 2018-04-24 06:56:42 ; rxFreq: 214.8512 ; elev: 20.8 ; source: j1924-2914
+2018.114.07:02:02.28#     #rx: E2VUI ; tsys: 865.82 ; tau: 0.38 ; pwv mm: 6.1 ; trx: 91.4 ; time: 2018-04-24 06:56:42 ; rxFreq: 227.3500 ; elev: 20.8 ; source: j1924-2914
+2018.114.07:02:02.29$getcal/!+2s
+2018.114.07:02:04.30$midob/"getcal3mm
+2018.114.07:02:04.30$midob/"getcal1mm
+2018.114.07:02:04.30$midob/dbbcifread
+2018.114.07:02:04.30$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.07:02:04.30$dbbcifread/dbbc=dbbcifa
+2018.114.07:02:07.30?ERROR un  113 No route to host
+2018.114.07:02:07.30?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:02:07.30$dbbcifread/dbbc=dbbcifb
+2018.114.07:02:10.30?ERROR un  113 No route to host
+2018.114.07:02:10.30?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:02:10.30:!2018.114.07:05:00
+2018.114.07:05:00.00:data_valid=off
+2018.114.07:05:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.07:05:00.00:postob
+2018.114.07:05:00.01$postob/"- - - - postob - - - -
+2018.114.07:05:00.01$postob/dbbcifread
+2018.114.07:05:00.01$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.07:05:00.01$dbbcifread/dbbc=dbbcifa
+2018.114.07:05:03.01?ERROR un  113 No route to host
+2018.114.07:05:03.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:05:03.01$dbbcifread/dbbc=dbbcifb
+2018.114.07:05:06.01?ERROR un  113 No route to host
+2018.114.07:05:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:05:06.01$postob/mk5=rtime?;
+2018.114.07:05:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:05:06.01$postob/!+1s
+2018.114.07:05:07.02$postob/mk5=scan_check?;
+2018.114.07:05:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:05:07.02$postob/!+1s
+2018.114.07:05:08.03$postob/mk5=dir_info?;
+2018.114.07:05:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:05:08.03$postob/!+1s
+2018.114.07:05:09.04$postob/mk5=bank_set?;
+2018.114.07:05:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:05:09.04$postob/!+1s
+2018.114.07:05:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.07:05:10.67$postob/!+5s
+2018.114.07:05:15.68$postob/wx
+2018.114.07:05:15.68/wx/  4.5,  721.3, 51.9
+2018.114.07:05:15.68:scan_name=no0023,e18a24,pv,180,180
+2018.114.07:05:15.68:source=nrao530,173302.71,-130449.5,2000.0,
+2018.114.07:05:15.68#antcn#>>SM NONE nrao530 17h33m02.7s -13d04'50" 4cm 0 0 2000FS9
+2018.114.07:05:15.68#flagr#flagr/antenna,new-source
+2018.114.07:05:15.68:setup01
+2018.114.07:05:15.68?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.114.07:05:15.68:!2018.114.07:21:50
+2018.114.07:21:50.00:preob
+2018.114.07:21:50.00$preob/"- - - - preob - - - -
+2018.114.07:21:50.00$preob/dbbcifread
+2018.114.07:21:50.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.07:21:50.00$dbbcifread/dbbc=dbbcifa
+2018.114.07:21:53.00?ERROR un  113 No route to host
+2018.114.07:21:53.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:21:53.00$dbbcifread/dbbc=dbbcifb
+2018.114.07:21:56.01?ERROR un  113 No route to host
+2018.114.07:21:56.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:21:56.01:!2018.114.07:22:00
+2018.114.07:22:00.00:data_valid=on
+2018.114.07:22:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.07:22:00.00:midob
+2018.114.07:22:00.00$midob/"- - - - midob - - - -
+2018.114.07:22:00.00$midob/onsource
+2018.114.07:22:00.00/onsource/TRACKING
+2018.114.07:22:00.00$midob/pvwget
+2018.114.07:22:00.00$pvwget/"- - - - pvwget - - - -
+2018.114.07:22:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.114.07:22:00.00#flagr#flagr/antenna,acquired
+2018.114.07:22:00.01$pvwget/!+2s
+2018.114.07:22:02.02$pvwget/wx
+2018.114.07:22:02.02/wx/  5.0,  721.4, 50.0
+2018.114.07:22:02.02$midob/getcal
+2018.114.07:22:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.114.07:22:02.24#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180424s42.xml
+2018.114.07:22:02.24#     #rx: E2HLI ; tsys: 844.51 ; tau: 0.34 ; pwv mm: 5.8 ; trx: 74.2 ; time: 2018-04-24 07:17:50 ; rxFreq: 214.8509 ; elev: 18.2 ; source: nrao530
+2018.114.07:22:02.24#     #rx: E2HUI ; tsys: 899.67 ; tau: 0.36 ; pwv mm: 5.7 ; trx: 75.8 ; time: 2018-04-24 07:17:50 ; rxFreq: 227.3500 ; elev: 18.2 ; source: nrao530
+2018.114.07:22:02.24#     #rx: E2VLI ; tsys: 874.30 ; tau: 0.34 ; pwv mm: 5.7 ; trx: 92.0 ; time: 2018-04-24 07:17:50 ; rxFreq: 214.8509 ; elev: 18.2 ; source: nrao530
+2018.114.07:22:02.24#     #rx: E2VUI ; tsys: 912.81 ; tau: 0.35 ; pwv mm: 5.6 ; trx: 91.2 ; time: 2018-04-24 07:17:50 ; rxFreq: 227.3500 ; elev: 18.2 ; source: nrao530
+2018.114.07:22:02.24$getcal/!+2s
+2018.114.07:22:04.25$midob/"getcal3mm
+2018.114.07:22:04.25$midob/"getcal1mm
+2018.114.07:22:04.25$midob/dbbcifread
+2018.114.07:22:04.25$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.07:22:04.25$dbbcifread/dbbc=dbbcifa
+2018.114.07:22:07.25?ERROR un  113 No route to host
+2018.114.07:22:07.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:22:07.25$dbbcifread/dbbc=dbbcifb
+2018.114.07:22:10.25?ERROR un  113 No route to host
+2018.114.07:22:10.25?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:22:10.25:!2018.114.07:25:00
+2018.114.07:25:00.00:data_valid=off
+2018.114.07:25:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.114.07:25:00.00:postob
+2018.114.07:25:00.00$postob/"- - - - postob - - - -
+2018.114.07:25:00.00$postob/dbbcifread
+2018.114.07:25:00.00$dbbcifread/"- - - - dbbcifread - - - -
+2018.114.07:25:00.00$dbbcifread/dbbc=dbbcifa
+2018.114.07:25:03.00?ERROR un  113 No route to host
+2018.114.07:25:03.00?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:25:03.00$dbbcifread/dbbc=dbbcifb
+2018.114.07:25:06.01?ERROR un  113 No route to host
+2018.114.07:25:06.01?ERROR db  -23 dbbccn: socket open error from getsockopt()
+2018.114.07:25:06.01$postob/mk5=rtime?;
+2018.114.07:25:06.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:06.01$postob/!+1s
+2018.114.07:25:07.02$postob/mk5=scan_check?;
+2018.114.07:25:07.02?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:07.02$postob/!+1s
+2018.114.07:25:08.03$postob/mk5=dir_info?;
+2018.114.07:25:08.03?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:08.03$postob/!+1s
+2018.114.07:25:09.04$postob/mk5=bank_set?;
+2018.114.07:25:09.04?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:09.04$postob/!+1s
+2018.114.07:25:10.05$postob/sy=/home/oper/bin/end_scan_notifier
+2018.114.07:25:10.67$postob/!+5s
+2018.114.07:25:15.68$postob/wx
+2018.114.07:25:15.68/wx/  5.0,  721.4, 50.0
+2018.114.07:25:15.68:sched_end
+2018.114.07:25:15.68&sched_end/mk5=status?;
+2018.114.07:25:15.68&sched_end/disk_stats
+2018.114.07:25:15.68&sched_end/"- - - - end of schedule - - - -
+2018.114.07:25:15.68$sched_end/mk5=status?;
+2018.114.07:25:15.68?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.68$sched_end/disk_stats
+2018.114.07:25:15.68&disk_stats/"- - - - disk_stats - - - -
+2018.114.07:25:15.68&disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68&disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68&disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68&disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68&disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68&disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68&disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68&disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68$disk_stats/"- - - - disk_stats - - - -
+2018.114.07:25:15.68$disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.68$disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.68$disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.68$disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.68$disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.68$disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.68$disk_stats/mk5=get_stats?;
+2018.114.07:25:15.68?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.69$disk_stats/mk5=get_stats?;
+2018.114.07:25:15.69?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.114.07:25:15.69$sched_end/"- - - - end of schedule - - - -
+2018.114.07:25:15.69:*end of schedule
+2018.114.19:42:03.97;schedule=e18c25pv
+2018.114.19:42:03.97?ERROR fm   -1 Opening file: /usr2/proc/e18c25pv.prc
+2018.114.19:42:03.97?ERROR bo -133 Error opening procedure library, UNIX    2: No such file or directory

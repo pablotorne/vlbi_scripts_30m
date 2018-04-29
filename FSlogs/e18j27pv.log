@@ -1,0 +1,29 @@
+2018.026.17:43:58.97;Log Opened: Mark IV Field System Version 9.11.18
+2018.026.17:43:58.97;location,PICOVEL ,3.39,37.07,2920.0
+2018.026.17:43:58.97;horizon1,0.,10.,360.
+2018.026.17:43:58.97;antenna,30.0,30.0,30.0,60.0,460.0,3.0,88.0,azel
+2018.026.17:43:58.97;equip,dbbc_pfb/fila10g,none,none,none,500.10,3,a/d,101,60,20,none,40,1,in,8bit,cdp,3,return,v105_1,v16,1,1,15000,15000,0,vsi2
+2018.026.17:43:58.97;time,-5.411,5.545,rate
+2018.026.17:43:58.97;flagr,200
+2018.026.17:43:58.97:" e18j27    2018 PICOVEL  P Pv
+2018.026.17:43:58.97:" P PICOVEL  AZEL  .0000  30.0   10 -999.9  999.9  30.0   10 -999.9  999.9   .0 Pv
+2018.026.17:43:58.97:" Pv PICOVEL   5088967.74544  -301681.18586  3825012.20561
+2018.026.17:43:58.97:"      PICOVEL     0     8820
+2018.026.17:43:58.97:" drudg version 2016Nov29 compiled under FS  9.11.18
+2018.026.17:43:58.97:" Rack=DBBC_PFB  Recorder 1=none      Recorder 2=none
+2018.026.17:43:58.97:exper_initi
+2018.026.17:43:58.97?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.026.17:43:58.97:scan_name=no0001,e18j27,pv,300,300
+2018.026.17:43:58.97:source=0721+713,072153.45,712036.4,2000.0,
+2018.026.17:43:59.02#antcn#>>SM NONE 0721+713  7h21m53.5s  71d20'36" 4cm 0 0 2000FS9
+2018.026.17:43:59.02#flagr#flagr/antenna,new-source
+2018.026.17:43:59.02:setup01
+2018.026.17:43:59.02?ERROR sp   -4 Unrecognized name (not a function or procedure).
+2018.026.17:43:59.02:!2018.027.07:33:50
+2018.026.18:00:51.92;source=1055+018,105829.61,013358.8,2000.0,
+2018.026.18:00:51.92#antcn#>>SM NONE 1055+018 10h58m29.6s   1d33'59" 4cm 0 0 2000FS9
+2018.026.18:00:51.92?ERROR fl   -1 Previous source in this schedule not reached before new source was commanded
+2018.026.18:00:51.92#flagr#flagr/antenna,new-source
+2018.026.18:01:27.32;halt
+2018.026.18:01:35.47;terminate
+2018.026.18:01:35.47:*boss terminated
