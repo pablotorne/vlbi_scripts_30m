@@ -31,6 +31,8 @@ import subprocess
 
 import socket
 
+import logging
+
 # Arguments control:
 parser = argparse.ArgumentParser()
 
@@ -60,6 +62,11 @@ if args.localdatapath != None:
     makelocalcopy = True
 
 if args.verbose == True: verbose = True
+
+# Set-up log
+logging.basicConfig(level=logging.DEBUG, filename='/local/users/torne/vlbi_monitor_client/Python/read_lastcal_info.log', \
+                        format='%(asctime)s %(message)s') # To log the exceptions/errors
+
 
 # ---
 
@@ -130,7 +137,7 @@ def search_lastCal_XML(scandir):
         if search_scan < 1: # There is no continuum calibration in this DAY, return
             #raise FileNotFoundError( errno.ENOENT, os.strerror(errno.ENOENT), scandir+"/"+search_scan)
             raise AttributeError('No CALs inside %s. FileNotFoundError.'%DATAPATH+"/")
-            #sys.exit(1)
+            sys.exit(1)
 
         search_folder = datapath+"/"+str(search_scan)
         if verbose: print "Searching continuum cal XML in %s"%search_folder
@@ -203,7 +210,10 @@ while not success_get_cal:
                         status = subprocess.call('cp %s %s'%(xml_cal, LOCALDATAPATH+xml_cal_filenm), shell=True)
                     except Exception as e:
                         print "Exception in COPY! = %s"%e
-                    if status != 0: print "ERROR copying xml file to /local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
+                        logging.exception("Shell copy file!")
+                    if status != 0: 
+                        print "ERROR copying xml file to /local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
+                        logging.exception("Shell copy file! STATUS != 0")
                     if verbose: print "status cp = %d"%status
                     xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, LOCALDATAPATH)
                 else:

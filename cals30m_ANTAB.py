@@ -5,6 +5,7 @@ and outputs it in ANTAB format for VLBI correlator.
 
 v0: the cal info must be in the format output by
     read_lastcal_info.py (used in VLBI Field System), i.e.:
+v1: also extracts and writes the weather information
 
 CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
 rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
@@ -15,7 +16,7 @@ rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-2
 P. Torne, IRAM 23.04.2018
 """
 
-import sys, datetime
+import sys, datetime, os
 import numpy as np
 import subprocess
 import argparse
@@ -24,22 +25,41 @@ import argparse
 parser = argparse.ArgumentParser()
 
 parser.add_argument("-v", "--verbose", action="count", help="outputs detailed execution informaton")
-parser.add_argument("sched", help="name of the schedule from which calibration is read. Used to name the output file accordingly")
-parser.add_argument("calinfo_file", help="input file where to read the calibration information from (e.g. a Field System log)")
+#parser.add_argument("sched", help="name of the schedule from which calibration is read. Used to name the output file accordingly")
+parser.add_argument("calinfo_file", help="input file where to read the calibration and weather information from (e.g. a Field System log). This code is written for Pv, and assumes that the text file contains rows with the 'rx' and 'wx' strings to fetch the calibration and weather data.")
 #parser.add_argument("wxinfo_file", help="input file where to read the weather information from")
 
 args = parser.parse_args()
 
-sched = args.sched.split(".vex")[0]
+#sched = args.sched.split(".vex")[0]  # Get the basename of the schedule name
+basenm = os.path.basename( os.path.splitext(args.calinfo_file)[0] )
 
-print "\nOpening file %spv.antab to write ANTAB table ..."%sched
-outputfn = open("%spv.antab"%sched, "w")
+# Functions
+def dewtemp(temp, humid):
+    '''
+    Calculate dewpoint following Thomas 'dewpoint.awk'.
+    Calculate saturation vapor pressure(Es) and actual vapor pressure(E) in millibars
+    http://www.gorhamschaffler.com/humidity_formulas.htm
+    see also https://ag.arizona.edu/azmet/dewpoint.html
+    '''
+    ES = 6.11 * 10.0**(7.5*temp/(237.7+temp))
+    E = humid * ES / 100.
+
+    y = np.log(E/6.11) / 7.5 / np.log(10)
+
+    dewtemp = 237.7*y/(1-y)
+
+    # predictable water in mm
+    pw = 432.98/(temp+273.16) * np.exp( (1.81 + 17.27 * dewtemp) / (dewtemp + 237.7) )
+
+    return [dewtemp, pw]
+
 
 # Load input file
 try:
 
     calinfo = subprocess.check_output('grep %s -e "rx:"'%args.calinfo_file, shell=True).splitlines()
-    #wxinfo  = subprocess.check_output('grep %s -e "/wx/"'%args.calinfo_file, shell=True).splitlines()
+    wxinfo  = subprocess.check_output('grep %s -e "/wx/"'%args.calinfo_file, shell=True).splitlines()
     #wxinfo  = subprocess.check_output('grep %s -e "/wx/"'%args.wxinfo_file, shell=True).splitlines()
 
 except Exception as e:
@@ -48,7 +68,13 @@ except Exception as e:
     print "\nHalting program."
     sys.exit(1)
 
-# Output info in ANTAB format
+# ********************************************
+# Output CALIBRATION info in ANTAB format
+# ********************************************
+
+print "\nOpening file %s.antab to write ANTAB table ..."%basenm
+outputfn = open("%s.antab"%basenm, "w")
+
 outputfn.write("TSYS PV  FT= 1.0  INDEX = 'R1:32', 'L1:32' ,'R1:32', 'L1:32' /\n")
 outputfn.write("!bands             HLI     VLI     HUI     VUI\n")
 outputfn.write("!DOY hh:mm:ss.ss   RCP     LCP     RCP     LCP     !  tau   elv   source\n")
@@ -139,7 +165,7 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
                 outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
                                                                                    tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
          
-print "Writing to %spv.antab ..."%sched
+print "Writing to %s.antab ..."%basenm
 
     #if ii >= 4: break
 
@@ -149,3 +175,45 @@ outputfn.write("/\n")
 outputfn.close()
 
 print "DONE."
+
+
+# ********************************************
+# Output WEATHER info in ANTAB format
+# ********************************************
+
+print "\nOpening file WX.%s.antab to write ANTAB table ..."%basenm
+outputfn = open("WX.%s.antab"%basenm, "w")
+
+# These parameters are written butnot needed for data processing, so set to 0.
+wind=0.0
+pa=0.0
+rain=0.0
+gust=0.0
+
+# Header
+outputfn.write("! ----- Weather information for Pv -----\n")
+outputfn.write("! All values are instantaneous readings at the time indicated.\n")
+outputfn.write("!              Temp   Press  DewPt   Wind Spd/Dir    Rain   Gust\n")
+outputfn.write("!UT Day-Time    C      mBar    C      m/s    deg      cm     m/s\n")
+outputfn.write("WEATHER SC /\n")
+
+for ll in wxinfo:
+    # Reformat the date/time:
+    doy = int( ll.split()[0].split(".")[1] )
+    time = ll.split()[0].split(".")[2]
+    temp = float( ll.split()[1].split(",")[0] )
+    press = float( ll.split()[2].split(",")[0] )
+    humid = float( ll.split(",")[-1] )
+    [dewt, pw ] = dewtemp(temp, humid)
+
+    outputfn.write("%d-%s %5.1f   %6.1f %5.1f     %3.1f    %3.1f     %4.2f    %3.1f \n"%(
+           doy, time, temp, press, dewt, wind, pa, rain, gust))
+
+
+# Write the 'end of file' marker for ANTAB
+outputfn.write("/\n")
+
+outputfn.close()
+
+print "DONE."
+
