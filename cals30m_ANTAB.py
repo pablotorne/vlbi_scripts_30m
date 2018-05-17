@@ -104,6 +104,11 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
         dd = int( data[5].split()[1].split("-")[2] )
  
         dayofyear = datetime.datetime(yy, mm, dd).timetuple().tm_yday
+        
+        if args.verbose >= 1:
+            print "Date from cal data: %s-%s-%s"%(yy, mm, dd)
+            print "DOY = datetime.datetime(yy, mm, dd).timetuple().tm_yday = %d"%dayofyear 
+
         ts = data[5].split()[2]
 
         DOY.append(dayofyear)
@@ -181,8 +186,8 @@ print "DONE."
 # Output WEATHER info in ANTAB format
 # ********************************************
 
-print "\nOpening file WX.%s.antab to write ANTAB table ..."%basenm
-outputfn = open("WX.%s.antab"%basenm, "w")
+print "\nOpening file %s.wx to write ANTAB table ..."%basenm
+outputfn = open("%s.wx"%basenm, "w")
 
 # These parameters are written butnot needed for data processing, so set to 0.
 wind=0.0
@@ -195,7 +200,7 @@ outputfn.write("! ----- Weather information for Pv -----\n")
 outputfn.write("! All values are instantaneous readings at the time indicated.\n")
 outputfn.write("!              Temp   Press  DewPt   Wind Spd/Dir    Rain   Gust\n")
 outputfn.write("!UT Day-Time    C      mBar    C      m/s    deg      cm     m/s\n")
-outputfn.write("WEATHER SC /\n")
+outputfn.write("WEATHER PV /\n")
 
 for ll in wxinfo:
     # Reformat the date/time:
