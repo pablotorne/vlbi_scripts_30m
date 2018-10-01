@@ -1,0 +1,773 @@
+2018.270.11:22:00.97;Log Opened: Mark IV Field System Version 9.11.18
+2018.270.11:22:00.97;location,PICOVEL ,3.39,37.07,2920.0
+2018.270.11:22:00.97;horizon1,0.,10.,360.
+2018.270.11:22:00.97;antenna,30.0,30.0,30.0,60.0,460.0,3.0,88.0,azel
+2018.270.11:22:00.97;equip,dbbc_pfb/fila10g,none,none,none,500.10,3,a/d,101,60,20,none,40,1,in,8bit,cdp,3,return,v105_1,v16_1,1,1,15000,15000,0,vsi2
+2018.270.11:22:00.97;time,-5.411,5.545,rate
+2018.270.11:22:00.97;flagr,200
+2018.270.11:22:00.97:" f182a     2018 PICOVEL  D PV
+2018.270.11:22:00.97:" D PICOVEL  AZEL  .0000  30.0   20 -999.9  999.9  30.0   20 -999.9  999.9   .0 PV
+2018.270.11:22:00.97:" PV PICOVEL   5088967.74544  -301681.18586  3825012.20561
+2018.270.11:22:00.97:"      PICOVEL     0     8820
+2018.270.11:22:00.97:" drudg version 2016Nov29 compiled under FS  9.11.18
+2018.270.11:22:00.97:" Rack=DBBC_PFB  Recorder 1=none      Recorder 2=none
+2018.270.11:22:00.97:exper_initi
+2018.270.11:22:00.97&exper_initi/proc_library
+2018.270.11:22:00.97&exper_initi/sched_initi
+2018.270.11:22:00.97&exper_initi/dbbc=version
+2018.270.11:22:00.97$exper_initi/proc_library
+2018.270.11:22:00.97&proc_library/" c171c      picovel   pv
+2018.270.11:22:00.97&proc_library/" drudg version 2016nov29 compiled under fs  9.11.18
+2018.270.11:22:00.97&proc_library/"< dbbc_pfb             rack >< none     recorder 1>
+2018.270.11:22:00.97$proc_library/" c171c      picovel   pv
+2018.270.11:22:00.97$proc_library/" drudg version 2016nov29 compiled under fs  9.11.18
+2018.270.11:22:00.97$proc_library/"< dbbc_pfb             rack >< none     recorder 1>
+2018.270.11:22:00.97$exper_initi/sched_initi
+2018.270.11:22:00.97&sched_initi/mk5=status?;
+2018.270.11:22:00.97&sched_initi/!+2s
+2018.270.11:22:00.97&sched_initi/"- - - - starting schedule - - - -
+2018.270.11:22:00.97$sched_initi/mk5=status?;
+2018.270.11:22:01.01?ERROR m5  -98 mk5cn: no mk5 device defined
+2018.270.11:22:01.01$sched_initi/!+2s
+2018.270.11:22:03.02$sched_initi/"- - - - starting schedule - - - -
+2018.270.11:22:03.02$exper_initi/dbbc=version
+2018.270.11:22:03.04/dbbc/version/PFB,16_1,July 12 2017
+2018.270.11:22:03.04:scan_name=no0001,f182a,pv,300,300
+2018.270.11:22:03.04:source=oj287,085448.87,200630.6,2000.0,
+2018.270.11:22:03.06#antcn#>>SM NONE oj287  8h54m48.9s  20d06'31" 4cm 0 0 2000FS9
+2018.270.11:22:03.06#flagr#flagr/antenna,new-source
+2018.270.11:22:03.07:setup01
+2018.270.11:22:03.07&setup01/pcalon
+2018.270.11:22:03.07&setup01/tpicd=stop
+2018.270.11:22:03.07&setup01/pcald=stop
+2018.270.11:22:03.07&setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.11:22:03.07&setup01/bit_streams
+2018.270.11:22:03.07&setup01/form=flex
+2018.270.11:22:03.07&setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.11:22:03.07&setup01/ifd01
+2018.270.11:22:03.07&setup01/tpicd=no,0
+2018.270.11:22:03.07&setup01/tpicd
+2018.270.11:22:03.07$setup01/pcalon
+2018.270.11:22:03.07&pcalon/"- - - - pcalon - - - -
+2018.270.11:22:03.07&pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.11:22:03.07$pcalon/"- - - - pcalon - - - -
+2018.270.11:22:03.07$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.11:22:03.09$setup01/tpicd=stop
+2018.270.11:22:03.09$setup01/pcald=stop
+2018.270.11:22:03.09$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.11:22:03.10?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.11:22:03.10$setup01/bit_streams
+2018.270.11:22:03.10/bit_streams/,,,
+2018.270.11:22:03.10$setup01/form=flex
+2018.270.11:22:03.10/form/ack
+2018.270.11:22:03.10$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.11:22:03.10/vsi1/ack,ack
+2018.270.11:22:03.10$setup01/ifd01
+2018.270.11:22:03.10&ifd01/ifa=1,agc,1
+2018.270.11:22:03.10&ifd01/ifb=4,agc,1
+2018.270.11:22:03.10&ifd01/lo=
+2018.270.11:22:03.10&ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.11:22:03.10&ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.11:22:03.10$ifd01/ifa=1,agc,1
+2018.270.11:22:03.10/ifa/ack
+2018.270.11:22:03.10$ifd01/ifb=4,agc,1
+2018.270.11:22:03.10/ifb/ack
+2018.270.11:22:03.10$ifd01/lo=
+2018.270.11:22:03.10$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.11:22:03.10$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.11:22:03.11$setup01/tpicd=no,0
+2018.270.11:22:03.11$setup01/tpicd
+2018.270.11:22:03.11?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.11:22:03.11:!2018.270.11:59:50
+2018.270.11:22:11.93;list
+2018.270.11:59:50.00:preob
+2018.270.11:59:50.00&preob/"- - - - preob - - - -
+2018.270.11:59:50.00&preob/"dbbcifread   ********
+2018.270.11:59:50.00$preob/"- - - - preob - - - -
+2018.270.11:59:50.00$preob/"dbbcifread   ********
+2018.270.11:59:50.00:!2018.270.12:00:00
+2018.270.12:00:00.00:data_valid=on
+2018.270.12:00:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.12:00:00.00:midob
+2018.270.12:00:00.00&midob/"- - - - midob - - - -
+2018.270.12:00:00.00&midob/onsource
+2018.270.12:00:00.00&midob/pvwget
+2018.270.12:00:00.00&midob/getcal
+2018.270.12:00:00.00&midob/"getcal3mm
+2018.270.12:00:00.00&midob/"getcal1mm
+2018.270.12:00:00.00&midob/"dbbcifread  ************************
+2018.270.12:00:00.00$midob/"- - - - midob - - - -
+2018.270.12:00:00.00$midob/onsource
+2018.270.12:00:00.00/onsource/TRACKING
+2018.270.12:00:00.00$midob/pvwget
+2018.270.12:00:00.00&pvwget/"- - - - pvwget - - - -
+2018.270.12:00:00.00&pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.12:00:00.00&pvwget/!+2s
+2018.270.12:00:00.00&pvwget/wx
+2018.270.12:00:00.00$pvwget/"- - - - pvwget - - - -
+2018.270.12:00:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.12:00:00.00#flagr#flagr/antenna,acquired
+2018.270.12:00:00.01$pvwget/!+2s
+2018.270.12:00:02.02$pvwget/wx
+2018.270.12:00:02.02/wx/  9.7,  732.1, 72.3
+2018.270.12:00:02.02$midob/getcal
+2018.270.12:00:02.02&getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.12:00:02.02&getcal/!+2s
+2018.270.12:00:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.12:00:02.34#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s44.xml
+2018.270.12:00:02.34#     #rx: E0HLI ; tsys: 192.02 ; tau: 0.18 ; pwv mm: 25.0 ; trx: 60.7 ; time: 2018-09-27 11:50:28 ; rxFreq: 85.8500 ; elev: 46.2 ; source: oj287
+2018.270.12:00:02.34#     #rx: E0VLI ; tsys: 170.42 ; tau: 0.18 ; pwv mm: 25.2 ; trx: 44.9 ; time: 2018-09-27 11:50:28 ; rxFreq: 85.8500 ; elev: 46.2 ; source: oj287
+2018.270.12:00:02.34#     #rx: E2HLO ; tsys: 2998.98 ; tau: 1.56 ; pwv mm: 27.4 ; trx: 63.4 ; time: 2018-09-27 11:50:28 ; rxFreq: 202.0000 ; elev: 46.2 ; source: oj287
+2018.270.12:00:02.34#     #rx: E2VLO ; tsys: 2886.63 ; tau: 1.52 ; pwv mm: 26.8 ; trx: 67.5 ; time: 2018-09-27 11:50:28 ; rxFreq: 202.0000 ; elev: 46.2 ; source: oj287
+2018.270.12:00:02.34$getcal/!+2s
+2018.270.12:00:04.35$midob/"getcal3mm
+2018.270.12:00:04.35$midob/"getcal1mm
+2018.270.12:00:04.35$midob/"dbbcifread  ************************
+2018.270.12:00:04.35:!2018.270.12:05:00
+2018.270.12:05:00.00:data_valid=off
+2018.270.12:05:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.12:05:00.00:postob
+2018.270.12:05:00.00&postob/"- - - - postob - - - -
+2018.270.12:05:00.00&postob/"dbbcifread ************
+2018.270.12:05:00.00&postob/" mk5=rtime?;*************
+2018.270.12:05:00.00&postob/!+1s
+2018.270.12:05:00.00&postob/"mk5=scan_check?;**************
+2018.270.12:05:00.00&postob/!+1s
+2018.270.12:05:00.00&postob/"mk5=dir_info?;***************
+2018.270.12:05:00.00&postob/!+1s
+2018.270.12:05:00.00&postob/"mk5=bank_set?;***************
+2018.270.12:05:00.00&postob/!+1s
+2018.270.12:05:00.00&postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.12:05:00.00&postob/!+5s
+2018.270.12:05:00.00&postob/wx
+2018.270.12:05:00.00$postob/"- - - - postob - - - -
+2018.270.12:05:00.00$postob/"dbbcifread ************
+2018.270.12:05:00.00$postob/" mk5=rtime?;*************
+2018.270.12:05:00.00$postob/!+1s
+2018.270.12:05:01.01$postob/"mk5=scan_check?;**************
+2018.270.12:05:01.01$postob/!+1s
+2018.270.12:05:02.02$postob/"mk5=dir_info?;***************
+2018.270.12:05:02.02$postob/!+1s
+2018.270.12:05:03.03$postob/"mk5=bank_set?;***************
+2018.270.12:05:03.03$postob/!+1s
+2018.270.12:05:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.12:05:04.81$postob/!+5s
+2018.270.12:05:09.82$postob/wx
+2018.270.12:05:09.82/wx/  9.7,  732.1, 72.3
+2018.270.12:05:09.82:scan_name=no0002,f182a,pv,300,300
+2018.270.12:05:09.82:source=oj287,085448.87,200630.6,2000.0,
+2018.270.12:05:09.82#antcn#>>SM NONE oj287  8h54m48.9s  20d06'31" 4cm 0 0 2000FS9
+2018.270.12:05:09.82#flagr#flagr/antenna,new-source
+2018.270.12:05:09.82:setup01
+2018.270.12:05:09.82$setup01/pcalon
+2018.270.12:05:09.82$pcalon/"- - - - pcalon - - - -
+2018.270.12:05:09.82$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.12:05:09.83$setup01/tpicd=stop
+2018.270.12:05:09.83$setup01/pcald=stop
+2018.270.12:05:09.83$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.12:05:09.83?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.12:05:09.83$setup01/bit_streams
+2018.270.12:05:09.83/bit_streams/,,,
+2018.270.12:05:09.83$setup01/form=flex
+2018.270.12:05:09.83/form/ack
+2018.270.12:05:09.83$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.12:05:09.85/vsi1/ack,ack
+2018.270.12:05:09.85$setup01/ifd01
+2018.270.12:05:09.85$ifd01/ifa=1,agc,1
+2018.270.12:05:09.85/ifa/ack
+2018.270.12:05:09.85$ifd01/ifb=4,agc,1
+2018.270.12:05:09.85/ifb/ack
+2018.270.12:05:09.85$ifd01/lo=
+2018.270.12:05:09.85$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.12:05:09.85$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.12:05:09.85$setup01/tpicd=no,0
+2018.270.12:05:09.85$setup01/tpicd
+2018.270.12:05:09.85?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.12:05:09.85:!2018.270.12:14:50
+2018.270.12:14:50.00:preob
+2018.270.12:14:50.00$preob/"- - - - preob - - - -
+2018.270.12:14:50.00$preob/"dbbcifread   ********
+2018.270.12:14:50.00:!2018.270.12:15:00
+2018.270.12:15:00.00:data_valid=on
+2018.270.12:15:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.12:15:00.00:midob
+2018.270.12:15:00.00$midob/"- - - - midob - - - -
+2018.270.12:15:00.00$midob/onsource
+2018.270.12:15:00.00/onsource/TRACKING
+2018.270.12:15:00.00$midob/pvwget
+2018.270.12:15:00.00$pvwget/"- - - - pvwget - - - -
+2018.270.12:15:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.12:15:00.00#flagr#flagr/antenna,acquired
+2018.270.12:15:00.00$pvwget/!+2s
+2018.270.12:15:02.01$pvwget/wx
+2018.270.12:15:02.01/wx/  8.1,  732.1, 84.3
+2018.270.12:15:02.01$midob/getcal
+2018.270.12:15:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.12:15:02.28#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s50.xml
+2018.270.12:15:02.28#     #rx: E0HLI ; tsys: 188.08 ; tau: 0.16 ; pwv mm: 22.1 ; trx: 59.6 ; time: 2018-09-27 12:12:34 ; rxFreq: 85.8500 ; elev: 41.9 ; source: oj287
+2018.270.12:15:02.28#     #rx: E0VLI ; tsys: 170.92 ; tau: 0.17 ; pwv mm: 22.6 ; trx: 45.9 ; time: 2018-09-27 12:12:34 ; rxFreq: 85.8500 ; elev: 41.9 ; source: oj287
+2018.270.12:15:02.28#     #rx: E2HLO ; tsys: 3265.87 ; tau: 1.49 ; pwv mm: 25.8 ; trx: 67.2 ; time: 2018-09-27 12:12:34 ; rxFreq: 202.0000 ; elev: 41.9 ; source: oj287
+2018.270.12:15:02.28#     #rx: E2VLO ; tsys: 3026.23 ; tau: 1.44 ; pwv mm: 25.1 ; trx: 66.4 ; time: 2018-09-27 12:12:34 ; rxFreq: 202.0000 ; elev: 41.9 ; source: oj287
+2018.270.12:15:02.28$getcal/!+2s
+2018.270.12:15:04.29$midob/"getcal3mm
+2018.270.12:15:04.29$midob/"getcal1mm
+2018.270.12:15:04.29$midob/"dbbcifread  ************************
+2018.270.12:15:04.29:!2018.270.12:20:00
+2018.270.12:20:00.00:data_valid=off
+2018.270.12:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.12:20:00.00:postob
+2018.270.12:20:00.00$postob/"- - - - postob - - - -
+2018.270.12:20:00.00$postob/"dbbcifread ************
+2018.270.12:20:00.00$postob/" mk5=rtime?;*************
+2018.270.12:20:00.00$postob/!+1s
+2018.270.12:20:01.01$postob/"mk5=scan_check?;**************
+2018.270.12:20:01.01$postob/!+1s
+2018.270.12:20:02.02$postob/"mk5=dir_info?;***************
+2018.270.12:20:02.02$postob/!+1s
+2018.270.12:20:03.03$postob/"mk5=bank_set?;***************
+2018.270.12:20:03.03$postob/!+1s
+2018.270.12:20:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.12:20:04.65$postob/!+5s
+2018.270.12:20:09.66$postob/wx
+2018.270.12:20:09.66/wx/  8.1,  732.1, 84.3
+2018.270.12:20:09.66:scan_name=no0003,f182a,pv,300,300
+2018.270.12:20:09.66:source=rleo,094733.49,112543.7,2000.0,
+2018.270.12:20:09.66#antcn#>>SM NONE rleo  9h47m33.5s  11d25'44" 4cm 0 0 2000FS9
+2018.270.12:20:09.66#flagr#flagr/antenna,new-source
+2018.270.12:20:09.66:setup01
+2018.270.12:20:09.66$setup01/pcalon
+2018.270.12:20:09.66$pcalon/"- - - - pcalon - - - -
+2018.270.12:20:09.66$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.12:20:09.67$setup01/tpicd=stop
+2018.270.12:20:09.67$setup01/pcald=stop
+2018.270.12:20:09.67$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.12:20:09.67?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.12:20:09.67$setup01/bit_streams
+2018.270.12:20:09.67/bit_streams/,,,
+2018.270.12:20:09.67$setup01/form=flex
+2018.270.12:20:09.67/form/ack
+2018.270.12:20:09.67$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.12:20:09.67/vsi1/ack,ack
+2018.270.12:20:09.67$setup01/ifd01
+2018.270.12:20:09.67$ifd01/ifa=1,agc,1
+2018.270.12:20:09.68/ifa/ack
+2018.270.12:20:09.68$ifd01/ifb=4,agc,1
+2018.270.12:20:09.68/ifb/ack
+2018.270.12:20:09.68$ifd01/lo=
+2018.270.12:20:09.68$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.12:20:09.68$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.12:20:09.68$setup01/tpicd=no,0
+2018.270.12:20:09.68$setup01/tpicd
+2018.270.12:20:09.68?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.12:20:09.68:!2018.270.12:34:50
+2018.270.12:34:50.00:preob
+2018.270.12:34:50.00$preob/"- - - - preob - - - -
+2018.270.12:34:50.00$preob/"dbbcifread   ********
+2018.270.12:34:50.00:!2018.270.12:35:00
+2018.270.12:35:00.00:data_valid=on
+2018.270.12:35:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.12:35:00.00:midob
+2018.270.12:35:00.00$midob/"- - - - midob - - - -
+2018.270.12:35:00.00$midob/onsource
+2018.270.12:35:00.00/onsource/TRACKING
+2018.270.12:35:00.00$midob/pvwget
+2018.270.12:35:00.00$pvwget/"- - - - pvwget - - - -
+2018.270.12:35:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.12:35:00.00#flagr#flagr/antenna,acquired
+2018.270.12:35:00.01$pvwget/!+2s
+2018.270.12:35:02.02$pvwget/wx
+2018.270.12:35:02.02/wx/  8.5,  732.0, 80.7
+2018.270.12:35:02.02$midob/getcal
+2018.270.12:35:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.12:35:02.25#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s58.xml
+2018.270.12:35:02.25#     #rx: E0HLI ; tsys: 183.60 ; tau: 0.17 ; pwv mm: 22.3 ; trx: 59.8 ; time: 2018-09-27 12:25:40 ; rxFreq: 85.8500 ; elev: 44.3 ; source: rleo
+2018.270.12:35:02.25#     #rx: E0VLI ; tsys: 166.55 ; tau: 0.17 ; pwv mm: 22.9 ; trx: 45.8 ; time: 2018-09-27 12:25:40 ; rxFreq: 85.8500 ; elev: 44.3 ; source: rleo
+2018.270.12:35:02.25#     #rx: E2HLO ; tsys: 3065.81 ; tau: 1.51 ; pwv mm: 26.4 ; trx: 67.3 ; time: 2018-09-27 12:25:40 ; rxFreq: 202.0000 ; elev: 44.3 ; source: rleo
+2018.270.12:35:02.25#     #rx: E2VLO ; tsys: 2869.50 ; tau: 1.47 ; pwv mm: 25.7 ; trx: 66.6 ; time: 2018-09-27 12:25:40 ; rxFreq: 202.0000 ; elev: 44.3 ; source: rleo
+2018.270.12:35:02.26$getcal/!+2s
+2018.270.12:35:04.27$midob/"getcal3mm
+2018.270.12:35:04.27$midob/"getcal1mm
+2018.270.12:35:04.27$midob/"dbbcifread  ************************
+2018.270.12:35:04.27:!2018.270.12:40:00
+2018.270.12:40:00.00:data_valid=off
+2018.270.12:40:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.12:40:00.00:postob
+2018.270.12:40:00.00$postob/"- - - - postob - - - -
+2018.270.12:40:00.00$postob/"dbbcifread ************
+2018.270.12:40:00.00$postob/" mk5=rtime?;*************
+2018.270.12:40:00.00$postob/!+1s
+2018.270.12:40:01.01$postob/"mk5=scan_check?;**************
+2018.270.12:40:01.01$postob/!+1s
+2018.270.12:40:02.02$postob/"mk5=dir_info?;***************
+2018.270.12:40:02.02$postob/!+1s
+2018.270.12:40:03.03$postob/"mk5=bank_set?;***************
+2018.270.12:40:03.03$postob/!+1s
+2018.270.12:40:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.12:40:04.66$postob/!+5s
+2018.270.12:40:09.67$postob/wx
+2018.270.12:40:09.67/wx/  8.5,  732.0, 80.7
+2018.270.12:40:09.67:scan_name=no0004,f182a,pv,300,300
+2018.270.12:40:09.67:source=rleo,094733.49,112543.7,2000.0,
+2018.270.12:40:09.67#antcn#>>SM NONE rleo  9h47m33.5s  11d25'44" 4cm 0 0 2000FS9
+2018.270.12:40:09.67#flagr#flagr/antenna,new-source
+2018.270.12:40:09.67:setup01
+2018.270.12:40:09.67$setup01/pcalon
+2018.270.12:40:09.67$pcalon/"- - - - pcalon - - - -
+2018.270.12:40:09.67$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.12:40:09.67$setup01/tpicd=stop
+2018.270.12:40:09.68$setup01/pcald=stop
+2018.270.12:40:09.68$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.12:40:09.68?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.12:40:09.68$setup01/bit_streams
+2018.270.12:40:09.68/bit_streams/,,,
+2018.270.12:40:09.68$setup01/form=flex
+2018.270.12:40:09.68/form/ack
+2018.270.12:40:09.68$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.12:40:09.68/vsi1/ack,ack
+2018.270.12:40:09.68$setup01/ifd01
+2018.270.12:40:09.68$ifd01/ifa=1,agc,1
+2018.270.12:40:09.68/ifa/ack
+2018.270.12:40:09.68$ifd01/ifb=4,agc,1
+2018.270.12:40:09.68/ifb/ack
+2018.270.12:40:09.68$ifd01/lo=
+2018.270.12:40:09.68$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.12:40:09.68$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.12:40:09.68$setup01/tpicd=no,0
+2018.270.12:40:09.68$setup01/tpicd
+2018.270.12:40:09.68?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.12:40:09.68:!2018.270.12:44:50
+2018.270.12:44:50.00:preob
+2018.270.12:44:50.00$preob/"- - - - preob - - - -
+2018.270.12:44:50.00$preob/"dbbcifread   ********
+2018.270.12:44:50.00:!2018.270.12:45:00
+2018.270.12:45:00.00:data_valid=on
+2018.270.12:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.12:45:00.01:midob
+2018.270.12:45:00.01$midob/"- - - - midob - - - -
+2018.270.12:45:00.01$midob/onsource
+2018.270.12:45:00.01/onsource/TRACKING
+2018.270.12:45:00.01$midob/pvwget
+2018.270.12:45:00.01$pvwget/"- - - - pvwget - - - -
+2018.270.12:45:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.12:45:00.01#flagr#flagr/antenna,acquired
+2018.270.12:45:00.02$pvwget/!+2s
+2018.270.12:45:02.03$pvwget/wx
+2018.270.12:45:02.03/wx/  8.4,  731.9, 81.4
+2018.270.12:45:02.03$midob/getcal
+2018.270.12:45:02.03$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.12:45:02.27#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s58.xml
+2018.270.12:45:02.27#     #rx: E0HLI ; tsys: 183.60 ; tau: 0.17 ; pwv mm: 22.3 ; trx: 59.8 ; time: 2018-09-27 12:25:40 ; rxFreq: 85.8500 ; elev: 44.3 ; source: rleo
+2018.270.12:45:02.27#     #rx: E0VLI ; tsys: 166.55 ; tau: 0.17 ; pwv mm: 22.9 ; trx: 45.8 ; time: 2018-09-27 12:25:40 ; rxFreq: 85.8500 ; elev: 44.3 ; source: rleo
+2018.270.12:45:02.27#     #rx: E2HLO ; tsys: 3065.81 ; tau: 1.51 ; pwv mm: 26.4 ; trx: 67.3 ; time: 2018-09-27 12:25:40 ; rxFreq: 202.0000 ; elev: 44.3 ; source: rleo
+2018.270.12:45:02.27#     #rx: E2VLO ; tsys: 2869.50 ; tau: 1.47 ; pwv mm: 25.7 ; trx: 66.6 ; time: 2018-09-27 12:25:40 ; rxFreq: 202.0000 ; elev: 44.3 ; source: rleo
+2018.270.12:45:02.27$getcal/!+2s
+2018.270.12:45:04.28$midob/"getcal3mm
+2018.270.12:45:04.28$midob/"getcal1mm
+2018.270.12:45:04.28$midob/"dbbcifread  ************************
+2018.270.12:45:04.28:!2018.270.12:50:00
+2018.270.12:50:00.00:data_valid=off
+2018.270.12:50:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.12:50:00.00:postob
+2018.270.12:50:00.00$postob/"- - - - postob - - - -
+2018.270.12:50:00.00$postob/"dbbcifread ************
+2018.270.12:50:00.00$postob/" mk5=rtime?;*************
+2018.270.12:50:00.00$postob/!+1s
+2018.270.12:50:01.01$postob/"mk5=scan_check?;**************
+2018.270.12:50:01.01$postob/!+1s
+2018.270.12:50:02.02$postob/"mk5=dir_info?;***************
+2018.270.12:50:02.02$postob/!+1s
+2018.270.12:50:03.03$postob/"mk5=bank_set?;***************
+2018.270.12:50:03.03$postob/!+1s
+2018.270.12:50:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.12:50:04.65$postob/!+5s
+2018.270.12:50:09.66$postob/wx
+2018.270.12:50:09.66/wx/  8.4,  731.9, 81.4
+2018.270.12:50:09.66:scan_name=no0005,f182a,pv,300,300
+2018.270.12:50:09.66:source=1633+38,163515.49,380804.5,2000.0,
+2018.270.12:50:09.66#antcn#>>SM NONE 1633+38 16h35m15.5s  38d08'05" 4cm 0 0 2000FS9
+2018.270.12:50:09.66#flagr#flagr/antenna,new-source
+2018.270.12:50:09.66:setup01
+2018.270.12:50:09.66$setup01/pcalon
+2018.270.12:50:09.66$pcalon/"- - - - pcalon - - - -
+2018.270.12:50:09.66$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.12:50:09.67$setup01/tpicd=stop
+2018.270.12:50:09.67$setup01/pcald=stop
+2018.270.12:50:09.67$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.12:50:09.67?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.12:50:09.67$setup01/bit_streams
+2018.270.12:50:09.67/bit_streams/,,,
+2018.270.12:50:09.67$setup01/form=flex
+2018.270.12:50:09.67/form/ack
+2018.270.12:50:09.67$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.12:50:09.67/vsi1/ack,ack
+2018.270.12:50:09.67$setup01/ifd01
+2018.270.12:50:09.67$ifd01/ifa=1,agc,1
+2018.270.12:50:09.67/ifa/ack
+2018.270.12:50:09.67$ifd01/ifb=4,agc,1
+2018.270.12:50:09.68/ifb/ack
+2018.270.12:50:09.68$ifd01/lo=
+2018.270.12:50:09.68$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.12:50:09.68$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.12:50:09.68$setup01/tpicd=no,0
+2018.270.12:50:09.68$setup01/tpicd
+2018.270.12:50:09.68?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.12:50:09.68:!2018.270.12:59:50
+2018.270.12:59:50.00:preob
+2018.270.12:59:50.00$preob/"- - - - preob - - - -
+2018.270.12:59:50.00$preob/"dbbcifread   ********
+2018.270.12:59:50.00:!2018.270.13:00:00
+2018.270.13:00:00.00:data_valid=on
+2018.270.13:00:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.13:00:00.00:midob
+2018.270.13:00:00.00$midob/"- - - - midob - - - -
+2018.270.13:00:00.00$midob/onsource
+2018.270.13:00:00.00#flagr#flagr/antenna,acquired
+2018.270.13:00:00.00/onsource/TRACKING
+2018.270.13:00:00.00$midob/pvwget
+2018.270.13:00:00.00$pvwget/"- - - - pvwget - - - -
+2018.270.13:00:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.13:00:00.01$pvwget/!+2s
+2018.270.13:00:02.02$pvwget/wx
+2018.270.13:00:02.02/wx/  9.5,  731.9, 70.9
+2018.270.13:00:02.02$midob/getcal
+2018.270.13:00:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.13:00:02.27#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s62.xml
+2018.270.13:00:02.27#     #rx: E0HLI ; tsys: 514.50 ; tau: 0.58 ; pwv mm: 88.8 ; trx: 59.7 ; time: 2018-09-27 12:56:33 ; rxFreq: 85.8500 ; elev: 49.6 ; source: 1633+38
+2018.270.13:00:02.27#     #rx: E0VLI ; tsys: 493.62 ; tau: 0.60 ; pwv mm: 90.7 ; trx: 45.9 ; time: 2018-09-27 12:56:33 ; rxFreq: 85.8500 ; elev: 49.6 ; source: 1633+38
+2018.270.13:00:02.27#     #rx: E2HLO ; tsys: 41325.16 ; tau: 3.56 ; pwv mm: 62.9 ; trx: 67.5 ; time: 2018-09-27 12:56:33 ; rxFreq: 202.0000 ; elev: 49.6 ; source: 1633+38
+2018.270.13:00:02.27#     #rx: E2VLO ; tsys: 23993.23 ; tau: 3.15 ; pwv mm: 55.7 ; trx: 67.0 ; time: 2018-09-27 12:56:33 ; rxFreq: 202.0000 ; elev: 49.6 ; source: 1633+38
+2018.270.13:00:02.27$getcal/!+2s
+2018.270.13:00:04.28$midob/"getcal3mm
+2018.270.13:00:04.28$midob/"getcal1mm
+2018.270.13:00:04.28$midob/"dbbcifread  ************************
+2018.270.13:00:04.28:!2018.270.13:05:00
+2018.270.13:05:00.00:data_valid=off
+2018.270.13:05:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.13:05:00.00:postob
+2018.270.13:05:00.00$postob/"- - - - postob - - - -
+2018.270.13:05:00.00$postob/"dbbcifread ************
+2018.270.13:05:00.00$postob/" mk5=rtime?;*************
+2018.270.13:05:00.00$postob/!+1s
+2018.270.13:05:01.01$postob/"mk5=scan_check?;**************
+2018.270.13:05:01.01$postob/!+1s
+2018.270.13:05:02.02$postob/"mk5=dir_info?;***************
+2018.270.13:05:02.02$postob/!+1s
+2018.270.13:05:03.03$postob/"mk5=bank_set?;***************
+2018.270.13:05:03.03$postob/!+1s
+2018.270.13:05:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.13:05:04.65$postob/!+5s
+2018.270.13:05:09.66$postob/wx
+2018.270.13:05:09.67/wx/  9.5,  731.9, 70.9
+2018.270.13:05:09.67:scan_name=no0006,f182a,pv,300,300
+2018.270.13:05:09.67:source=1633+38,163515.49,380804.5,2000.0,
+2018.270.13:05:09.67#antcn#>>SM NONE 1633+38 16h35m15.5s  38d08'05" 4cm 0 0 2000FS9
+2018.270.13:05:09.67#flagr#flagr/antenna,new-source
+2018.270.13:05:09.67:setup01
+2018.270.13:05:09.67$setup01/pcalon
+2018.270.13:05:09.67$pcalon/"- - - - pcalon - - - -
+2018.270.13:05:09.67$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.13:05:09.67$setup01/tpicd=stop
+2018.270.13:05:09.67$setup01/pcald=stop
+2018.270.13:05:09.67$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.13:05:09.67?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.13:05:09.67$setup01/bit_streams
+2018.270.13:05:09.67/bit_streams/,,,
+2018.270.13:05:09.67$setup01/form=flex
+2018.270.13:05:09.68/form/ack
+2018.270.13:05:09.68$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.13:05:09.68/vsi1/ack,ack
+2018.270.13:05:09.68$setup01/ifd01
+2018.270.13:05:09.68$ifd01/ifa=1,agc,1
+2018.270.13:05:09.68/ifa/ack
+2018.270.13:05:09.68$ifd01/ifb=4,agc,1
+2018.270.13:05:09.68/ifb/ack
+2018.270.13:05:09.68$ifd01/lo=
+2018.270.13:05:09.68$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.13:05:09.68$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.13:05:09.68$setup01/tpicd=no,0
+2018.270.13:05:09.68$setup01/tpicd
+2018.270.13:05:09.68?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.13:05:09.68:!2018.270.13:14:50
+2018.270.13:14:50.00:preob
+2018.270.13:14:50.00$preob/"- - - - preob - - - -
+2018.270.13:14:50.00$preob/"dbbcifread   ********
+2018.270.13:14:50.00:!2018.270.13:15:00
+2018.270.13:15:00.00:data_valid=on
+2018.270.13:15:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.13:15:00.01:midob
+2018.270.13:15:00.01$midob/"- - - - midob - - - -
+2018.270.13:15:00.01$midob/onsource
+2018.270.13:15:00.01/onsource/TRACKING
+2018.270.13:15:00.01$midob/pvwget
+2018.270.13:15:00.01$pvwget/"- - - - pvwget - - - -
+2018.270.13:15:00.01$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.13:15:00.01#flagr#flagr/antenna,acquired
+2018.270.13:15:00.01$pvwget/!+2s
+2018.270.13:15:02.02$pvwget/wx
+2018.270.13:15:02.02/wx/  8.7,  731.8, 80.1
+2018.270.13:15:02.02$midob/getcal
+2018.270.13:15:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.13:15:02.27#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s64.xml
+2018.270.13:15:02.27#     #rx: E0HLI ; tsys: 400.68 ; tau: 0.48 ; pwv mm: 72.2 ; trx: 59.9 ; time: 2018-09-27 13:05:33 ; rxFreq: 85.8500 ; elev: 51.3 ; source: 1633+38
+2018.270.13:15:02.27#     #rx: E0VLI ; tsys: 380.50 ; tau: 0.49 ; pwv mm: 73.8 ; trx: 45.9 ; time: 2018-09-27 13:05:33 ; rxFreq: 85.8500 ; elev: 51.3 ; source: 1633+38
+2018.270.13:15:02.27#     #rx: E2HLO ; tsys: 14900.05 ; tau: 2.86 ; pwv mm: 50.6 ; trx: 67.7 ; time: 2018-09-27 13:05:33 ; rxFreq: 202.0000 ; elev: 51.3 ; source: 1633+38
+2018.270.13:15:02.27#     #rx: E2VLO ; tsys: 11797.80 ; tau: 2.69 ; pwv mm: 47.5 ; trx: 67.2 ; time: 2018-09-27 13:05:33 ; rxFreq: 202.0000 ; elev: 51.3 ; source: 1633+38
+2018.270.13:15:02.27$getcal/!+2s
+2018.270.13:15:04.28$midob/"getcal3mm
+2018.270.13:15:04.28$midob/"getcal1mm
+2018.270.13:15:04.28$midob/"dbbcifread  ************************
+2018.270.13:15:04.28:!2018.270.13:20:00
+2018.270.13:20:00.00:data_valid=off
+2018.270.13:20:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.13:20:00.00:postob
+2018.270.13:20:00.00$postob/"- - - - postob - - - -
+2018.270.13:20:00.00$postob/"dbbcifread ************
+2018.270.13:20:00.00$postob/" mk5=rtime?;*************
+2018.270.13:20:00.00$postob/!+1s
+2018.270.13:20:01.01$postob/"mk5=scan_check?;**************
+2018.270.13:20:01.01$postob/!+1s
+2018.270.13:20:02.02$postob/"mk5=dir_info?;***************
+2018.270.13:20:02.02$postob/!+1s
+2018.270.13:20:03.03$postob/"mk5=bank_set?;***************
+2018.270.13:20:03.03$postob/!+1s
+2018.270.13:20:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.13:20:04.65$postob/!+5s
+2018.270.13:20:09.66$postob/wx
+2018.270.13:20:09.66/wx/  8.7,  731.8, 80.1
+2018.270.13:20:09.66:scan_name=no0007,f182a,pv,300,300
+2018.270.13:20:09.66:source=1633+38,163515.49,380804.5,2000.0,
+2018.270.13:20:09.66#antcn#>>SM NONE 1633+38 16h35m15.5s  38d08'05" 4cm 0 0 2000FS9
+2018.270.13:20:09.66#flagr#flagr/antenna,new-source
+2018.270.13:20:09.66:setup01
+2018.270.13:20:09.66$setup01/pcalon
+2018.270.13:20:09.66$pcalon/"- - - - pcalon - - - -
+2018.270.13:20:09.66$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.13:20:09.67$setup01/tpicd=stop
+2018.270.13:20:09.67$setup01/pcald=stop
+2018.270.13:20:09.67$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.13:20:09.67?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.13:20:09.67$setup01/bit_streams
+2018.270.13:20:09.67/bit_streams/,,,
+2018.270.13:20:09.67$setup01/form=flex
+2018.270.13:20:09.67/form/ack
+2018.270.13:20:09.67$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.13:20:09.67/vsi1/ack,ack
+2018.270.13:20:09.67$setup01/ifd01
+2018.270.13:20:09.67$ifd01/ifa=1,agc,1
+2018.270.13:20:09.67/ifa/ack
+2018.270.13:20:09.67$ifd01/ifb=4,agc,1
+2018.270.13:20:09.67/ifb/ack
+2018.270.13:20:09.67$ifd01/lo=
+2018.270.13:20:09.67$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.13:20:09.67$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.13:20:09.67$setup01/tpicd=no,0
+2018.270.13:20:09.67$setup01/tpicd
+2018.270.13:20:09.67?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.13:20:09.67:!2018.270.13:29:50
+2018.270.13:29:50.01:preob
+2018.270.13:29:50.01$preob/"- - - - preob - - - -
+2018.270.13:29:50.01$preob/"dbbcifread   ********
+2018.270.13:29:50.01:!2018.270.13:30:00
+2018.270.13:30:00.00:data_valid=on
+2018.270.13:30:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.13:30:00.00:midob
+2018.270.13:30:00.00$midob/"- - - - midob - - - -
+2018.270.13:30:00.00$midob/onsource
+2018.270.13:30:00.00/onsource/TRACKING
+2018.270.13:30:00.00$midob/pvwget
+2018.270.13:30:00.00$pvwget/"- - - - pvwget - - - -
+2018.270.13:30:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.13:30:00.00#flagr#flagr/antenna,acquired
+2018.270.13:30:00.01$pvwget/!+2s
+2018.270.13:30:02.02$pvwget/wx
+2018.270.13:30:02.02/wx/  8.2,  731.7, 83.8
+2018.270.13:30:02.02$midob/getcal
+2018.270.13:30:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.13:30:02.28#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s67.xml
+2018.270.13:30:02.28#     #rx: E0HLI ; tsys: 611.29 ; tau: 0.71 ; pwv mm: 109.1 ; trx: 59.9 ; time: 2018-09-27 13:20:38 ; rxFreq: 85.8500 ; elev: 54.2 ; source: 1633+38
+2018.270.13:30:02.28#     #rx: E0VLI ; tsys: 588.35 ; tau: 0.73 ; pwv mm: 111.1 ; trx: 46.0 ; time: 2018-09-27 13:20:38 ; rxFreq: 85.8500 ; elev: 54.2 ; source: 1633+38
+2018.270.13:30:02.28#     #rx: E2HLO ; tsys: 88117.19 ; tau: 4.40 ; pwv mm: 77.6 ; trx: 67.7 ; time: 2018-09-27 13:20:38 ; rxFreq: 202.0000 ; elev: 54.2 ; source: 1633+38
+2018.270.13:30:02.28#     #rx: E2VLO ; tsys: 37031.30 ; tau: 3.71 ; pwv mm: 65.2 ; trx: 67.3 ; time: 2018-09-27 13:20:38 ; rxFreq: 202.0000 ; elev: 54.2 ; source: 1633+38
+2018.270.13:30:02.29$getcal/!+2s
+2018.270.13:30:04.30$midob/"getcal3mm
+2018.270.13:30:04.30$midob/"getcal1mm
+2018.270.13:30:04.30$midob/"dbbcifread  ************************
+2018.270.13:30:04.30:!2018.270.13:35:00
+2018.270.13:35:00.00:data_valid=off
+2018.270.13:35:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.13:35:00.00:postob
+2018.270.13:35:00.00$postob/"- - - - postob - - - -
+2018.270.13:35:00.00$postob/"dbbcifread ************
+2018.270.13:35:00.00$postob/" mk5=rtime?;*************
+2018.270.13:35:00.00$postob/!+1s
+2018.270.13:35:01.01$postob/"mk5=scan_check?;**************
+2018.270.13:35:01.01$postob/!+1s
+2018.270.13:35:02.02$postob/"mk5=dir_info?;***************
+2018.270.13:35:02.02$postob/!+1s
+2018.270.13:35:03.03$postob/"mk5=bank_set?;***************
+2018.270.13:35:03.03$postob/!+1s
+2018.270.13:35:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.13:35:04.65$postob/!+5s
+2018.270.13:35:09.67$postob/wx
+2018.270.13:35:09.67/wx/  8.2,  731.7, 83.8
+2018.270.13:35:09.67:scan_name=no0008,f182a,pv,300,300
+2018.270.13:35:09.67:source=1633+38,163515.49,380804.5,2000.0,
+2018.270.13:35:09.67#antcn#>>SM NONE 1633+38 16h35m15.5s  38d08'05" 4cm 0 0 2000FS9
+2018.270.13:35:09.67:setup01
+2018.270.13:35:09.67$setup01/pcalon
+2018.270.13:35:09.67$pcalon/"- - - - pcalon - - - -
+2018.270.13:35:09.67#flagr#flagr/antenna,new-source
+2018.270.13:35:09.67$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.13:35:09.67$setup01/tpicd=stop
+2018.270.13:35:09.67$setup01/pcald=stop
+2018.270.13:35:09.67$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.13:35:09.67?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.13:35:09.67$setup01/bit_streams
+2018.270.13:35:09.67/bit_streams/,,,
+2018.270.13:35:09.67$setup01/form=flex
+2018.270.13:35:09.67/form/ack
+2018.270.13:35:09.67$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.13:35:09.68/vsi1/ack,ack
+2018.270.13:35:09.68$setup01/ifd01
+2018.270.13:35:09.68$ifd01/ifa=1,agc,1
+2018.270.13:35:09.68/ifa/ack
+2018.270.13:35:09.68$ifd01/ifb=4,agc,1
+2018.270.13:35:09.68/ifb/ack
+2018.270.13:35:09.68$ifd01/lo=
+2018.270.13:35:09.68$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.13:35:09.68$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.13:35:09.68$setup01/tpicd=no,0
+2018.270.13:35:09.68$setup01/tpicd
+2018.270.13:35:09.68?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.13:35:09.68:!2018.270.13:44:50
+2018.270.13:44:50.00:preob
+2018.270.13:44:50.00$preob/"- - - - preob - - - -
+2018.270.13:44:50.00$preob/"dbbcifread   ********
+2018.270.13:44:50.00:!2018.270.13:45:00
+2018.270.13:45:00.00:data_valid=on
+2018.270.13:45:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.13:45:00.00:midob
+2018.270.13:45:00.00$midob/"- - - - midob - - - -
+2018.270.13:45:00.00$midob/onsource
+2018.270.13:45:00.00/onsource/TRACKING
+2018.270.13:45:00.00$midob/pvwget
+2018.270.13:45:00.00$pvwget/"- - - - pvwget - - - -
+2018.270.13:45:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.13:45:00.00#flagr#flagr/antenna,acquired
+2018.270.13:45:00.00$pvwget/!+2s
+2018.270.13:45:02.01$pvwget/wx
+2018.270.13:45:02.01/wx/  8.4,  731.6, 82.8
+2018.270.13:45:02.01$midob/getcal
+2018.270.13:45:02.01$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.13:45:02.27#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s71.xml
+2018.270.13:45:02.27#     #rx: E0HLI ; tsys: 288.50 ; tau: 0.37 ; pwv mm: 54.0 ; trx: 59.9 ; time: 2018-09-27 13:35:37 ; rxFreq: 85.8500 ; elev: 57.1 ; source: 1633+38
+2018.270.13:45:02.27#     #rx: E0VLI ; tsys: 270.12 ; tau: 0.37 ; pwv mm: 55.3 ; trx: 46.0 ; time: 2018-09-27 13:35:37 ; rxFreq: 85.8500 ; elev: 57.1 ; source: 1633+38
+2018.270.13:45:02.27#     #rx: E2HLO ; tsys: 6100.40 ; tau: 2.36 ; pwv mm: 41.3 ; trx: 67.8 ; time: 2018-09-27 13:35:37 ; rxFreq: 202.0000 ; elev: 57.1 ; source: 1633+38
+2018.270.13:45:02.27#     #rx: E2VLO ; tsys: 5402.87 ; tau: 2.26 ; pwv mm: 39.6 ; trx: 67.3 ; time: 2018-09-27 13:35:37 ; rxFreq: 202.0000 ; elev: 57.1 ; source: 1633+38
+2018.270.13:45:02.27$getcal/!+2s
+2018.270.13:45:04.28$midob/"getcal3mm
+2018.270.13:45:04.28$midob/"getcal1mm
+2018.270.13:45:04.28$midob/"dbbcifread  ************************
+2018.270.13:45:04.28:!2018.270.13:50:00
+2018.270.13:50:00.00:data_valid=off
+2018.270.13:50:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.13:50:00.00:postob
+2018.270.13:50:00.00$postob/"- - - - postob - - - -
+2018.270.13:50:00.00$postob/"dbbcifread ************
+2018.270.13:50:00.00$postob/" mk5=rtime?;*************
+2018.270.13:50:00.00$postob/!+1s
+2018.270.13:50:01.01$postob/"mk5=scan_check?;**************
+2018.270.13:50:01.01$postob/!+1s
+2018.270.13:50:02.02$postob/"mk5=dir_info?;***************
+2018.270.13:50:02.02$postob/!+1s
+2018.270.13:50:03.03$postob/"mk5=bank_set?;***************
+2018.270.13:50:03.03$postob/!+1s
+2018.270.13:50:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.13:50:04.66$postob/!+5s
+2018.270.13:50:09.67$postob/wx
+2018.270.13:50:09.67/wx/  8.4,  731.6, 82.8
+2018.270.13:50:09.67:scan_name=no0009,f182a,pv,300,300
+2018.270.13:50:09.67:source=1633+38,163515.49,380804.5,2000.0,
+2018.270.13:50:09.67#antcn#>>SM NONE 1633+38 16h35m15.5s  38d08'05" 4cm 0 0 2000FS9
+2018.270.13:50:09.67#flagr#flagr/antenna,new-source
+2018.270.13:50:09.67:setup01
+2018.270.13:50:09.67$setup01/pcalon
+2018.270.13:50:09.67$pcalon/"- - - - pcalon - - - -
+2018.270.13:50:09.67$pcalon/sy=/usr2/st/pcal/pcalon
+2018.270.13:50:09.68$setup01/tpicd=stop
+2018.270.13:50:09.68$setup01/pcald=stop
+2018.270.13:50:09.68$setup01/bit_streams=ext,0xffffffff,,64.000
+2018.270.13:50:09.68?ERROR 5t -214 Clock rate (from equip.ctl) divided by sample rate must be integer 1, 2, 4, 8, or 16 within 0.1 percent.
+2018.270.13:50:09.68$setup01/bit_streams
+2018.270.13:50:09.68/bit_streams/,,,
+2018.270.13:50:09.68$setup01/form=flex
+2018.270.13:50:09.68/form/ack
+2018.270.13:50:09.68$setup01/vsi1=a05,a06,a07,a08,a09,a10,a11,a12,b05,b06,b07,b08,b09,b10,b11,b12
+2018.270.13:50:09.68/vsi1/ack,ack
+2018.270.13:50:09.68$setup01/ifd01
+2018.270.13:50:09.68$ifd01/ifa=1,agc,1
+2018.270.13:50:09.68/ifa/ack
+2018.270.13:50:09.68$ifd01/ifb=4,agc,1
+2018.270.13:50:09.69/ifb/ack
+2018.270.13:50:09.69$ifd01/lo=
+2018.270.13:50:09.69$ifd01/lo=loa,85500.00,usb,rcp,1.000
+2018.270.13:50:09.69$ifd01/lo=lob,85500.00,usb,lcp,1.000
+2018.270.13:50:09.69$setup01/tpicd=no,0
+2018.270.13:50:09.69$setup01/tpicd
+2018.270.13:50:09.69?ERROR tc -302 TPICD not set-up: no detectors selected.
+2018.270.13:50:09.69:!2018.270.13:59:50
+2018.270.13:59:50.00:preob
+2018.270.13:59:50.00$preob/"- - - - preob - - - -
+2018.270.13:59:50.00$preob/"dbbcifread   ********
+2018.270.13:59:50.00:!2018.270.14:00:00
+2018.270.14:00:00.00:data_valid=on
+2018.270.14:00:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.14:00:00.00:midob
+2018.270.14:00:00.00$midob/"- - - - midob - - - -
+2018.270.14:00:00.00$midob/onsource
+2018.270.14:00:00.00#flagr#flagr/antenna,acquired
+2018.270.14:00:00.00/onsource/TRACKING
+2018.270.14:00:00.00$midob/pvwget
+2018.270.14:00:00.00$pvwget/"- - - - pvwget - - - -
+2018.270.14:00:00.00$pvwget/sy=rsh -l root vcdesk /home/penalver/weavlbi | /usr2/st/bin/antrx &
+2018.270.14:00:00.01$pvwget/!+2s
+2018.270.14:00:02.02$pvwget/wx
+2018.270.14:00:02.02/wx/  8.2,  731.5, 85.6
+2018.270.14:00:02.02$midob/getcal
+2018.270.14:00:02.02$getcal/sy=ssh -l vlbi mrt-lx2 '/mrt-lx3/vis/vlbi/scripts/read_lastcal_info.py -lc /mrt-lx3/vis/vlbi/vlbireduc/calxmls/'  | /usr2/st/bin/antrxcal
+2018.270.14:00:02.27#     #CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180927s75.xml
+2018.270.14:00:02.27#     #rx: E0HLI ; tsys: 413.49 ; tau: 0.55 ; pwv mm: 82.7 ; trx: 59.9 ; time: 2018-09-27 13:50:39 ; rxFreq: 85.8500 ; elev: 60.0 ; source: 1633+38
+2018.270.14:00:02.27#     #rx: E0VLI ; tsys: 392.72 ; tau: 0.56 ; pwv mm: 84.4 ; trx: 46.0 ; time: 2018-09-27 13:50:39 ; rxFreq: 85.8500 ; elev: 60.0 ; source: 1633+38
+2018.270.14:00:02.27#     #rx: E2HLO ; tsys: 14598.25 ; tau: 3.16 ; pwv mm: 55.6 ; trx: 67.8 ; time: 2018-09-27 13:50:39 ; rxFreq: 202.0000 ; elev: 60.0 ; source: 1633+38
+2018.270.14:00:02.27#     #rx: E2VLO ; tsys: 11367.79 ; tau: 2.95 ; pwv mm: 51.9 ; trx: 67.3 ; time: 2018-09-27 13:50:39 ; rxFreq: 202.0000 ; elev: 60.0 ; source: 1633+38
+2018.270.14:00:02.28$getcal/!+2s
+2018.270.14:00:04.29$midob/"getcal3mm
+2018.270.14:00:04.29$midob/"getcal1mm
+2018.270.14:00:04.29$midob/"dbbcifread  ************************
+2018.270.14:00:04.29:!2018.270.14:05:00
+2018.270.14:05:00.00:data_valid=off
+2018.270.14:05:00.00?ERROR sp  -13 This command not supported for your equipment, check equip.ctl.
+2018.270.14:05:00.00:postob
+2018.270.14:05:00.00$postob/"- - - - postob - - - -
+2018.270.14:05:00.00$postob/"dbbcifread ************
+2018.270.14:05:00.00$postob/" mk5=rtime?;*************
+2018.270.14:05:00.00$postob/!+1s
+2018.270.14:05:01.01$postob/"mk5=scan_check?;**************
+2018.270.14:05:01.01$postob/!+1s
+2018.270.14:05:02.02$postob/"mk5=dir_info?;***************
+2018.270.14:05:02.02$postob/!+1s
+2018.270.14:05:03.03$postob/"mk5=bank_set?;***************
+2018.270.14:05:03.03$postob/!+1s
+2018.270.14:05:04.04$postob/sy=/home/oper/bin/end_scan_notifier
+2018.270.14:05:04.65$postob/!+5s
+2018.270.14:05:09.66$postob/wx
+2018.270.14:05:09.66/wx/  8.2,  731.5, 85.6
+2018.270.14:05:09.66:sched_end
+2018.270.14:05:09.66&sched_end/"mk5=status?;   *****************
+2018.270.14:05:09.66&sched_end/"disk_stats     *****************
+2018.270.14:05:09.66&sched_end/"- - - - end of schedule - - - -
+2018.270.14:05:09.67$sched_end/"mk5=status?;   *****************
+2018.270.14:05:09.67$sched_end/"disk_stats     *****************
+2018.270.14:05:09.67$sched_end/"- - - - end of schedule - - - -
+2018.270.14:05:09.67:*end of schedule
+2018.270.17:56:15.21;schedule=c182apv

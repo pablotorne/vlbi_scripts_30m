@@ -1,17 +1,20 @@
 #!/usr/bin/env python
 """
-Reads the calibration information from an input file,
+Reads the calibration information from an input file (usually a FS log),
 and outputs it in ANTAB format for VLBI correlator.
 
 v0: the cal info must be in the format output by
     read_lastcal_info.py (used in VLBI Field System), i.e.:
-v1: also extracts and writes the weather information
 
 CAL info read from: /mrt-lx3/vis/vlbi/vlbireduc/calxmls/iram30m-calibration-NBC-20180421s111.xml
 rx: E2HLI ; tsys: 581.70 ; tau: 0.40 ; pwv mm: 6.7 ; trx: 73.5 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
 rx: E2HUI ; tsys: 611.80 ; tau: 0.41 ; pwv mm: 6.6 ; trx: 75.0 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
 rx: E2VLI ; tsys: 605.85 ; tau: 0.38 ; pwv mm: 6.5 ; trx: 90.6 ; time: 2018-04-21 04:37:24 ; rxFreq: 214.8506 ; elev: 28.3 ; source: Mars
 rx: E2VUI ; tsys: 629.44 ; tau: 0.40 ; pwv mm: 6.4 ; trx: 89.8 ; time: 2018-04-21 04:37:24 ; rxFreq: 227.3500 ; elev: 28.3 ; source: Mars
+
+
+v1: also extracts and writes the weather information
+v2: offer output in EHT or GMVA format
 
 P. Torne, IRAM 23.04.2018
 """
@@ -28,6 +31,7 @@ parser.add_argument("-v", "--verbose", action="count", help="outputs detailed ex
 #parser.add_argument("sched", help="name of the schedule from which calibration is read. Used to name the output file accordingly")
 parser.add_argument("calinfo_file", help="input file where to read the calibration and weather information from (e.g. a Field System log). This code is written for Pv, and assumes that the text file contains rows with the 'rx' and 'wx' strings to fetch the calibration and weather data.")
 #parser.add_argument("wxinfo_file", help="input file where to read the weather information from")
+parser.add_argument("format", help="decides the output format: for GMVA or EHT data", choices=['GMVA', 'EHT'])
 
 args = parser.parse_args()
 
@@ -55,7 +59,7 @@ def dewtemp(temp, humid):
     return [dewtemp, pw]
 
 
-# Load input file
+# Fetch info from input file
 try:
 
     calinfo = subprocess.check_output('grep %s -e "rx:"'%args.calinfo_file, shell=True).splitlines()
@@ -75,9 +79,19 @@ except Exception as e:
 print "\nOpening file %s.antab to write ANTAB table ..."%basenm
 outputfn = open("%s.antab"%basenm, "w")
 
-outputfn.write("TSYS PV  FT= 1.0  INDEX = 'R1:32', 'L1:32' ,'R1:32', 'L1:32' /\n")
-outputfn.write("!bands             HLI     VLI     HUI     VUI\n")
-outputfn.write("!DOY hh:mm:ss.ss   RCP     LCP     RCP     LCP     !  tau   elv   source\n")
+if args.format=='EHT': # write header for EHT data (4 IFs)
+
+    outputfn.write("TSYS PV  FT= 1.0  INDEX = 'R1:32', 'L1:32' ,'R1:32', 'L1:32' /\n")
+    outputfn.write("!bands             HLI     VLI     HUI     VUI\n")
+    outputfn.write("!DOY hh:mm:ss.ss   RCP     LCP     RCP     LCP     !  tau   elv   source\n")
+
+elif args.format=='GMVA': # write header for GMVA data (2 IFs)
+
+    outputfn.write("TSYS PV  FT= 1.0  INDEX = 'R1:8', 'L1:8'' /\n")
+    outputfn.write("!bands             HLI     VLI     \n")
+    outputfn.write("!DOY hh:mm:ss.ss   RCP     LCP     !  tau   elv   source\n")
+
+
 
 all_timestamp = [] # always save last time stamp to avoid duplicates in the output file
 
@@ -156,20 +170,34 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
 
         if ii == 0: # First entry, no duplicity check
 
-            # Write one line with the four Tsys in four columns:
-            outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
-                                                                            tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
+            if args.format=="EHT":
+                # Write one line with the four Tsys in four columns:
+                outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
+                                                                                tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
+            elif args.format=="GMVA":
+                # Write one line with the two Tsys in two columns: (note that the IF order is different from GMVA and EHT! GMVA: E090H, E090V, E230H, E230V)
+                outputfn.write("%d  %s.00 %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[1], \
+                                                                                     np.mean((tau[0], tau[1])), elv[-1], source[-1]) )
+
         elif ii > 0: # Ignore duplicity check for first entry
 
             if timestamp[-1] == all_timestamp[-2]:  # Do not write repeated cal info (occurs if no new cal is done when calling getcals in FS)
                 print "timestamp = %s | previous = %s"%(timestamp[-1], all_timestamp[-2])
                 print "Detected duplicated timestamp. Ignoring line."
                 continue
+
             else:
-                # Write one line with the four Tsys in four columns:
-                outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
-                                                                                   tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
+
+                if args.format=="EHT":
+                    # Write one line with the four Tsys in four columns:
+                    outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
+                                                                                       tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
+                elif args.format=="GMVA": 
+                    # Write one line with the two Tsys in two columns: (note that the IF order is different from GMVA and EHT! GMVA: E090H, E090V, E230H, E230V)
+                    outputfn.write("%d  %s.00 %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[1], \
+                                                                                          np.mean((tau[0], tau[1])), elv[-1], source[-1]) )
          
+
 print "Writing to %s.antab ..."%basenm
 
     #if ii >= 4: break
