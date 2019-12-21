@@ -15,6 +15,8 @@ v2: fetches the xml file from /ncsServer/mrt/ncs/packages/coordinator2009-08-10v
     and makes a local copy to read from.
 v3: added argparser options to have more flexibility. Now this code can be used by
     the VLBI monitor or the VLBI field system by passing the correct -lc parameter.
+v4: added an argument to select the log file location. If empty, the error log will
+   by default go to $PWD/log/error.log. 
 
 P. Torne, IRAM, v22.04.2018
 """
@@ -38,8 +40,10 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("-v", "--verbose", action="store_true", help="Outputs detailed execution informaton")
 parser.add_argument("-lc", "--localdatapath", help="Copies the xml files to this location and reads the information from there. \nRecommended mode. Make sure you have read/write permission in that folder!\nIf you prefer to not make local copies, do not pass this argument.\n")
+parser.add_argument("-log", "--logfile", help="Chooses the location of the .log file of the execution. If empty, error.log will be used in the folder where read_lastcal_info.py is called from.", default=os.getcwd()+"/log/error.log")
 
 args = parser.parse_args()
+
 
 # 1) Check that we are executing from mrt-lx1, or mrt-lx2, or mrt-lx3. This program will only work from them!
 if socket.gethostname() not in ['mrt-lx1', 'mrt-lx2', 'mrt-lx3']:
@@ -63,8 +67,10 @@ if args.localdatapath != None:
 
 if args.verbose == True: verbose = True
 
+LOGERRORSLOC = args.logfile
+
 # Set-up log
-logging.basicConfig(level=logging.DEBUG, filename='/local/users/torne/vlbi_monitor_client/Python/read_lastcal_info.log', \
+logging.basicConfig(level=logging.DEBUG, filename=LOGERRORSLOC, \
                         format='%(asctime)s %(message)s') # To log the exceptions/errors
 
 
