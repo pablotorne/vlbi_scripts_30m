@@ -16,7 +16,10 @@ v2: fetches the xml file from /ncsServer/mrt/ncs/packages/coordinator2009-08-10v
 v3: added argparser options to have more flexibility. Now this code can be used by
     the VLBI monitor or the VLBI field system by passing the correct -lc parameter.
 v4: added an argument to select the log file location. If empty, the error log will
-   by default go to $PWD/log/error.log. 
+   by default go to $PWD/log/error.log.
+v5: updated for EHT Metadata Formatter, added:
+    -- option to pass as argument a local XML calibration file to read info from.
+    -- Extract and print on screen new requested fields: Azimuth,Tamb,Tatm,Taus.
 
 P. Torne, IRAM, v22.04.2018
 """
@@ -41,6 +44,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-v", "--verbose", action="store_true", help="Outputs detailed execution informaton")
 parser.add_argument("-lc", "--localdatapath", help="Copies the xml files to this location and reads the information from there. \nRecommended mode. Make sure you have read/write permission in that folder!\nIf you prefer to not make local copies, do not pass this argument.\n")
 parser.add_argument("-log", "--logfile", help="Chooses the location of the .log file of the execution. If empty, error.log will be used in the folder where read_lastcal_info.py is called from.", default=os.getcwd()+"/log/error.log")
+parser.add_argument("-xml", "--localxml", help="If passed, the calibration information will be read from the XML file instead of searching from the telescope control system for the last XML calibration file available for the vlbi project", default=None)
 
 args = parser.parse_args()
 
@@ -61,13 +65,16 @@ LOCALDATAPATH = "/mrt-lx3/vis/vlbi/vlbireduc/CALXMLs/"  # A standard, already cr
 #LOCALDATAPATH = "/mrt-lx3/vis/vlbi/vlbireduc/CALXMLs/"  # version for vlbi Field System
 
 # Format the program variables with the arguments passed:
-if args.localdatapath != None: 
+if args.localdatapath != None:
     LOCALDATAPATH = args.localdatapath
     makelocalcopy = True
 
 if args.verbose == True: verbose = True
 
 LOGERRORSLOC = args.logfile
+
+localxml = args.localxml
+print "localxml = %s"%localxml
 
 # Set-up log
 logging.basicConfig(level=logging.DEBUG, filename=LOGERRORSLOC, \
@@ -101,7 +108,7 @@ def get_last_modified_folder(dir=DATAPATH):
     Returns the path of the last-modified subdir inside dir+"/scans",
     that should correspond to the newest scan available.
     '''
-    
+
     # Get the full path of the last-modified subdir
     if verbose: print "Checking DATAPATH = %s ..."%dir
     if verbose: print "Is there a 'scans' subdir?"
@@ -127,7 +134,7 @@ def search_lastCal_XML(scandir):
     until finding the calibration XML of continuum backend
     '''
 
-    # Extract the scan number:    
+    # Extract the scan number:
     last_scan   = int( scandir.split("/")[-1] )
     datapath    = scandir.split("/"+str(last_scan))[-2]
     if verbose: print "last_scan = search_scan = %s"%last_scan
@@ -165,7 +172,7 @@ def search_lastCal_XML(scandir):
                 else:
                     # backend is not identified in filename (can be read from inside xml file if needed)
                     continue
-            
+
             if cal_xml == 'None': # Reduce scan number and search again
                 search_scan = search_scan-1
 
@@ -183,85 +190,94 @@ def search_lastCal_XML(scandir):
 
 if verbose: print "Starting read_lastCal_info.py ..."
 
-# Get the last -calibration-*$DATE*.xml file from 
+# Get the last -calibration-*$DATE*.xml file from
 success_get_cal = False
 days_without_cals = 0
 DATE = CURRENTDAY
 
 while not success_get_cal:
 
-    if days_without_cals >= 5:
-        print "No recent calibration results found for the project. Wait for a new calibration scan to get results."
-        #print "5+ days without finding a result of cal in xml. Aborting read_lastCal_info.py ..."
-        sys.exit(1)
+    # If an argument with a local XML file is passed to code, use it and do not search:
+    # (in this case no local copy is made, we just read the information from the XML file)
+    if localxml != None:
+        print "Reading from a local/argument-passed XML cal. file: %s"%localxml
+        xml_cal = localxml
+        success_get_cal = True
 
-    try: # Find a cal xml file for $DATE.
+    # If the option "localxml" is not used, search for the last available XMLL calibration file:
+    else:
+        if days_without_cals >= 5:
+            print "No recent calibration results found for the project. Wait for a new calibration scan to get results."
+            #print "5+ days without finding a result of cal in xml. Aborting read_lastCal_info.py ..."
+            sys.exit(1)
 
-        try: # Is there an XML file in coordinator2009/ dir? Yes? -> Get the last one and make a local copy
+        try: # Find a cal xml file for $DATE.
 
-            if verbose: print "Trying to fetch a cal xml file from %s ..."%DATAPATH
-            xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, DATAPATH)
-            if verbose: print "OK. Found %s ..."%xml_cal
+            try: # Is there an XML file in coordinator2009/ dir? Yes? -> Get the last one and make a local copy
 
-            #Yes? -> Get the last one and make a local copy. Check if the file was already copied and if so, skip copy.
-            xml_cal_filenm=xml_cal.split("/")[-1]
-            if verbose: print "Extracting filenm of xml_cal: %s"%xml_cal_filenm
+                if verbose: print "Trying to fetch a cal xml file from %s ..."%DATAPATH
+                xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, DATAPATH)
+                if verbose: print "OK. Found %s ..."%xml_cal
 
-            if makelocalcopy:
-
-                if not os.path.exists(LOCALDATAPATH+xml_cal_filenm):
-                    if verbose: 
-                        print "Creating a local copy of the cal xml: cp %s %s"%(xml_cal, LOCALDATAPATH+xml_cal_filenm)
-                    try:
-                        status = subprocess.call('cp %s %s'%(xml_cal, LOCALDATAPATH+xml_cal_filenm), shell=True)
-                    except Exception as e:
-                        print "Exception in COPY! = %s"%e
-                        logging.exception("Shell copy file!")
-                    if status != 0: 
-                        print "ERROR copying xml file to /local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
-                        logging.exception("Shell copy file! STATUS != 0")
-                    if verbose: print "status cp = %d"%status
-                    xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, LOCALDATAPATH)
-                else:
-                    if verbose: print "%s already in %s. Skipping copy."%(xml_cal_filenm, LOCALDATAPATH)
-                    xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, LOCALDATAPATH)
-
-            else: # If option makelocalcopy is False, use the file directly from DATAPATH:
-                if verbose: print "makelocalcopy = False. Using files in %s"%DATAPATH
-                xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, DATAPATH)     
-             
-            success_get_cal = True
-
-        except:  # No cal xml file in coordinator2009?
-
-            try: #search for the file in the local folder where we keep the copies (CALXML).
+                #Yes? -> Get the last one and make a local copy. Check if the file was already copied and if so, skip copy.
+                xml_cal_filenm=xml_cal.split("/")[-1]
+                if verbose: print "Extracting filenm of xml_cal: %s"%xml_cal_filenm
 
                 if makelocalcopy:
-   
-                    if verbose:
-                        print "No XML found in %s"%DATAPATH
-                        print "Checking %s"%LOCALDATAPATH
 
-                    xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, LOCALDATAPATH)
+                    if not os.path.exists(LOCALDATAPATH+xml_cal_filenm):
+                        if verbose: 
+                            print "Creating a local copy of the cal xml: cp %s %s"%(xml_cal, LOCALDATAPATH+xml_cal_filenm)
+                        try:
+                            status = subprocess.call('cp %s %s'%(xml_cal, LOCALDATAPATH+xml_cal_filenm), shell=True)
+                        except Exception as e:
+                            print "Exception in COPY! = %s"%e
+                            logging.exception("Shell copy file!")
+                        if status != 0: 
+                            print "ERROR copying xml file to /local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
+                            logging.exception("Shell copy file! STATUS != 0")
+                        if verbose: print "status cp = %d"%status
+                        xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, LOCALDATAPATH)
+                    else:
+                        if verbose: print "%s already in %s. Skipping copy."%(xml_cal_filenm, LOCALDATAPATH)
+                        xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, LOCALDATAPATH)
 
-                    if verbose: print "Success. Found %s"%xml_cal
-                    
-                    success_get_cal = True
+                else: # If option makelocalcopy is False, use the file directly from DATAPATH:
+                    if verbose: print "makelocalcopy = False. Using files in %s"%DATAPATH
+                    xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, DATAPATH)
 
-                else: # makelocalcopy = False
-                    if verbose: print "No calibration results found in %s for %s."%(DATAPATH, DATE)
+                success_get_cal = True
+
+            except:  # No cal xml file in coordinator2009?
+
+                try: #search for the file in the local folder where we keep the copies (CALXML).
+
+                    if makelocalcopy:
+
+                        if verbose:
+                            print "No XML found in %s"%DATAPATH
+                            print "Checking %s"%LOCALDATAPATH
+
+                        xml_cal = get_lastmodified_file("*-calibration*%s*.xml"%DATE, LOCALDATAPATH)
+
+                        if verbose: print "Success. Found %s"%xml_cal
+
+                        success_get_cal = True
+
+                    else: # makelocalcopy = False
+                        if verbose: print "No calibration results found in %s for %s."%(DATAPATH, DATE)
+                        sys.exit(1)
+
+                except:
+                    if verbose: print "No cal results found for %s. Trying on previous day.\n"%DATE
                     sys.exit(1)
 
-            except:
-                if verbose: print "No cal results found for %s. Trying on previous day.\n"%DATE
-                sys.exit(1)
-
-    except: # If all the previous try fails, it is because we changed the DATE and there is no CAL this day yet.
-            # Reduce the variable DATE by one day and search again for files to fetch the latest cal.
-        #raise AttributeError("No -cal*.XML files found on %s"%DATE)
-        days_without_cals += 1
-        DATE       = (datetime.today()-timedelta(days=days_without_cals)).strftime("%Y%m%d")
-        #time.sleep(2)
+        except: # If all the previous try fails, it is because we changed the DATE and there is no CAL this day yet.
+                # Reduce the variable DATE by one day and search again for files to fetch the latest cal.
+            #raise AttributeError("No -cal*.XML files found on %s"%DATE)
+            days_without_cals += 1
+            DATE       = (datetime.today()-timedelta(days=days_without_cals)).strftime("%Y%m%d")
+            #time.sleep(2)
 
 
 # 3) Read contents and extract desired info:

@@ -45,6 +45,7 @@ def dewtemp(temp, humid):
     Calculate saturation vapor pressure(Es) and actual vapor pressure(E) in millibars
     http://www.gorhamschaffler.com/humidity_formulas.htm
     see also https://ag.arizona.edu/azmet/dewpoint.html
+    # Formula verified twice. Results are correct (even if numbers look weird).
     '''
     ES = 6.11 * 10.0**(7.5*temp/(237.7+temp))
     E = humid * ES / 100.

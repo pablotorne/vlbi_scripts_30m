@@ -1,12 +1,20 @@
 # vlbi_scripts_30m
 Scripts aiding VLBI observations at the 30-m radio telescope
 
-read_lastcal_info.py: Searches and reads the last results from a calibration scan and prints them formatted properly on the terminal. Used by the VLBI web monitor and the VLBI Field System to monitor the cal. results.
+read_lastcal_info.py: 
+- Searches and reads the last results from a calibration scan and prints them formatted properly on the terminal. 
+- Used by the VLBI web monitor and the VLBI Field System to monitor the cal. results.
+- The results on this script goes into the Field System logs, that will later be used by other scripts to format
+  metadata in different formats (e.g., ANTAB, or EHT_metadata_tables).
 
-cals30m_ANTAB.py: Reads files with calibration and weather information from the 30-m and writes the output in ANTAB tables.
+cals30m_ANTAB.py: 
+- Reads files with calibration and weather information form the IRAM 30m (usually a Field System log) and writes the output as ANTAB tables.
+
+EHT_metadata.py
+- Read files with calibration and weather information form the IRAM 30m (usually a Field System log) and writes the output as EHT metadata tables.
 
 ---
 
-The master code is at mrt-lx2
+The master LOCAL code is at mrt-lx2
 
 
