@@ -17,11 +17,14 @@ v3: added argparser options to have more flexibility. Now this code can be used 
     the VLBI monitor or the VLBI field system by passing the correct -lc parameter.
 v4: added an argument to select the log file location. If empty, the error log will
    by default go to $PWD/log/error.log.
-v5: updated for EHT Metadata Formatter, added:
+v5: (Dec. 2020) updated for EHT Metadata Formatter, added:
     -- option to pass as argument a local XML calibration file to read info from.
     -- Extract and print on screen new requested fields: Azimuth,Tamb,Tatm,Taus.
+    -- added as extra fields: Pcold, Phot, Psky (counts, RAW data); 
+                              Tcold, effForward, effBeam, Tcal
+                              Backend used
 
-P. Torne, IRAM, v22.04.2018
+P. Torne, IRAM, v16.12.2020
 """
 
 import numpy as np
@@ -300,11 +303,20 @@ for ii in range(len(info)):
 
         # For BBC, the desired data (and line numbers) are:
         # rx name:   ii+30
+        # gainImage: ii+34 (=sideband coupling for 2SB Rx, in %. Typical 13dB rejection = 5% leakage)
         # Tsys:      ii+46
-        # tau:       ii+50
+        # tauzen:    ii+50 # Tau at Zenith
         # pwv mm:    ii+44
         # trx:       ii+45
         # sky_freq:  ii+32
+        # Tcold:     ii+35
+        # Tamb:      ii+36
+        # Tatm_signal: ii+48
+        # Pcold:     ii+52
+        # Phot:      ii+53
+        # Psky:      ii+54
+        # effForward:ii+37
+        # effBeam:   ii+38
 
         # then add 27 lines for IF 2, 27*2 for IF3, and 27*3 for IF4.
         # Be aware that NBC and BBC can be different. NBC 4 channels, BBC 8 channels
@@ -423,8 +435,197 @@ for ii in range(len(info)):
 
         if verbose: print "trx_array = %s"%trx_arr
 
+        # Get gainImage (=sideband coupling for 2SB Rx)           
+        gainImage_arr = []
+        for jj in range(34, 34+27*nIFs, 27):
+
+            try:
+
+                gainImage = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                gainImage_arr.append( gainImage )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving gainImage"
+                gainImage = -1
+                gainImage_arr.append( gainImage )
+                #break
+
+        if verbose: print "gainImage_arr = %s"%gainImage_arr
+
+        # Get Tcold (= cold load temperature )           
+        Tcold_arr = []
+        for jj in range(35, 35+27*nIFs, 27):
+
+            try:
+
+                Tcold = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                Tcold_arr.append( Tcold )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving Tcold"
+                Tcold = -1
+                Tcold_arr.append( Tcold )
+                #break
+
+        if verbose: print "Tcold_arr = %s"%Tcold_arr
+
+        # Get Tamb (=the physical temperature of the ambient load used in calibration [in K] = Thot )           
+        Tamb_arr = []
+        for jj in range(36, 36+27*nIFs, 27):
+
+            try:
+
+                Tamb = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                Tamb_arr.append( Tamb )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving Tamb"
+                Tamb = -1
+                Tamb_arr.append( Tamb )
+                #break
+
+        if verbose: print "Tamb_arr = %s"%Tamb_arr
+
+        # Get Tatm (= atmospheric temperature in signal band)           
+        Tatm_arr = []
+        for jj in range(48, 48+27*nIFs, 27):
+
+            try:
+
+                Tatm = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                Tatm_arr.append( Tatm )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving Tatm"
+                Tatm = -1
+                Tatm_arr.append( Tatm )
+                #break
+
+        if verbose: print "Tatm_arr = %s"%Tatm_arr
+
+        # Get Pcold (= counts on cold load)           
+        Pcold_arr = []
+        for jj in range(52, 52+27*nIFs, 27):
+
+            try:
+
+                Pcold = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                Pcold_arr.append( Pcold )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving Pcold"
+                Pcold = -1
+                Pcold_arr.append( Pcold )
+                #break
+
+        if verbose: print "Pcold_arr = %s"%Pcold_arr
+
+        # Get Phot (= counts on ambient load)           
+        Phot_arr = []
+        for jj in range(53, 53+27*nIFs, 27):
+
+            try:
+
+                Phot = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                Phot_arr.append( Phot )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving Phot"
+                Phot = -1
+                Phot_arr.append( Phot )
+                #break
+
+        if verbose: print "Phot_arr = %s"%Phot_arr
+
+        # Get Psky (= counts on sky)           
+        Psky_arr = []
+        for jj in range(54, 54+27*nIFs, 27):
+
+            try:
+
+                Psky = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                Psky_arr.append( Psky )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving Psky"
+                Psky = -1
+                Psky_arr.append( Psky )
+                #break
+
+        if verbose: print "Psky_arr = %s"%Psky_arr
+
+        # Get effForward (from paKo/MIRA)           
+        effForward_arr = []
+        for jj in range(37, 37+27*nIFs, 27):
+
+            try:
+
+                effF = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                effForward_arr.append( effF )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving effForward"
+                effF = -1
+                effForward_arr.append( effF )
+                #break
+
+        if verbose: print "effForward_arr = %s"%effForward_arr
+
+        # Get effBeam (from paKo/MIRA)           
+        effBeam_arr = []
+        for jj in range(38, 38+27*nIFs, 27):
+
+            try:
+
+                effB = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                effBeam_arr.append( effB )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving effBeam"
+                effB = -1
+                effBeam_arr.append( effB )
+                #break
+
+        if verbose: print "effBeam_arr = %s"%effBeam_arr
+
 
         break # Don't continue searching the XML file if the CALinfo table is found
+
+# Search for the backend info table:
+for ii in range(len(info)):
+    if fnmatch.fnmatch(info[ii], '*<RESOURCE name="backends">\n'):
+        if verbose: print "Found the backend info!"
+        start = ii
+        # ii now points to the start of the table with the backend info
+        # every 9 rows there is a new IF info
+
+        # Get backend name           
+        backend_arr = []
+        for jj in range(12, 12+9*nIFs, 9):
+
+            try:
+
+                backend_name = info[start+jj].split("<TD>")[1].split("</TD>")[-2]
+                backend_arr.append( backend_name )
+
+            except:
+
+                if verbose: print "Exception raised when retrieving backend name"
+                backend_name = "N/A"
+                backend_arr.append( backend_name )
+                #break
+
+        if verbose: print "backend_array = %s"%backend_arr
+
 
 # Read the time stamp of the data
 for ii in range(len(info)):
@@ -435,6 +636,14 @@ for ii in range(len(info)):
         # Keep format with getVlbiCals1mm.py:
         timestamp = timestamp.replace("T", " ", 1)[:-4]
         if verbose: print "Timestamp = %s"%timestamp
+
+# Read the azimuth of the source:      <PARAM name="azimuth" value="
+for ii in range(len(info)):
+    if fnmatch.fnmatch(info[ii], '*<PARAM name="azimuth" value="*'):
+        if verbose: print "Found the azimuth!"
+
+        azim = info[ii].split('value="')[1].split('" unit="')[-2]
+        if verbose: print "azim = %s"%azim
 
 # Read the elevation of the source:      <PARAM name="elevation" value="
 for ii in range(len(info)):
@@ -452,16 +661,17 @@ for ii in range(len(info)):
         source = info[ii].split('value="')[1].split('" datatype="')[-2]
         if verbose: print "Source = %s"%source
 
+
 # Output info in same format as getVlbiCalibration1mm.py
 
 # Check that all arrays are same length:
 length = len(rx_arr)
-if any(len(lst) != length for lst in [tsys_arr, tau_arr, pwv_arr, trx_arr]):
+if any(len(lst) != length for lst in [tsys_arr, tau_arr, pwv_arr, trx_arr, gainImage_arr, Tcold_arr, Tamb_arr, Tatm_arr, Pcold_arr, Phot_arr, Psky_arr, effForward_arr, effBeam_arr, backend_arr]):
     print "Some data missing. Not broadcasting data."
     sys.exit(1)
 else:
     print "CAL info read from: %s"%xml_cal
     for ii in range(len(rx_arr)):
         if rx_arr[ii] != "Not_tuned":
-            print "rx: %s ; tsys: %.2f ; tau: %.2f ; pwv mm: %.1f ; trx: %.1f ; time: %s ; rxFreq: %.4f ; elev: %.1f ; source: %s"%(\
-             rx_arr[ii], float(tsys_arr[ii]), float(tau_arr[ii]), float(pwv_arr[ii]), float(trx_arr[ii]), timestamp, float(rxFreq_arr[ii]), float(elev), source)
+            print "rx: %s ; tsys*: %.2f ; tau_z: %.2f ; pwv mm: %.1f ; trx: %.1f ; time: %s ; rxFreq: %.4f ; azim: %.1f ; elev: %.1f ; source: %s ; gainImage: %.3f ; Tcold: %.3f ; Tamb: %.3f ; Tatm: %.3f ; Pcold: %.5f ; Phot: %.5f ; Psky: %.5f ; effForward: %.2f ; effBeam: %.2f ; backend: %s"%(\
+             rx_arr[ii], float(tsys_arr[ii]), float(tau_arr[ii]), float(pwv_arr[ii]), float(trx_arr[ii]), timestamp, float(rxFreq_arr[ii]), float(azim), float(elev), source, float(gainImage_arr[ii]), float(Tcold_arr[ii]), float(Tamb_arr[ii]), float(Tatm_arr[ii]), float(Pcold_arr[ii]), float(Phot_arr[ii]), float(Psky_arr[ii]), float(effForward_arr[ii]), float(effBeam_arr[ii]), backend_arr[ii] )
