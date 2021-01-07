@@ -29,9 +29,9 @@ P. Torne, IRAM 03.01.2020
 
 import sys, datetime, os
 import numpy as np
-from scipy.interpolate import interp1d
 import subprocess
 import argparse
+import matplotlib.pyplot as plt
 
 # Global parameter:
 DELTA_TIME = 600 # seconds, or less, to consider a cal. scan info OK to be assigned to a VLBI scan
@@ -95,25 +95,6 @@ def extractTrackInfo(prnfile):
             break
 
     return [startdate, track, stationcode]
-
-def singlesource_callist_timestamps_dt(timestamp_list_dt, CALDATAFRMT, source):
-    '''
-    Loop over our master vector of calibration time stamps and
-    save to a temporal vector only those time stamps that
-    correspond to calibrations on the source.
-    We need to use the CAL. LIST SUMMARY to cross-check sources
-    in the calibration scans!
-    '''
-
-    singlesource_timestamp_list_dt = []
-
-    for ii in range( len(timestamp_list_dt) ):
-        if CALDATAFRMT[ii].split("\t")[2].lower() == source_name.lower():
-            if args.verbose > 2: print("Saving a timestamp_dt from a cal. on %s (for VLBI scan on %s)"%(CALDATAFRMT[ii].split("\t")[2].lower(), source_name.lower()))
-            singlesource_timestamp_list_dt.append(timestamp_list_dt[ii])
-
-    return singlesource_timestamp_list_dt
-
 
 def find_idx(lst, a):
     '''
@@ -202,6 +183,7 @@ all_tsys_b4l  = []  # E2ULI (Cal. Line 3 in output of read_lastcal_info.py with 
 all_tauz      = []
 all_Tamb      = []
 all_Tatm      = []
+all_RxFreq    = []
 
 print "Reading information from %d calibration scans from %s ..."%(len(calinfo)/4, args.calinfo_file)
 for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4 IFs:
@@ -243,8 +225,14 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
         DOY.append(dayofyear)
         timestamp.append(ts)
 
-        if jj == ii: # Ony append once to the all_timestamps vector
+        if jj == ii: # Only append once to the all_timestamps vector
             all_timestamps.append(ts)
+
+        # Extract rxFreq
+        rxfrequency = float( data[6].split()[1] )
+        rxFreq.append( rxfrequency )
+
+
 
         # Extract Tsys values
         tempsys = float( data[1].split()[1] )
@@ -279,7 +267,6 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
             if jj == ii: # Only append once per entry to the sources vector
                 all_sources.append(source[-1])
 
-
         except Exception as e:
             print "\n* Error: You seem to be passing a log from before Apr2018. Sorry, those are not in a compatible format.\n"
             sys.exit(1)
@@ -294,7 +281,7 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
         #Psky _TBD
         #effForward
         #effBeam
-        #Backend 
+        #Backend
 
     if args.verbose >= 2:
         #print "DOY = %s"%DOY
@@ -307,7 +294,7 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
     if DOY[0:] == DOY[::-1] and timestamp[0:] == timestamp[::-1] and source[0:] == source [::-1]: # these are four lines corresponding to the same scan
 
         # Save all the calibration data into master lists, used later to relate cal.<-> VLBI scans, and interpolate values if needed
-        if args.verbose >= 1: print "Saving calibration data on source %s into internal Python lists ..."%source[-1]
+        if args.verbose >= 2: print "Saving calibration data on source %s into internal Python lists ..."%source[-1]
 
         # all_timestamps, all_sources, all_azimuth, all_elevation are appended in the previous loop, 
         # to make sure we only append once per cal. entry
@@ -329,7 +316,7 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
         all_Tatm.append( np.mean(Tatm_s)  )
 
         # Write all the calibration information formatted as EHT into an output Cal. Summary Table
-        if args.verbose >= 1: print "Writing extracted calibration info on %s to CAL. summary table ..."%source[-1]
+        if args.verbose >= 2: print "Writing extracted calibration info on %s to CAL. summary table ..."%source[-1]
 
         if ii == 0: # First entry, no duplicity check
 
@@ -388,10 +375,10 @@ print "Finished writing summary calibration table and saving metadata in memory.
 
 # REMOVE?
 ### Get loaded the CAL data properly formatted (note: the file must not contain any header):
-print("Opening and reading in summary and formatted calibration table from %s_PV.CAL.txt\n"%basenm)
-g = open("%s_PV.CAL.txt"%basenm, 'r')
-CALDATAFRMT = g.readlines()
-g.close() 
+#print("Opening and reading in summary and formatted calibration table from %s_PV.CAL.txt\n"%basenm)
+#g = open("%s_PV.CAL.txt"%basenm, 'r')
+#CALDATAFRMT = g.readlines()
+#g.close() 
 # Here we should open a new file and write the heade of thw final Tsys table for this track
 # BLABLA
 
@@ -410,14 +397,54 @@ for tstamp in all_timestamps:
 #   that corresponds to the VLBI scan
 # - Write out the corresponding row in the Tsys table
 
-print("Reading the PRN file and writing out calibration metadata ...")
+print("Reading the PRN file and writing out calibration metadata ...\n")
 
 # Open the PRN file and read in
 f = open(args.prn_file, 'r')
 prntext = f.readlines()
 f.close()
 
-# Loop and work out
+# Open the output text file that will be the Tsys metadata table:
+
+tsys_table = open("%s_%s.tsys.txt"%(track, stationcode), 'w')
+
+# Write the header of the Tsys table file:
+tsys_table.write("################################################################\n")
+tsys_table.write("#\n")
+tsys_table.write("# Tsys/Tsys* table for each station and track\n")
+tsys_table.write("#\n")
+tsys_table.write("################################################################\n")
+tsys_table.write("#\n")
+tsys_table.write("# Track Start Date (UT): %s\n"%datetime.datetime.strptime(startdate, '%Y%b%d').date())
+tsys_table.write("# Experiment name: %s\n"%track)
+tsys_table.write("# Station ID: %s\n"%stationcode)
+tsys_table.write("# Operators/observer/contact person: Pablo Torne (torne@iram.es)\n")
+tsys_table.write("# Tsys* or Tsys (inclusive of opacity or not): Tsys*\n")
+tsys_table.write("# Central observing frequencies in GHz (DSB/2SB): %.1f, %.1f, %.1f, %.1f (2SB)\n"%(rxFreq[0], rxFreq[2], rxFreq[1], rxFreq[3]))
+tsys_table.write("# Sideband ratio (if available, for DSB): NA\n")
+tsys_table.write("# Sideband coupling coefficient (if available, for 2SB): %.3f\n"%np.mean(gainImage))
+tsys_table.write("# Tau observing frequency in GHz: %.1f (average of central observing frequencies)\n"%np.mean(rxFreq))
+tsys_table.write("#\n")
+tsys_table.write("################################################################\n")
+tsys_table.write("# * Timestamp gives the date and time at which Tsys*/Tsys was measured (can be during, before or after each scan)\n")
+tsys_table.write("# * Scan column gives the VEX scan number associated with each Tsys*/Tsys measurement\n")
+tsys_table.write("# * Tau values should be that measured at zenith\n")
+tsys_table.write("# * Empty cells should have an 'NA'\n")
+tsys_table.write("# * If the same Tsys/Tsys* values are used for multiple bands, then include repeated values in the appropriate columns\n")
+tsys_table.write("# * Tsys*/Tsys values should be provided without sideband correction\n")
+tsys_table.write("# * Column Delta_t indicates the absolute time difference between the calibration data and the start time of the VLBI scan.\n")
+tsys_table.write("# * If Delta_t > 10 min, we interpolate between the closest calibration values for the source.\n") 
+tsys_table.write("#\n")
+tsys_table.write("## Timestamp(UT)       Scan	Source Pos_Az Pos_El  Tsys_b1r\t_b1l\t_b2r\t_b2l\t_b3r\t_b3l\t_b4r\t_b4l\tTau\tTamn\tTatm\tDelta_t\n")
+tsys_table.write("# YYYY-MM-DD HH:MM:SS  (VEX)	       (deg)  (deg)     (K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(zen)\t(K)\t(K)\t(min)\n")
+tsys_table.write("################################################################################################################################################################\n")
+
+# Loop over PRN in search of VLBI scans, work out cal. data, and populate Tsys table:
+
+# Save some numbers for statistics:
+direct_assignations = 0
+interpolations      = 0
+
 for line in prntext:
     # Detect if the line is a "date =" entry or a VLBI scan
     lineinfo = line.split()
@@ -429,7 +456,6 @@ for line in prntext:
 
     elif len(lineinfo) > 0 and lineinfo[0][0:2] == "no" and ( len(lineinfo) == 11 or len(lineinfo) == 12):
         # This is a row with a VLBI scan
-        if args.verbose > 2: print("Found VLBI scan in the PRN file. Matching with CAL data from %s_PV.CAL.txt"%basenm) 
         vlbi_scannumber = lineinfo[0]
         source_name     = lineinfo[2]
         az              = float(lineinfo[3])
@@ -441,6 +467,8 @@ for line in prntext:
         else:
             print("\n\n\n ERROR when reading VLBI scan info from PRN file. Aborting!")
             sys.exit(1)
+
+        if args.verbose >= 1: print("Found VLBI scan %s in the PRN file (on %s). Matching with CAL. data in memory ..."%(vlbi_scannumber, source_name)) 
 
         # Convert startime of VLBI scan to a datetime object that
         # we can use to calculate time deltas nicely
@@ -472,7 +500,7 @@ for line in prntext:
         source_Tamb     = [all_Tamb[k] for k in source_idx]
         source_Tatm     = [all_Tatm[k] for k in source_idx]
 
-        if args.verbose >= 2:
+        if args.verbose >= 3:
             print("Extracting the subset of calibration data in %s for source %s ..."%(args.calinfo_file, source_name))
             print("source_idx = %s"%source_idx)
             print("source_ts_dt = %s"%source_ts_dt)
@@ -494,7 +522,7 @@ for line in prntext:
         nearest_cal_ts_dt, nearest_cal_index, delta_t = nearest(source_ts_dt, timestamp_vlbi_dt)
 
         print("Nearest-in-time calibration scan found for VLBI scan %s on %s at %s is:"%(vlbi_scannumber, source_name, timestamp_vlbi_dt))
-        closest_cal_info = "%s\tCALXML\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.3f\t%.1f\t%.1f\n"%(\
+        closest_cal_info = "%s\tCALXML\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.2f\t%.1f\t%.1f\n"%(\
                              source_ts_dt[nearest_cal_index], source_calname[nearest_cal_index],\
                              source_az[nearest_cal_index], source_el[nearest_cal_index],\
                              source_tsys_b1r[nearest_cal_index], source_tsys_b1l[nearest_cal_index],\
@@ -505,35 +533,108 @@ for line in prntext:
         print(closest_cal_info)
 
         # Quick sanity check: double check that cal. scan source == VLBI scan science source:
-
         if source_calname[nearest_cal_index].lower() != source_name.lower(): # case insensitive check
             print("ERROR: Cal. scan source != from VLBI scan source! Halting program.")
             sys.exit(1)
 
         # Strategy 1: Check is delta_t between cal scan and VLBI scan < DELTA_TIME
         if delta_t.seconds <= DELTA_TIME:
-            print("The cal. was taken within %.1f minutes of the VLBI scan start time. Accepting cal. metadata -> Writing out to Tsys table..."%(delta_t.seconds/60.))
+            print("This cal. was taken within %.1f minutes of the VLBI scan start time. Accepting cal. metadata -> Writing out to Tsys table..."%(delta_t.seconds/60.))
 
+            tsys_table.write("%s\t%s\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.2f\t%.1f\t%.1f\t%.1f\n"%(\
+                             source_ts_dt[nearest_cal_index], vlbi_scannumber, source_calname[nearest_cal_index],\
+                             source_az[nearest_cal_index], source_el[nearest_cal_index],\
+                             source_tsys_b1r[nearest_cal_index], source_tsys_b1l[nearest_cal_index],\
+                             source_tsys_b2r[nearest_cal_index], source_tsys_b2l[nearest_cal_index],\
+                             source_tsys_b3r[nearest_cal_index], source_tsys_b3l[nearest_cal_index],\
+                             source_tsys_b4r[nearest_cal_index], source_tsys_b4l[nearest_cal_index],\
+                             source_tauz[nearest_cal_index], source_Tamb[nearest_cal_index], source_Tatm[nearest_cal_index],\
+                             delta_t.seconds/60.)
+                            )
+
+            direct_assignations += 1
+
+        # Strategy 2: If the time between the cal. scan and the VLBI start time > DELTA_TIME, interpolate between closest cal. scans:
         else:
-            print("\n\n\n ERROR: Cal. data Delta_t to VLBI scan > 10 minutes. Need interpolation code here :-) .Halting.")
-            sys.exit(1)
+            print("Cal. data Delta_t to VLBI scan > %.1f minutes. Interpolating linearly using the closest cal. scans on this source ..."%(delta_t.seconds/60.))
 
-
-        # To interpolate we need to convert the dateime objects of timestamps to float numbers:
-        source_ts_floats = [datetime_to_float(source_ts_dt[k]) for k in range(len(source_ts_dt))] 
+            # To interpolate we need to convert the datetime objects of timestamps to float numbers:
+            source_ts_floats = [datetime_to_float(source_ts_dt[k]) for k in range(len(source_ts_dt))]
+            vlbiscan_ts_float = datetime_to_float(timestamp_vlbi_dt)
         
-        # Create interpolation function:
+            # Create interpolation function:
 
-        # Note: this would be faster if we only interpolate 2-nearest values,...
-        #       perhaps nearest could return a SORTED array of cals, ordered by delta_t
-        #       but we need to select only the one before and after the VLBI scan.
-        #       For the moment interpolate all the array, it is fast.
-        x = np.array(source_ts_floats)
-        y = np.array(source_tsys_b1r)
-        f = interp1d(x, y)
+            # Note: this would be faster if we only interpolate 2-nearest values,...
+            #       perhaps nearest could return a SORTED array of cals, ordered by delta_t
+            #       but we need to select only the one before and after the VLBI scan.
+            #       For the moment interpolate all the array, it is fast.
+           
+            # Tidy up a bit to allow for the use of a for loop for Tsys interp 
+            source_tsys = [source_tsys_b1r, source_tsys_b1l, source_tsys_b2r, source_tsys_b2l, \
+                            source_tsys_b3r, source_tsys_b3l, source_tsys_b4r, source_tsys_b4l]            
+            tsys_interp = []
+
+            for band in range(8): # We are currently working with 4 bands x 2 polarisations
+
+                x = np.array(source_ts_floats)
+                y = np.array(source_tsys[band])
+
+                tsys_interp_value = np.interp(vlbiscan_ts_float, x, y, left=y[0], right=y[-1])
+
+                # With params left and right we take care of the rare cases in which we have
+                # a VLBI scan that is > DELTA_TIME from the nearest cal. scan and that IS NOT
+                # sorrounded by cal. scans to allow the interpolation with existing data.
+                # This can occur e.g., at the very beginning or end of a track / schedule if
+                # a cal. is not done on the source close enough to the VLBI scan start time.
+
+                tsys_interp.append( tsys_interp_value )
+
+            # Interpolate azimuth:
+            y = np.array(source_az)
+            az_interp = np.interp(vlbiscan_ts_float, x, y, left=y[0], right=y[-1])
+
+            # Interpolate elevation:
+            y = np.array(source_el)
+            el_interp = np.interp(vlbiscan_ts_float, x, y, left=y[0], right=y[-1])
+
+            # Interpolate tauz:
+            y = np.array(source_tauz) 
+            tauz_interp = np.interp(vlbiscan_ts_float, x, y, left=y[0], right=y[-1])
+
+            # Interpolate Tamb:
+            y = np.array(source_Tamb) 
+            Tamb_interp = np.interp(vlbiscan_ts_float, x, y, left=y[0], right=y[-1])
+
+            # Interpolate Tatm:
+            y = np.array(source_Tatm)
+            Tatm_interp = np.interp(vlbiscan_ts_float, x, y, left=y[0], right=y[-1])
+
+            # Write to Tsys table:
+            tsys_table.write("%s\t%s\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.3f\t%.1f\t%.1f\t%s\n"%(\
+                             timestamp_vlbi_dt, vlbi_scannumber, source_calname[nearest_cal_index],\
+                             az_interp, el_interp,\
+                             tsys_interp[0], tsys_interp[2], tsys_interp[0], tsys_interp[2],\
+                             tsys_interp[1], tsys_interp[3], tsys_interp[1], tsys_interp[3],\
+                             tauz_interp, Tamb_interp, Tatm_interp,\
+                             "Interp")
+                            )
+
+            interpolations += 1
+
+            if args.verbose >= 4:
+                # Make a plot with the interpolated data, and stop the code to avoid creating tens of plots?
+                plt.figure()
+                plt.plot(x, np.array(source_tsys[band]), '.', markersize=15)
+                plt.plot(x, np.array(source_tsys[band]), '-')
+                plt.plot(vlbiscan_ts_float, tsys_interp[band], marker="*", markersize=15)
+                plt.show()
+                #sys.exit(0)
 
 
 
         print("\n")
+
+
+tsys_table.close()
 
 print "DONE."
