@@ -10,11 +10,11 @@ read_lastcal_info.py:
 cals30m_ANTAB.py: 
 - Reads files with calibration and weather information form the IRAM 30m (usually a Field System log) and writes the output as ANTAB tables.
 
-EHT_metadata.py
-- Read files with calibration and weather information form the IRAM 30m (usually a Field System log) and writes the output as EHT metadata tables.
+TsysTable_EHT.py
+- Read files with calibration information from the IRAM 30m (usually a Field System log) and writes the output as EHT Tsys* metadata tables.
 
 ---
 
-The master LOCAL code is at mrt-lx2
+The master LOCAL code is at mrt-lx2 / 3 
 
 
