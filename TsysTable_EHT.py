@@ -156,14 +156,19 @@ startdate, track, stationcode = extractTrackInfo(args.prn_file)
 # *************************************************
 
 print "\nOpening file %s_PV.CAL.txt to write Tsys and Cal. Metadata Summary table ..."%basenm
-outputfn = open("%s_PV.CAL.txt"%basenm, "w")
+calsummary_table = open("%s_CALs_%s.txt"%(track, stationcode), "w")
 
 # Write the header of the Tsys table file:
-#outputfn.write("################################################################\n")
-#outputfn.write("#\n")
-#outputfn.write("# Tsys/Tsys* table for each CALIBRATION scan from PV: %s\n"%basenm)
-#outputfn.write("#\n")
-#outputfn.write("################################################################\n")
+calsummary_table.write("################################################################\n")
+calsummary_table.write("#\n")
+calsummary_table.write("# CALIBRATION DATA SUMMARY from PV for track: %s\n"%track)
+calsummary_table.write("#\n")
+calsummary_table.write("################################################################\n")
+calsummary_table.write("# * NOTE: This is NOT the Tsys table! (that's a different file)\n")
+calsummary_table.write("#\n")
+calsummary_table.write("## Timestamp(UT)       Scan	Source Pos_Az Pos_El  Tsys_b1r\t_b1l\t_b2r\t_b2l\t_b3r\t_b3l\t_b4r\t_b4l\tTau\tTamb\tTatm\n")
+calsummary_table.write("# YYYY-MM-DD HH:MM:SS  (VEX)	       (deg)  (deg)     (K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(zen)\t(K)\t(K)\n")
+calsummary_table.write("################################################################################################################################################################\n")
 
 # Keep all the calibration data in lists to later operate with them, for instance
 # to search for nearest calibration and be able to interpolate if necessary
@@ -324,7 +329,7 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
             # Note: at 64Gbps, we only record LowerInner and UpperInner
             # In EHT/Correlator nomenclature: Tsys* of LI = Tsys* of Band1 *and* Band2 (we do not measure Tsys separately for them)
             #                                 Tsys* of UI = Tsys* of Band3 *and* Band4 (and H=RCP and V=LCP)
-            outputfn.write("%s\tCALXML\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.3f\t%.1f\t%.1f\n"%(\
+            calsummary_table.write("%s\tCALXML\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.2f\t%.1f\t%.1f\n"%(\
                            timestamp[-1], source[-1], azimuth[-1], elevation[-1], \
                            tsys_star[0], tsys_star[2], tsys_star[0], tsys_star[2], \
                            tsys_star[1], tsys_star[3], tsys_star[1], tsys_star[3], \
@@ -341,7 +346,7 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
                 continue
 
             else:
-                outputfn.write("%s\tCALXML\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.3f\t%.1f\t%.1f\n"%(\
+                calsummary_table.write("%s\tCALXML\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.2f\t%.1f\t%.1f\n"%(\
                            timestamp[-1], source[-1], azimuth[-1], elevation[-1], \
                            tsys_star[0], tsys_star[2], tsys_star[0], tsys_star[2], \
                            tsys_star[1], tsys_star[3], tsys_star[1], tsys_star[3], \
@@ -355,7 +360,7 @@ print "Writing to %s_PV.CAL.txt ..."%basenm
 
     #if ii >= 4: break
 
-outputfn.close()
+calsummary_table.close()
 print "Finished writing summary calibration table and saving metadata in memory.\n\n"
 # The summary calibration table is an extra, not what they as for.
 
@@ -420,7 +425,7 @@ tsys_table.write("# Experiment name: %s\n"%track)
 tsys_table.write("# Station ID: %s\n"%stationcode)
 tsys_table.write("# Operators/observer/contact person: Pablo Torne (torne@iram.es)\n")
 tsys_table.write("# Tsys* or Tsys (inclusive of opacity or not): Tsys*\n")
-tsys_table.write("# Central observing frequencies in GHz (DSB/2SB): %.1f, %.1f, %.1f, %.1f (2SB)\n"%(rxFreq[0], rxFreq[2], rxFreq[1], rxFreq[3]))
+tsys_table.write("# Central observing frequencies in GHz for Tsys measurement (DSB/2SB): %.1f (b1 & b2), %.1f (b3 & b4) (2SB)\n"%(rxFreq[0]+0.25, rxFreq[1]-0.25))
 tsys_table.write("# Sideband ratio (if available, for DSB): NA\n")
 tsys_table.write("# Sideband coupling coefficient (if available, for 2SB): %.3f\n"%np.mean(gainImage))
 tsys_table.write("# Tau observing frequency in GHz: %.1f (average of central observing frequencies)\n"%np.mean(rxFreq))
@@ -435,7 +440,7 @@ tsys_table.write("# * Tsys*/Tsys values should be provided without sideband corr
 tsys_table.write("# * Column Delta_t indicates the absolute time difference between the calibration data and the start time of the VLBI scan.\n")
 tsys_table.write("# * If Delta_t > 10 min, we interpolate between the closest calibration values for the source.\n") 
 tsys_table.write("#\n")
-tsys_table.write("## Timestamp(UT)       Scan	Source Pos_Az Pos_El  Tsys_b1r\t_b1l\t_b2r\t_b2l\t_b3r\t_b3l\t_b4r\t_b4l\tTau\tTamn\tTatm\tDelta_t\n")
+tsys_table.write("## Timestamp(UT)       Scan	Source Pos_Az Pos_El  Tsys_b1r\t_b1l\t_b2r\t_b2l\t_b3r\t_b3l\t_b4r\t_b4l\tTau\tTamb\tTatm\tDelta_t\n")
 tsys_table.write("# YYYY-MM-DD HH:MM:SS  (VEX)	       (deg)  (deg)     (K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(zen)\t(K)\t(K)\t(min)\n")
 tsys_table.write("################################################################################################################################################################\n")
 
@@ -610,7 +615,7 @@ for line in prntext:
             Tatm_interp = np.interp(vlbiscan_ts_float, x, y, left=y[0], right=y[-1])
 
             # Write to Tsys table:
-            tsys_table.write("%s\t%s\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.3f\t%.1f\t%.1f\t%s\n"%(\
+            tsys_table.write("%s\t%s\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.2f\t%.1f\t%.1f\t%s\n"%(\
                              timestamp_vlbi_dt, vlbi_scannumber, source_calname[nearest_cal_index],\
                              az_interp, el_interp,\
                              tsys_interp[0], tsys_interp[2], tsys_interp[0], tsys_interp[2],\
