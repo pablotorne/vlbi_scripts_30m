@@ -20,6 +20,7 @@ v1: also extracts and writes the weather information
 v2: offer output in EHT or GMVA format
 v3 (2021.01.10): modified to be compatible with the new output (with more fields) of read_lastcal_info.py after EHT Data Management request in Dec. 2020
                  updates as well the condition to check that the four lines corresponf to the same scan (it was working OK before, but not checking all lines) 
+v4: added handling of bad calibration results, e.g. Tsys = "nan". These can come from "cal /sky no" e.g. if tuning when the antenna cannot move, (as in April 2021 c211b.vex)
 
 P. Torne, IRAM 23.04.2018, last update 10.01.2021
 """
@@ -139,12 +140,17 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
 
         # Extract Tsys values
         tempsys = float( data[1].split()[1] )
+
+        if args.verbose >= 1: print "tempsys vaeriable = %s"%tempsys
+
         # Check value
         if tempsys > 9999.9: 
             tsys.append(9999.9)
         elif (tempsys > 1 and tempsys <= 9999.9):
             tsys.append(tempsys)
         elif tempsys <= 0:
+            tsys.append(np.NaN)
+        elif np.isnan(tempsys): # This will happen when we have "cal /sky no" results in the FS log
             tsys.append(np.NaN)
 
         # Extract tau
@@ -164,10 +170,10 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
          
 
     if args.verbose >= 1:
-        #print "DOY = %s"%DOY
-        #print "timestamp = %s"%timestamp
-        #print "tsys = %s"%tsys
-        #print "source = %s"%source
+        print "DOY = %s"%DOY
+        print "timestamp = %s"%timestamp
+        print "tsys = %s"%tsys
+        print "source = %s"%source
         print "Extracting relevant information: DOY, timestamp, Tsys, tau, elev, source. for a cal scan on %s"%source[-1]
 
     # Check:
@@ -176,33 +182,42 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
 
         if ii == 0: # First entry, no duplicity check
 
-            if args.format=="EHT":
-                # Write one line with the four Tsys in four columns:
-                outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
-                                                                                tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
-            elif args.format=="GMVA":
-                # Write one line with the two Tsys in two columns: (note that the IF order is different from GMVA and EHT! GMVA: E090H, E090V, E230H, E230V)
-                outputfn.write("%d  %s.00 %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[1], \
-                                                                                     np.mean((tau[0], tau[1])), elv[-1], source[-1]) )
-
-        elif ii > 0: # Ignore duplicity check for first entry
-
-            if timestamp[-1] == all_timestamp[-2]:  # Do not write repeated cal info (occurs if no new cal is done when calling getcals in FS)
-                print "timestamp = %s | previous = %s"%(timestamp[-1], all_timestamp[-2])
-                print "Detected duplicated timestamp. Ignoring line."
-                continue
+            if np.isnan(tsys[-1]):
+                if args.verbose >= 1: print "Skipping cal. result with Tsys = NaN (likely from a cal /sky no)"
 
             else:
 
                 if args.format=="EHT":
                     # Write one line with the four Tsys in four columns:
                     outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
-                                                                                       tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
-                elif args.format=="GMVA": 
+                                                                                tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
+                elif args.format=="GMVA":
                     # Write one line with the two Tsys in two columns: (note that the IF order is different from GMVA and EHT! GMVA: E090H, E090V, E230H, E230V)
                     outputfn.write("%d  %s.00 %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[1], \
+                                                                                     np.mean((tau[0], tau[1])), elv[-1], source[-1]) )
+
+        elif ii > 0: # Ignore duplicity check for first entry, check for rest
+
+            if np.isnan(tsys[-1]):
+                if args.verbose >= 1: print "Skipping cal. result with Tsys = NaN (likely from a cal /sky no)"
+
+            else:    
+
+                if timestamp[-1] == all_timestamp[-2]:  # Do not write repeated cal info (occurs if no new cal is done when calling getcals in FS)
+                    print "timestamp = %s | previous = %s"%(timestamp[-1], all_timestamp[-2])
+                    print "Detected duplicated timestamp. Ignoring line."
+                    continue
+
+                else:
+
+                    if args.format=="EHT":
+                        # Write one line with the four Tsys in four columns:
+                        outputfn.write("%d  %s.00 %7.1f %7.1f %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[2], \
+                                                                                       tsys[1], tsys[3], np.mean((tau[0], tau[2], tau[1], tau[3])), elv[-1], source[-1]) )
+                    elif args.format=="GMVA": 
+                        # Write one line with the two Tsys in two columns: (note that the IF order is different from GMVA and EHT! GMVA: E090H, E090V, E230H, E230V)
+                        outputfn.write("%d  %s.00 %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[1], \
                                                                                           np.mean((tau[0], tau[1])), elv[-1], source[-1]) )
-         
 
 print "Writing to %s.antab ..."%basenm
 
