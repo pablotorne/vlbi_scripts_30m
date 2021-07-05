@@ -54,7 +54,7 @@ args = parser.parse_args()
 
 
 # 1) Check that we are executing from mrt-lx1, or mrt-lx2, or mrt-lx3. This program will only work from them!
-if socket.gethostname() not in ['mrt-lx1', 'mrt-lx2vm', 'mrt-lx3']:
+if socket.gethostname() not in ['mrt-lx1', 'mrt-lx2', 'mrt-lx2vm', 'mrt-lx3']:
     print "\n * Error: this program can only run from mrt-lx1, mrt-lx2, mrt-lx3. The preferred one is mrt-lx2."
     print "Exiting."
     sys.exit(1)
