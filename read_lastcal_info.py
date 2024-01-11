@@ -23,8 +23,13 @@ v5: (Dec. 2020) updated for EHT Metadata Formatter, added:
     -- added as extra fields: Pcold, Phot, Psky (counts, RAW data); 
                               Tcold, effForward, effBeam, Tcal
                               Backend used
+v6 (2024-01-11): minor change to accept execution from $HOST mrt-lxX.iram.es
+                 Added note, seems that program reads *any* last calibration,
+                 not only those under the "vlbi" account. Is OK. More data is
+                 almost always good. :)
 
 P. Torne, IRAM, v16.12.2020
+                updated v11.01.2024
 """
 
 import numpy as np
@@ -54,13 +59,14 @@ args = parser.parse_args()
 
 
 # 1) Check that we are executing from mrt-lx1, or mrt-lx2, or mrt-lx3. This program will only work from them!
-if socket.gethostname() not in ['mrt-lx1', 'mrt-lx2', 'mrt-lx2vm', 'mrt-lx3']:
+if socket.gethostname() not in ['mrt-lx1', 'mrt-lx2', 'mrt-lx2vm', 'mrt-lx3', 'mrt-lx1.iram.es', 'mrt-lx2.iram.es', 'mrt-lx2vm.iram.es', 'mrt-lx3.iram.es']:
+    print "socket.gethostname() = %s"%socket.gethostname()
     print "\n * Error: this program can only run from mrt-lx1, mrt-lx2, mrt-lx3. The preferred one is mrt-lx2."
     print "Exiting."
     sys.exit(1)
 
 # Init values
-CURRENTDAY = datetime.today().strftime("%Y%m%d") 
+CURRENTDAY = datetime.today().strftime("%Y%m%d")
 verbose = False
 makelocalcopy = False
 DATAPATH   = "/ncsServer/mrt/ncs/packages/coordinator2009-08-10v1.13/"
@@ -230,14 +236,14 @@ while not success_get_cal:
                 if makelocalcopy:
 
                     if not os.path.exists(LOCALDATAPATH+xml_cal_filenm):
-                        if verbose: 
+                        if verbose:
                             print "Creating a local copy of the cal xml: cp %s %s"%(xml_cal, LOCALDATAPATH+xml_cal_filenm)
                         try:
                             status = subprocess.call('cp %s %s'%(xml_cal, LOCALDATAPATH+xml_cal_filenm), shell=True)
                         except Exception as e:
                             print "Exception in COPY! = %s"%e
                             logging.exception("Shell copy file!")
-                        if status != 0: 
+                        if status != 0:
                             print "ERROR copying xml file to /local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
                             logging.exception("Shell copy file! STATUS != 0")
                         if verbose: print "status cp = %d"%status
