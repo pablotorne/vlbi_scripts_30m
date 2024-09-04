@@ -21,8 +21,12 @@ v2: offer output in EHT or GMVA format
 v3 (2021.01.10): modified to be compatible with the new output (with more fields) of read_lastcal_info.py after EHT Data Management request in Dec. 2020
                  updates as well the condition to check that the four lines corresponf to the same scan (it was working OK before, but not checking all lines) 
 v4: added handling of bad calibration results, e.g. Tsys = "nan". These can come from "cal /sky no" e.g. if tuning when the antenna cannot move, (as in April 2021 c211b.vex)
+v5: updated to .split('/wx/') when reading the weather info for robustness, e.g., cases when temp has 2 negative decimals.
+v6: had to add the option to read in only two IFs from the .log files. This can occur is we do 3mm without connecting the 1 mm Rx.
+    It should not happen, but for some reason in april 2024 we observed without the 1 mm band in parallel and the v5 code was confused
+    because it assumed always 4 IFs per cal. scan. Now you have an extra parameter you must indicate with the num_ifs.
 
-P. Torne, IRAM 23.04.2018, last update 10.01.2021
+P. Torne, IRAM 23.04.2018, last update 04.09.2024
 """
 
 import sys, datetime, os
@@ -38,6 +42,7 @@ parser.add_argument("-v", "--verbose", action="count", help="outputs detailed ex
 parser.add_argument("calinfo_file", help="input file where to read the calibration and weather information from (e.g. a Field System log). This code is written for Pv, and assumes that the text file contains rows with the 'rx' and 'wx' strings to fetch the calibration and weather data.")
 #parser.add_argument("wxinfo_file", help="input file where to read the weather information from")
 parser.add_argument("format", help="decides the output format: for GMVA or EHT data", choices=['GMVA', 'EHT'])
+parser.add_argument("num_ifs", type=int, help="indicate how many IFs were recorded", choices=[2, 4])
 
 args = parser.parse_args()
 
@@ -102,8 +107,8 @@ elif args.format=='GMVA': # write header for GMVA data (2 IFs)
 
 all_timestamp = [] # always save last time stamp to avoid duplicates in the output file
 
-print "Reading information from %d calibration scans from %s ..."%(len(calinfo)/4, args.calinfo_file)
-for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4 IFs:
+print "Reading information from %d calibration scans from %s ..."%(len(calinfo)/args.num_ifs, args.calinfo_file)
+for ii in range(0, len(calinfo), args.num_ifs):  # each cal scan info comes in args.num_ifs rows for args.num_ifs IFs:
     # Read and format data:
     DOY       = []
     timestamp = []
@@ -113,7 +118,7 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
     source    = []
     line      = []
 
-    for jj in range(ii, ii+4): # Loop over four lines starting from ii
+    for jj in range(ii, ii+args.num_ifs): # Loop over args.num_ifs lines starting from ii
 
         data = calinfo[jj].split(" ; ")
 
@@ -141,7 +146,7 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
         # Extract Tsys values
         tempsys = float( data[1].split()[1] )
 
-        if args.verbose >= 1: print "tempsys vaeriable = %s"%tempsys
+        if args.verbose >= 1: print "tempsys variable = %s"%tempsys
 
         # Check value
         if tempsys > 9999.9: 
@@ -177,8 +182,8 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
         print "Extracting relevant information: DOY, timestamp, Tsys, tau, elev, source. for a cal scan on %s"%source[-1]
 
     # Check:
-    if DOY[0:] == DOY[::-1] and timestamp[0:] == timestamp[::-1] and source[0:] == source [::-1]: # these are four lines corresponding to the same scan
-        if args.verbose >= 1: print "Writing to calibration info on %s to ANTAB table ..."%source[-1]
+    if DOY[0:] == DOY[::-1] and timestamp[0:] == timestamp[::-1] and source[0:] == source [::-1]: # these are args.num_ifs lines corresponding to the same scan
+        if args.verbose >= 1: print "Writing calibration info on %s to ANTAB table ..."%source[-1]
 
         if ii == 0: # First entry, no duplicity check
 
@@ -219,6 +224,11 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
                         outputfn.write("%d  %s.00 %7.1f %7.1f   !  %2.2f  %2.1f  %s\n"%(int(DOY[-1]), timestamp[-1], tsys[0], tsys[1], \
                                                                                           np.mean((tau[0], tau[1])), elv[-1], source[-1]) )
 
+    else:
+        print "\nWARNING: Check lines for each scan, something is not matching... !\n"
+        print "Halting program.\n"
+        sys.exit()
+
 print "Writing to %s.antab ..."%basenm
 
     #if ii >= 4: break
@@ -253,10 +263,10 @@ outputfn.write("WEATHER PV /\n")
 
 for ll in wxinfo:
     # Reformat the date/time:
-    doy = int( ll.split()[0].split(".")[1] )
-    time = ll.split()[0].split(".")[2]
-    temp = float( ll.split()[1].split(",")[0] )
-    press = float( ll.split()[2].split(",")[0] )
+    doy = int( ll.split('/wx/')[0].split(".")[1] )
+    time = ll.split('/wx/')[0].split(".")[2]
+    temp = float( ll.split('/wx/')[1].split(",")[0] )
+    press = float( ll.split('/wx/')[1].split(",")[1] )
     humid = float( ll.split(",")[-1] )
     [dewt, pw ] = dewtemp(temp, humid)
 

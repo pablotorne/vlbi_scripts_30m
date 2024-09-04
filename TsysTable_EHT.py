@@ -27,8 +27,10 @@ v3: - Handles sources observed during VLBI but without any CAL. info
     - Cross-check source names only with first 8 characters to deal with
       sources that appear with a longer name in a CAL scan and a short
       version in the .prn (e.g., j1924-2914 and J1924-29, e21a14 - Apr21)
+v4: Need to change some lines to be compatible with the new scan ID format
+    introduced in March 2022: DOY-HHMM of start of scan, instad of NoXXXX.
  
-P. Torne, IRAM v2: 03.01.2020, v3: 2021.06.05
+P. Torne, IRAM v2: 03.01.2020, v3: 2021.06.05, v4: 2022.07.22
 """
 
 import sys, datetime, os
@@ -36,6 +38,7 @@ import numpy as np
 import subprocess
 import argparse
 import matplotlib.pyplot as plt
+import re
 
 # Global parameter:
 DELTA_TIME = 600 # seconds, or less, to consider a cal. scan info OK to be assigned to a VLBI scan
@@ -56,7 +59,9 @@ basenm = os.path.basename( os.path.splitext(args.prn_file)[0] )
 try:
 
     calinfo = subprocess.check_output('grep %s -e "rx:"'%args.calinfo_file, shell=True).splitlines()
-    prninfo  = subprocess.check_output('grep -E "no[0-9]{1,}" %s'%args.prn_file, shell=True).splitlines()
+    #prninfo  = subprocess.check_output('grep -E "no[0-9]{1,}" %s'%args.prn_file, shell=True).splitlines()
+    # In 2022, they changed the format of the scans ID from no####, to DOY-HHMM of scan start. Need code update:
+    prninfo  = subprocess.check_output('grep -E "  :  :  " %s'%args.prn_file, shell=True).splitlines()
 
 except Exception as e:
 
@@ -156,6 +161,25 @@ def nearest(items, pivot):
 
     return [nearest_cal_ts, nearest_cal_idx, delta_t]
 
+def checkScanID(line):
+    '''
+    Check the initial part of the passed line using regular expressions
+    to identify which lines correspond to a VLBI scan in the format
+    of the .prn from March 2022
+    Adapted from https://stackoverflow.com/questions/14966647/check-python-string-format
+    '''
+    r = re.compile('\d{3}-\d{4}')
+    print "line =%s"%str(line)
+    # Compare only with the first characters of the line:
+    if r.match( str(line) ) is not None:
+        print "True"
+        return True
+    else:
+        print "False"
+        return False    
+
+
+
 
 # Get the Start Time (UT), Track name and Station Code from the PRN file
 startdate, track, stationcode = extractTrackInfo(args.prn_file)
@@ -250,13 +274,16 @@ for ii in range(0, len(calinfo), 4):  # each cal scan info comes in 4 rows for 4
 
         # Extract Tsys values
         tempsys = float( data[1].split()[1] )
+        print "tempsys = %s"%tempsys
         # Check value
         if tempsys > 9999.9: 
             tsys_star.append(9999.9)
         elif (tempsys > 1 and tempsys <= 9999.9):
             tsys_star.append(tempsys)
         elif tempsys <= 0:
-            tsys_star.append("NA")
+            tsys_star.append(-1)
+        else:
+            tsys_star.append(-1)
 
         # Extract tau
         tau_z.append( float(data[2].split()[1]) )
@@ -434,7 +461,8 @@ tsys_table.write("# Experiment name: %s\n"%track)
 tsys_table.write("# Station ID: %s\n"%stationcode)
 tsys_table.write("# Operators/observer/contact person: Pablo Torne (torne@iram.es)\n")
 tsys_table.write("# Tsys* or Tsys (inclusive of opacity or not): Tsys*\n")
-tsys_table.write("# Central observing frequencies in GHz for Tsys measurement (DSB/2SB): %.1f (b1 & b2), %.1f (b3 & b4) (2SB)\n"%(rxFreq[0]+0.25, rxFreq[1]-0.25))
+#tsys_table.write("# Central observing frequencies in GHz for Tsys measurement (DSB/2SB): %.1f (b1 & b2), %.1f (b3 & b4) (2SB)\n"%(rxFreq[0]+0.25, rxFreq[1]-0.25))
+tsys_table.write("# Central observing frequencies in GHz for Tsys measurement (DSB/2SB): %.1f (b1 & b2), %.1f (b3 & b4) (2SB)\n"%(rxFreq[0], rxFreq[1])) #Apr21, remove 0.25 shift, those affect the VLBI recording but should not affect the NBC data
 tsys_table.write("# Sideband ratio (if available, for DSB): NA\n")
 tsys_table.write("# Sideband coupling coefficient (if available, for 2SB): %.3f\n"%np.mean(gainImage))
 tsys_table.write("# Tau observing frequency in GHz: %.1f (average of central observing frequencies)\n"%np.mean(rxFreq))
@@ -450,8 +478,8 @@ tsys_table.write("# * Column Delta_t indicates the absolute time difference betw
 tsys_table.write("# * If Delta_t > 10 min, we interpolate between the closest calibration values for the source (indicated with Interp.).\n")
 tsys_table.write("# * If there is no calibration data for a given scan / source, columns indicate NA and Column Delta_t indicates NOCAL_INFO.\n") 
 tsys_table.write("#\n")
-tsys_table.write("## Timestamp(UT)       Scan	Source Pos_Az Pos_El  Tsys_b1r\t_b1l\t_b2r\t_b2l\t_b3r\t_b3l\t_b4r\t_b4l\tTau\tTamb\tTatm\tDelta_t\n")
-tsys_table.write("# YYYY-MM-DD HH:MM:SS  (VEX)	       (deg)  (deg)     (K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(zen)\t(K)\t(K)\t(min)\n")
+tsys_table.write("## Timestamp(UT)       Scan	       Source Pos_Az Pos_El  Tsys_b1r\t_b1l\t_b2r\t_b2l\t_b3r\t_b3l\t_b4r\t_b4l\tTau\tTamb\tTatm\tDelta_t\n")
+tsys_table.write("# YYYY-MM-DD HH:MM:SS  (VEX)	              (deg)  (deg)     (K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(K)\t(zen)\t(K)\t(K)\t(min)\n")
 tsys_table.write("################################################################################################################################################################\n")
 
 # Loop over PRN in search of VLBI scans, work out cal. data, and populate Tsys table:
@@ -462,6 +490,9 @@ interpolations      = 0
 no_cal_data         = 0 
 
 for line in prntext:
+    
+    if args.verbose > 3: print "line from prntext = %s"%line
+
     # Detect if the line is a "date =" entry or a VLBI scan
     lineinfo = line.split()
     
@@ -470,7 +501,9 @@ for line in prntext:
         if args.verbose > 2: print("Found a new date line in the PRN file! Saving date to format time stamps.")
         datestr = lineinfo[2] # in str() format
 
-    elif len(lineinfo) > 0 and lineinfo[0][0:2] == "no" and ( len(lineinfo) == 11 or len(lineinfo) == 12):
+    #elif len(lineinfo) > 0 and lineinfo[0][0:2] == "no" and ( len(lineinfo) == 11 or len(lineinfo) == 12):
+    # Previous line needs update to be compatible with the new format of scan ID in the .prn as from March 22 (DOY-HHMM)
+    elif len(lineinfo) > 0 and checkScanID(lineinfo[0]) == True and ( len(lineinfo) == 11 or len(lineinfo) == 12): 
         # This is a row with a VLBI scan
         vlbi_scannumber = lineinfo[0]
         source_name     = lineinfo[2]
