@@ -15,6 +15,6 @@ TsysTable_EHT.py
 
 ---
 
-The master LOCAL code is at mrt-lx2 / 3 
+For master LOCAL code development use mrt-lx3 (vlbi)
 
 
