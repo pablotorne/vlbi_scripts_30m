@@ -1,0 +1,21 @@
+---
+
+The new security layer of GitHub requires new methods to push to the GitHub cloud repository.
+
+To push the changes to the remote repository, you first:
+
+git status
+git add <files> or git add .
+git commit -m "message explaning changes"
+git status
+git push -u origin master
+
+But if it asks for a user and password, you need to re-point to the new repository URL with:
+
+git remote set-url "origin" git@github.com:pablotorne/vlbi_scripts_30m.git
+
+and then you can
+
+git push -u origin master
+
+---
