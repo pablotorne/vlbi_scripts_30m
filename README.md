@@ -13,6 +13,9 @@ cals30m_ANTAB.py:
 TsysTable_EHT.py
 - Read files with calibration information from the IRAM 30m (usually a Field System log) and writes the output as EHT Tsys* metadata tables.
 
+check_duplicate_sources.py
+- Reads the output of a paKo .sou catalog and detects duplicate sources
+
 ---
 
 For master LOCAL code development use mrt-lx3 (vlbi)
