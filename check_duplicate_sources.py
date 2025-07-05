@@ -67,19 +67,52 @@ def parse_sources(file_path):
     return sources
 
 def angular_distance(ra1_deg, dec1_deg, ra2_deg, dec2_deg):
+    '''
+    Computes the angular separation between two points on the celestial sphere.
+
+    Inputs:
+        ra1_deg, dec1_deg: Right Ascension and Declination of point 1 (in degrees)
+        ra2_deg, dec2_deg: Right Ascension and Declination of point 2 (in degrees)
+
+    Returns:
+        Angular distance in degrees.
+
+    Method:
+        Uses the Vincenty formula (spherical version), which is:
+        
+        ΔRA = RA2 - RA1
+        x = cos(Dec2) * sin(ΔRA)
+        y = cos(Dec1) * sin(Dec2) - sin(Dec1) * cos(Dec2) * cos(ΔRA)
+        z = sin(Dec1) * sin(Dec2) + cos(Dec1) * cos(Dec2) * cos(ΔRA)
+
+        angle = atan2(√(x² + y²), z)
+        
+        This gives the angular distance in radians between the two positions.
+        Then it's converted to degrees.
+
+    This method is accurate even for very small separations (< 1 arcsecond).
+    '''
+
+    # Convert input coordinates from degrees to radians
     ra1 = math.radians(ra1_deg)
     dec1 = math.radians(dec1_deg)
     ra2 = math.radians(ra2_deg)
     dec2 = math.radians(dec2_deg)
 
+    # Compute the difference in right ascension
     delta_ra = ra2 - ra1
 
+    # Compute the intermediate x, y, and z terms for the Vincenty (spherical) formula
     x = math.cos(dec2) * math.sin(delta_ra)
     y = math.cos(dec1) * math.sin(dec2) - math.sin(dec1) * math.cos(dec2) * math.cos(delta_ra)
     z = math.sin(dec1) * math.sin(dec2) + math.cos(dec1) * math.cos(dec2) * math.cos(delta_ra)
 
+    # atan2 returns the angular separation in radians
     angle_rad = math.atan2(math.sqrt(x**2 + y**2), z)
+
+    # Convert to degrees before returning
     return math.degrees(angle_rad)
+
 
 def find_duplicates(sources, max_sep_arcsec, ignore_same_name):
     duplicates = []
