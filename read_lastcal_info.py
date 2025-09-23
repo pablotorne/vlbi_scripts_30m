@@ -20,13 +20,16 @@ v4: added an argument to select the log file location. If empty, the error log w
 v5: (Dec. 2020) updated for EHT Metadata Formatter, added:
     -- option to pass as argument a local XML calibration file to read info from.
     -- Extract and print on screen new requested fields: Azimuth,Tamb,Tatm,Taus.
-    -- added as extra fields: Pcold, Phot, Psky (counts, RAW data); 
+    -- added as extra fields: Pcold, Phot, Psky (counts, RAW data);
                               Tcold, effForward, effBeam, Tcal
                               Backend used
 v6 (2024-01-11): minor change to accept execution from $HOST mrt-lxX.iram.es
                  Added note, seems that program reads *any* last calibration,
                  not only those under the "vlbi" account. Is OK. More data is
                  almost always good. :)
+
+v7 (2025-09-23): Needed to update the location of the .xml files with the cal data.
+                 Now it seems to be /ncsServer/mrt/ncs/packages/coordinator/
 
 P. Torne, IRAM, v16.12.2020
                 updated v11.01.2024
@@ -69,7 +72,7 @@ if socket.gethostname() not in ['mrt-lx1', 'mrt-lx2', 'mrt-lx2vm', 'mrt-lx3', 'm
 CURRENTDAY = datetime.today().strftime("%Y%m%d")
 verbose = False
 makelocalcopy = False
-DATAPATH   = "/ncsServer/mrt/ncs/packages/coordinator2009-08-10v1.13/"
+DATAPATH   = "/ncsServer/mrt/ncs/packages/coordinator/"
 LOCALDATAPATH = "/mrt-lx3/vis/vlbi/vlbireduc/CALXMLs/"  # A standard, already created directory.
 #LOCALDATAPATH = "/local/users/torne/vlbi_monitor_client/Python/CALXMLs/"
 #LOCALDATAPATH = "/mrt-lx3/vis/vlbi/vlbireduc/CALXMLs/"  # version for vlbi Field System
