@@ -167,7 +167,8 @@ def display_table(scans, vexfile):
     sched = vexfile.split(".vex")[0]
     while True:
         print("\033c", end="")  # Clear terminal
-        print(f"\033[1mIRAM 30m VLBI Observer Co-Pilot - Schedule: {sched}\033[0m (Dev. by Heino Falcke & Pablo Torne -- Warning: Beta version!)")
+        print(f"\033[1mIRAM 30m VLBI Observer Co-Pilot - Schedule: {sched}\033[0m")
+        print("(Dev. by Heino Falcke & Pablo Torne -- Warning: Beta version!)")
         print(f"Current UTC Time: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"{'Scan Number':<15}{'Source':<15}{'Start Time (UTC)':<20}{' End Time':<15}{'Duration':<15}{'Gap[mm:ss]':<15}{'Recommended Action':<15}")
         print("-" * 115)
