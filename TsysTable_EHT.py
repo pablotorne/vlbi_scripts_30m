@@ -6,12 +6,12 @@ requested by EHT Data Managers in Dec. 2020.
 Takes as input:
 - a text file containing the calibration information given by
   "read_lastcal_info.py", normally a Field System log
-- a text file with the information of the VLBI scans of ONE SCHEDULY,
+- a text file with the information of the VLBI scans of ONE SCHEDULE,
   typically a .prn file generated from the .vex at the session start.
 
 (This code is based on create_ANTAB.py)
 
-v2: Creates first a file with all the calibration scan metadata and
+v2 (03.01.2020): Creates first a file with all the calibration scan metadata and
     the  uses this files to produce the Tsys* table for VLBI scans.
     The strategy in this version is:
     1) If a calibration(s) scan(s) for the science VLBI scan exists
@@ -23,14 +23,17 @@ v2: Creates first a file with all the calibration scan metadata and
     3) If 1) or 2) are not possible, use the closest-in-time cal.
        scan on any source and calculate the Tsys* in the elevation
        of the VLBI scan
-v3: - Handles sources observed during VLBI but without any CAL. info
+v3 (2021.06.05): - Handles sources observed during VLBI but without any CAL. info
     - Cross-check source names only with first 8 characters to deal with
       sources that appear with a longer name in a CAL scan and a short
       version in the .prn (e.g., j1924-2914 and J1924-29, e21a14 - Apr21)
-v4: Need to change some lines to be compatible with the new scan ID format
+v4 (2022.07.22): Need to change some lines to be compatible with the new scan ID format
     introduced in March 2022: DOY-HHMM of start of scan, instad of NoXXXX.
+v5 (2025-11-25): In 2024 EHT again uses the NoXXXX labels for the scans...
+   So, added a parameter to select the label format so the code works with
+   both options (either NoXXXX or DOY-HHMM)
  
-P. Torne, IRAM v2: 03.01.2020, v3: 2021.06.05, v4: 2022.07.22
+P. Torne, IRAM.
 """
 
 import sys, datetime, os
@@ -90,7 +93,13 @@ def extractTrackInfo(prnfile):
             print linedata
         if len(linedata) > 0 and linedata[0] == "date" and linedata[1] == "=":
             if args.verbose: print "Found the Start Date from the prn file: %s"%linedata[2]
-            startdate = linedata[2]
+            # Need a check for dates in which the day in single digit, because they can be written as "2024APR 9" (case of 2024).
+            if len( linedata[2] ) != 9:
+                print "Detected date has insufficient characters. Possibly a single-digit day. Reformatting date..."
+                startdate = linedata[2]+"0"+linedata[3]
+            else: # date field has the correct length, so we assume the correct format
+                startdate = linedata[2]
+            print "Detected date = %s"%startdate
             break
 
     # We need two separate loops because the first one must stop after finding the first Date 
