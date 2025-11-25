@@ -16,6 +16,9 @@ TsysTable_EHT.py
 check_duplicate_sources.py
 - Reads the output of a paKo .sou catalog and detects duplicate sources
 
+vex_copilot.py
+- Summarises on screen an observing schedule and guides the observer in real time on best actions to do in the gaps between scans. 
+
 ---
 
 For master LOCAL code development use mrt-lx3 (vlbi)
