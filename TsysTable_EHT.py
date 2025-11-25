@@ -64,12 +64,16 @@ try:
     calinfo = subprocess.check_output('grep %s -e "rx:"'%args.calinfo_file, shell=True).splitlines()
     #prninfo  = subprocess.check_output('grep -E "no[0-9]{1,}" %s'%args.prn_file, shell=True).splitlines()
     # In 2022, they changed the format of the scans ID from no####, to DOY-HHMM of scan start. Need code update:
+    # by grepping the string "  :  :  " we fetch the scans regardless of the scan name format.
+    # But later in this code we need to handle the label properly below!
     prninfo  = subprocess.check_output('grep -E "  :  :  " %s'%args.prn_file, shell=True).splitlines()
+    if args.verbose > 2: # -vvv
+        print "prninfo=%s"%prninfo
 
 except Exception as e:
 
     print e
-    print "\nHalting program."
+    print "\ngrep on calinfo or prninfo failed. Halting program."
     sys.exit(1)
 
 # Support functions
@@ -176,11 +180,14 @@ def checkScanID(line):
     to identify which lines correspond to a VLBI scan in the format
     of the .prn from March 2022
     Adapted from https://stackoverflow.com/questions/14966647/check-python-string-format
+    Update 2025: in 2024 thet again use a NoXXXX formt for the scans ... So, I add both
+    formats to identify the scan lines
     '''
-    r = re.compile('\d{3}-\d{4}')
+    r1 = re.compile('\d{3}-\d{4}')       # fetches scan labels of the type XXX-YYY
+    r2 = re.compile(r'^[Nn][Oo]\d{4}$')  # fetches scan labels of the type NoXXXX
     print "line =%s"%str(line)
     # Compare only with the first characters of the line:
-    if r.match( str(line) ) is not None:
+    if r1.match( str(line) ) is not None or r2.match( str(line) ) is not None:
         print "True"
         return True
     else:
