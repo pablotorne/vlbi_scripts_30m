@@ -508,12 +508,15 @@ for line in prntext:
     if len(lineinfo) > 0 and lineinfo[0] == "date" and lineinfo[1] == "=": # it is a "date =" entry
         # Save the date in UTC:
         if args.verbose > 2: print("Found a new date line in the PRN file! Saving date to format time stamps.")
-            # Need a check for dates in which the day in single digit, because they can be written as "2024APR 9" (case of 2024).
-            if len( linedata[2] ) != 9:
-                print "Detected date has insufficient characters. Possibly a single-digit day. Reformatting date..."
-                datestr = linedata[2]+"0"+linedata[3]
-            else:
-                datestr = lineinfo[2] # in str() format
+        # Need a check for dates in which the day in single digit, because they can be written as "2024APR 9" (case of 2024).
+        if len( lineinfo[2] ) != 9:
+            print lineinfo[2]
+            print "Detected date has insufficient characters. Possibly a single-digit day. Reformatting date..."
+            datestr = lineinfo[2]+"0"+lineinfo[3]
+            print datestr
+        else:
+            datestr = lineinfo[2] # in str() format
+            print datestr
 
     #elif len(lineinfo) > 0 and lineinfo[0][0:2] == "no" and ( len(lineinfo) == 11 or len(lineinfo) == 12):
     # Previous line needs update to be compatible with the new format of scan ID in the .prn as from March 22 (DOY-HHMM)
