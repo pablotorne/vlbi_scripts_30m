@@ -32,6 +32,9 @@ v4 (2022.07.22): Need to change some lines to be compatible with the new scan ID
 v5 (2025-11-25): In 2024 EHT again uses the NoXXXX labels for the scans...
    So, added a parameter to select the label format so the code works with
    both options (either NoXXXX or DOY-HHMM)
+v6 (2025-12-04): Added another parameter (EMIRband_label) to be able to extract only a certain band in case of dual-band setups, e.g., E150+E330.
+    In April 2024 we have some scans with E330 only, and some with E150. v6 was choosing the first 4 lines of the cal. info in the Field
+    System log, so taking E150 when present instead of E330. Now with parameter EMIRband_label = E0, E1, E2, E3 we can select that data only.
  
 P. Torne, IRAM.
 """
@@ -52,6 +55,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-v", "--verbose", action="count", help="outputs detailed execution informaton")
 parser.add_argument("calinfo_file", help="input file where to read the calibration information (e.g. a Field System log). This code is written for Pv, and assumes that the text file contains rows with the 'rx:' strings to fetch the calibration data as outputted by the read_lastcal_info.py routine.")
 parser.add_argument("prn_file", help="input file where to read the VLBI scans number and timestamps (use a .prn file). The output file name of the Tsys table will be generated from the baseline of this file (which should be the same as the schedule name.)")
+parser.add_argument("EMIRband_label", type=str, help="EMIR band label to select from cal. info entries", choices=['E0', 'E1', 'E2', 'E3'])
 
 args = parser.parse_args()
 
@@ -61,7 +65,7 @@ basenm = os.path.basename( os.path.splitext(args.prn_file)[0] )
 # Fetch info from input file
 try:
 
-    calinfo = subprocess.check_output('grep %s -e "rx:"'%args.calinfo_file, shell=True).splitlines()
+    calinfo = subprocess.check_output('grep %s -e "rx: %s"'%(args.calinfo_file, args.EMIRband_label), shell=True).splitlines()
     #prninfo  = subprocess.check_output('grep -E "no[0-9]{1,}" %s'%args.prn_file, shell=True).splitlines()
     # In 2022, they changed the format of the scans ID from no####, to DOY-HHMM of scan start. Need code update:
     # by grepping the string "  :  :  " we fetch the scans regardless of the scan name format.
@@ -478,7 +482,7 @@ tsys_table.write("# Station ID: %s\n"%stationcode)
 tsys_table.write("# Operators/observer/contact person: Pablo Torne (torne@iram.es)\n")
 tsys_table.write("# Tsys* or Tsys (inclusive of opacity or not): Tsys*\n")
 #tsys_table.write("# Central observing frequencies in GHz for Tsys measurement (DSB/2SB): %.1f (b1 & b2), %.1f (b3 & b4) (2SB)\n"%(rxFreq[0]+0.25, rxFreq[1]-0.25))
-tsys_table.write("# Central observing frequencies in GHz for Tsys measurement (DSB/2SB): %.1f (b1 & b2), %.1f (b3 & b4) (2SB)\n"%(rxFreq[0], rxFreq[1])) #Apr21, remove 0.25 shift, those affect the VLBI recording but should not affect the NBC data
+tsys_table.write("# Central observing frequencies in GHz for Tsys measurement (DSB/2SB): %.1f (b1 & b2), %.1f (b3 & b4) (2SB)\n"%(rxFreq[0], rxFreq[1])) #Apr21, remove 0.25 shift, those affect the VLBI recording but should not affect the NBC/BBC data
 tsys_table.write("# Sideband ratio (if available, for DSB): NA\n")
 tsys_table.write("# Sideband coupling coefficient (if available, for 2SB): %.3f\n"%np.mean(gainImage))
 tsys_table.write("# Tau observing frequency in GHz: %.1f (average of central observing frequencies)\n"%np.mean(rxFreq))
