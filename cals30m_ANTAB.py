@@ -25,6 +25,9 @@ v5: updated to .split('/wx/') when reading the weather info for robustness, e.g.
 v6: had to add the option to read in only two IFs from the .log files. This can occur is we do 3mm without connecting the 1 mm Rx.
     It should not happen, but for some reason in april 2024 we observed without the 1 mm band in parallel and the v5 code was confused
     because it assumed always 4 IFs per cal. scan. Now you have an extra parameter you must indicate with the num_ifs.
+v7: Added another parameter (EMIRband_label) to be able to extract only a certain band in case of dual-band setups, e.g., E150+E330.
+    In April 2024 we have some scans with E330 only, and some with E150. v6 was choosing the first 4 lines of the cal. info in the Field
+    System log, so taking E150 when present instead of E330. Now with parameter EMIRband_label = E0, E1, E2, E3 we can select that data only.
 
 P. Torne, IRAM 23.04.2018, last update 04.09.2024
 """
@@ -43,6 +46,7 @@ parser.add_argument("calinfo_file", help="input file where to read the calibrati
 #parser.add_argument("wxinfo_file", help="input file where to read the weather information from")
 parser.add_argument("format", help="decides the output format: for GMVA or EHT data", choices=['GMVA', 'EHT'])
 parser.add_argument("num_ifs", type=int, help="indicate how many IFs were recorded", choices=[2, 4])
+parser.add_argument("EMIRband_label", type=str, help="EMIR band label to select from cal. info entries", choices=['E0', 'E1', 'E2', 'E3'])
 
 args = parser.parse_args()
 
@@ -74,7 +78,7 @@ def dewtemp(temp, humid):
 # Fetch info from input file
 try:
 
-    calinfo = subprocess.check_output('grep %s -e "rx:"'%args.calinfo_file, shell=True).splitlines()
+    calinfo = subprocess.check_output('grep %s -e "rx: %s"'%(args.calinfo_file, args.EMIRband_label),  shell=True).splitlines()
     wxinfo  = subprocess.check_output('grep %s -e "/wx/"'%args.calinfo_file, shell=True).splitlines()
     #wxinfo  = subprocess.check_output('grep %s -e "/wx/"'%args.wxinfo_file, shell=True).splitlines()
 
