@@ -702,8 +702,11 @@ for line in prntext:
                 tsys_table.write("%s\t%s\t%s\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.1f\t%.2f\t%.1f\t%.1f\t%s\n"%(\
                                  timestamp_vlbi_dt, vlbi_scannumber, source_calname[nearest_cal_index],\
                                  az_interp, el_interp,\
-                                 tsys_interp[0], tsys_interp[2], tsys_interp[0], tsys_interp[2],\
-                                 tsys_interp[1], tsys_interp[3], tsys_interp[1], tsys_interp[3],\
+                                 #tsys_interp[0], tsys_interp[2], tsys_interp[0], tsys_interp[2],\
+                                 #tsys_interp[1], tsys_interp[3], tsys_interp[1], tsys_interp[3],\
+                                 # Bug corrected 15-April-2026, order was incorrect! tsys was re-ordered above when interpolating, so:
+                                 tsys_interp[0], tsys_interp[1], tsys_interp[2], tsys_interp[3],\
+                                 tsys_interp[4], tsys_interp[5], tsys_interp[6], tsys_interp[7],\
                                  tauz_interp, Tamb_interp, Tatm_interp,\
                                  "Interp")
                                 )
