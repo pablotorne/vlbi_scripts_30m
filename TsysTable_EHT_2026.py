@@ -35,6 +35,10 @@ v5 (2025-11-25): In 2024 EHT again uses the NoXXXX labels for the scans...
 v6 (2025-12-04): Added another parameter (EMIRband_label) to be able to extract only a certain band in case of dual-band setups, e.g., E150+E330.
     In April 2024 we have some scans with E330 only, and some with E150. v6 was choosing the first 4 lines of the cal. info in the Field
     System log, so taking E150 when present instead of E330. Now with parameter EMIRband_label = E0, E1, E2, E3 we can select that data only.
+v7 (2026-06-17): Note that in the .prn we may have comments. The comments make the number of columns change. So, you may have len() = 11 (no comments)
+                 len() = 12 if only one comment (e.g., done / lost), or >12 if more comments are added.
+                 So, we need to detect scan rows with len() >= 11 and identify well were is the 'Start Data column' needed to cross-match with the cal
+                 data from the FS log.
  
 P. Torne, IRAM.
 """
@@ -184,7 +188,7 @@ def checkScanID(line):
     to identify which lines correspond to a VLBI scan in the format
     of the .prn from March 2022
     Adapted from https://stackoverflow.com/questions/14966647/check-python-string-format
-    Update 2025: in 2024 thet again use a NoXXXX formt for the scans ... So, I add both
+    Update 2025: in 2024 they again use a NoXXXX formt for the scans ... So, I add both
     formats to identify the scan lines
     '''
     r1 = re.compile('\d{3}-\d{4}')       # fetches scan labels of the type XXX-YYY
@@ -192,10 +196,10 @@ def checkScanID(line):
     print "line =%s"%str(line)
     # Compare only with the first characters of the line:
     if r1.match( str(line) ) is not None or r2.match( str(line) ) is not None:
-        print "True"
+        print "checkScanID True, identified a scan label."
         return True
     else:
-        print "False"
+        print "checkScanID False, not identifying a scan label."
         return False    
 
 
@@ -467,7 +471,7 @@ f.close()
 
 # Open the output text file that will be the Tsys metadata table:
 
-tsys_table = open("%s_%s.tsys.txt"%(track, stationcode), 'w')
+tsys_table = open("%s_%s.tsys"%(track, stationcode), 'w')
 
 # Write the header of the Tsys table file:
 tsys_table.write("################################################################\n")
@@ -515,7 +519,14 @@ for line in prntext:
 
     # Detect if the line is a "date =" entry or a VLBI scan
     lineinfo = line.split()
-    
+
+    if args.verbose > 1:
+        print "Debug:"
+        print "lineinfo = line.split() =\n%s"%lineinfo  
+        print "len(lineinfo) = %s"%len(lineinfo)
+        if len(lineinfo) > 0:
+            print "checkScanID(lineinfo[0]) = %s"%checkScanID(lineinfo[0])
+ 
     if len(lineinfo) > 0 and lineinfo[0] == "date" and lineinfo[1] == "=": # it is a "date =" entry
         # Save the date in UTC:
         if args.verbose > 2: print("Found a new date line in the PRN file! Saving date to format time stamps.")
@@ -531,16 +542,20 @@ for line in prntext:
 
     #elif len(lineinfo) > 0 and lineinfo[0][0:2] == "no" and ( len(lineinfo) == 11 or len(lineinfo) == 12):
     # Previous line needs update to be compatible with the new format of scan ID in the .prn as from March 22 (DOY-HHMM)
-    elif len(lineinfo) > 0 and checkScanID(lineinfo[0]) == True and ( len(lineinfo) == 11 or len(lineinfo) == 12): 
+    # In 2026, soe .prn may have several comments in addition to done/lost, so len(lineinfo) can be >= 11
+    # In addition, in 2026 there is one new column! moving the index of start data by +1 ...
+    elif len(lineinfo) > 0 and checkScanID(lineinfo[0]) == True and len(lineinfo) >= 11: 
         # This is a row with a VLBI scan
         vlbi_scannumber = lineinfo[0]
         source_name     = lineinfo[2]
         az              = float(lineinfo[3])
         el              = float(lineinfo[4])
         if len(lineinfo) == 11: # this is the first VLBI scan of the prn, has one colunm less
-            starttime       = lineinfo[6]
-        elif len(lineinfo) > 11: # rest of rows
-            starttime       = lineinfo[7]
+            #starttime       = lineinfo[6] # Before 2026
+            starttime       = lineinfo[7] # EHT2026
+        elif len(lineinfo) > 11: # Not the first scan, any other:
+            #starttime       = lineinfo[7] # Before 2026
+            starttime       = lineinfo[8] # EHT 2026
         else:
             print("\n\n\n ERROR when reading VLBI scan info from PRN file. Aborting!")
             sys.exit(1)
@@ -745,6 +760,10 @@ for line in prntext:
 
             no_cal_data += 1
     
+    else:
+
+        print("No scan detected.")
+
 # Close output file          
 tsys_table.close()
 
